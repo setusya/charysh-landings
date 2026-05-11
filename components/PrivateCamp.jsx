@@ -186,7 +186,7 @@ function PCAltaiMarket() {
     <section className="sec-pad sec-dark" id="altai-market" data-screen-label="02.3 Big Altai dynamics">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">22</span><span className="sep">|</span>Большой&nbsp;Алтай</div>
+          <div className="crumb"><span className="num">21</span><span className="sep">|</span>Большой&nbsp;Алтай</div>
           <h2 className="display h-display-l">
             Что такое <em className="redword-light">Большой Алтай</em>.<br/>
             И почему это уже самый растущий туррегион России.
@@ -298,7 +298,7 @@ function PCAltaiViability() {
     <section className="sec-pad sec-dark" id="altai-viability" data-screen-label="02.4 Altai viability + scenarios">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">23</span><span className="sep">|</span>Доказательство · оборот</div>
+          <div className="crumb"><span className="num">22</span><span className="sep">|</span>Доказательство · оборот</div>
           <h2 className="display h-display-l">
             Чарышу нужно <em className="redword-light">0,36% рынка 2030</em>.<br/>
             Этой доли достаточно.
@@ -947,6 +947,7 @@ function PCSecurity() {
             <em className="redword-light">Сходятся четыре силы</em> — одновременно.
           </h2>
         </div>
+        <div className="pc-pillars-hero" style={{backgroundImage:"url('assets/photo/nature-panorama.jpg')"}}/>
         <div className="pc-pillars-grid">
           {pillars.map((p, i) => (
             <article className="pc-pillar" key={i}>
@@ -1187,9 +1188,9 @@ function PCWhatsBuilt() {
         </p>
         <div className="pc-built-strip">
           <figure><img src="assets/photo/nature-river-rocks.jpg" alt="Берег Чарыша · щебень"/><figcaption>Берег · щебень</figcaption></figure>
-          <figure><img src="assets/photo/nature-misty-bank.jpg" alt="Утренний туман над озером"/><figcaption>Утро над озером</figcaption></figure>
-          <figure><img src="assets/photo/nature-expedition.jpg" alt="Джипы поднимаются по склону"/><figcaption>Транспорт на месте</figcaption></figure>
+          <figure><img src="assets/photo/valley-overlook.jpg" alt="Панорама с высоты"/><figcaption>Панорама с&nbsp;высоты</figcaption></figure>
           <figure><img src="assets/photo/valley-autumn.jpg" alt="Долина в октябре"/><figcaption>Долина · октябрь</figcaption></figure>
+          <figure><img src="assets/photo/season-autumn-river.jpg" alt="Чарыш осенью"/><figcaption>Чарыш · сезон</figcaption></figure>
         </div>
         <div className="market-grid">
           {items.map((it, i) => (
@@ -1234,7 +1235,7 @@ function PCRoadmap() {
     <section className="sec-pad" id="roadmap" data-screen-label="12 Roadmap">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">21</span><span className="sep">|</span>Дорожная&nbsp;карта</div>
+          <div className="crumb"><span className="num">23</span><span className="sep">|</span>Дорожная&nbsp;карта</div>
           <h2 className="display h-display-l">
             Вы входите <em className="redword">сейчас</em>.<br/>
             В самый нужный момент.
@@ -1784,14 +1785,14 @@ function PCFormCEquity() {
     <section className="sec-pad sec-dark" id="equity" data-screen-label="ACT 3.C Equity AO">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">16</span><span className="sep">|</span>Условия · что финансирует АО</div>
+          <div className="crumb"><span className="num">16</span><span className="sep">|</span>Стать&nbsp;сонаследником</div>
           <h2 className="display h-display-l">
-            Деньги акционеров строят <em className="redword-light">всю ретрит-зону</em>.<br/>
+            Войдите в&nbsp;долю <em className="redword-light">Резиденции Чарыш</em>.<br/>
             Строительство 2027 · ввод в&nbsp;эксплуатацию 2028.
           </h2>
         </div>
         <p className="lead" style={{opacity:.78, maxWidth:'64ch', marginBottom:40}}>
-          Минимальный чек 500&nbsp;000&nbsp;₽ · самый институциональный путь участия. Ниже — финансовые условия и&nbsp;четыре объекта, которые финансируются деньгами акционеров.
+          Самый тёплый порог входа — от&nbsp;500&nbsp;000&nbsp;₽. Деньги совладельцев строят всю ретрит-зону: ретрит-центр, банный комплекс, ретрит-дома и&nbsp;модульные дома в&nbsp;лесу. Ниже — условия и&nbsp;четыре объекта, в&nbsp;которые вы&nbsp;входите.
         </p>
 
         {/* 6 финансовых условий компактно */}
@@ -1871,10 +1872,10 @@ function PCBonus() {
           </p>
           <div className="pc-bonus-tours">
             <article className="pc-bonus-tour pc-bonus-tour-invest" id="visit-invest">
-              <div className="pc-bonus-tour-photo" style={{backgroundImage:"url('assets/photo/valley-pavilion.jpg')"}}/>
+              <div className="pc-bonus-tour-photo" style={{backgroundImage:"url('assets/photo/nature-expedition.jpg')"}}/>
               <div className="pc-bonus-tour-body">
                 <div className="pc-bonus-tour-tag">Инвест-тур · 2–3 дня</div>
-                <h3 className="pc-bonus-tour-h">Персональный<br/>инвест-тур</h3>
+                <h3 className="pc-bonus-tour-h">Инвест-тур</h3>
                 <p className="pc-bonus-tour-d">
                   Точечная программа с&nbsp;командой основателей. Земля, мастер-план LH47, дом в&nbsp;стройке, финмодель, юр. пакет — всё на&nbsp;месте.
                 </p>
@@ -1893,10 +1894,10 @@ function PCBonus() {
               </div>
             </article>
             <article className="pc-bonus-tour pc-bonus-tour-love" id="visit-love">
-              <div className="pc-bonus-tour-photo" style={{backgroundImage:"url('assets/photo/horses-mountain.jpg')"}}/>
+              <div className="pc-bonus-tour-photo" style={{backgroundImage:"url('assets/photo/nature-misty-bank.jpg')"}}/>
               <div className="pc-bonus-tour-body">
                 <div className="pc-bonus-tour-tag">Душа-тур · 3 или 5 дней</div>
-                <h3 className="pc-bonus-tour-h">Персональный<br/>Душа-тур</h3>
+                <h3 className="pc-bonus-tour-h">Душа-тур</h3>
                 <p className="pc-bonus-tour-d">
                   Семейный «очерышевывающий» тур. Знакомство с&nbsp;местными мастерами, хороводы, сплавы, баня, ужин с&nbsp;местными жителями.
                 </p>
