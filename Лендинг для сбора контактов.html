@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Усадьбы Чарыш — Алтай для искушённых</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="components/RapportStrip.jsx"></script>
+<script type="text/babel" src="components/Header.jsx"></script>
+<script type="text/babel" src="components/Hero.jsx"></script>
+<script type="text/babel" src="components/Manifest.jsx"></script>
+<script type="text/babel" src="components/Place.jsx"></script>
+<script type="text/babel" src="components/Houses.jsx"></script>
+<script type="text/babel" src="components/Community.jsx"></script>
+<script type="text/babel" src="components/Extras.jsx"></script>
+<script type="text/babel" src="components/Extras.jsx"></script>
+<script type="text/babel" src="components/Visit.jsx"></script>
+
+<script type="text/babel">
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "heroVariant": "A",
+  "heroPhoto": "assets\/photo\/upload-00105.jpg",
+  "tone": "warm",
+  "accent": "black",
+  "ornaments": true,
+  "typeSize": "s",
+  "cardStyle": "bordered"
+}/*EDITMODE-END*/;
+
+const HERO_PHOTOS = [
+  { v: '00105', src: 'assets/photo/upload-00105.jpg', label: 'Чарыш · осень (00105)' },
+  { v: 'upload-1', src: 'assets/photo/upload-1.jpg', label: 'Долина' },
+  { v: 'upload-2', src: 'assets/photo/upload-2.jpg', label: 'Река' },
+  { v: 'upload-3', src: 'assets/photo/upload-3.jpg', label: 'Горы' },
+  { v: 'upload-4', src: 'assets/photo/upload-4.jpg', label: 'Пейзаж' },
+  { v: 'river-summer', src: 'assets/photo/river-summer-1.jpg', label: 'Лето' },
+  { v: 'valley', src: 'assets/photo/valley-pavilion.jpg', label: 'Павильон' },
+];
+
+function App() {
+  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+
+  React.useEffect(() => {
+    const cls = ['tone-warm','tone-neutral','accent-red','accent-black','no-ornaments','type-s','type-m','type-l','cards-bordered','cards-filled','cards-shadow'];
+    cls.forEach(c => document.body.classList.remove(c));
+    document.body.classList.add(`tone-${t.tone}`);
+    document.body.classList.add(`accent-${t.accent}`);
+    document.body.classList.add(`type-${t.typeSize}`);
+    document.body.classList.add(`cards-${t.cardStyle}`);
+    if (!t.ornaments) document.body.classList.add('no-ornaments');
+  }, [t.tone, t.accent, t.typeSize, t.cardStyle, t.ornaments]);
+
+  // Reveal-on-scroll
+  React.useEffect(() => {
+    const els = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((es) => {
+      es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    els.forEach(el => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+
+  return (
+    <div data-screen-label="00 Charysh Investors Site">
+      <Header />
+
+      <Hero variant={t.heroVariant} heroPhoto={t.heroPhoto} ornaments={t.ornaments} />
+
+      <ManifestSection />
+
+      <PlaceSection />
+
+      {t.ornaments && <RapportStrip variant={2} tone="redOnWhite" height={48} />}
+
+      <HousesSection />
+
+      <MarketStats />
+
+      <CommunitySection />
+
+      <ReadinessSection />
+
+      <RoadSection />
+
+      <TeamStrip />
+
+      <VisitSection />
+
+      <ContactForm />
+
+      {t.ornaments && <RapportStrip variant={3} tone="goldOnBlack" height={56} />}
+
+      <Footer />
+
+      <TweaksPanel title="Tweaks">
+        <TweakSection title="Hero">
+          <TweakRadio label="Вариант" value={t.heroVariant} onChange={(v) => setTweak('heroVariant', v)}
+            options={[{value:'A',label:'Full-bleed'},{value:'B',label:'Split'},{value:'C',label:'Collage'}]} />
+          <TweakSelect label="Hero-фото" value={t.heroPhoto} onChange={(v) => setTweak('heroPhoto', v)}
+            options={HERO_PHOTOS.map(p => ({ value: p.src, label: p.label }))} />
+        </TweakSection>
+        <TweakSection title="Тон и цвет">
+          <TweakRadio label="Температура" value={t.tone} onChange={(v) => setTweak('tone', v)}
+            options={[{value:'neutral',label:'Нейтральная'},{value:'warm',label:'Тёплая'}]} />
+          <TweakRadio label="Акцент" value={t.accent} onChange={(v) => setTweak('accent', v)}
+            options={[{value:'red',label:'Красный'},{value:'black',label:'Чёрный'}]} />
+          <TweakToggle label="Раппорт-орнаменты" value={t.ornaments} onChange={(v) => setTweak('ornaments', v)} />
+        </TweakSection>
+        <TweakSection title="Типографика и карточки">
+          <TweakRadio label="Размер шрифта" value={t.typeSize} onChange={(v) => setTweak('typeSize', v)}
+            options={[{value:'s',label:'S'},{value:'m',label:'M'},{value:'l',label:'L'}]} />
+          <TweakSelect label="Карточки усадеб" value={t.cardStyle} onChange={(v) => setTweak('cardStyle', v)}
+            options={[
+              { value:'bordered', label:'Контурные' },
+              { value:'filled',   label:'С заливкой' },
+              { value:'shadow',   label:'С тенью' },
+            ]} />
+        </TweakSection>
+      </TweaksPanel>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

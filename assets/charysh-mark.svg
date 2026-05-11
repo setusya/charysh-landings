@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Charysh supporting graphic element">
+  
+  <g fill="currentColor">
+    <path d="M32 4 L60 32 L32 60 L4 32 Z"></path>
+    <path d="M32 14 L50 32 L32 50 L14 32 Z" fill="#fff"></path>
+    <rect x="30" y="20" width="4" height="24"></rect>
+    <rect x="20" y="30" width="24" height="4"></rect>
+  </g>
+</svg>

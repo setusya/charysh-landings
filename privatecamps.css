@@ -1,0 +1,2552 @@
+/* Charysh — Private Camp 2 speaker landing
+   Page-specific styles. Requires tokens.css + site.css loaded first. */
+
+/* ─────────── Big Altai — определение «что это» (3 cells) ─────────── */
+.pc-bigaltai-def {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,.25);
+  border-left: 1px solid rgba(255,255,255,.25);
+  margin: 16px 0 56px;
+}
+.pc-bigaltai-def-cell {
+  padding: 24px 22px 26px;
+  border-right: 1px solid rgba(255,255,255,.25);
+  border-bottom: 1px solid rgba(255,255,255,.25);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pc-bigaltai-def-l {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .55;
+}
+.pc-bigaltai-def-v {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 30px;
+  line-height: 1.05;
+  color: #f4c8a8;
+  margin: 4px 0 2px;
+}
+.pc-bigaltai-def-d {
+  font-size: var(--fs-spec);
+  line-height: 1.55;
+  opacity: .85;
+  margin-top: 4px;
+}
+@media (max-width: 880px) { .pc-bigaltai-def { grid-template-columns: 1fr; } }
+
+/* ─────────── Big Altai — 3 key stats внизу ─────────── */
+.pc-bigaltai-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+}
+.pc-bigaltai-stat {
+  padding: 28px 28px 30px;
+  border: 1px solid rgba(255,255,255,.2);
+  background: rgba(255,255,255,.04);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pc-bigaltai-stat-now    { background: rgba(244,200,168,.10); border-color: rgba(244,200,168,.3); }
+.pc-bigaltai-stat-target { background: var(--accent); border-color: var(--accent); }
+.pc-bigaltai-stat-v {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: clamp(48px, 6vw, 80px);
+  line-height: 1;
+  color: #fff;
+}
+.pc-bigaltai-stat-u {
+  font-family: 'Manrope', sans-serif;
+  font-size: var(--fs-lead);
+  opacity: .8;
+  margin-left: 6px;
+}
+.pc-bigaltai-stat-l {
+  font-size: var(--fs-spec);
+  line-height: 1.45;
+  margin-top: 8px;
+}
+.pc-bigaltai-stat-sub {
+  margin-top: auto;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: .04em;
+  opacity: .65;
+  padding-top: 12px;
+}
+.pc-bigaltai-stat-target .pc-bigaltai-stat-sub { opacity: .85; }
+@media (max-width: 880px) { .pc-bigaltai-stats { grid-template-columns: 1fr; } }
+
+/* Highlight target bar в chart */
+.pc-bar-target {
+  background: linear-gradient(180deg, #f4c8a8 0%, #c43d49 100%) !important;
+}
+.pc-bar-src {
+  display: block;
+  font-size: 10px;
+  letter-spacing: .04em;
+  opacity: .6;
+  margin-top: 2px;
+  text-transform: lowercase;
+}
+
+/* ─────────── Altai Boom — bar chart на тёмной секции ─────────── */
+.pc-chart-wrap {
+  margin: 56px 0 16px;
+  padding: 32px 28px 28px;
+  border: 1px solid rgba(255,255,255,.2);
+  background: rgba(255,255,255,.03);
+}
+.pc-chart-h {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: #f4c8a8;
+  margin-bottom: 24px;
+}
+.pc-chart {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+  align-items: end;
+  height: 240px;
+  border-bottom: 1px solid rgba(255,255,255,.25);
+  padding-bottom: 4px;
+}
+.pc-bar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+.pc-bar-value {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 18px;
+  color: #f4c8a8;
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+.pc-bar {
+  width: 100%;
+  background: linear-gradient(180deg, var(--accent) 0%, #c43d49 100%);
+  margin-top: auto;
+  min-height: 4px;
+  transition: height 800ms var(--ease);
+}
+.pc-bar-year {
+  position: absolute;
+  bottom: -28px;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .8;
+  font-variant-numeric: tabular-nums;
+}
+.pc-chart-src {
+  margin-top: 48px;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .5;
+}
+@media (max-width: 760px) {
+  .pc-chart { height: 180px; gap: 10px; }
+  .pc-bar-value { font-size: 14px; }
+}
+
+/* ─────────── Reality check — proof of viability (внутри Altai Boom) ─────────── */
+.pc-reality-check {
+  margin-top: 64px;
+  padding: 40px 36px 36px;
+  border: 2px solid var(--accent);
+  background: rgba(135,0,13,.12);
+}
+.pc-reality-eyebrow {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: #f4c8a8;
+  margin-bottom: 12px;
+}
+.pc-reality-h {
+  color: #fff;
+  margin: 0 0 16px;
+  max-width: 26ch;
+}
+.pc-reality-lead {
+  font-size: var(--fs-lead);
+  line-height: 1.55;
+  opacity: .92;
+  max-width: 60ch;
+  margin: 0 0 32px;
+}
+.pc-reality-lead strong {
+  color: #f4c8a8;
+  font-weight: 500;
+}
+.pc-reality-math {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,.25);
+  border-left: 1px solid rgba(255,255,255,.25);
+}
+.pc-reality-step {
+  padding: 22px 18px 24px;
+  border-right: 1px solid rgba(255,255,255,.25);
+  border-bottom: 1px solid rgba(255,255,255,.25);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 200px;
+}
+.pc-reality-step-l {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .55;
+}
+.pc-reality-step-v {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1;
+  color: #fff;
+  margin-top: 4px;
+}
+.pc-reality-step-d {
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+  opacity: .85;
+  margin-top: auto;
+}
+.pc-reality-step-final {
+  background: var(--accent);
+}
+.pc-reality-step-final .pc-reality-step-l { color: #f4c8a8; opacity: .95; }
+.pc-reality-step-final .pc-reality-step-v { color: #fff; font-size: clamp(36px, 4vw, 56px); }
+.pc-reality-foot {
+  margin-top: 24px;
+  font-size: var(--fs-spec);
+  line-height: 1.55;
+  opacity: .8;
+  max-width: 64ch;
+}
+.pc-reality-foot strong { color: #f4c8a8; font-weight: 500; }
+@media (max-width: 1100px) { .pc-reality-math { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px)  { .pc-reality-math { grid-template-columns: 1fr; } }
+
+/* ─────────── 3 сценария оборота (PCAltaiViability) ─────────── */
+.pc-scenarios-head { margin: 56px 0 24px; }
+.pc-scenarios-eyebrow {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: #f4c8a8;
+  margin-bottom: 10px;
+}
+.pc-scenarios-h {
+  color: #fff;
+  margin: 0;
+  max-width: 36ch;
+}
+.pc-scenarios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,.25);
+  border-left: 1px solid rgba(255,255,255,.25);
+}
+.pc-scenario {
+  padding: 24px 22px 28px;
+  border-right: 1px solid rgba(255,255,255,.25);
+  border-bottom: 1px solid rgba(255,255,255,.25);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.pc-scenario-tone-paper { background: rgba(255,255,255,.06); }
+.pc-scenario-tone-warm  { background: rgba(244,200,168,.10); }
+.pc-scenario-tone-ink   { background: var(--accent); }
+.pc-scenario-tag {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 26px;
+  line-height: 1.1;
+  color: #fff;
+}
+.pc-scenario-tone-ink .pc-scenario-tag { color: #fff; }
+.pc-scenario-sub {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: #f4c8a8;
+  opacity: .9;
+}
+.pc-scenario-tone-ink .pc-scenario-sub { color: #fff; opacity: .85; }
+.pc-scenario-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 12px 0;
+  border-top: 1px solid rgba(255,255,255,.18);
+  border-bottom: 1px solid rgba(255,255,255,.18);
+}
+.pc-scenario-meta > div { display: flex; flex-direction: column; gap: 2px; }
+.pc-scenario-meta-l {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .55;
+}
+.pc-scenario-meta-v {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 20px;
+  line-height: 1;
+  color: #fff;
+}
+.pc-scenario-mix {
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+  opacity: .82;
+}
+.pc-scenario-ramp {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255,255,255,.18);
+  border-bottom: 1px solid rgba(255,255,255,.18);
+  font-variant-numeric: tabular-nums;
+}
+.pc-scenario-ramp-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-spec);
+  padding: 3px 0;
+}
+.pc-scenario-ramp-y { opacity: .65; }
+.pc-scenario-ramp-v { opacity: .95; }
+.pc-scenario-totals {
+  margin-top: auto;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pc-scenario-target,
+.pc-scenario-cum {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.pc-scenario-target-l,
+.pc-scenario-cum-l {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .6;
+}
+.pc-scenario-target-v {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 24px;
+  line-height: 1;
+  color: #f4c8a8;
+}
+.pc-scenario-cum-v {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: clamp(28px, 3vw, 36px);
+  line-height: 1;
+  color: #fff;
+}
+.pc-scenario-tone-ink .pc-scenario-target-v { color: #fff; opacity: .9; }
+.pc-scenario-tone-ink .pc-scenario-cum-v { color: #fff; }
+@media (max-width: 980px) { .pc-scenarios-grid { grid-template-columns: 1fr; } }
+
+/* ─────────── Money block — оборот при ADR 15 000 ₽ ─────────── */
+.pc-money-block {
+  margin: 36px 0 24px;
+  padding: 28px 28px 24px;
+  border: 1px solid rgba(255,255,255,.25);
+  background: rgba(0,0,0,.25);
+}
+.pc-money-eyebrow {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: #f4c8a8;
+  margin-bottom: 10px;
+}
+.pc-money-h {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: clamp(22px, 2.3vw, 32px);
+  line-height: 1.2;
+  color: #fff;
+  margin: 0 0 24px;
+}
+.pc-money-table {
+  display: flex;
+  flex-direction: column;
+  font-variant-numeric: tabular-nums;
+}
+.pc-money-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid rgba(255,255,255,.18);
+  font-size: var(--fs-spec);
+  align-items: baseline;
+}
+.pc-money-row:last-child { border-bottom: 1px solid rgba(255,255,255,.18); }
+.pc-money-head {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .55;
+  border-top: 0;
+  padding-bottom: 6px;
+}
+.pc-money-row-target {
+  background: rgba(244,200,168,.08);
+  margin: 0 -12px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.pc-money-row-target div { color: #fff; }
+.pc-money-total {
+  background: var(--accent);
+  margin: 0 -12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: var(--fs-body-s);
+}
+.pc-money-total div { color: #fff; }
+.pc-money-total strong { color: #fff; font-weight: 500; }
+.pc-money-note {
+  margin-top: 16px;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: .04em;
+  line-height: 1.55;
+  opacity: .7;
+}
+@media (max-width: 760px) {
+  .pc-money-row { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .pc-money-head { display: none; }
+}
+
+/* ─────────── Speaker — Светлана Антонова (slide 02) ─────────── */
+.pc-speaker-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.2fr;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: start;
+}
+.pc-speaker-photo {
+  margin: 0;
+  position: relative;
+}
+.pc-speaker-photo img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  display: block;
+}
+.pc-speaker-cap {
+  position: absolute;
+  left: 18px;
+  bottom: 16px;
+  color: #fff;
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 22px;
+  text-shadow: 0 1px 12px rgba(0,0,0,.7);
+}
+.pc-speaker-body {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 4px;
+}
+.pc-speaker-tagline {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 16px;
+}
+.pc-speaker-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pc-speaker-block-h {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 22px;
+  line-height: 1.15;
+}
+.pc-speaker-list {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: var(--fs-body-s);
+  line-height: 1.55;
+}
+.pc-speaker-list li {
+  padding-left: 16px;
+  position: relative;
+  opacity: .9;
+}
+.pc-speaker-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  opacity: .55;
+}
+.pc-speaker-list li strong { font-weight: 500; color: var(--accent); }
+.pc-speaker-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+.pc-speaker-tag-group {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 16px;
+  font-size: var(--fs-spec);
+  align-items: baseline;
+}
+.pc-speaker-tag-l {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .55;
+}
+.pc-speaker-tag-v { line-height: 1.5; opacity: .9; }
+@media (max-width: 880px) {
+  .pc-speaker-grid { grid-template-columns: 1fr; }
+  .pc-speaker-tag-group { grid-template-columns: 1fr; gap: 4px; }
+}
+
+/* ─────────── Location (where is Charysh) ─────────── */
+.pc-location-photo { min-height: 78vh; }
+.pc-location-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  margin-top: 0;
+}
+.pc-location-cell {
+  padding: 28px 24px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 200px;
+}
+.pc-location-num {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  opacity: .5;
+}
+.pc-location-city {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 22px;
+  line-height: 1.1;
+  margin-top: 6px;
+}
+.pc-location-t {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: clamp(40px, 4.5vw, 56px);
+  line-height: 1;
+  color: var(--accent);
+  margin-top: 10px;
+}
+.pc-location-sub {
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+  opacity: .75;
+  margin-top: auto;
+}
+.pc-location-narrative {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 80px);
+  padding: clamp(48px, 7vw, 96px) 0 clamp(72px, 9vw, 128px);
+}
+.pc-location-narrative .format-h { color: var(--accent); }
+@media (max-width: 980px) { .pc-location-grid { grid-template-columns: 1fr 1fr; } .pc-location-narrative { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .pc-location-grid { grid-template-columns: 1fr; } }
+
+/* ─────────── Master Plan — 6 sectors ─────────── */
+.pc-sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.pc-sector-card {
+  padding: 28px 26px 24px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 280px;
+  background: var(--paper);
+  position: relative;
+}
+.pc-sector-num {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 36px;
+  line-height: 1;
+  color: var(--accent);
+  opacity: .85;
+}
+.pc-sector-name {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 24px;
+  line-height: 1.1;
+  margin-top: 8px;
+}
+.pc-sector-sub {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .55;
+}
+.pc-sector-d {
+  font-size: var(--fs-spec);
+  line-height: 1.55;
+  opacity: .82;
+  margin: 8px 0 0;
+}
+.pc-sector-status {
+  margin-top: auto;
+  padding-top: 14px;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: .8;
+}
+@media (max-width: 980px) { .pc-sectors-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .pc-sectors-grid { grid-template-columns: 1fr; } }
+
+/* ─────────── Master Plan Detail — 2 columns deep dive ─────────── */
+.pc-mp-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 4vw, 64px);
+}
+.pc-mp-col-head {
+  border-top: 2px solid var(--ink);
+  padding-top: 16px;
+  margin-bottom: 20px;
+}
+.pc-mp-col-tag {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .55;
+}
+.pc-mp-col-title {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 32px;
+  line-height: 1.1;
+  margin: 6px 0 4px;
+}
+.pc-mp-col-sub {
+  font-size: var(--fs-spec);
+  opacity: .75;
+  margin-bottom: 10px;
+}
+.pc-mp-blocks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.pc-mp-block {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 16px;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  align-items: start;
+}
+.pc-mp-block:last-child { border-bottom: 1px solid var(--line); }
+.pc-mp-block-tag {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  padding-top: 4px;
+}
+.pc-mp-block-name {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 20px;
+  line-height: 1.15;
+}
+.pc-mp-block-d {
+  font-size: var(--fs-spec);
+  line-height: 1.55;
+  opacity: .8;
+  margin-top: 4px;
+}
+.pc-mp-foot {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: var(--fs-spec);
+  line-height: 1.55;
+  opacity: .8;
+}
+.pc-mp-foot strong {
+  font-weight: 500;
+  color: var(--accent);
+}
+@media (max-width: 980px) {
+  .pc-mp-detail-grid { grid-template-columns: 1fr; gap: 48px; }
+  .pc-mp-block { grid-template-columns: 90px 1fr; gap: 12px; }
+}
+
+/* ─────────── Year-round seasons ─────────── */
+.pc-seasons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.pc-season {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px 0 0;
+  border-top: 2px solid var(--ink);
+}
+.pc-season-num {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .55;
+}
+.pc-season-name {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 32px;
+  line-height: 1;
+  margin-top: 4px;
+}
+.pc-season-sub {
+  font-size: var(--fs-spec);
+  opacity: .65;
+  margin-bottom: 12px;
+}
+.pc-season-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+}
+.pc-season-list li {
+  padding-left: 14px;
+  position: relative;
+  opacity: .85;
+}
+.pc-season-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  opacity: .5;
+}
+@media (max-width: 980px) { .pc-seasons-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .pc-seasons-grid { grid-template-columns: 1fr; } }
+
+/* ─────────── Resident portraits ─────────── */
+.pc-residents-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.pc-resident {
+  padding: 28px 24px 32px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 280px;
+}
+.pc-resident-num {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  opacity: .5;
+  font-variant-numeric: tabular-nums;
+}
+.pc-resident-t {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 26px;
+  line-height: 1.1;
+  margin-top: 4px;
+}
+.pc-resident-age {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .55;
+  margin-top: -2px;
+}
+.pc-resident-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+}
+.pc-resident-list li {
+  padding-left: 14px;
+  position: relative;
+  opacity: .82;
+}
+.pc-resident-list li::before {
+  content: '·';
+  position: absolute;
+  left: 4px;
+  font-weight: 700;
+  color: var(--accent);
+}
+@media (max-width: 980px) { .pc-residents-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .pc-residents-grid { grid-template-columns: 1fr; } }
+
+/* ─────────── Three Securities (dark section) ─────────── */
+.pc-security-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,.2);
+  border-left: 1px solid rgba(255,255,255,.2);
+  margin-top: 16px;
+}
+.pc-security-col {
+  padding: 32px 28px 36px;
+  border-right: 1px solid rgba(255,255,255,.2);
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 360px;
+}
+.pc-security-num {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  opacity: .5;
+}
+.pc-security-h {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 26px;
+  line-height: 1.1;
+  color: #fff;
+  margin-top: 4px;
+}
+.pc-security-sub {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: #f4c8a8;
+  opacity: .85;
+}
+.pc-security-list {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+}
+.pc-security-list li {
+  padding-left: 16px;
+  position: relative;
+  opacity: .85;
+}
+.pc-security-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  opacity: .5;
+}
+@media (max-width: 980px) { .pc-security-grid { grid-template-columns: 1fr; } }
+
+/* ─────────── Economics — uses .climate-grid override ─────────── */
+.pc-economics-grid .climate-value {
+  font-size: clamp(40px, 5vw, 64px);
+}
+
+/* ─────────── Entry Formats ─────────── */
+.pc-formats-list {
+  display: flex;
+  flex-direction: column;
+}
+.pc-format-row {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 24px;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+  align-items: start;
+}
+.pc-format-row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.pc-format-num {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 36px;
+  line-height: 1;
+  opacity: .85;
+}
+.pc-format-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pc-format-head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.pc-format-t {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 26px;
+  line-height: 1.1;
+}
+.pc-format-sub {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.pc-format-d {
+  font-size: var(--fs-spec);
+  line-height: 1.55;
+  opacity: .8;
+  max-width: 78ch;
+}
+
+/* ─────────── Co-partnership grid ─────────── */
+.pc-cop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.pc-cop-cell {
+  padding: 28px 24px 30px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 200px;
+}
+.pc-cop-num {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  opacity: .5;
+}
+.pc-cop-t {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 22px;
+  line-height: 1.15;
+  margin-top: 2px;
+}
+.pc-cop-d {
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+  opacity: .8;
+  margin-top: auto;
+}
+@media (max-width: 980px) { .pc-cop-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .pc-cop-grid { grid-template-columns: 1fr; } }
+
+/* ─────────── Legal ─────────── */
+.pc-legal-banner {
+  background: var(--ink);
+  color: #fff;
+  padding: 24px 28px;
+  font-size: var(--fs-meta);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.pc-legal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.pc-legal-col {
+  padding: 28px 24px 30px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 280px;
+}
+.pc-legal-num {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  opacity: .5;
+}
+.pc-legal-h {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 22px;
+  line-height: 1.15;
+}
+.pc-legal-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+}
+.pc-legal-list li {
+  padding-left: 18px;
+  position: relative;
+  opacity: .82;
+}
+.pc-legal-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+@media (max-width: 980px) { .pc-legal-grid { grid-template-columns: 1fr; } }
+
+/* ─────────── Roadmap ─────────── */
+.pc-roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+.pc-stage {
+  padding: 28px 22px 32px;
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+.pc-stage:last-child { border-right: 0; }
+.pc-stage-active::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent);
+}
+.pc-stage-active .pc-stage-when { color: var(--accent); }
+.pc-stage-n {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 36px;
+  line-height: 1;
+  opacity: .65;
+}
+.pc-stage-when {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .65;
+  margin-top: 6px;
+}
+.pc-stage-t {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 22px;
+  line-height: 1.15;
+  margin-top: 4px;
+}
+.pc-stage-list {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+}
+.pc-stage-list li {
+  padding-left: 14px;
+  position: relative;
+  opacity: .82;
+}
+.pc-stage-list li::before {
+  content: '·';
+  position: absolute;
+  left: 4px;
+  color: var(--accent);
+  font-weight: 700;
+}
+@media (max-width: 980px) {
+  .pc-roadmap-grid { grid-template-columns: 1fr 1fr; }
+  .pc-stage:nth-child(odd) { border-right: 1px solid var(--line); }
+  .pc-stage:nth-child(even) { border-right: 0; }
+  .pc-stage:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+}
+@media (max-width: 560px) {
+  .pc-roadmap-grid { grid-template-columns: 1fr; }
+  .pc-stage { border-right: 0 !important; border-bottom: 1px solid var(--line); }
+  .pc-stage:last-child { border-bottom: 0; }
+}
+
+/* ─────────── Team — 3-column override for PC ─────────── */
+.pc-team-grid { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 980px) { .pc-team-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .pc-team-grid { grid-template-columns: 1fr; } }
+
+/* Ambassadors */
+.pc-amb-head {
+  margin-top: 80px;
+  margin-bottom: 32px;
+}
+.pc-amb-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.pc-amb-cell {
+  padding: 28px 24px 30px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 220px;
+}
+.pc-amb-num {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  opacity: .5;
+}
+.pc-amb-name {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 24px;
+  margin-top: 4px;
+}
+.pc-amb-role {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .55;
+}
+.pc-amb-d {
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+  opacity: .8;
+  margin-top: 10px;
+}
+@media (max-width: 980px) { .pc-amb-grid { grid-template-columns: 1fr; } }
+
+/* ─────────── Bonus section (Private Camp exclusive) ─────────── */
+.pc-bonus-section {
+  background: var(--accent);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.pc-bonus-frame {
+  position: relative;
+  z-index: 2;
+}
+.pc-bonus-h {
+  color: #fff;
+  margin-top: 12px;
+  max-width: 22ch;
+}
+.pc-bonus-h .redword-light { color: #f4c8a8; }
+.pc-bonus-lead {
+  font-size: var(--fs-lead);
+  line-height: 1.55;
+  opacity: .92;
+  max-width: 56ch;
+  margin: 24px 0 48px;
+}
+.pc-bonus-tours {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 8px;
+}
+.pc-bonus-tour {
+  padding: 32px 28px;
+  border: 1px solid rgba(255,255,255,.35);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 460px;
+}
+.pc-bonus-tour-invest { background: rgba(255,255,255,.05); }
+.pc-bonus-tour-love   { background: rgba(0,0,0,.18); }
+.pc-bonus-tour-tag {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: #f4c8a8;
+}
+.pc-bonus-tour-h {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.05;
+  color: #fff;
+  margin: 4px 0 0;
+}
+.pc-bonus-tour-d {
+  font-size: var(--fs-body-s);
+  line-height: 1.55;
+  opacity: .92;
+  margin: 0;
+  max-width: 44ch;
+}
+.pc-bonus-tour-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+  border-top: 1px solid rgba(255,255,255,.2);
+  padding-top: 16px;
+}
+.pc-bonus-tour-list li {
+  padding-left: 14px;
+  position: relative;
+  opacity: .9;
+}
+.pc-bonus-tour-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  opacity: .5;
+}
+.pc-bonus-tour-foot {
+  margin-top: auto;
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+.pc-bonus-tour-foot .btn-light {
+  background: #fff;
+  color: var(--accent);
+  border-color: #fff;
+}
+.pc-bonus-tour-foot .btn-light:hover {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+.pc-bonus-tour-meta {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .75;
+}
+@media (max-width: 880px) { .pc-bonus-tours { grid-template-columns: 1fr; } }
+
+/* Legacy 4-card bonus grid (no longer used after split) */
+.pc-bonus-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,.3);
+  border-left: 1px solid rgba(255,255,255,.3);
+  margin-bottom: 40px;
+}
+.pc-bonus-cell {
+  padding: 24px 22px 28px;
+  border-right: 1px solid rgba(255,255,255,.3);
+  border-bottom: 1px solid rgba(255,255,255,.3);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 220px;
+}
+.pc-bonus-num {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 28px;
+  line-height: 1;
+  color: #f4c8a8;
+}
+.pc-bonus-t {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 20px;
+  line-height: 1.15;
+  color: #fff;
+  margin-top: 4px;
+}
+.pc-bonus-d {
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+  opacity: .9;
+  margin-top: auto;
+}
+.pc-bonus-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.pc-bonus-cta-row .btn-light {
+  background: #fff;
+  color: var(--accent);
+  border-color: #fff;
+}
+.pc-bonus-cta-row .btn-light:hover {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+.pc-bonus-deadline {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .85;
+}
+@media (max-width: 980px) { .pc-bonus-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .pc-bonus-grid { grid-template-columns: 1fr; } }
+
+/* Bonus section override for crumb on red bg — already inline in component */
+.pc-bonus-section .crumb { color: rgba(255,255,255,.7) !important; }
+
+/* ─────────── PEOPLE — «Чарыш это люди» ─────────── */
+.pc-people-section { background: var(--paper); }
+.pc-people-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 220px;
+  gap: 12px;
+  margin-top: 16px;
+}
+.pc-people-fig {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  background: #1a1611;
+}
+.pc-people-fig img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 800ms var(--ease);
+}
+.pc-people-fig:hover img { transform: scale(1.04); }
+.pc-people-fig figcaption {
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+  right: 14px;
+  color: #fff;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  text-shadow: 0 1px 12px rgba(0,0,0,.7);
+  line-height: 1.3;
+}
+.pc-people-fig-hero { grid-column: span 4; grid-row: span 2; }
+.pc-people-fig-2    { grid-column: span 2; grid-row: span 2; }
+.pc-people-fig-3    { grid-column: span 2; }
+.pc-people-fig-4    { grid-column: span 2; }
+.pc-people-fig-5    { grid-column: span 2; }
+.pc-people-fig-6    { grid-column: span 2; }
+.pc-people-fig-7    { grid-column: span 4; }
+.pc-people-quote {
+  margin: 64px auto 0;
+  max-width: 64ch;
+  text-align: center;
+  position: relative;
+  padding: 0 24px;
+}
+.pc-people-quote-mark {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 96px;
+  line-height: 1;
+  color: var(--accent);
+  margin-bottom: -24px;
+}
+.pc-people-quote-text {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: clamp(24px, 2.6vw, 36px);
+  line-height: 1.25;
+  color: var(--ink);
+}
+.pc-people-quote-by {
+  margin-top: 18px;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .6;
+}
+@media (max-width: 980px) {
+  .pc-people-grid { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 180px; }
+  .pc-people-fig-hero { grid-column: span 4; grid-row: span 2; }
+  .pc-people-fig-2    { grid-column: span 4; grid-row: span 1; }
+  .pc-people-fig-3, .pc-people-fig-4, .pc-people-fig-5, .pc-people-fig-6 { grid-column: span 2; }
+  .pc-people-fig-7    { grid-column: span 4; }
+}
+@media (max-width: 560px) {
+  .pc-people-grid { grid-template-columns: 1fr; }
+  .pc-people-fig-hero, .pc-people-fig-2, .pc-people-fig-3, .pc-people-fig-4, .pc-people-fig-5, .pc-people-fig-6, .pc-people-fig-7 { grid-column: 1; grid-row: auto; }
+}
+
+/* ─────────── Year-round seasons — POSTER (4 large cards) ─────────── */
+.pc-poster-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.pc-poster-card { margin: 0; position: relative; overflow: hidden; }
+.pc-poster-photo {
+  aspect-ratio: 3/4;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform 800ms var(--ease);
+}
+.pc-poster-card:hover .pc-poster-photo { transform: scale(1.03); }
+.pc-poster-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(0,0,0,0) 35%, rgba(0,0,0,.7) 100%);
+}
+.pc-poster-cap {
+  position: absolute; left: 22px; right: 22px; bottom: 22px;
+  color: #fff;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.pc-poster-num {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .75;
+}
+.pc-poster-name {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1;
+  margin-top: 4px;
+}
+.pc-poster-sub {
+  font-size: var(--fs-spec);
+  opacity: .85;
+  margin-top: 6px;
+}
+@media (max-width: 980px) { .pc-poster-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .pc-poster-grid { grid-template-columns: 1fr; } }
+
+/* ─────────── Activities — 6 categories grid ─────────── */
+.pc-activities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.pc-activity-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+}
+.pc-activity-photo {
+  aspect-ratio: 16/10;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.pc-activity-num {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  color: #fff;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-shadow: 0 1px 8px rgba(0,0,0,.6);
+}
+.pc-activity-body {
+  padding: 22px 22px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.pc-activity-tag {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 26px;
+  line-height: 1.1;
+  color: var(--ink);
+}
+.pc-activity-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+}
+.pc-activity-list li {
+  padding-left: 14px;
+  position: relative;
+  opacity: .85;
+}
+.pc-activity-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  opacity: .5;
+}
+@media (max-width: 1100px) { .pc-activities-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px)  { .pc-activities-grid { grid-template-columns: 1fr; } }
+
+/* ─────────── Residents strip (4 portrait thumbnails above the grid) ─────────── */
+.pc-residents-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.pc-residents-strip figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  background: #1a1611;
+}
+.pc-residents-strip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 800ms var(--ease);
+}
+.pc-residents-strip figure:hover img { transform: scale(1.04); }
+.pc-residents-strip figcaption {
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+  right: 14px;
+  color: #fff;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  text-shadow: 0 1px 12px rgba(0,0,0,.7);
+}
+@media (max-width: 880px) { .pc-residents-strip { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .pc-residents-strip { grid-template-columns: 1fr; } }
+
+/* ─────────── Built strip (location proof above stats) ─────────── */
+.pc-built-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 48px;
+}
+.pc-built-strip figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: #0a0a0a;
+}
+.pc-built-strip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .92;
+  transition: transform 800ms var(--ease), opacity 240ms var(--ease);
+}
+.pc-built-strip figure:hover img { transform: scale(1.04); opacity: 1; }
+.pc-built-strip figcaption {
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+  color: #fff;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  text-shadow: 0 1px 12px rgba(0,0,0,.7);
+}
+@media (max-width: 880px) { .pc-built-strip { grid-template-columns: 1fr 1fr; } }
+
+/* ─────────── Eras (10 000 лет на одной долине — 4-card grid with photos) ─────────── */
+.pc-eras-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+.pc-era-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  border-top: 2px solid var(--ink);
+}
+.pc-era-photo {
+  aspect-ratio: 4/5;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--paper-2);
+}
+.pc-era-body {
+  padding: 18px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pc-era-era {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .55;
+}
+.pc-era-who {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 28px;
+  line-height: 1.1;
+  color: var(--ink);
+}
+.pc-era-t {
+  font-size: var(--fs-spec);
+  line-height: 1.55;
+  opacity: .82;
+  margin-top: 4px;
+}
+@media (max-width: 980px) { .pc-eras-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .pc-eras-grid { grid-template-columns: 1fr; } }
+
+/* ─────────── House renders — show whole house, not cropped ─────────── */
+.house-photo-lg,
+.house-photo {
+  background-size: contain !important;
+  background-repeat: no-repeat;
+  background-color: var(--paper-2);
+  background-position: center;
+}
+
+/* ─────────── Showcase (full-bleed retreat) ─────────── */
+.pc-showcase-photo { min-height: 86vh; }
+
+/* ─────────── Three Forms Fork ─────────── */
+.pc-forms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.pc-form-card {
+  padding: 32px 28px 36px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 480px;
+  position: relative;
+}
+.pc-form-tone-paper { background: var(--paper); color: var(--ink); }
+.pc-form-tone-warm  { background: var(--paper-2); color: var(--ink); }
+.pc-form-tone-ink   { background: var(--ink); color: #fff; }
+.pc-form-tone-ink   .pc-form-tag { color: #f4c8a8; }
+.pc-form-tone-ink   .pc-form-cta { background: #fff; color: var(--ink); border-color: #fff; }
+.pc-form-tone-ink   .pc-form-cta:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.pc-form-tone-ink   .pc-form-ticket-l { opacity: .65; }
+.pc-form-letter {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 96px;
+  line-height: 1;
+  position: absolute;
+  top: 16px;
+  right: 22px;
+  opacity: .12;
+  pointer-events: none;
+}
+.pc-form-tone-ink .pc-form-letter { opacity: .25; color: #f4c8a8; }
+.pc-form-tag {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+  position: relative; z-index: 2;
+}
+.pc-form-title {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 30px;
+  line-height: 1.1;
+  margin: 6px 0 0;
+  position: relative; z-index: 2;
+}
+.pc-form-sub {
+  font-size: var(--fs-spec);
+  opacity: .8;
+  position: relative; z-index: 2;
+}
+.pc-form-list {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+  position: relative; z-index: 2;
+}
+.pc-form-list li {
+  padding-left: 16px;
+  position: relative;
+  opacity: .85;
+}
+.pc-form-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  opacity: .5;
+}
+.pc-form-ticket {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid currentColor;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  opacity: 1;
+}
+.pc-form-ticket-l {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .6;
+}
+.pc-form-ticket-v {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 28px;
+  line-height: 1;
+  color: var(--accent);
+}
+.pc-form-tone-ink .pc-form-ticket-v { color: #f4c8a8; }
+.pc-form-cta {
+  margin-top: 18px;
+  align-self: flex-start;
+  position: relative; z-index: 2;
+}
+@media (max-width: 980px) { .pc-forms-grid { grid-template-columns: 1fr; } }
+
+/* ─────────── Form B objects grid ─────────── */
+.pc-objects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+.pc-object-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 0;
+}
+.pc-object-photo {
+  aspect-ratio: auto;
+  min-height: 340px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.pc-object-num {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  color: #fff;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-shadow: 0 1px 8px rgba(0,0,0,.6);
+}
+.pc-object-tag {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: var(--accent);
+  color: #fff;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  padding: 6px 10px;
+}
+.pc-object-body {
+  padding: 24px 24px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pc-object-name {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 28px;
+  margin: 0;
+  line-height: 1.1;
+}
+.pc-object-sub {
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+  opacity: .75;
+}
+.pc-object-d {
+  font-size: var(--fs-spec);
+  line-height: 1.55;
+  opacity: .85;
+  margin: 4px 0 0;
+}
+.pc-object-facts {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: var(--fs-spec);
+}
+.pc-object-fact {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding: 6px 0;
+}
+.pc-object-fact-l { opacity: .6; }
+.pc-object-fact-v { font-variant-numeric: tabular-nums; }
+@media (max-width: 1100px) {
+  .pc-object-card { grid-template-columns: 1fr; }
+  .pc-object-photo { min-height: 260px; }
+}
+@media (max-width: 760px) {
+  .pc-objects-grid { grid-template-columns: 1fr; }
+}
+
+/* ─────────── Construction Timeline (модульный/капитальный) ─────────── */
+.pc-construction-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+.pc-construction-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+}
+.pc-construction-photo {
+  aspect-ratio: 16/10;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--paper-2);
+  position: relative;
+}
+.pc-construction-months {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 16px 10px;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-family: 'Dobrozrachniy', serif;
+}
+.pc-construction-months-n { font-size: 36px; line-height: 1; }
+.pc-construction-months-u {
+  font-size: var(--fs-spec);
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: .04em;
+  opacity: .9;
+}
+.pc-construction-body {
+  padding: 24px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pc-construction-tag {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 28px;
+  line-height: 1.1;
+}
+.pc-construction-sub {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.pc-construction-d {
+  font-size: var(--fs-spec);
+  line-height: 1.55;
+  opacity: .82;
+  margin: 4px 0 0;
+}
+.pc-construction-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+}
+.pc-construction-list li {
+  padding-left: 14px;
+  position: relative;
+  opacity: .85;
+}
+.pc-construction-list li::before { content: '—'; position: absolute; left: 0; opacity: .5; }
+.pc-construction-foot {
+  margin-top: 48px;
+  padding: 28px 28px 30px;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+}
+.pc-construction-foot-h {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.pc-construction-foot-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  font-size: var(--fs-spec);
+  line-height: 1.55;
+}
+.pc-construction-foot-grid strong {
+  display: block;
+  font-family: 'Dobrozrachniy', serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+@media (max-width: 980px) { .pc-construction-grid { grid-template-columns: 1fr; } .pc-construction-foot-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .pc-construction-foot-grid { grid-template-columns: 1fr; } }
+
+/* ─────────── Announce — КФХ ─────────── */
+.pc-announce-frame { max-width: 1200px; }
+.pc-announce-eyebrow {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.pc-announce-h { margin: 0 0 20px; max-width: 24ch; }
+.pc-announce-lead {
+  font-size: var(--fs-lead);
+  line-height: 1.55;
+  opacity: .85;
+  max-width: 64ch;
+  margin: 0 0 36px;
+}
+.pc-announce-lead strong { color: var(--accent); font-weight: 500; }
+.pc-announce-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  margin-bottom: 32px;
+}
+.pc-announce-cell {
+  padding: 24px 20px 26px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 220px;
+  background: var(--paper);
+}
+.pc-announce-cell-l {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .55;
+}
+.pc-announce-cell-v {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 22px;
+  line-height: 1.15;
+  color: var(--accent);
+}
+.pc-announce-cell-d {
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+  opacity: .82;
+  margin-top: 6px;
+}
+.pc-announce-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.pc-announce-meta {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .65;
+}
+@media (max-width: 980px) { .pc-announce-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .pc-announce-grid { grid-template-columns: 1fr; } }
+
+/* ─────────── Form C — editorial showcase 6 объектов ретрит-зоны ─────────── */
+.pc-retreat-showcase-h {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: #f4c8a8;
+  margin: 56px 0 16px;
+}
+.pc-retreat-showcase {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+.pc-retreat-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.18);
+  overflow: hidden;
+  transition: transform 400ms var(--ease), border-color 400ms var(--ease);
+}
+.pc-retreat-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(244,200,168,.45);
+}
+/* HERO card — 4 cols × 2 rows · big retreat-center на всю высоту */
+.pc-retreat-card-hero { grid-column: span 4; grid-row: span 2; }
+.pc-retreat-card-hero .pc-retreat-photo { aspect-ratio: 16/9; }
+.pc-retreat-card-hero .pc-retreat-name { font-size: clamp(32px, 3.4vw, 44px); }
+.pc-retreat-card-hero .pc-retreat-d { font-size: var(--fs-body-s); max-width: 56ch; }
+/* WIDE card — 2 cols × 2 rows · banya */
+.pc-retreat-card-wide { grid-column: span 2; grid-row: span 2; }
+.pc-retreat-card-wide .pc-retreat-photo { aspect-ratio: 4/5; }
+/* STD card — 3 cols · 4 объекта в 2 ряда по 2 (legacy, не используется сейчас) */
+.pc-retreat-card-std { grid-column: span 3; }
+.pc-retreat-card-std .pc-retreat-photo { aspect-ratio: 16/9; }
+/* FULL card — 6 cols full row · для 4 ретрит-дома */
+.pc-retreat-card-full { grid-column: span 6; }
+.pc-retreat-card-full { display: grid; grid-template-columns: 1.4fr 1fr; }
+.pc-retreat-card-full .pc-retreat-photo { aspect-ratio: 21/9; min-height: 320px; }
+.pc-retreat-card-full .pc-retreat-name { font-size: clamp(28px, 3vw, 36px); }
+@media (max-width: 880px) {
+  .pc-retreat-card-full { grid-template-columns: 1fr; }
+  .pc-retreat-card-full .pc-retreat-photo { min-height: 220px; }
+}
+
+.pc-retreat-photo {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  flex: 0 0 auto;
+}
+.pc-retreat-num {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  color: #fff;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-shadow: 0 1px 8px rgba(0,0,0,.7);
+  font-variant-numeric: tabular-nums;
+}
+.pc-retreat-tag {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  background: var(--accent);
+  color: #fff;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  padding: 6px 10px;
+}
+.pc-retreat-body {
+  padding: 20px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1 1 auto;
+}
+.pc-retreat-name {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 24px;
+  line-height: 1.1;
+  color: #fff;
+  margin: 0;
+}
+.pc-retreat-d {
+  font-size: var(--fs-spec);
+  line-height: 1.55;
+  opacity: .85;
+  margin: 4px 0 0;
+}
+.pc-retreat-facts {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,.15);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: var(--fs-spec);
+  font-variant-numeric: tabular-nums;
+}
+.pc-retreat-fact {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+.pc-retreat-fact-l { opacity: .65; }
+.pc-retreat-fact-v { color: #f4c8a8; }
+.pc-retreat-foot {
+  margin-top: 24px;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: .04em;
+  line-height: 1.6;
+  opacity: .75;
+}
+.pc-retreat-foot strong { color: #f4c8a8; font-weight: 500; }
+
+@media (max-width: 1100px) {
+  .pc-retreat-showcase { grid-template-columns: repeat(4, 1fr); }
+  .pc-retreat-card-hero { grid-column: span 4; grid-row: span 1; }
+  .pc-retreat-card-hero .pc-retreat-photo { aspect-ratio: 21/9; }
+  .pc-retreat-card-wide { grid-column: span 2; grid-row: span 1; }
+  .pc-retreat-card-wide .pc-retreat-photo { aspect-ratio: 16/10; }
+  .pc-retreat-card-std { grid-column: span 2; }
+}
+@media (max-width: 560px) {
+  .pc-retreat-showcase { grid-template-columns: 1fr; }
+  .pc-retreat-card-hero, .pc-retreat-card-wide, .pc-retreat-card-std { grid-column: 1; grid-row: auto; }
+}
+
+/* ─────────── Form C — visual gallery (6 photos) ─────────── */
+.pc-equity-gallery-wrap { margin-top: 56px; }
+.pc-equity-gallery-h {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: #f4c8a8;
+  margin-bottom: 16px;
+}
+.pc-equity-gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 200px;
+  gap: 10px;
+}
+.pc-equity-fig {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  background: #1a1611;
+}
+.pc-equity-fig img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 800ms var(--ease);
+}
+.pc-equity-fig:hover img { transform: scale(1.04); }
+.pc-equity-fig figcaption {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  right: 12px;
+  color: #fff;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  text-shadow: 0 1px 12px rgba(0,0,0,.7);
+  line-height: 1.3;
+}
+.pc-equity-fig-1 { grid-column: span 4; grid-row: span 2; }
+.pc-equity-fig-2 { grid-column: span 2; grid-row: span 2; }
+.pc-equity-fig-3 { grid-column: span 3; }
+.pc-equity-fig-4 { grid-column: span 3; }
+.pc-equity-fig-5 { grid-column: span 3; }
+.pc-equity-fig-6 { grid-column: span 3; }
+@media (max-width: 980px) {
+  .pc-equity-gallery { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 160px; }
+  .pc-equity-fig-1 { grid-column: span 4; grid-row: span 2; }
+  .pc-equity-fig-2 { grid-column: span 4; grid-row: span 1; }
+  .pc-equity-fig-3, .pc-equity-fig-4, .pc-equity-fig-5, .pc-equity-fig-6 { grid-column: span 2; }
+}
+@media (max-width: 560px) {
+  .pc-equity-gallery { grid-template-columns: 1fr; }
+  .pc-equity-fig-1, .pc-equity-fig-2, .pc-equity-fig-3, .pc-equity-fig-4, .pc-equity-fig-5, .pc-equity-fig-6 { grid-column: 1; grid-row: auto; }
+}
+
+/* ─────────── Form C — 3 detailed object cards ─────────── */
+.pc-equity-objects-h {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: #f4c8a8;
+  margin: 56px 0 16px;
+}
+.pc-equity-objects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.pc-equity-object {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.18);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.pc-equity-object-photo {
+  aspect-ratio: 16/10;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.pc-equity-object-num {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  color: #fff;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-shadow: 0 1px 8px rgba(0,0,0,.7);
+}
+.pc-equity-object-body {
+  padding: 22px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pc-equity-object-name {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 26px;
+  line-height: 1.1;
+  color: #fff;
+  margin: 0;
+}
+.pc-equity-object-sub {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: #f4c8a8;
+}
+.pc-equity-object-d {
+  font-size: var(--fs-spec);
+  line-height: 1.55;
+  opacity: .85;
+  margin: 4px 0 0;
+}
+.pc-equity-object-specs {
+  margin: 12px 0 0;
+  padding: 12px 0 0;
+  border-top: 1px solid rgba(255,255,255,.18);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 16px;
+  font-size: var(--fs-spec);
+  font-variant-numeric: tabular-nums;
+}
+.pc-equity-object-specs dt {
+  opacity: .65;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.pc-equity-object-specs dd {
+  margin: 0;
+  text-align: right;
+  color: #fff;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.pc-equity-object-specs dt:last-of-type,
+.pc-equity-object-specs dd:last-of-type {
+  border-bottom: 0;
+}
+@media (max-width: 980px) { .pc-equity-objects { grid-template-columns: 1fr; } }
+
+/* ─────────── Form C v2 — clean 2×2 objects grid ─────────── */
+.pc-equity-objects-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 16px;
+}
+.pc-equity-obj-card {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.18);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 240ms var(--ease);
+}
+.pc-equity-obj-card:hover { border-color: rgba(244,200,168,.45); }
+.pc-equity-obj-photo {
+  aspect-ratio: 16/10;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+/* Для архитектурных рендеров (PNG) — contain, чтобы дом виден целиком */
+.pc-equity-obj-card:nth-child(4) .pc-equity-obj-photo {
+  background-size: contain;
+  background-color: var(--ink);
+}
+.pc-equity-obj-num {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  color: #fff;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-shadow: 0 1px 8px rgba(0,0,0,.7);
+}
+.pc-equity-obj-tag {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  background: var(--accent);
+  color: #fff;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  padding: 6px 10px;
+}
+.pc-equity-obj-body {
+  padding: 22px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+.pc-equity-obj-name {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 24px;
+  line-height: 1.1;
+  margin: 0;
+  color: #fff;
+}
+.pc-equity-obj-d {
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+  opacity: .85;
+  margin: 4px 0 0;
+}
+.pc-equity-obj-facts {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,.15);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: var(--fs-spec);
+  font-variant-numeric: tabular-nums;
+}
+.pc-equity-obj-fact {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+}
+.pc-equity-obj-fact-l { opacity: .65; }
+.pc-equity-obj-fact-v { color: #f4c8a8; }
+@media (max-width: 880px) { .pc-equity-objects-2x2 { grid-template-columns: 1fr; } }
+
+.pc-equity-foot-block {
+  margin-top: 56px;
+  padding: 32px 32px 28px;
+  border: 1px solid rgba(255,255,255,.2);
+  background: rgba(255,255,255,.03);
+}
+.pc-equity-foot-h {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: #f4c8a8;
+  margin-bottom: 18px;
+}
+.pc-equity-list-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 32px;
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+  font-size: var(--fs-spec);
+  line-height: 1.55;
+}
+.pc-equity-list-2col li {
+  padding-left: 20px;
+  position: relative;
+  opacity: .9;
+}
+.pc-equity-list-2col li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #f4c8a8;
+}
+@media (max-width: 760px) { .pc-equity-list-2col { grid-template-columns: 1fr; } }
+.pc-equity-foot-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,.15);
+}
+.pc-equity-foot-meta {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: .04em;
+  opacity: .65;
+}
+
+/* ─────────── Form C — equity ─────────── */
+.pc-equity-composition {
+  margin-top: 48px;
+  padding: 28px 28px 22px;
+  border: 1px solid rgba(255,255,255,.2);
+  background: rgba(255,255,255,.04);
+}
+.pc-equity-composition-h {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: #f4c8a8;
+  margin-bottom: 18px;
+}
+.pc-equity-composition-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,.18);
+  border-left: 1px solid rgba(255,255,255,.18);
+}
+.pc-equity-composition-cell {
+  padding: 20px 18px 22px;
+  border-right: 1px solid rgba(255,255,255,.18);
+  border-bottom: 1px solid rgba(255,255,255,.18);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pc-equity-composition-num {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  opacity: .5;
+}
+.pc-equity-composition-name {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 20px;
+  line-height: 1.15;
+  color: #fff;
+  margin-top: 2px;
+}
+.pc-equity-composition-d {
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+  opacity: .85;
+  margin-top: 4px;
+}
+.pc-equity-composition-foot {
+  margin-top: 16px;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: .04em;
+  line-height: 1.55;
+  opacity: .75;
+}
+.pc-equity-composition-foot strong { color: #f4c8a8; font-weight: 500; }
+@media (max-width: 980px) { .pc-equity-composition-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .pc-equity-composition-grid { grid-template-columns: 1fr; } }
+
+.pc-equity-detail {
+  margin-top: 48px;
+  padding: 32px 28px;
+  border: 1px solid rgba(255,255,255,.2);
+}
+.pc-equity-detail-h {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: #f4c8a8;
+  margin-bottom: 18px;
+}
+.pc-equity-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: var(--fs-body-s);
+  line-height: 1.55;
+}
+.pc-equity-list li {
+  padding-left: 20px;
+  position: relative;
+  opacity: .9;
+}
+.pc-equity-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #f4c8a8;
+}
+.pc-equity-cta { margin-top: 8px; }
+
+/* ─────────── Final CTA section uses existing form-grid ─────────── */

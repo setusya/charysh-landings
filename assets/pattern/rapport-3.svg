@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" preserveAspectRatio="xMidYMid slice">
+  
+  <defs>
+    <pattern id="r3" x="0" y="0" width="50" height="80" patternUnits="userSpaceOnUse">
+      <g fill="none" stroke="currentColor" stroke-width="3">
+        <path d="M25 15 V65 M5 40 H45"></path>
+        <path d="M25 15 L20 10 M25 15 L30 10"></path>
+        <path d="M25 65 L20 70 M25 65 L30 70"></path>
+        <path d="M5 40 L0 35 M5 40 L0 45"></path>
+        <path d="M45 40 L50 35 M45 40 L50 45"></path>
+      </g>
+      <circle cx="25" cy="40" r="3" fill="currentColor"></circle>
+    </pattern>
+  </defs>
+  <rect width="240" height="80" fill="url(#r3)"></rect>
+</svg>

@@ -1,0 +1,21 @@
+# Heavy / working files — not for repo
+uploads/
+*.pdf
+.claude/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+.vscode/
+.idea/
+
+# Node (if anyone adds tooling later)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Backup snapshots created by save process
+/Чарыш-лендинг-снимок-*/
+/Чарыш-лендинг-снимок-*.zip

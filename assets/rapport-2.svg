@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" preserveAspectRatio="xMidYMid slice">
+  
+  <defs>
+    <pattern id="r2" x="0" y="0" width="40" height="80" patternUnits="userSpaceOnUse">
+      <g fill="currentColor">
+        <path d="M0 20 L20 40 L0 60 Z"></path>
+        <path d="M40 20 L20 40 L40 60 Z"></path>
+        <rect x="18" y="8" width="4" height="8"></rect>
+        <rect x="18" y="64" width="4" height="8"></rect>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="240" height="80" fill="url(#r2)"></rect>
+</svg>

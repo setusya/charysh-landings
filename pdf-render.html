@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>PDF Renderer</title></head>
+<body>
+<div id="status">loading...</div>
+<script type="module">
+import * as pdfjsLib from 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.min.mjs';
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.worker.min.mjs';
+
+window.renderPdfPage = async function(url, pageNum, scale = 1.5) {
+  const doc = await pdfjsLib.getDocument(url).promise;
+  if (pageNum > doc.numPages) return null;
+  const page = await doc.getPage(pageNum);
+  const viewport = page.getViewport({ scale });
+  const canvas = document.createElement('canvas');
+  canvas.width = viewport.width;
+  canvas.height = viewport.height;
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = 'white';
+  ctx.fillRect(0, 0, viewport.width, viewport.height);
+  await page.render({ canvasContext: ctx, viewport }).promise;
+  return canvas.toDataURL('image/jpeg', 0.85);
+};
+
+window.pdfReady = true;
+document.getElementById('status').textContent = 'pdfjs ready';
+</script>
+</body>
+</html>
