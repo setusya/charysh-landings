@@ -186,7 +186,7 @@ function PCAltaiMarket() {
     <section className="sec-pad sec-dark" id="altai-market" data-screen-label="02.3 Big Altai dynamics">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">19</span><span className="sep">|</span>Большой&nbsp;Алтай</div>
+          <div className="crumb"><span className="num">22</span><span className="sep">|</span>Большой&nbsp;Алтай</div>
           <h2 className="display h-display-l">
             Что такое <em className="redword-light">Большой Алтай</em>.<br/>
             И почему это уже самый растущий туррегион России.
@@ -298,7 +298,7 @@ function PCAltaiViability() {
     <section className="sec-pad sec-dark" id="altai-viability" data-screen-label="02.4 Altai viability + scenarios">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">20</span><span className="sep">|</span>Доказательство · оборот</div>
+          <div className="crumb"><span className="num">23</span><span className="sep">|</span>Доказательство · оборот</div>
           <h2 className="display h-display-l">
             Чарышу нужно <em className="redword-light">0,36% рынка 2030</em>.<br/>
             Этой доли достаточно.
@@ -1023,7 +1023,7 @@ function PCLegal() {
     <section className="sec-pad sec-warm" id="legal" data-screen-label="10 Legal">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">22</span><span className="sep">|</span>Юридика</div>
+          <div className="crumb"><span className="num">25</span><span className="sep">|</span>Юридика</div>
           <h2 className="display h-display-l">
             Земля оформлена. Документы в&nbsp;порядке.<br/>
             <em className="redword">Сделка прозрачна.</em>
@@ -1063,7 +1063,7 @@ function PCWhatsBuilt() {
     <section className="sec-pad sec-dark" id="built" data-screen-label="11 Whats Built">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">23</span><span className="sep">|</span>Что&nbsp;уже&nbsp;сделано</div>
+          <div className="crumb"><span className="num">19</span><span className="sep">|</span>Что&nbsp;уже&nbsp;сделано</div>
           <h2 className="display h-display-l">
             Не план. <em className="redword-light">Уже&nbsp;работа.</em>
           </h2>
@@ -1120,7 +1120,7 @@ function PCRoadmap() {
     <section className="sec-pad" id="roadmap" data-screen-label="12 Roadmap">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">25</span><span className="sep">|</span>Дорожная&nbsp;карта</div>
+          <div className="crumb"><span className="num">21</span><span className="sep">|</span>Дорожная&nbsp;карта</div>
           <h2 className="display h-display-l">
             Вы входите <em className="redword">сейчас</em>.<br/>
             В самый нужный момент.
@@ -1158,7 +1158,7 @@ function PCTeam() {
     <section className="sec-pad sec-warm" id="team" data-screen-label="13 Team">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">24</span><span className="sep">|</span>Команда&nbsp;и&nbsp;амбассадоры</div>
+          <div className="crumb"><span className="num">20</span><span className="sep">|</span>Команда&nbsp;и&nbsp;амбассадоры</div>
           <h2 className="display h-display-l">
             Команда, которая <em className="redword">создаст</em> это место.
           </h2>
@@ -1351,7 +1351,7 @@ function PCThreeForms() {
     <section className="sec-pad" id="forms-fork" data-screen-label="ACT 3 Three Forms Fork">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">21</span><span className="sep">|</span>Три&nbsp;формы&nbsp;участия</div>
+          <div className="crumb"><span className="num">24</span><span className="sep">|</span>Три&nbsp;формы&nbsp;участия</div>
           <h2 className="display h-display-l">
             Вход — это <em className="redword">выбор</em>,<br/>
             а не покупка.
