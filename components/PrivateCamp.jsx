@@ -1756,42 +1756,48 @@ function PCBonus() {
             Два формата визита, оба на&nbsp;индивидуальных условиях для&nbsp;Private&nbsp;Camp 2. Инвест-тур — для&nbsp;тех, кто рассматривает покупку дома или&nbsp;долю в&nbsp;инфраструктуре. Душа-тур — чтобы влюбиться в&nbsp;Чарыш всей семьёй и&nbsp;понять, ваше ли&nbsp;это место.
           </p>
           <div className="pc-bonus-tours">
-            <article className="pc-bonus-tour pc-bonus-tour-invest">
-              <div className="pc-bonus-tour-tag">Инвест-тур · 2–3 дня</div>
-              <h3 className="pc-bonus-tour-h">Персональный<br/>инвест-тур</h3>
-              <p className="pc-bonus-tour-d">
-                Точечная программа с&nbsp;командой основателей. Земля, мастер-план LH47, дом в&nbsp;стройке, финмодель, юр. пакет — всё на&nbsp;месте.
-              </p>
-              <ul className="pc-bonus-tour-list">
-                <li>Команда основателей сопровождает лично — не менеджер по продажам</li>
-                <li>Прогулка по&nbsp;72&nbsp;га · выбор участка с&nbsp;видом</li>
-                <li>Финмодель под ваш сценарий, ЕГРН, генплан, договор</li>
-                <li>Ужин у&nbsp;реки, баня, конная прогулка — чтобы прочувствовать</li>
-              </ul>
-              <div className="pc-bonus-tour-foot">
-                <a href="#form" className="btn btn-light">
-                  Запросить&nbsp;инвест-тур <span className="arrow">→</span>
-                </a>
-                <span className="pc-bonus-tour-meta">Для покупателей дома и со-партнёров</span>
+            <article className="pc-bonus-tour pc-bonus-tour-invest" id="visit-invest">
+              <div className="pc-bonus-tour-photo" style={{backgroundImage:"url('assets/photo/valley-pavilion.jpg')"}}/>
+              <div className="pc-bonus-tour-body">
+                <div className="pc-bonus-tour-tag">Инвест-тур · 2–3 дня</div>
+                <h3 className="pc-bonus-tour-h">Персональный<br/>инвест-тур</h3>
+                <p className="pc-bonus-tour-d">
+                  Точечная программа с&nbsp;командой основателей. Земля, мастер-план LH47, дом в&nbsp;стройке, финмодель, юр. пакет — всё на&nbsp;месте.
+                </p>
+                <ul className="pc-bonus-tour-list">
+                  <li>Команда основателей сопровождает лично — не менеджер по продажам</li>
+                  <li>Прогулка по&nbsp;72&nbsp;га · выбор участка с&nbsp;видом</li>
+                  <li>Финмодель под ваш сценарий, ЕГРН, генплан, договор</li>
+                  <li>Ужин у&nbsp;реки, баня, конная прогулка — чтобы прочувствовать</li>
+                </ul>
+                <div className="pc-bonus-tour-foot">
+                  <a href="#form" className="btn btn-light">
+                    Запросить&nbsp;инвест-тур <span className="arrow">→</span>
+                  </a>
+                  <span className="pc-bonus-tour-meta">Для покупателей дома и со-партнёров</span>
+                </div>
               </div>
             </article>
-            <article className="pc-bonus-tour pc-bonus-tour-love">
-              <div className="pc-bonus-tour-tag">Душа-тур · 3 или 5 дней</div>
-              <h3 className="pc-bonus-tour-h">Персональный<br/>Душа-тур</h3>
-              <p className="pc-bonus-tour-d">
-                Семейный «очерышевывающий» тур. Знакомство с&nbsp;местными мастерами, хороводы, сплавы, баня, ужин с&nbsp;местными жителями.
-              </p>
-              <ul className="pc-bonus-tour-list">
-                <li>Программа собирается под&nbsp;вашу семью или&nbsp;группу</li>
-                <li>Сплав по&nbsp;Чарышу, рыбалка, конные прогулки</li>
-                <li>Хороводы, керамика, обрядовые куклы — живая традиция</li>
-                <li>Тёплая встреча у&nbsp;костра, чай у&nbsp;местных</li>
-              </ul>
-              <div className="pc-bonus-tour-foot">
-                <a href="#form" className="btn btn-light">
-                  Запросить&nbsp;Душа-тур <span className="arrow">→</span>
-                </a>
-                <span className="pc-bonus-tour-meta">Для семей и тематических партнёров</span>
+            <article className="pc-bonus-tour pc-bonus-tour-love" id="visit-love">
+              <div className="pc-bonus-tour-photo" style={{backgroundImage:"url('assets/photo/horses-mountain.jpg')"}}/>
+              <div className="pc-bonus-tour-body">
+                <div className="pc-bonus-tour-tag">Душа-тур · 3 или 5 дней</div>
+                <h3 className="pc-bonus-tour-h">Персональный<br/>Душа-тур</h3>
+                <p className="pc-bonus-tour-d">
+                  Семейный «очерышевывающий» тур. Знакомство с&nbsp;местными мастерами, хороводы, сплавы, баня, ужин с&nbsp;местными жителями.
+                </p>
+                <ul className="pc-bonus-tour-list">
+                  <li>Программа собирается под&nbsp;вашу семью или&nbsp;группу</li>
+                  <li>Сплав по&nbsp;Чарышу, рыбалка, конные прогулки</li>
+                  <li>Хороводы, керамика, обрядовые куклы — живая традиция</li>
+                  <li>Тёплая встреча у&nbsp;костра, чай у&nbsp;местных</li>
+                </ul>
+                <div className="pc-bonus-tour-foot">
+                  <a href="#form" className="btn btn-light">
+                    Запросить&nbsp;Душа-тур <span className="arrow">→</span>
+                  </a>
+                  <span className="pc-bonus-tour-meta">Для семей и тематических партнёров</span>
+                </div>
               </div>
             </article>
           </div>
@@ -1810,7 +1816,7 @@ function PCFinalCTA() {
       <div className="container">
         <div className="form-grid">
           <div className="form-left">
-            <div className="crumb"><span className="num">28</span><span className="sep">|</span>Следующий&nbsp;шаг</div>
+            <div className="crumb"><span className="num">27</span><span className="sep">|</span>Следующий&nbsp;шаг</div>
             <h2 className="display h-display-m">
               Вы уже <em className="redword">очарышованы</em>?<br/>
               Покажем место, дома, расчёты доходности.
