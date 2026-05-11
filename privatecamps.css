@@ -904,6 +904,63 @@
 }
 @media (max-width: 980px) { .pc-security-grid { grid-template-columns: 1fr; } }
 
+/* ─────────── Why we are confident — 4 pillars (dark section) ─────────── */
+.pc-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,.2);
+  border-left: 1px solid rgba(255,255,255,.2);
+  margin-top: 16px;
+}
+.pc-pillar {
+  padding: 36px 28px 40px;
+  border-right: 1px solid rgba(255,255,255,.2);
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 320px;
+}
+.pc-pillar-num {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 56px;
+  line-height: 1;
+  color: #f4c8a8;
+  opacity: .9;
+  font-variant-numeric: tabular-nums;
+}
+.pc-pillar-h {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 26px;
+  line-height: 1.12;
+  color: #fff;
+  margin: 12px 0 6px;
+}
+.pc-pillar-list {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+}
+.pc-pillar-list li {
+  padding-left: 16px;
+  position: relative;
+  opacity: .85;
+}
+.pc-pillar-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  opacity: .55;
+}
+@media (max-width: 1200px) { .pc-pillars-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 680px) { .pc-pillars-grid { grid-template-columns: 1fr; } }
+
 /* ─────────── Economics — uses .climate-grid override ─────────── */
 .pc-economics-grid .climate-value {
   font-size: clamp(40px, 5vw, 64px);

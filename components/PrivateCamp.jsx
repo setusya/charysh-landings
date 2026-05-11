@@ -801,66 +801,61 @@ function PCResidents() {
 }
 window.PCResidents = PCResidents;
 
-// ───────────────────────── 20 · Why this works — execution readiness ─────────────────────────
+// ───────────────────────── 18 · Why we are confident — 4 pillars ─────────────────────────
 function PCSecurity() {
-  const cols = [
+  const pillars = [
     {
-      h: 'Юр. чистота и активы', sub: 'Всё в собственности',
+      h: 'Юридически чистый актив',
       pts: [
-        'Юридическая чистота земли — проверена',
-        'Земля 72 га оформлена в собственность',
-        'Инфраструктура — в собственности',
-        'Спецтехника — в собственности',
+        'Земля 72 га в собственности',
         'ВРИ — туристическое обслуживание',
         'АО учреждено и зарегистрировано',
       ],
     },
     {
-      h: 'Коммуникации подведены', sub: 'На все объекты курорта',
+      h: 'Инфраструктура подведена',
       pts: [
-        'Электросети — подведены',
-        'Дороги отсыпаны',
-        'Водоснабжение — подведено',
-        'Малая авиация — действующая вертолётная площадка',
-        'Связь — устойчивое покрытие',
-        'Локация под взлётную полосу и горнолыжную трассу',
+        'Электричество, вода, дороги, связь',
+        'Действующая вертолётная площадка',
+        'Локации под взлётную полосу и ГЛТ',
       ],
     },
     {
-      h: 'Команда и операционка', sub: 'Внутри проекта · не подряд',
+      h: 'Локация на линии трендов',
       pts: [
-        'Опытная и вовлечённая команда основателей',
-        'Релевантный опыт в российском бизнесе',
-        'Релевантный опыт в международном бизнесе',
+        'Большой Алтай · +5% турпотока на 2026',
+        'Уникальная недооценённая земля',
+        'Тупиковая долина · приватность природы',
+      ],
+    },
+    {
+      h: 'Команда и операционка внутри',
+      pts: [
         'Своя строительно-монтажная организация',
         'Своя управляющая организация',
-        'Контроль качества и сроков — у основателей',
+        'Опыт в российском и международном бизнесе',
       ],
     },
   ];
   return (
-    <section className="sec-pad sec-dark" id="security" data-screen-label="20 Why this works">
+    <section className="sec-pad sec-dark" id="security" data-screen-label="18 Why we are confident">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">18</span><span className="sep">|</span>Почему&nbsp;у&nbsp;нас&nbsp;получится</div>
+          <div className="crumb"><span className="num">18</span><span className="sep">|</span>Почему&nbsp;мы&nbsp;уверены&nbsp;в&nbsp;проекте</div>
           <h2 className="display h-display-l">
-            Уникальная <em className="redword-light">недооценённая локация</em><br/>
-            на&nbsp;растущем рынке — на&nbsp;линии набирающих силу трендов.
+            Не&nbsp;идея и&nbsp;не&nbsp;план.<br/>
+            <em className="redword-light">Сходятся четыре силы</em> — одновременно.
           </h2>
         </div>
-        <p className="lead" style={{opacity:.78, maxWidth:'66ch', marginBottom:48}}>
-          Это не&nbsp;стартап на&nbsp;идее. Юридически чистая земля в&nbsp;собственности, подведённые коммуникации на&nbsp;все объекты, своя стройка и&nbsp;своя УК. Команда — с&nbsp;релевантным опытом в&nbsp;российском и&nbsp;международном бизнесе.
-        </p>
-        <div className="pc-security-grid">
-          {cols.map((c, i) => (
-            <div className="pc-security-col" key={i}>
-              <div className="pc-security-num">{String(i+1).padStart(2,'0')}</div>
-              <div className="pc-security-h">{c.h}</div>
-              <div className="pc-security-sub">{c.sub}</div>
-              <ul className="pc-security-list">
-                {c.pts.map((p, j) => <li key={j}>{p}</li>)}
+        <div className="pc-pillars-grid">
+          {pillars.map((p, i) => (
+            <article className="pc-pillar" key={i}>
+              <div className="pc-pillar-num">{String(i+1).padStart(2,'0')}</div>
+              <h3 className="pc-pillar-h">{p.h}</h3>
+              <ul className="pc-pillar-list">
+                {p.pts.map((pt, j) => <li key={j}>{pt}</li>)}
               </ul>
-            </div>
+            </article>
           ))}
         </div>
       </div>
