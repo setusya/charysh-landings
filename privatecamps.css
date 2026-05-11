@@ -729,6 +729,36 @@
   .pc-mp-block { grid-template-columns: 90px 1fr; gap: 12px; }
 }
 
+/* ─────────── Architecture & Russian code — photo strip ─────────── */
+.pc-arch-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 0 0 40px;
+}
+.pc-arch-strip-cell {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pc-arch-strip-ph {
+  aspect-ratio: 4/3;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--ink);
+}
+.pc-arch-strip-cap {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .7;
+  line-height: 1.35;
+}
+@media (max-width: 880px) {
+  .pc-arch-strip { grid-template-columns: 1fr 1fr; }
+}
+
 /* ─────────── Year-round seasons ─────────── */
 .pc-seasons-grid {
   display: grid;

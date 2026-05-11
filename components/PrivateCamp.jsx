@@ -186,7 +186,7 @@ function PCAltaiMarket() {
     <section className="sec-pad sec-dark" id="altai-market" data-screen-label="02.3 Big Altai dynamics">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">22</span><span className="sep">|</span>Большой&nbsp;Алтай</div>
+          <div className="crumb"><span className="num">23</span><span className="sep">|</span>Большой&nbsp;Алтай</div>
           <h2 className="display h-display-l">
             Что такое <em className="redword-light">Большой Алтай</em>.<br/>
             И почему это уже самый растущий туррегион России.
@@ -298,7 +298,7 @@ function PCAltaiViability() {
     <section className="sec-pad sec-dark" id="altai-viability" data-screen-label="02.4 Altai viability + scenarios">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">23</span><span className="sep">|</span>Доказательство · оборот</div>
+          <div className="crumb"><span className="num">24</span><span className="sep">|</span>Доказательство · оборот</div>
           <h2 className="display h-display-l">
             Чарышу нужно <em className="redword-light">0,36% рынка 2030</em>.<br/>
             Этой доли достаточно.
@@ -603,6 +603,100 @@ function PCMasterPlanDetail() {
 }
 window.PCMasterPlanDetail = PCMasterPlanDetail;
 
+// ───────────────────────── 12 · Architecture & Russian visual code ─────────────────────────
+function PCArchitecture() {
+  const arch = [
+    { tag: 'Регламент',  name: 'Бюро LH47',                              d: 'Единый архитектурный регламент посёлка: материал, форма, посадка на участок. Свобода планировок внутри общего языка.' },
+    { tag: 'Соавтор',    name: 'Студия 8 Lines · Никола-Ленивец',        d: 'Соавторство павильонов ретрит-зоны. Международное признание и культурный контекст ЮНЕСКО — без курортного формализма.' },
+    { tag: 'Форма',      name: 'Двускатные кровли · панорамное остекление', d: 'Современная форма с архетипом избы. Графит, дерево, ниши под поленницы — узнаваемо русское без китча.' },
+    { tag: 'Среда',      name: 'Модульность и пешеходные оси',           d: 'Объекты могут «расти» вместе с проектом. Сквозные пешеходные оси, видовые точки, мягкая посадка под ландшафт.' },
+  ];
+  const code = [
+    { tag: 'Корни',     name: 'Скифы → Казаки → Староверы → Сегодня', d: '10 000 лет на одной долине. Курорт продолжает линию, а не цитирует её формально.' },
+    { tag: 'Цвет',      name: 'Охра · графит · лён · тёплое дерево',   d: 'Природная палитра Алтая в архитектуре, текстиле, керамике и графике. Нет глянца, нет «евростандарта».' },
+    { tag: 'Деталь',    name: 'Резьба, наличники, орнамент',           d: 'Авторские паттерны (раппорт) — переосмысленные старинные мотивы. На фасадах, в текстиле, в визуале курорта.' },
+    { tag: 'Ритуал',    name: 'Ремёсла как часть среды',               d: 'Хороводы, обрядовые куклы, керамика, ковка, валяние — не музей, а живая практика мастеров-резидентов.' },
+  ];
+  const strip = [
+    { img: 'assets/photo/modular-house.webp',      cap: 'Современный модуль · LH47' },
+    { img: 'assets/photo/house-belyak.png',        cap: 'Капитальный дом · «на поколения»' },
+    { img: 'assets/photo/cossacks-khorovod.jpg',   cap: 'Хоровод · живая традиция' },
+    { img: 'assets/photo/founders-with-master.jpg', cap: 'Мастера · среда курорта' },
+  ];
+  return (
+    <section className="sec-pad sec-warm" id="architecture" data-screen-label="12 Architecture & Russian code">
+      <div className="container">
+        <div className="comm-head">
+          <div className="crumb"><span className="num">12</span><span className="sep">|</span>Архитектура и&nbsp;русский код</div>
+          <h2 className="display h-display-l">
+            Современная архитектура<br/>
+            с <em className="redword">русскими корнями</em>.
+          </h2>
+        </div>
+        <p className="lead" style={{opacity:.78, maxWidth:'66ch', marginBottom:32}}>
+          Курорт собран по&nbsp;архитектурному регламенту бюро LH47. Современные формы, прочитываемые как&nbsp;русское: двускатные кровли, открытая древесина, графитовые фасады. Айдентика, паттерны и&nbsp;ремёсла — линия от&nbsp;скифов до&nbsp;сегодня.
+        </p>
+
+        {/* Узкая фото-полоска: современный модуль / капитальный дом / хоровод / мастера */}
+        <div className="pc-arch-strip">
+          {strip.map((s, i) => (
+            <figure className="pc-arch-strip-cell" key={i}>
+              <div className="pc-arch-strip-ph" style={{backgroundImage:`url('${s.img}')`}}/>
+              <figcaption className="pc-arch-strip-cap">{s.cap}</figcaption>
+            </figure>
+          ))}
+        </div>
+
+        <div className="pc-mp-detail-grid">
+          <div className="pc-mp-col">
+            <div className="pc-mp-col-head">
+              <div className="pc-mp-col-tag">Раздел 01</div>
+              <h3 className="pc-mp-col-title">Архитектура</h3>
+              <div className="pc-mp-col-sub">Бюро LH47 + студия 8&nbsp;Lines</div>
+            </div>
+            <ul className="pc-mp-blocks">
+              {arch.map((b, i) => (
+                <li className="pc-mp-block" key={i}>
+                  <div className="pc-mp-block-tag">{b.tag}</div>
+                  <div className="pc-mp-block-body">
+                    <div className="pc-mp-block-name">{b.name}</div>
+                    <div className="pc-mp-block-d">{b.d}</div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <div className="pc-mp-foot">
+              <strong>Принцип:</strong> архитектурный регламент задаёт язык, но&nbsp;не&nbsp;превращает посёлок в&nbsp;«одинаковый». Каждый дом — авторский в&nbsp;общей логике.
+            </div>
+          </div>
+          <div className="pc-mp-col">
+            <div className="pc-mp-col-head">
+              <div className="pc-mp-col-tag">Раздел 02</div>
+              <h3 className="pc-mp-col-title">Русский визуальный код</h3>
+              <div className="pc-mp-col-sub">Цвет · деталь · ритуал</div>
+            </div>
+            <ul className="pc-mp-blocks">
+              {code.map((b, i) => (
+                <li className="pc-mp-block" key={i}>
+                  <div className="pc-mp-block-tag">{b.tag}</div>
+                  <div className="pc-mp-block-body">
+                    <div className="pc-mp-block-name">{b.name}</div>
+                    <div className="pc-mp-block-d">{b.d}</div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <div className="pc-mp-foot">
+              <strong>Принцип:</strong> русское — не&nbsp;декорация и&nbsp;не&nbsp;стилизация. Это материал, цвет, ритм жизни, ремёсла. Живая среда вместо музея.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+window.PCArchitecture = PCArchitecture;
+
 // ───────────────────────── 04 · Year-round (4 seasons) ─────────────────────────
 // ───────── Slide 1: 4 seasons — POSTER (большие фото, минимум текста) ─────────
 function PCYearRound() {
@@ -847,7 +941,7 @@ function PCSecurity() {
     <section className="sec-pad sec-dark" id="security" data-screen-label="18 Why we are confident">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">18</span><span className="sep">|</span>Почему&nbsp;мы&nbsp;уверены&nbsp;в&nbsp;проекте</div>
+          <div className="crumb"><span className="num">19</span><span className="sep">|</span>Почему&nbsp;мы&nbsp;уверены&nbsp;в&nbsp;проекте</div>
           <h2 className="display h-display-l">
             Не&nbsp;идея и&nbsp;не&nbsp;план.<br/>
             <em className="redword-light">Сходятся четыре силы</em> — одновременно.
@@ -875,7 +969,7 @@ function PCSecurity() {
           ))}
         </div>
         <div className="pc-pillar-foot">
-          <span className="pc-pillar-foot-meta">Полная команда и&nbsp;био — на&nbsp;слайде 20</span>
+          <span className="pc-pillar-foot-meta">Полная команда и&nbsp;био — на&nbsp;слайде 21</span>
           <a href="#team" className="pc-pillar-foot-link">Команда и амбассадоры <span className="arrow">→</span></a>
         </div>
       </div>
@@ -898,7 +992,7 @@ function PCEconomics() {
     <section className="sec-pad" id="economics" data-screen-label="07 Economics">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">13</span><span className="sep">|</span>Экономика</div>
+          <div className="crumb"><span className="num">14</span><span className="sep">|</span>Экономика</div>
           <h2 className="display h-display-l">
             Зарабатывает, когда вы в&nbsp;городе.<br/>
             <em className="redword">Восстанавливает</em>, когда вы&nbsp;здесь.
@@ -1043,7 +1137,7 @@ function PCLegal() {
     <section className="sec-pad sec-warm" id="legal" data-screen-label="10 Legal">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">25</span><span className="sep">|</span>Юридика</div>
+          <div className="crumb"><span className="num">26</span><span className="sep">|</span>Юридика</div>
           <h2 className="display h-display-l">
             Земля оформлена. Документы в&nbsp;порядке.<br/>
             <em className="redword">Сделка прозрачна.</em>
@@ -1083,7 +1177,7 @@ function PCWhatsBuilt() {
     <section className="sec-pad sec-dark" id="built" data-screen-label="11 Whats Built">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">19</span><span className="sep">|</span>Что&nbsp;уже&nbsp;сделано</div>
+          <div className="crumb"><span className="num">20</span><span className="sep">|</span>Что&nbsp;уже&nbsp;сделано</div>
           <h2 className="display h-display-l">
             Не план. <em className="redword-light">Уже&nbsp;работа.</em>
           </h2>
@@ -1140,7 +1234,7 @@ function PCRoadmap() {
     <section className="sec-pad" id="roadmap" data-screen-label="12 Roadmap">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">21</span><span className="sep">|</span>Дорожная&nbsp;карта</div>
+          <div className="crumb"><span className="num">22</span><span className="sep">|</span>Дорожная&nbsp;карта</div>
           <h2 className="display h-display-l">
             Вы входите <em className="redword">сейчас</em>.<br/>
             В самый нужный момент.
@@ -1178,7 +1272,7 @@ function PCTeam() {
     <section className="sec-pad sec-warm" id="team" data-screen-label="13 Team">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">20</span><span className="sep">|</span>Команда&nbsp;и&nbsp;амбассадоры</div>
+          <div className="crumb"><span className="num">21</span><span className="sep">|</span>Команда&nbsp;и&nbsp;амбассадоры</div>
           <h2 className="display h-display-l">
             Команда, которая <em className="redword">создаст</em> это место.
           </h2>
@@ -1303,7 +1397,7 @@ function PCRetreatShowcase() {
         <div className="place-photo-overlay" />
         <div className="container place-photo-frame">
           <div className="crumb" style={{ color: '#fff' }}>
-            <span className="num">15</span><span className="sep">|</span>Опция&nbsp;3<span className="sep">|</span>Станьте&nbsp;акционером
+            <span className="num">16</span><span className="sep">|</span>Опция&nbsp;3<span className="sep">|</span>Станьте&nbsp;акционером
           </div>
           <h2 className="display h-display-l place-photo-h">
             Атмосферный <em className="redword-light">ретрит-комплекс</em><br/>
@@ -1371,7 +1465,7 @@ function PCThreeForms() {
     <section className="sec-pad" id="forms-fork" data-screen-label="ACT 3 Three Forms Fork">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">24</span><span className="sep">|</span>Три&nbsp;формы&nbsp;участия</div>
+          <div className="crumb"><span className="num">25</span><span className="sep">|</span>Три&nbsp;формы&nbsp;участия</div>
           <h2 className="display h-display-l">
             Вход — это <em className="redword">выбор</em>,<br/>
             а не покупка.
@@ -1462,7 +1556,7 @@ function PCFormBObjects() {
     <section className="sec-pad" id="objects" data-screen-label="ACT 3.B Objects">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">14</span><span className="sep">|</span>Опция 2 · Войдите долей</div>
+          <div className="crumb"><span className="num">15</span><span className="sep">|</span>Опция 2 · Войдите долей</div>
           <h2 className="display h-display-l">
             Войдите долей в&nbsp;<em className="redword">конкретный объект</em>.<br/>
             Отдельное ООО, отдельная экономика.
@@ -1542,7 +1636,7 @@ function PCConstructionTimeline() {
     <section className="sec-pad" id="construction" data-screen-label="ACT 3.A Construction Timeline">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">12</span><span className="sep">|</span>Опция 1 · Участок + подряд</div>
+          <div className="crumb"><span className="num">13</span><span className="sep">|</span>Опция 1 · Участок + подряд</div>
           <h2 className="display h-display-l">
             Участок + подряд = <em className="redword">ключи в&nbsp;руках</em>.<br/>
             Два срока, одна ответственность.
@@ -1592,7 +1686,7 @@ function PCAnnounceFarming() {
     <section className="sec-pad sec-warm" id="farming-announce" data-screen-label="ACT 3.D Announce — КФХ">
       <div className="container">
         <div className="pc-announce-frame">
-          <div className="crumb"><span className="num">17</span><span className="sep">|</span>Анонс · отдельный проект</div>
+          <div className="crumb"><span className="num">18</span><span className="sep">|</span>Анонс · отдельный проект</div>
           <h2 className="display h-display-l pc-announce-h">
             Земли под <em className="redword">крестьянско-фермерское хозяйство</em><br/>
             — следующая инвестиционная волна.
@@ -1690,7 +1784,7 @@ function PCFormCEquity() {
     <section className="sec-pad sec-dark" id="equity" data-screen-label="ACT 3.C Equity AO">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">16</span><span className="sep">|</span>Условия · что финансирует АО</div>
+          <div className="crumb"><span className="num">17</span><span className="sep">|</span>Условия · что финансирует АО</div>
           <h2 className="display h-display-l">
             Деньги акционеров строят <em className="redword-light">всю ретрит-зону</em>.<br/>
             Строительство 2027 · ввод в&nbsp;эксплуатацию 2028.
@@ -1765,7 +1859,7 @@ function PCBonus() {
       <div className="container">
         <div className="pc-bonus-frame">
           <div className="crumb" style={{color:'rgba(255,255,255,.65)'}}>
-            <span className="num">26</span><span className="sep">|</span>Эксклюзив&nbsp;для&nbsp;Private&nbsp;Camp&nbsp;2
+            <span className="num">27</span><span className="sep">|</span>Эксклюзив&nbsp;для&nbsp;Private&nbsp;Camp&nbsp;2
           </div>
           <h2 className="display h-display-l pc-bonus-h">
             Персональные условия —<br/>
@@ -1836,7 +1930,7 @@ function PCFinalCTA() {
       <div className="container">
         <div className="form-grid">
           <div className="form-left">
-            <div className="crumb"><span className="num">27</span><span className="sep">|</span>Следующий&nbsp;шаг</div>
+            <div className="crumb"><span className="num">28</span><span className="sep">|</span>Следующий&nbsp;шаг</div>
             <h2 className="display h-display-m">
               Вы уже <em className="redword">очарышованы</em>?<br/>
               Покажем место, дома, расчёты доходности.
