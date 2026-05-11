@@ -835,6 +835,12 @@ function PCSecurity() {
         'Своя управляющая организация',
         'Опыт в российском и международном бизнесе',
       ],
+      avatars: [
+        { img: 'assets/team/antonova.jpg',   name: 'Светлана Антонова',  role: 'Со-основатель' },
+        { img: 'assets/team/nemtsov.jpg',    name: 'Вячеслав Немцов',    role: 'Со-основатель' },
+        { img: 'assets/team/nemtsev.jpg',    name: 'Андрей Немцев',      role: 'Управл. партнёр' },
+        { img: 'assets/team/markish.jpg',    name: 'Тамара Маркиш',      role: 'Развитие' },
+      ],
     },
   ];
   return (
@@ -855,8 +861,22 @@ function PCSecurity() {
               <ul className="pc-pillar-list">
                 {p.pts.map((pt, j) => <li key={j}>{pt}</li>)}
               </ul>
+              {p.avatars && (
+                <div className="pc-pillar-avatars">
+                  {p.avatars.map((a, k) => (
+                    <div className="pc-pillar-avatar" key={k} title={`${a.name} — ${a.role}`}>
+                      <div className="pc-pillar-avatar-ph" style={{backgroundImage:`url('${a.img}')`}}/>
+                      <div className="pc-pillar-avatar-name">{a.name.split(' ')[0]}</div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </article>
           ))}
+        </div>
+        <div className="pc-pillar-foot">
+          <span className="pc-pillar-foot-meta">Полная команда и&nbsp;био — на&nbsp;слайде 20</span>
+          <a href="#team" className="pc-pillar-foot-link">Команда и амбассадоры <span className="arrow">→</span></a>
         </div>
       </div>
     </section>
