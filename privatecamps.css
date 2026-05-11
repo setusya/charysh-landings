@@ -729,6 +729,96 @@
   .pc-mp-block { grid-template-columns: 90px 1fr; gap: 12px; }
 }
 
+/* ─────────── Master Plan Detail — Year-round anchors (детский центр + мастерские) ─────────── */
+.pc-mp-anchors-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 3vw, 40px);
+  margin-bottom: 56px;
+}
+.pc-mp-anchor {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface, #fff);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+.pc-mp-anchor-photo {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  background-position: center;
+}
+.pc-mp-anchor-tag {
+  position: absolute;
+  left: 16px; top: 16px;
+  padding: 6px 12px;
+  background: var(--accent);
+  color: #fff;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.pc-mp-anchor-body {
+  padding: 24px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pc-mp-anchor-name {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 28px;
+  line-height: 1.1;
+  margin: 0;
+}
+.pc-mp-anchor-sub {
+  font-size: var(--fs-spec);
+  color: var(--accent);
+  opacity: .85;
+}
+.pc-mp-anchor-d {
+  font-size: var(--fs-spec);
+  line-height: 1.55;
+  opacity: .85;
+  margin: 4px 0 8px;
+}
+.pc-mp-anchor-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pc-mp-anchor-list li {
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+  opacity: .8;
+  padding-left: 18px;
+  position: relative;
+}
+.pc-mp-anchor-list li::before {
+  content: '·';
+  position: absolute;
+  left: 6px;
+  color: var(--accent);
+  font-weight: 700;
+}
+.pc-mp-zones-head {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: clamp(24px, 2.4vw, 32px);
+  line-height: 1.15;
+  margin: 0 0 28px;
+  text-align: center;
+  opacity: .9;
+}
+@media (max-width: 980px) {
+  .pc-mp-anchors-grid { grid-template-columns: 1fr; gap: 24px; }
+  .pc-mp-anchor-body { padding: 20px; }
+  .pc-mp-anchor-name { font-size: 24px; }
+}
+
 /* ─────────── Year-round seasons ─────────── */
 .pc-seasons-grid {
   display: grid;

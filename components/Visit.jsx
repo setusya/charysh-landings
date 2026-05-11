@@ -4,7 +4,7 @@ function VisitSection() {
     <section className="visit-section" id="visit" data-screen-label="06 Visit">
       <div className="container">
         <div className="crumb" style={{color:'#fff'}}>
-          <span className="num">29</span><span className="sep">|</span>Приехать<span className="sep">|</span>Два формата
+          <span className="num">27</span><span className="sep">|</span>Приехать<span className="sep">|</span>Два формата
         </div>
         <h2 className="display h-display-l visit-h">
           Лучший способ<br/>
