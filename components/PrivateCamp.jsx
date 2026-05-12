@@ -1022,18 +1022,6 @@ function PCTrends() {
     { tag: 'Современный русский',   d: 'LH47 + традиция, без китча' },
     { tag: 'Большой Алтай',         d: 'Структурный рост, бюджет под триллион' },
   ];
-  const clusters = [
-    { h: 'Россия и идентичность',  items: ['Внутренний туризм', 'Импортозамещение luxury', 'Интерес к русскому', 'Патриотизм', 'Корневые ценности', 'Возрождение ремёсел'] },
-    { h: 'Lifestyle и роскошь',    items: ['Тихая роскошь', 'Privacy as luxury', 'Slow living', 'Slow travel', 'Digital detox', 'Тишина как премиум'] },
-    { h: 'Семья и поколения',      items: ['Семейность', 'Осознанное родительство', 'Родовое имение', 'Образование в природе', 'Безопасная среда', 'Память рода'] },
-    { h: 'Здоровье и благополучие',items: ['Wellness и ретрит', 'Mental health', 'Mindfulness', 'Sleep tourism', 'Фито-медицина Алтая', 'Mountain wellness'] },
-    { h: 'Природа и эко',          items: ['Жизнь на природе', 'Эко-устойчивость', 'Органическая еда', 'Био-хозяйство', 'Сезонность по природе', 'Связь с землёй'] },
-    { h: 'Сообщество',             items: ['Аутентичность', 'Племя', 'Private camp', 'Соседство', 'Co-creation', 'Совладение'] },
-    { h: 'Инвестиции и капитал',   items: ['Реальные активы', 'Hedge от инфляции', 'Инфраструктурная капитализация', 'Семейный фонд', 'Юр. чистота как luxury', 'Закрытый клуб'] },
-    { h: 'Работа и образ жизни',   items: ['Удалёнка с домом', 'Гибрид Москва–Чарыш', 'Школа года', 'Резиденции мастеров'] },
-    { h: 'Архитектура и дизайн',   items: ['Современный русский', 'Тёплый минимализм', 'Архитектура контекста', 'Модульность'] },
-    { h: 'Макро и рынок',          items: ['Большой Алтай', 'Сибирь как фронтир', 'Малая авиация', 'Реконструкция дорог'] },
-  ];
   return (
     <section className="sec-pad" id="trends" data-screen-label="19 Trends fit">
       <div className="container">
@@ -1041,14 +1029,12 @@ function PCTrends() {
           <div className="crumb"><span className="num">19</span><span className="sep">|</span>На&nbsp;пересечении&nbsp;трендов</div>
           <h2 className="display h-display-l">
             Мы попадаем в&nbsp;<em className="redword">момент</em>.<br/>
-            ~50&nbsp;трендов сходятся в&nbsp;одной точке.
+            Двенадцать трендов сходятся в&nbsp;одной точке.
           </h2>
         </div>
-
-        {/* Вариант А — 12 главных */}
-        <div className="pc-trends-head">
-          <div className="pc-trends-label">Вариант А · 12 главных — основа позиционирования</div>
-        </div>
+        <p className="lead" style={{opacity:.78, maxWidth:'66ch', marginBottom:32}}>
+          Чарыш стоит на&nbsp;пересечении главных трендов десятилетия — от&nbsp;тихой роскоши и&nbsp;внутреннего туризма до&nbsp;корневых ценностей и&nbsp;реальных активов. Каждый сам по&nbsp;себе уже рынок. Здесь они работают вместе.
+        </p>
         <div className="pc-trends-main12">
           {main12.map((t, i) => (
             <article className="pc-trend-main" key={i}>
@@ -1056,24 +1042,6 @@ function PCTrends() {
               <div className="pc-trend-main-tag">{t.tag}</div>
               <div className="pc-trend-main-d">{t.d}</div>
             </article>
-          ))}
-        </div>
-
-        <div className="pc-trends-rule"/>
-
-        {/* Вариант Б — полная карта */}
-        <div className="pc-trends-head">
-          <div className="pc-trends-label">Вариант Б · полная карта — 10 направлений, ~50 трендов</div>
-        </div>
-        <div className="pc-trends-clusters">
-          {clusters.map((c, i) => (
-            <div className="pc-trends-cluster" key={i}>
-              <div className="pc-trends-cluster-num">{String(i+1).padStart(2,'0')}</div>
-              <div className="pc-trends-cluster-h">{c.h}</div>
-              <div className="pc-trends-cluster-tags">
-                {c.items.map((it, j) => <span className="pc-trend-pill" key={j}>{it}</span>)}
-              </div>
-            </div>
           ))}
         </div>
       </div>
