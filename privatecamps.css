@@ -1,6 +1,103 @@
 /* Charysh — Private Camp 2 speaker landing
    Page-specific styles. Requires tokens.css + site.css loaded first. */
 
+/* ─────────── Big Altai — hero photo (Lake Teletskoye) ─────────── */
+.pc-bigaltai-hero {
+  margin: 8px 0 40px;
+  position: relative;
+}
+.pc-bigaltai-hero-ph {
+  width: 100%;
+  aspect-ratio: 21/8;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255,255,255,.05);
+}
+.pc-bigaltai-hero-cap {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 18px 22px;
+  background: linear-gradient(0deg, rgba(0,0,0,.65) 0%, rgba(0,0,0,0) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  color: #fff;
+}
+.pc-bigaltai-hero-place {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: clamp(22px, 2.4vw, 32px);
+}
+.pc-bigaltai-hero-meta {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: #f4c8a8;
+  opacity: .9;
+}
+@media (max-width: 880px) {
+  .pc-bigaltai-hero-ph { aspect-ratio: 16/9; }
+  .pc-bigaltai-hero-cap { flex-direction: column; gap: 6px; }
+}
+
+/* ─────────── Big Altai — отбивка: большие региональные проекты ─────────── */
+.pc-bigaltai-flagships {
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,.2);
+}
+.pc-bigaltai-flagships-h {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: clamp(22px, 2.2vw, 28px);
+  line-height: 1.15;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.pc-bigaltai-flagships-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,.18);
+  border-left: 1px solid rgba(255,255,255,.18);
+}
+.pc-bigaltai-flagship {
+  padding: 22px 22px 24px;
+  border-right: 1px solid rgba(255,255,255,.18);
+  border-bottom: 1px solid rgba(255,255,255,.18);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 180px;
+}
+.pc-bigaltai-flagship-name {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 24px;
+  line-height: 1.1;
+  color: #fff;
+}
+.pc-bigaltai-flagship-sub {
+  font-size: var(--fs-spec);
+  color: #f4c8a8;
+  opacity: .9;
+}
+.pc-bigaltai-flagship-fact {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 22px;
+  line-height: 1.15;
+  margin-top: 12px;
+  color: #fff;
+  opacity: .92;
+}
+.pc-bigaltai-flagship-where {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .55;
+  margin-top: auto;
+}
+@media (max-width: 1100px) { .pc-bigaltai-flagships-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .pc-bigaltai-flagships-grid { grid-template-columns: 1fr; } }
+
 /* ─────────── Big Altai — определение «что это» (3 cells) ─────────── */
 .pc-bigaltai-def {
   display: grid;

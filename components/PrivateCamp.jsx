@@ -117,7 +117,7 @@ function PCSpeaker() {
     <section className="sec-pad" id="speaker" data-screen-label="02 Speaker — Антонова">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">02</span><span className="sep">|</span>Спикер</div>
+          <div className="crumb"><span className="num">03</span><span className="sep">|</span>Спикер</div>
           <h2 className="display h-display-l">
             Сегодня проект представляет<br/>
             <em className="redword">Светлана Антонова.</em>
@@ -182,16 +182,32 @@ function PCAltaiMarket() {
     { year: '2030', v: 7.3, label: '7,3 млн',  src: 'цель',       highlight: true, target: true },
   ];
   const maxV = 8.0;
+  // Большие региональные проекты, которые гонят турпоток в Большой Алтай
+  const flagships = [
+    { name: 'Шерегеш',           sub: 'Горнолыжный курорт',    where: 'Кемеровская обл.',  fact: '>2 млн гостей/год' },
+    { name: 'Сибирская монета',  sub: 'Игорная зона',          where: 'Алтайский край',    fact: '1 из 5 в России' },
+    { name: 'Манжерок',          sub: 'Премиум курорт Сбера',  where: 'Республика Алтай',  fact: '~1,5 млн гостей/год' },
+    { name: 'Бирюзовая Катунь',  sub: 'Особая эконом. зона',   where: 'Алтайский край',    fact: 'Туристический кластер' },
+  ];
   return (
-    <section className="sec-pad sec-dark" id="altai-market" data-screen-label="02.3 Big Altai dynamics">
+    <section className="sec-pad sec-dark" id="altai-market" data-screen-label="02 Big Altai context">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">21</span><span className="sep">|</span>Большой&nbsp;Алтай</div>
+          <div className="crumb"><span className="num">02</span><span className="sep">|</span>Большой&nbsp;Алтай</div>
           <h2 className="display h-display-l">
-            Что такое <em className="redword-light">Большой Алтай</em>.<br/>
-            И почему это уже самый растущий туррегион России.
+            <em className="redword-light">Большой Алтай</em> —<br/>
+            самый растущий туррегион России.
           </h2>
         </div>
+
+        {/* Hero — Телецкое озеро (визитная карточка Горного Алтая) */}
+        <figure className="pc-bigaltai-hero">
+          <div className="pc-bigaltai-hero-ph" style={{backgroundImage:"url('assets/photo/altai-teletskoye.jpg')"}}/>
+          <figcaption className="pc-bigaltai-hero-cap">
+            <span className="pc-bigaltai-hero-place">Телецкое озеро</span>
+            <span className="pc-bigaltai-hero-meta">«Золотые горы Алтая» · объект Всемирного наследия ЮНЕСКО</span>
+          </figcaption>
+        </figure>
 
         {/* Что такое Большой Алтай — определение в 3 пунктах */}
         <div className="pc-bigaltai-def">
@@ -246,6 +262,21 @@ function PCAltaiMarket() {
             <div className="pc-bigaltai-stat-v">7,3 <span className="pc-bigaltai-stat-u">млн</span></div>
             <div className="pc-bigaltai-stat-l">цель нацпроекта к 2030</div>
             <div className="pc-bigaltai-stat-sub">+40% за 5 лет · бюджетное финансирование инфраструктуры</div>
+          </div>
+        </div>
+
+        {/* Отбивка — большие региональные проекты, которые гонят поток */}
+        <div className="pc-bigaltai-flagships">
+          <div className="pc-bigaltai-flagships-h">Большие проекты, которые гонят поток в&nbsp;регион</div>
+          <div className="pc-bigaltai-flagships-grid">
+            {flagships.map((f, i) => (
+              <article className="pc-bigaltai-flagship" key={i}>
+                <div className="pc-bigaltai-flagship-name">{f.name}</div>
+                <div className="pc-bigaltai-flagship-sub">{f.sub}</div>
+                <div className="pc-bigaltai-flagship-fact">{f.fact}</div>
+                <div className="pc-bigaltai-flagship-where">{f.where}</div>
+              </article>
+            ))}
           </div>
         </div>
       </div>
@@ -400,7 +431,7 @@ function PCLocation() {
         <div className="place-photo-overlay" />
         <div className="container place-photo-frame">
           <div className="crumb" style={{ color: '#fff' }}>
-            <span className="num">03</span><span className="sep">|</span>География<span className="sep">|</span>Где&nbsp;это
+            <span className="num">04</span><span className="sep">|</span>География<span className="sep">|</span>Где&nbsp;это
           </div>
           <h2 className="display h-display-l place-photo-h">
             Россия · Алтайский край ·<br/>
@@ -486,7 +517,7 @@ function PCMasterPlan() {
     <section className="sec-pad sec-warm" id="masterplan" data-screen-label="03 Master Plan — 6 sectors">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">10</span><span className="sep">|</span>Мастер-план</div>
+          <div className="crumb"><span className="num">11</span><span className="sep">|</span>Мастер-план</div>
           <h2 className="display h-display-l">
             Шесть секторов на&nbsp;<em className="redword">72 га</em>.<br/>
             Автономное и&nbsp;безопасное пространство.
@@ -547,7 +578,7 @@ function PCMasterPlanDetail() {
     <section className="sec-pad" id="masterplan-detail" data-screen-label="03.5 Master Plan Detail">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">11</span><span className="sep">|</span>Что внутри</div>
+          <div className="crumb"><span className="num">12</span><span className="sep">|</span>Что внутри</div>
           <h2 className="display h-display-l">
             Два сектора — <em className="redword">сердце посёлка</em>.<br/>
             Где живут и где собираются.
@@ -710,7 +741,7 @@ function PCYearRound() {
     <section className="sec-pad" id="yearround" data-screen-label="04 Year-round seasons">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">07</span><span className="sep">|</span>Круглый&nbsp;год</div>
+          <div className="crumb"><span className="num">08</span><span className="sep">|</span>Круглый&nbsp;год</div>
           <h2 className="display h-display-l">
             <em className="redword">365 дней.</em><br/>
             Каждый по-своему живой.
@@ -792,7 +823,7 @@ function PCActivities() {
     <section className="sec-pad sec-warm" id="activities" data-screen-label="04.5 Activities">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">08</span><span className="sep">|</span>Чем&nbsp;живёт&nbsp;Чарыш</div>
+          <div className="crumb"><span className="num">09</span><span className="sep">|</span>Чем&nbsp;живёт&nbsp;Чарыш</div>
           <h2 className="display h-display-l">
             Дома, реки и горы — это <em className="redword">оправа</em>.<br/>
             Главное — то, что мы&nbsp;здесь делаем&nbsp;<em className="redword">вместе</em>.
@@ -861,7 +892,7 @@ function PCResidents() {
     <section className="sec-pad sec-warm" id="residents" data-screen-label="05 Residents">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">09</span><span className="sep">|</span>Кто&nbsp;здесь&nbsp;живёт</div>
+          <div className="crumb"><span className="num">10</span><span className="sep">|</span>Кто&nbsp;здесь&nbsp;живёт</div>
           <h2 className="display h-display-l">
             Тщательно отобранное<br/>
             <em className="redword">сообщество</em> — наша защита<br/>
@@ -941,7 +972,7 @@ function PCSecurity() {
     <section className="sec-pad sec-dark" id="security" data-screen-label="18 Why we are confident">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">18</span><span className="sep">|</span>Почему&nbsp;мы&nbsp;уверены&nbsp;в&nbsp;проекте</div>
+          <div className="crumb"><span className="num">19</span><span className="sep">|</span>Почему&nbsp;мы&nbsp;уверены&nbsp;в&nbsp;проекте</div>
           <h2 className="display h-display-l">
             Не&nbsp;идея и&nbsp;не&nbsp;план.<br/>
             <em className="redword-light">Сходятся четыре силы</em> — одновременно.
@@ -970,7 +1001,7 @@ function PCSecurity() {
           ))}
         </div>
         <div className="pc-pillar-foot">
-          <span className="pc-pillar-foot-meta">Полная команда и&nbsp;био — на&nbsp;слайде 20</span>
+          <span className="pc-pillar-foot-meta">Полная команда и&nbsp;био — на&nbsp;слайде 21</span>
           <a href="#team" className="pc-pillar-foot-link">Команда и амбассадоры <span className="arrow">→</span></a>
         </div>
       </div>
@@ -993,7 +1024,7 @@ function PCEconomics() {
     <section className="sec-pad" id="economics" data-screen-label="07 Economics">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">13</span><span className="sep">|</span>Экономика</div>
+          <div className="crumb"><span className="num">14</span><span className="sep">|</span>Экономика</div>
           <h2 className="display h-display-l">
             Зарабатывает, когда вы в&nbsp;городе.<br/>
             <em className="redword">Восстанавливает</em>, когда вы&nbsp;здесь.
@@ -1178,7 +1209,7 @@ function PCWhatsBuilt() {
     <section className="sec-pad sec-dark" id="built" data-screen-label="11 Whats Built">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">19</span><span className="sep">|</span>Что&nbsp;уже&nbsp;сделано</div>
+          <div className="crumb"><span className="num">20</span><span className="sep">|</span>Что&nbsp;уже&nbsp;сделано</div>
           <h2 className="display h-display-l">
             Не план. <em className="redword-light">Уже&nbsp;работа.</em>
           </h2>
@@ -1273,7 +1304,7 @@ function PCTeam() {
     <section className="sec-pad sec-warm" id="team" data-screen-label="13 Team">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">20</span><span className="sep">|</span>Команда&nbsp;и&nbsp;амбассадоры</div>
+          <div className="crumb"><span className="num">21</span><span className="sep">|</span>Команда&nbsp;и&nbsp;амбассадоры</div>
           <h2 className="display h-display-l">
             Команда, которая <em className="redword">создаст</em> это место.
           </h2>
@@ -1308,7 +1339,7 @@ function PCCommunity() {
     <section className="sec-pad" id="community" data-screen-label="ACT 1.4 Community">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">06</span><span className="sep">|</span>10 000 лет на одной долине</div>
+          <div className="crumb"><span className="num">07</span><span className="sep">|</span>10 000 лет на одной долине</div>
           <h2 className="display h-display-l">
             Скифы. Казаки. Староверы.<br/>
             <em className="redword">Живые легенды места.</em>
@@ -1398,7 +1429,7 @@ function PCRetreatShowcase() {
         <div className="place-photo-overlay" />
         <div className="container place-photo-frame">
           <div className="crumb" style={{ color: '#fff' }}>
-            <span className="num">15</span><span className="sep">|</span>Опция&nbsp;3<span className="sep">|</span>Станьте&nbsp;акционером
+            <span className="num">16</span><span className="sep">|</span>Опция&nbsp;3<span className="sep">|</span>Станьте&nbsp;акционером
           </div>
           <h2 className="display h-display-l place-photo-h">
             Атмосферный <em className="redword-light">ретрит-комплекс</em><br/>
@@ -1557,7 +1588,7 @@ function PCFormBObjects() {
     <section className="sec-pad" id="objects" data-screen-label="ACT 3.B Objects">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">14</span><span className="sep">|</span>Опция 2 · Войдите долей</div>
+          <div className="crumb"><span className="num">15</span><span className="sep">|</span>Опция 2 · Войдите долей</div>
           <h2 className="display h-display-l">
             Войдите долей в&nbsp;<em className="redword">конкретный объект</em>.<br/>
             Отдельное ООО, отдельная экономика.
@@ -1637,7 +1668,7 @@ function PCConstructionTimeline() {
     <section className="sec-pad" id="construction" data-screen-label="ACT 3.A Construction Timeline">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">12</span><span className="sep">|</span>Опция 1 · Участок + подряд</div>
+          <div className="crumb"><span className="num">13</span><span className="sep">|</span>Опция 1 · Участок + подряд</div>
           <h2 className="display h-display-l">
             Участок + подряд = <em className="redword">ключи в&nbsp;руках</em>.<br/>
             Два срока, одна ответственность.
@@ -1687,7 +1718,7 @@ function PCAnnounceFarming() {
     <section className="sec-pad sec-warm" id="farming-announce" data-screen-label="ACT 3.D Announce — КФХ">
       <div className="container">
         <div className="pc-announce-frame">
-          <div className="crumb"><span className="num">17</span><span className="sep">|</span>Анонс · отдельный проект</div>
+          <div className="crumb"><span className="num">18</span><span className="sep">|</span>Анонс · отдельный проект</div>
           <h2 className="display h-display-l pc-announce-h">
             Земли под <em className="redword">крестьянско-фермерское хозяйство</em><br/>
             — следующая инвестиционная волна.
@@ -1785,7 +1816,7 @@ function PCFormCEquity() {
     <section className="sec-pad sec-dark" id="equity" data-screen-label="ACT 3.C Equity AO">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">16</span><span className="sep">|</span>Стать&nbsp;сонаследником</div>
+          <div className="crumb"><span className="num">17</span><span className="sep">|</span>Стать&nbsp;сонаследником</div>
           <h2 className="display h-display-l">
             Войдите в&nbsp;долю <em className="redword-light">Резиденции Чарыш</em>.<br/>
             Строительство 2027 · ввод в&nbsp;эксплуатацию 2028.
