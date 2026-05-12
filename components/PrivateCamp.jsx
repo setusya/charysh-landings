@@ -117,7 +117,7 @@ function PCSpeaker() {
     <section className="sec-pad" id="speaker" data-screen-label="02 Speaker — Антонова">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">03</span><span className="sep">|</span>Спикер</div>
+          <div className="crumb"><span className="num">04</span><span className="sep">|</span>Спикер</div>
           <h2 className="display h-display-l">
             Сегодня проект представляет<br/>
             <em className="redword">Светлана Антонова.</em>
@@ -187,6 +187,7 @@ function PCAltaiMarket() {
     { name: 'Шерегеш',           sub: 'Горнолыжный курорт',    where: 'Кемеровская обл.',  fact: '>2 млн гостей/год' },
     { name: 'Сибирская монета',  sub: 'Игорная зона',          where: 'Алтайский край',    fact: '1 из 5 в России' },
     { name: 'Манжерок',          sub: 'Премиум курорт Сбера',  where: 'Республика Алтай',  fact: '~1,5 млн гостей/год' },
+    { name: 'Белокуриха',        sub: 'Курорт федерального значения · бальнеология', where: 'Алтайский край', fact: '~250 тыс гостей/год' },
     { name: 'Бирюзовая Катунь',  sub: 'Особая эконом. зона',   where: 'Алтайский край',    fact: 'Туристический кластер' },
   ];
   return (
@@ -200,23 +201,6 @@ function PCAltaiMarket() {
           </h2>
         </div>
 
-        {/* Hero — два мегакурорта Большого Алтая для контраста с заповедным Чарышом */}
-        <div className="pc-bigaltai-hero-duo">
-          <figure className="pc-bigaltai-hero-cell">
-            <div className="pc-bigaltai-hero-ph" style={{backgroundImage:"url('assets/photo/altai-sheregesh.jpg')"}}/>
-            <figcaption className="pc-bigaltai-hero-cap">
-              <span className="pc-bigaltai-hero-place">Шерегеш</span>
-              <span className="pc-bigaltai-hero-meta">&gt;&nbsp;2&nbsp;млн&nbsp;гостей&nbsp;/&nbsp;год · горнолыжный мегакурорт</span>
-            </figcaption>
-          </figure>
-          <figure className="pc-bigaltai-hero-cell">
-            <div className="pc-bigaltai-hero-ph" style={{backgroundImage:"url('assets/photo/altai-manzherok.jpg')"}}/>
-            <figcaption className="pc-bigaltai-hero-cap">
-              <span className="pc-bigaltai-hero-place">Манжерок</span>
-              <span className="pc-bigaltai-hero-meta">~&nbsp;1,5&nbsp;млн&nbsp;гостей&nbsp;/&nbsp;год · премиум курорт Сбера</span>
-            </figcaption>
-          </figure>
-        </div>
         <p className="pc-bigaltai-hero-note">
           Большой Алтай — это уже мегакурорты, миллионы гостей и&nbsp;бюджеты под&nbsp;триллион. <strong>Чарыш — заповедная альтернатива</strong> в&nbsp;часе от&nbsp;этих потоков.
         </p>
@@ -443,7 +427,7 @@ function PCLocation() {
         <div className="place-photo-overlay" />
         <div className="container place-photo-frame">
           <div className="crumb" style={{ color: '#fff' }}>
-            <span className="num">04</span><span className="sep">|</span>География<span className="sep">|</span>Где&nbsp;это
+            <span className="num">03</span><span className="sep">|</span>География<span className="sep">|</span>Где&nbsp;это
           </div>
           <h2 className="display h-display-l place-photo-h">
             Россия · Алтайский край ·<br/>
@@ -563,7 +547,7 @@ function PCMasterPlanDetail() {
     blocks: [
       { tag: 'Сектор А', name: 'Долгосрочное проживание', d: 'Капитальные дома ближе к Красному Партизану. Участки до 10 соток с ландшафтом и беседками. Просторные дороги, навес у дома, зона пляжа рядом.' },
       { tag: 'Сектор Б', name: 'Модульные дома · сервис', d: 'Дома 50–120 м², участки 6–7 соток. Беззаборное пространство. Парковка общая на въезде. Доставка багажа служебным электромобилем.' },
-      { tag: 'Сектор В', name: 'Семьи с детьми', d: 'Рядом с детскими и прогулочными площадками, верёвочный парк. Безопасная обзорная среда — родители всегда видят детей.' },
+      { tag: 'Сектор В', name: 'Кластер для семей с детьми', d: 'Рядом с детскими и прогулочными площадками, верёвочный парк. Безопасная обзорная среда — родители всегда видят детей.' },
       { tag: 'Сектор Д', name: 'Апартаменты с видом на реку', d: '2 корпуса по 16 юнитов = 32 апартамента. Двухэтажный блок: гостиная-кухня сверху с видом на реку, спальня снизу. Парковка на 35–40 машин.' },
       { tag: 'По возможности', name: 'Творческий кластер · «Красный проспект»', d: 'Мини-площадки для встреч, мастер-классы на природе, кинотеатр на траве. Парадная улица-визитная карточка от центральной входной группы.' },
     ],
@@ -826,9 +810,9 @@ function PCActivities() {
       items: ['Йога-программы и дыхательные практики', 'Авторские ретриты от приглашённых мастеров', 'MICE-павильон для корпоративных событий', 'Семейные смены и Family Camp'],
     },
     {
-      tag: 'Фермерская кухня',
-      img: 'assets/photo/activity-farm-kitchen.jpg',
-      items: ['Своё КФХ: молоко, сыр, овощи, зелень', 'Ресторан ЗОЖ с переработкой местного сырья', 'Уличная ярмарка фермерских продуктов', 'Кулинарные мастер-классы у местных хозяек'],
+      tag: 'Органическая еда',
+      img: 'assets/photo/food-cauliflower.jpg',
+      items: ['Своё КФХ: молоко, сыр, овощи, зелень', 'Ресторан здорового питания на собственном сырье', 'Уличная ярмарка фермерских продуктов', 'Кулинарные мастер-классы у местных хозяек'],
     },
   ];
   return (
@@ -1560,19 +1544,19 @@ function PCFormBObjects() {
       ],
     },
     {
-      img: 'assets/photo/object-restaurant.jpg',
+      img: 'assets/photo/food-cauliflower.jpg',
       tag: 'Приоритет 2026',
-      name: 'Ресторан ЗОЖ',
-      sub: 'Фермерская кухня · переработка местного сырья · доставка по&nbsp;посёлку',
+      name: 'Ресторан здорового питания',
+      sub: 'Органическая еда · переработка местного сырья · доставка по&nbsp;посёлку',
       d: 'Якорный объект ретрит-комплекса и&nbsp;точка притяжения для&nbsp;резидентов курорта. Производственный цех — часть концепции.',
       facts: [
-        ['Концепция', 'ЗОЖ + локальное'],
+        ['Концепция', 'Органика + локальное'],
         ['Сырьё', 'свой кооператив'],
         ['Старт операции', '2027'],
       ],
     },
     {
-      img: 'assets/photo/object-rental.jpg',
+      img: 'assets/photo/object-rental-bikes.png',
       tag: 'Приоритет 2026',
       name: 'Центр проката',
       sub: 'Велосипеды · SUP · снегоходы · лыжи · хранение личной техники · маршруты с&nbsp;гидом',
@@ -1600,9 +1584,9 @@ function PCFormBObjects() {
     <section className="sec-pad" id="objects" data-screen-label="ACT 3.B Objects">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">15</span><span className="sep">|</span>Опция 2 · Войдите долей</div>
+          <div className="crumb"><span className="num">15</span><span className="sep">|</span>Станьте&nbsp;нашим&nbsp;тематическим&nbsp;партнёром</div>
           <h2 className="display h-display-l">
-            Войдите долей в&nbsp;<em className="redword">конкретный объект</em>.<br/>
+            Станьте нашим <em className="redword">тематическим партнёром</em>.<br/>
             Отдельное ООО, отдельная экономика.
           </h2>
         </div>
