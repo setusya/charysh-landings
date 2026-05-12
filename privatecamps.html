@@ -54,7 +54,6 @@ function PrivateCampApp() {
       <PlaceSection />
       <RoadSection />
       <PCCommunity />
-      <PCResidents />
       <PCYearRound />
       <PCActivities />
       <RapportStrip variant={2} tone="redOnWhite" height={48} />
@@ -63,19 +62,23 @@ function PrivateCampApp() {
       <PCSpeaker />
       <PCTeam />
 
-      {/* ─── EMOTIONAL CORE · ДНК сходимости (после Place + People) ─── */}
+      {/* ─── EMOTIONAL CORE · ДНК сходимости ─── */}
       <PCDNA />
 
-      {/* ─── CONFIDENCE · почему мы справимся ─── */}
+      {/* ─── CONFIDENCE · 4 столпа уверенности ─── */}
       <PCSecurity />
-      <PCWhatsBuilt />
 
       {/* ─── PROJECT · что мы строим ─── */}
       <PCMasterPlan />
       <PCMasterPlanDetail />
 
-      {/* ─── INVESTMENT · контекст трендов перед предложением ─── */}
+      {/* ─── TRENDS · контекст перед предложением ─── */}
       <PCTrends />
+
+      {/* ─── COMMUNITY ANCHOR · кто живёт рядом — мост к инвестициям ─── */}
+      <PCResidents />
+
+      {/* ─── INVESTMENT · три формы и опции ─── */}
       <PCThreeForms />
       <PCConstructionTimeline />
       <PCEconomics />
@@ -84,8 +87,9 @@ function PrivateCampApp() {
       <PCFormCEquity />
       <PCAnnounceFarming />
 
-      {/* ─── PROOF + PLAN · доказательство и дорога ─── */}
+      {/* ─── PROOF · оборот → "Не план. Уже работа." → дорожная карта ─── */}
       <PCAltaiViability />
+      <PCWhatsBuilt />
       <PCRoadmap />
 
       {/* ─── CLOSE · юр. чистота → бонус PC2 → CTA ─── */}
