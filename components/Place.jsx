@@ -20,7 +20,7 @@ function PlaceSection() {
       <div className="container">
         <div className="comm-head">
           <div className="crumb">
-            <span className="num">04</span><span className="sep">|</span>Место<span className="sep">|</span>Природа
+            <span className="num">05</span><span className="sep">|</span>Место<span className="sep">|</span>Природа
           </div>
           <h2 className="display h-display-l">
             Уникальная природа<br/>
