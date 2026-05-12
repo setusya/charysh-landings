@@ -325,7 +325,7 @@ function PCAltaiViability() {
     <section className="sec-pad sec-dark" id="altai-viability" data-screen-label="02.4 Altai viability + scenarios">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">23</span><span className="sep">|</span>Доказательство · оборот</div>
+          <div className="crumb"><span className="num">24</span><span className="sep">|</span>Доказательство · оборот</div>
           <h2 className="display h-display-l">
             Чарышу нужно <em className="redword-light">0,36% рынка 2030</em>.<br/>
             Этой доли достаточно.
@@ -513,7 +513,7 @@ function PCMasterPlan() {
     <section className="sec-pad sec-warm" id="masterplan" data-screen-label="03 Master Plan — 6 sectors">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">11</span><span className="sep">|</span>Мастер-план</div>
+          <div className="crumb"><span className="num">12</span><span className="sep">|</span>Мастер-план</div>
           <h2 className="display h-display-l">
             Шесть секторов на&nbsp;<em className="redword">72 га</em>.<br/>
             Автономное и&nbsp;безопасное пространство.
@@ -574,7 +574,7 @@ function PCMasterPlanDetail() {
     <section className="sec-pad" id="masterplan-detail" data-screen-label="03.5 Master Plan Detail">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">12</span><span className="sep">|</span>Что внутри</div>
+          <div className="crumb"><span className="num">13</span><span className="sep">|</span>Что внутри</div>
           <h2 className="display h-display-l">
             Два сектора — <em className="redword">сердце посёлка</em>.<br/>
             Где живут и где собираются.
@@ -922,6 +922,122 @@ function PCResidents() {
 }
 window.PCResidents = PCResidents;
 
+// ───────────────────────── 10 · DNA convergence — основатели · место · люди ─────────────────────────
+function PCDNA() {
+  const founders = [
+    {
+      name: 'Вячеслав Немцов',
+      role: 'Со-основатель',
+      img: 'assets/team/nemtsov.jpg',
+      keys: ['Семья', 'Честь имею', 'Сильный род'],
+      d: 'Родовая память, верность слову, мужская честь — стержень, на&nbsp;котором держится семья и&nbsp;проект.',
+    },
+    {
+      name: 'Светлана Антонова',
+      role: 'Со-основатель',
+      img: 'assets/team/antonova.jpg',
+      keys: ['Гармония с природой', 'Духовные практики', 'Эстетика'],
+      d: 'Соединение тонкого мира и&nbsp;материального. Видение красоты, уважение к&nbsp;ритуалам, женское начало.',
+    },
+    {
+      name: 'Андрей Немцев',
+      role: 'Управляющий партнёр',
+      img: 'assets/team/nemtsev.jpg',
+      keys: ['Настоящее', 'Сибирское слово', 'Человек дела'],
+      d: 'Сила здесь и&nbsp;сейчас. Сказано — сделано. Знание земли, людей, природы изнутри.',
+    },
+  ];
+  const place = [
+    'Тупиковая долина — фильтр случайных',
+    'Чистая вода, воздух, целебные травы',
+    '10 000 лет истории на одной долине',
+    'Русское сердце на границе РА и АК',
+    'Тишина и приватность как природа',
+    'Особый микроклимат предгорий',
+  ];
+  const locals = [
+    'Казаки · 1765, станица Чарышская',
+    'Староверы · согласие с природой',
+    'Мастера · резьба, гончарство, валяние',
+    'Сибирское слово · прямота речи',
+    'Хор «Канареечка», хороводы, обряды',
+    'Жизнь по правде, община, гостеприимство',
+  ];
+  return (
+    <section className="sec-pad sec-warm" id="dna" data-screen-label="10 DNA convergence">
+      <div className="container">
+        <div className="comm-head">
+          <div className="crumb"><span className="num">11</span><span className="sep">|</span>Где&nbsp;сходятся&nbsp;три&nbsp;ДНК</div>
+          <h2 className="display h-display-l">
+            ДНК основателей · ДНК места · ДНК людей —<br/>
+            <em className="redword">сходятся в&nbsp;одной точке</em>.
+          </h2>
+        </div>
+        <p className="lead" style={{opacity:.78, maxWidth:'66ch', marginBottom:48}}>
+          Чарышские Усадьбы — это не&nbsp;девелопмент-проект. Это сочетание трёх ДНК. Каждое сильное само по&nbsp;себе. Вместе они дают характер места.
+        </p>
+
+        {/* Уровень 1 — ДНК основателей */}
+        <div className="pc-dna-section-head">
+          <span className="pc-dna-section-num">01</span>
+          <span className="pc-dna-section-h">ДНК основателей</span>
+          <span className="pc-dna-section-meta">Три характера · три ноты</span>
+        </div>
+        <div className="pc-dna-founders">
+          {founders.map((f, i) => (
+            <article className="pc-dna-founder" key={i}>
+              <div className="pc-dna-founder-ph" style={{backgroundImage:`url('${f.img}')`}}/>
+              <div className="pc-dna-founder-body">
+                <div className="pc-dna-founder-role">{f.role}</div>
+                <h3 className="pc-dna-founder-name">{f.name}</h3>
+                <div className="pc-dna-founder-keys">
+                  {f.keys.map((k, j) => <span key={j} className="pc-dna-key">{k}</span>)}
+                </div>
+                <p className="pc-dna-founder-d" dangerouslySetInnerHTML={{__html: f.d}}/>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        {/* Уровень 2 — ДНК места и людей */}
+        <div className="pc-dna-pair">
+          <div className="pc-dna-pair-col">
+            <div className="pc-dna-section-head">
+              <span className="pc-dna-section-num">02</span>
+              <span className="pc-dna-section-h">ДНК места</span>
+              <span className="pc-dna-section-meta">Чарышская долина</span>
+            </div>
+            <ul className="pc-dna-list">
+              {place.map((p, i) => <li key={i}>{p}</li>)}
+            </ul>
+          </div>
+          <div className="pc-dna-pair-col">
+            <div className="pc-dna-section-head">
+              <span className="pc-dna-section-num">03</span>
+              <span className="pc-dna-section-h">ДНК местных жителей</span>
+              <span className="pc-dna-section-meta">Чарышцы · 10 000 лет</span>
+            </div>
+            <ul className="pc-dna-list">
+              {locals.map((l, i) => <li key={i}>{l}</li>)}
+            </ul>
+          </div>
+        </div>
+
+        {/* Уровень 3 — сходимость */}
+        <div className="pc-dna-converge">
+          <div className="pc-dna-converge-arrow" aria-hidden="true">↓</div>
+          <div className="pc-dna-converge-h">Что получается на&nbsp;пересечении</div>
+          <p className="pc-dna-converge-d">
+            Семейный курорт с&nbsp;<strong>честью рода</strong>, <strong>красотой и&nbsp;духовной глубиной</strong>, <strong>сибирской прямотой и&nbsp;делом</strong> — собран на&nbsp;земле, которая 10&nbsp;000&nbsp;лет хранит этот код, и&nbsp;рядом с&nbsp;людьми, которые его носят живым.
+          </p>
+          <p className="pc-dna-converge-tag">Чарыш — не&nbsp;проект про курорт. Это место, которое возвращает домой.</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+window.PCDNA = PCDNA;
+
 // ───────────────────────── 18 · Why we are confident — 4 pillars ─────────────────────────
 function PCSecurity() {
   const pillars = [
@@ -968,7 +1084,7 @@ function PCSecurity() {
     <section className="sec-pad sec-dark" id="security" data-screen-label="18 Why we are confident">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">19</span><span className="sep">|</span>Почему&nbsp;мы&nbsp;уверены&nbsp;в&nbsp;проекте</div>
+          <div className="crumb"><span className="num">20</span><span className="sep">|</span>Почему&nbsp;мы&nbsp;уверены&nbsp;в&nbsp;проекте</div>
           <h2 className="display h-display-l">
             Не&nbsp;идея и&nbsp;не&nbsp;план.<br/>
             <em className="redword-light">Сходятся четыре силы</em> — одновременно.
@@ -997,7 +1113,7 @@ function PCSecurity() {
           ))}
         </div>
         <div className="pc-pillar-foot">
-          <span className="pc-pillar-foot-meta">Полная команда и&nbsp;био — на&nbsp;слайде 22</span>
+          <span className="pc-pillar-foot-meta">Полная команда и&nbsp;био — на&nbsp;слайде 23</span>
           <a href="#team" className="pc-pillar-foot-link">Команда и амбассадоры <span className="arrow">→</span></a>
         </div>
       </div>
@@ -1026,7 +1142,7 @@ function PCTrends() {
     <section className="sec-pad" id="trends" data-screen-label="19 Trends fit">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">19</span><span className="sep">|</span>На&nbsp;пересечении&nbsp;трендов</div>
+          <div className="crumb"><span className="num">21</span><span className="sep">|</span>На&nbsp;пересечении&nbsp;трендов</div>
           <h2 className="display h-display-l">
             Мы попадаем в&nbsp;<em className="redword">момент</em>.<br/>
             Двенадцать трендов сходятся в&nbsp;одной точке.
@@ -1064,7 +1180,7 @@ function PCEconomics() {
     <section className="sec-pad" id="economics" data-screen-label="07 Economics">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">14</span><span className="sep">|</span>Экономика</div>
+          <div className="crumb"><span className="num">15</span><span className="sep">|</span>Экономика</div>
           <h2 className="display h-display-l">
             Зарабатывает, когда вы в&nbsp;городе.<br/>
             <em className="redword">Восстанавливает</em>, когда вы&nbsp;здесь.
@@ -1209,7 +1325,7 @@ function PCLegal() {
     <section className="sec-pad sec-warm" id="legal" data-screen-label="10 Legal">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">26</span><span className="sep">|</span>Юридика</div>
+          <div className="crumb"><span className="num">27</span><span className="sep">|</span>Юридика</div>
           <h2 className="display h-display-l">
             Земля оформлена. Документы в&nbsp;порядке.<br/>
             <em className="redword">Сделка прозрачна.</em>
@@ -1249,7 +1365,7 @@ function PCWhatsBuilt() {
     <section className="sec-pad sec-dark" id="built" data-screen-label="11 Whats Built">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">21</span><span className="sep">|</span>Что&nbsp;уже&nbsp;сделано</div>
+          <div className="crumb"><span className="num">22</span><span className="sep">|</span>Что&nbsp;уже&nbsp;сделано</div>
           <h2 className="display h-display-l">
             Не план. <em className="redword-light">Уже&nbsp;работа.</em>
           </h2>
@@ -1306,7 +1422,7 @@ function PCRoadmap() {
     <section className="sec-pad" id="roadmap" data-screen-label="12 Roadmap">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">24</span><span className="sep">|</span>Дорожная&nbsp;карта</div>
+          <div className="crumb"><span className="num">25</span><span className="sep">|</span>Дорожная&nbsp;карта</div>
           <h2 className="display h-display-l">
             Вы входите <em className="redword">сейчас</em>.<br/>
             В самый нужный момент.
@@ -1344,7 +1460,7 @@ function PCTeam() {
     <section className="sec-pad sec-warm" id="team" data-screen-label="13 Team">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">22</span><span className="sep">|</span>Команда&nbsp;и&nbsp;амбассадоры</div>
+          <div className="crumb"><span className="num">23</span><span className="sep">|</span>Команда&nbsp;и&nbsp;амбассадоры</div>
           <h2 className="display h-display-l">
             Команда, которая <em className="redword">создаст</em> это место.
           </h2>
@@ -1469,7 +1585,7 @@ function PCRetreatShowcase() {
         <div className="place-photo-overlay" />
         <div className="container place-photo-frame">
           <div className="crumb" style={{ color: '#fff' }}>
-            <span className="num">16</span><span className="sep">|</span>Опция&nbsp;3<span className="sep">|</span>Станьте&nbsp;акционером
+            <span className="num">17</span><span className="sep">|</span>Опция&nbsp;3<span className="sep">|</span>Станьте&nbsp;акционером
           </div>
           <h2 className="display h-display-l place-photo-h">
             Атмосферный <em className="redword-light">ретрит-комплекс</em><br/>
@@ -1537,7 +1653,7 @@ function PCThreeForms() {
     <section className="sec-pad" id="forms-fork" data-screen-label="ACT 3 Three Forms Fork">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">25</span><span className="sep">|</span>Три&nbsp;формы&nbsp;участия</div>
+          <div className="crumb"><span className="num">26</span><span className="sep">|</span>Три&nbsp;формы&nbsp;участия</div>
           <h2 className="display h-display-l">
             Вход — это <em className="redword">выбор</em>,<br/>
             а не покупка.
@@ -1628,7 +1744,7 @@ function PCFormBObjects() {
     <section className="sec-pad" id="objects" data-screen-label="ACT 3.B Objects">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">15</span><span className="sep">|</span>Станьте&nbsp;нашим&nbsp;тематическим&nbsp;партнёром</div>
+          <div className="crumb"><span className="num">16</span><span className="sep">|</span>Станьте&nbsp;нашим&nbsp;тематическим&nbsp;партнёром</div>
           <h2 className="display h-display-l">
             Станьте нашим <em className="redword">тематическим партнёром</em>.<br/>
             Отдельное ООО, отдельная экономика.
@@ -1708,7 +1824,7 @@ function PCConstructionTimeline() {
     <section className="sec-pad" id="construction" data-screen-label="ACT 3.A Construction Timeline">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">13</span><span className="sep">|</span>Опция 1 · Участок + подряд</div>
+          <div className="crumb"><span className="num">14</span><span className="sep">|</span>Опция 1 · Участок + подряд</div>
           <h2 className="display h-display-l">
             Участок + подряд = <em className="redword">ключи в&nbsp;руках</em>.<br/>
             Два срока, одна ответственность.
@@ -1758,7 +1874,7 @@ function PCAnnounceFarming() {
     <section className="sec-pad sec-warm" id="farming-announce" data-screen-label="ACT 3.D Announce — КФХ">
       <div className="container">
         <div className="pc-announce-frame">
-          <div className="crumb"><span className="num">18</span><span className="sep">|</span>Анонс · отдельный проект</div>
+          <div className="crumb"><span className="num">19</span><span className="sep">|</span>Анонс · отдельный проект</div>
           <h2 className="display h-display-l pc-announce-h">
             Земли под <em className="redword">крестьянско-фермерское хозяйство</em><br/>
             — следующая инвестиционная волна.
@@ -1856,7 +1972,7 @@ function PCFormCEquity() {
     <section className="sec-pad sec-dark" id="equity" data-screen-label="ACT 3.C Equity AO">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">17</span><span className="sep">|</span>Стать&nbsp;сонаследником</div>
+          <div className="crumb"><span className="num">18</span><span className="sep">|</span>Стать&nbsp;сонаследником</div>
           <h2 className="display h-display-l">
             Войдите в&nbsp;долю <em className="redword-light">Резиденции Чарыш</em>.<br/>
             Строительство 2027 · ввод в&nbsp;эксплуатацию 2028.
@@ -1931,7 +2047,7 @@ function PCBonus() {
       <div className="container">
         <div className="pc-bonus-frame">
           <div className="crumb" style={{color:'rgba(255,255,255,.65)'}}>
-            <span className="num">27</span><span className="sep">|</span>Эксклюзив&nbsp;для&nbsp;Private&nbsp;Camp&nbsp;2
+            <span className="num">28</span><span className="sep">|</span>Эксклюзив&nbsp;для&nbsp;Private&nbsp;Camp&nbsp;2
           </div>
           <h2 className="display h-display-l pc-bonus-h">
             Персональные условия —<br/>
@@ -2002,7 +2118,7 @@ function PCFinalCTA() {
       <div className="container">
         <div className="form-grid">
           <div className="form-left">
-            <div className="crumb"><span className="num">28</span><span className="sep">|</span>Следующий&nbsp;шаг</div>
+            <div className="crumb"><span className="num">29</span><span className="sep">|</span>Следующий&nbsp;шаг</div>
             <h2 className="display h-display-m">
               Вы уже <em className="redword">очарышованы</em>?<br/>
               Покажем место, дома, расчёты доходности.

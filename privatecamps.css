@@ -1,6 +1,173 @@
 /* Charysh — Private Camp 2 speaker landing
    Page-specific styles. Requires tokens.css + site.css loaded first. */
 
+/* ─────────── DNA convergence slide — founders + place + locals ─────────── */
+.pc-dna-section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding-bottom: 10px;
+  margin: 28px 0 18px;
+  border-bottom: 2px solid var(--ink);
+}
+.pc-dna-section-num {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 28px;
+  line-height: 1;
+  color: var(--accent);
+}
+.pc-dna-section-h {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 22px;
+  line-height: 1.1;
+}
+.pc-dna-section-meta {
+  margin-left: auto;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .55;
+}
+.pc-dna-founders {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.pc-dna-founder {
+  background: var(--surface, #fff);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+}
+.pc-dna-founder-ph {
+  aspect-ratio: 4/3;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0,0,0,.06);
+}
+.pc-dna-founder-body {
+  padding: 18px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pc-dna-founder-role {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: .85;
+}
+.pc-dna-founder-name {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 22px;
+  line-height: 1.12;
+  margin: 0 0 4px;
+}
+.pc-dna-founder-keys {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+  margin: 4px 0 8px;
+}
+.pc-dna-key {
+  padding: 3px 10px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 14px;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  background: rgba(0,0,0,.02);
+}
+.pc-dna-founder-d {
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+  opacity: .82;
+  margin: 0;
+}
+
+.pc-dna-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  margin-bottom: 48px;
+}
+.pc-dna-pair-col {
+  display: flex;
+  flex-direction: column;
+}
+.pc-dna-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pc-dna-list li {
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+  padding-left: 18px;
+  position: relative;
+  opacity: .9;
+}
+.pc-dna-list li::before {
+  content: '·';
+  position: absolute;
+  left: 4px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.pc-dna-converge {
+  margin-top: 24px;
+  padding: 36px 32px 32px;
+  background: var(--ink);
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+.pc-dna-converge-arrow {
+  font-size: 28px;
+  line-height: 1;
+  color: #f4c8a8;
+  opacity: .75;
+  margin-bottom: 12px;
+}
+.pc-dna-converge-h {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: #f4c8a8;
+  margin-bottom: 14px;
+}
+.pc-dna-converge-d {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: clamp(20px, 1.8vw, 26px);
+  line-height: 1.4;
+  max-width: 72ch;
+  margin: 0 auto 18px;
+}
+.pc-dna-converge-d strong {
+  color: #f4c8a8;
+  font-weight: 500;
+}
+.pc-dna-converge-tag {
+  font-size: var(--fs-spec);
+  opacity: .85;
+  margin: 0;
+  max-width: 64ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1000px) {
+  .pc-dna-founders { grid-template-columns: 1fr; }
+  .pc-dna-pair { grid-template-columns: 1fr; gap: 24px; }
+}
+
 /* ─────────── Trends slide — 12 main as bordered 4x3 grid ─────────── */
 .pc-trends-main12 {
   display: grid;
