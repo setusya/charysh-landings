@@ -1,14 +1,21 @@
 /* Charysh — Private Camp 2 speaker landing
    Page-specific styles. Requires tokens.css + site.css loaded first. */
 
-/* ─────────── Big Altai — hero photo (Lake Teletskoye) ─────────── */
-.pc-bigaltai-hero {
-  margin: 8px 0 40px;
+/* ─────────── Big Altai — hero duo (Шерегеш + Манжерок) для контраста ─────────── */
+.pc-bigaltai-hero-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 8px 0 16px;
+}
+.pc-bigaltai-hero-cell {
   position: relative;
+  margin: 0;
+  overflow: hidden;
 }
 .pc-bigaltai-hero-ph {
   width: 100%;
-  aspect-ratio: 21/8;
+  aspect-ratio: 16/10;
   background-size: cover;
   background-position: center;
   background-color: rgba(255,255,255,.05);
@@ -16,28 +23,42 @@
 .pc-bigaltai-hero-cap {
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  padding: 18px 22px;
-  background: linear-gradient(0deg, rgba(0,0,0,.65) 0%, rgba(0,0,0,0) 100%);
+  padding: 16px 20px 18px;
+  background: linear-gradient(0deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,0) 100%);
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  gap: 24px;
+  gap: 18px;
   color: #fff;
 }
 .pc-bigaltai-hero-place {
   font-family: 'Dobrozrachniy', serif;
-  font-size: clamp(22px, 2.4vw, 32px);
+  font-size: clamp(22px, 2.2vw, 30px);
 }
 .pc-bigaltai-hero-meta {
   font-size: var(--fs-eyebrow);
   letter-spacing: var(--tracking-eyebrow);
   text-transform: uppercase;
   color: #f4c8a8;
-  opacity: .9;
+  opacity: .92;
+  text-align: right;
+  max-width: 56%;
+}
+.pc-bigaltai-hero-note {
+  font-size: var(--fs-spec);
+  line-height: 1.55;
+  opacity: .82;
+  max-width: 72ch;
+  margin: 0 0 40px;
+}
+.pc-bigaltai-hero-note strong {
+  color: #f4c8a8;
+  font-weight: 500;
 }
 @media (max-width: 880px) {
-  .pc-bigaltai-hero-ph { aspect-ratio: 16/9; }
+  .pc-bigaltai-hero-duo { grid-template-columns: 1fr; }
   .pc-bigaltai-hero-cap { flex-direction: column; gap: 6px; }
+  .pc-bigaltai-hero-meta { text-align: left; max-width: 100%; }
 }
 
 /* ─────────── Big Altai — отбивка: большие региональные проекты ─────────── */

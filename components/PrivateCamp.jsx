@@ -200,14 +200,26 @@ function PCAltaiMarket() {
           </h2>
         </div>
 
-        {/* Hero — Телецкое озеро (визитная карточка Горного Алтая) */}
-        <figure className="pc-bigaltai-hero">
-          <div className="pc-bigaltai-hero-ph" style={{backgroundImage:"url('assets/photo/altai-teletskoye.jpg')"}}/>
-          <figcaption className="pc-bigaltai-hero-cap">
-            <span className="pc-bigaltai-hero-place">Телецкое озеро</span>
-            <span className="pc-bigaltai-hero-meta">«Золотые горы Алтая» · объект Всемирного наследия ЮНЕСКО</span>
-          </figcaption>
-        </figure>
+        {/* Hero — два мегакурорта Большого Алтая для контраста с заповедным Чарышом */}
+        <div className="pc-bigaltai-hero-duo">
+          <figure className="pc-bigaltai-hero-cell">
+            <div className="pc-bigaltai-hero-ph" style={{backgroundImage:"url('assets/photo/altai-sheregesh.jpg')"}}/>
+            <figcaption className="pc-bigaltai-hero-cap">
+              <span className="pc-bigaltai-hero-place">Шерегеш</span>
+              <span className="pc-bigaltai-hero-meta">&gt;&nbsp;2&nbsp;млн&nbsp;гостей&nbsp;/&nbsp;год · горнолыжный мегакурорт</span>
+            </figcaption>
+          </figure>
+          <figure className="pc-bigaltai-hero-cell">
+            <div className="pc-bigaltai-hero-ph" style={{backgroundImage:"url('assets/photo/altai-manzherok.jpg')"}}/>
+            <figcaption className="pc-bigaltai-hero-cap">
+              <span className="pc-bigaltai-hero-place">Манжерок</span>
+              <span className="pc-bigaltai-hero-meta">~&nbsp;1,5&nbsp;млн&nbsp;гостей&nbsp;/&nbsp;год · премиум курорт Сбера</span>
+            </figcaption>
+          </figure>
+        </div>
+        <p className="pc-bigaltai-hero-note">
+          Большой Алтай — это уже мегакурорты, миллионы гостей и&nbsp;бюджеты под&nbsp;триллион. <strong>Чарыш — заповедная альтернатива</strong> в&nbsp;часе от&nbsp;этих потоков.
+        </p>
 
         {/* Что такое Большой Алтай — определение в 3 пунктах */}
         <div className="pc-bigaltai-def">
