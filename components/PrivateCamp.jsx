@@ -325,7 +325,7 @@ function PCAltaiViability() {
     <section className="sec-pad sec-dark" id="altai-viability" data-screen-label="02.4 Altai viability + scenarios">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">22</span><span className="sep">|</span>Доказательство · оборот</div>
+          <div className="crumb"><span className="num">23</span><span className="sep">|</span>Доказательство · оборот</div>
           <h2 className="display h-display-l">
             Чарышу нужно <em className="redword-light">0,36% рынка 2030</em>.<br/>
             Этой доли достаточно.
@@ -997,7 +997,7 @@ function PCSecurity() {
           ))}
         </div>
         <div className="pc-pillar-foot">
-          <span className="pc-pillar-foot-meta">Полная команда и&nbsp;био — на&nbsp;слайде 21</span>
+          <span className="pc-pillar-foot-meta">Полная команда и&nbsp;био — на&nbsp;слайде 22</span>
           <a href="#team" className="pc-pillar-foot-link">Команда и амбассадоры <span className="arrow">→</span></a>
         </div>
       </div>
@@ -1005,6 +1005,82 @@ function PCSecurity() {
   );
 }
 window.PCSecurity = PCSecurity;
+
+// ───────────────────────── 19 · Trends — на пересечении трендов ─────────────────────────
+function PCTrends() {
+  const main12 = [
+    { tag: 'Тихая роскошь',         d: 'Privacy as luxury · anti-Instagram' },
+    { tag: 'Внутренний туризм',     d: 'Алтай — в топ-5 регионов России' },
+    { tag: 'Аутентичность',         d: 'Настоящие казаки, староверы, мастера' },
+    { tag: 'Корневые ценности',     d: 'Традиция как ресурс, не нафталин' },
+    { tag: 'Семья на поколения',    d: 'Родовое имение, наследуемый актив' },
+    { tag: 'Slow living',           d: 'Долгие сезоны, ритм природы' },
+    { tag: 'Wellness и ретрит',     d: 'Здоровье как ежедневная практика' },
+    { tag: 'Сообщество',            d: 'Племя единомышленников, не ЖК' },
+    { tag: 'Природа как актив',     d: 'Заповедная долина, не турбаза' },
+    { tag: 'Реальные активы',       d: 'Земля в собственности · hedge' },
+    { tag: 'Современный русский',   d: 'LH47 + традиция, без китча' },
+    { tag: 'Большой Алтай',         d: 'Структурный рост, бюджет под триллион' },
+  ];
+  const clusters = [
+    { h: 'Россия и идентичность',  items: ['Внутренний туризм', 'Импортозамещение luxury', 'Интерес к русскому', 'Патриотизм', 'Корневые ценности', 'Возрождение ремёсел'] },
+    { h: 'Lifestyle и роскошь',    items: ['Тихая роскошь', 'Privacy as luxury', 'Slow living', 'Slow travel', 'Digital detox', 'Тишина как премиум'] },
+    { h: 'Семья и поколения',      items: ['Семейность', 'Осознанное родительство', 'Родовое имение', 'Образование в природе', 'Безопасная среда', 'Память рода'] },
+    { h: 'Здоровье и благополучие',items: ['Wellness и ретрит', 'Mental health', 'Mindfulness', 'Sleep tourism', 'Фито-медицина Алтая', 'Mountain wellness'] },
+    { h: 'Природа и эко',          items: ['Жизнь на природе', 'Эко-устойчивость', 'Органическая еда', 'Био-хозяйство', 'Сезонность по природе', 'Связь с землёй'] },
+    { h: 'Сообщество',             items: ['Аутентичность', 'Племя', 'Private camp', 'Соседство', 'Co-creation', 'Совладение'] },
+    { h: 'Инвестиции и капитал',   items: ['Реальные активы', 'Hedge от инфляции', 'Инфраструктурная капитализация', 'Семейный фонд', 'Юр. чистота как luxury', 'Закрытый клуб'] },
+    { h: 'Работа и образ жизни',   items: ['Удалёнка с домом', 'Гибрид Москва–Чарыш', 'Школа года', 'Резиденции мастеров'] },
+    { h: 'Архитектура и дизайн',   items: ['Современный русский', 'Тёплый минимализм', 'Архитектура контекста', 'Модульность'] },
+    { h: 'Макро и рынок',          items: ['Большой Алтай', 'Сибирь как фронтир', 'Малая авиация', 'Реконструкция дорог'] },
+  ];
+  return (
+    <section className="sec-pad" id="trends" data-screen-label="19 Trends fit">
+      <div className="container">
+        <div className="comm-head">
+          <div className="crumb"><span className="num">19</span><span className="sep">|</span>На&nbsp;пересечении&nbsp;трендов</div>
+          <h2 className="display h-display-l">
+            Мы попадаем в&nbsp;<em className="redword">момент</em>.<br/>
+            ~50&nbsp;трендов сходятся в&nbsp;одной точке.
+          </h2>
+        </div>
+
+        {/* Вариант А — 12 главных */}
+        <div className="pc-trends-head">
+          <div className="pc-trends-label">Вариант А · 12 главных — основа позиционирования</div>
+        </div>
+        <div className="pc-trends-main12">
+          {main12.map((t, i) => (
+            <article className="pc-trend-main" key={i}>
+              <div className="pc-trend-main-num">{String(i+1).padStart(2,'0')}</div>
+              <div className="pc-trend-main-tag">{t.tag}</div>
+              <div className="pc-trend-main-d">{t.d}</div>
+            </article>
+          ))}
+        </div>
+
+        <div className="pc-trends-rule"/>
+
+        {/* Вариант Б — полная карта */}
+        <div className="pc-trends-head">
+          <div className="pc-trends-label">Вариант Б · полная карта — 10 направлений, ~50 трендов</div>
+        </div>
+        <div className="pc-trends-clusters">
+          {clusters.map((c, i) => (
+            <div className="pc-trends-cluster" key={i}>
+              <div className="pc-trends-cluster-num">{String(i+1).padStart(2,'0')}</div>
+              <div className="pc-trends-cluster-h">{c.h}</div>
+              <div className="pc-trends-cluster-tags">
+                {c.items.map((it, j) => <span className="pc-trend-pill" key={j}>{it}</span>)}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+window.PCTrends = PCTrends;
 
 // ───────────────────────── 07 · Investment Economics ─────────────────────────
 function PCEconomics() {
@@ -1165,7 +1241,7 @@ function PCLegal() {
     <section className="sec-pad sec-warm" id="legal" data-screen-label="10 Legal">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">25</span><span className="sep">|</span>Юридика</div>
+          <div className="crumb"><span className="num">26</span><span className="sep">|</span>Юридика</div>
           <h2 className="display h-display-l">
             Земля оформлена. Документы в&nbsp;порядке.<br/>
             <em className="redword">Сделка прозрачна.</em>
@@ -1205,7 +1281,7 @@ function PCWhatsBuilt() {
     <section className="sec-pad sec-dark" id="built" data-screen-label="11 Whats Built">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">20</span><span className="sep">|</span>Что&nbsp;уже&nbsp;сделано</div>
+          <div className="crumb"><span className="num">21</span><span className="sep">|</span>Что&nbsp;уже&nbsp;сделано</div>
           <h2 className="display h-display-l">
             Не план. <em className="redword-light">Уже&nbsp;работа.</em>
           </h2>
@@ -1262,7 +1338,7 @@ function PCRoadmap() {
     <section className="sec-pad" id="roadmap" data-screen-label="12 Roadmap">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">23</span><span className="sep">|</span>Дорожная&nbsp;карта</div>
+          <div className="crumb"><span className="num">24</span><span className="sep">|</span>Дорожная&nbsp;карта</div>
           <h2 className="display h-display-l">
             Вы входите <em className="redword">сейчас</em>.<br/>
             В самый нужный момент.
@@ -1300,7 +1376,7 @@ function PCTeam() {
     <section className="sec-pad sec-warm" id="team" data-screen-label="13 Team">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">21</span><span className="sep">|</span>Команда&nbsp;и&nbsp;амбассадоры</div>
+          <div className="crumb"><span className="num">22</span><span className="sep">|</span>Команда&nbsp;и&nbsp;амбассадоры</div>
           <h2 className="display h-display-l">
             Команда, которая <em className="redword">создаст</em> это место.
           </h2>
@@ -1493,7 +1569,7 @@ function PCThreeForms() {
     <section className="sec-pad" id="forms-fork" data-screen-label="ACT 3 Three Forms Fork">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">24</span><span className="sep">|</span>Три&nbsp;формы&nbsp;участия</div>
+          <div className="crumb"><span className="num">25</span><span className="sep">|</span>Три&nbsp;формы&nbsp;участия</div>
           <h2 className="display h-display-l">
             Вход — это <em className="redword">выбор</em>,<br/>
             а не покупка.
@@ -1887,7 +1963,7 @@ function PCBonus() {
       <div className="container">
         <div className="pc-bonus-frame">
           <div className="crumb" style={{color:'rgba(255,255,255,.65)'}}>
-            <span className="num">26</span><span className="sep">|</span>Эксклюзив&nbsp;для&nbsp;Private&nbsp;Camp&nbsp;2
+            <span className="num">27</span><span className="sep">|</span>Эксклюзив&nbsp;для&nbsp;Private&nbsp;Camp&nbsp;2
           </div>
           <h2 className="display h-display-l pc-bonus-h">
             Персональные условия —<br/>
@@ -1958,7 +2034,7 @@ function PCFinalCTA() {
       <div className="container">
         <div className="form-grid">
           <div className="form-left">
-            <div className="crumb"><span className="num">27</span><span className="sep">|</span>Следующий&nbsp;шаг</div>
+            <div className="crumb"><span className="num">28</span><span className="sep">|</span>Следующий&nbsp;шаг</div>
             <h2 className="display h-display-m">
               Вы уже <em className="redword">очарышованы</em>?<br/>
               Покажем место, дома, расчёты доходности.
