@@ -1371,63 +1371,9 @@
   left: 0;
   opacity: .55;
 }
-.pc-pillar-avatars {
-  margin-top: auto;
-  padding-top: 18px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-  border-top: 1px solid rgba(255,255,255,.18);
-}
-.pc-pillar-avatar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-}
-.pc-pillar-avatar-ph {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-  background-color: rgba(255,255,255,.08);
-  border: 1px solid rgba(244,200,168,.45);
-}
-.pc-pillar-avatar-name {
-  font-size: 11px;
-  letter-spacing: .04em;
-  opacity: .82;
-  text-align: center;
-  line-height: 1.1;
-}
-.pc-pillar-foot {
-  margin-top: 28px;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 24px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255,255,255,.16);
-}
-.pc-pillar-foot-meta {
-  font-size: var(--fs-eyebrow);
-  letter-spacing: var(--tracking-eyebrow);
-  text-transform: uppercase;
-  opacity: .55;
-}
-.pc-pillar-foot-link {
-  color: #f4c8a8;
-  font-size: var(--fs-spec);
-  text-decoration: none;
-}
-.pc-pillar-foot-link:hover { text-decoration: underline; }
 @media (max-width: 1400px) { .pc-pillars-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 880px)  { .pc-pillars-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px)  {
-  .pc-pillars-grid { grid-template-columns: 1fr; }
-  .pc-pillar-foot { flex-direction: column; align-items: flex-start; gap: 8px; }
-}
+@media (max-width: 560px)  { .pc-pillars-grid { grid-template-columns: 1fr; } }
 
 /* ─────────── Economics — uses .climate-grid override ─────────── */
 .pc-economics-grid .climate-value {
