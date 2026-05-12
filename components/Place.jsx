@@ -8,38 +8,48 @@ function PlaceSection() {
     { n: '−16',  u: '°',  l: 'средняя январская',       sub: 'Сухой горный мороз без сырости' },
     { n: '+19',  u: '°',  l: 'средняя июльская',        sub: 'Не жарко даже летом' },
   ];
-  const naturePhotos = [
-    { src: 'assets/photo/girls-haystack.jpg',  cap: '2.1 — Лето в долине' },
-    { src: 'assets/photo/father-daughter.jpg', cap: '2.2 — Прогулка у реки' },
-    { src: 'assets/photo/horses-autumn.jpg',   cap: '2.3 — Осень, верхом' },
-    { src: 'assets/photo/river-summer-1.jpg',  cap: '2.4 — Утро на Чарыше' },
+  // Галерея — реальные фото долины Чарыша (взяты из слайда 15)
+  const gallery = [
+    { src: 'assets/photo/valley-overlook.jpg',    cap: 'Панорама с высоты' },
+    { src: 'assets/photo/nature-river-rocks.jpg', cap: 'Берег · щебень' },
+    { src: 'assets/photo/valley-autumn.jpg',      cap: 'Долина · октябрь' },
+    { src: 'assets/photo/season-autumn-river.jpg',cap: 'Чарыш · сезон' },
   ];
   return (
-    <section id="place" data-screen-label="03 Place — Nature">
-      <div className="place-photo" style={{ backgroundImage: "url('assets/photo/sunset-hills.jpg')" }}>
-        <div className="place-photo-overlay" />
-        <div className="container place-photo-frame">
-          <div className="crumb" style={{ color: '#fff' }}>
-            <span className="num">06</span><span className="sep">|</span>Место<span className="sep">|</span>Природа
+    <section className="sec-pad" id="place" data-screen-label="04 Place — Nature">
+      <div className="container">
+        <div className="comm-head">
+          <div className="crumb">
+            <span className="num">04</span><span className="sep">|</span>Место<span className="sep">|</span>Природа
           </div>
-          <h2 className="display h-display-l place-photo-h">
+          <h2 className="display h-display-l">
             Уникальная природа<br/>
-            и&nbsp;микроклимат.
+            и&nbsp;<em className="redword">микроклимат</em>.
           </h2>
-          <div className="place-photo-cap">2.0 — Долина реки Чарыш, июнь</div>
         </div>
-      </div>
-      <div className="container climate-grid">
-        {climate.map((c, i) => (
-          <div className="climate-cell" key={i}>
-            <div className="climate-num">0{i+1}</div>
-            <div className="climate-value">
-              {c.n}<span className="climate-unit">{c.u}</span>
+        <p className="lead" style={{opacity:.78, maxWidth:'62ch', marginBottom:32}}>
+          Чарышская долина — это не&nbsp;«ещё одна точка на&nbsp;Алтае». Это отдельный микроклимат, замкнутый горами от&nbsp;ветров, с&nbsp;числом солнечных дней выше Сочи и&nbsp;нулём мошки в&nbsp;разгар лета.
+        </p>
+        <div className="place-gallery">
+          {gallery.map((g, i) => (
+            <figure className="place-gallery-cell" key={i}>
+              <div className="place-gallery-ph" style={{backgroundImage:`url('${g.src}')`}}/>
+              <figcaption className="place-gallery-cap">{g.cap}</figcaption>
+            </figure>
+          ))}
+        </div>
+        <div className="climate-grid">
+          {climate.map((c, i) => (
+            <div className="climate-cell" key={i}>
+              <div className="climate-num">0{i+1}</div>
+              <div className="climate-value">
+                {c.n}<span className="climate-unit">{c.u}</span>
+              </div>
+              <div className="climate-label">{c.l}</div>
+              <div className="climate-sub">{c.sub}</div>
             </div>
-            <div className="climate-label">{c.l}</div>
-            <div className="climate-sub">{c.sub}</div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
