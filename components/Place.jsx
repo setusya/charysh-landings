@@ -20,7 +20,7 @@ function PlaceSection() {
         <div className="place-photo-overlay" />
         <div className="container place-photo-frame">
           <div className="crumb" style={{ color: '#fff' }}>
-            <span className="num">05</span><span className="sep">|</span>Место<span className="sep">|</span>Природа
+            <span className="num">06</span><span className="sep">|</span>Место<span className="sep">|</span>Природа
           </div>
           <h2 className="display h-display-l place-photo-h">
             Уникальная природа<br/>

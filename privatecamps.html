@@ -43,52 +43,51 @@ function PrivateCampApp() {
     <div data-screen-label="00 Private Camp 2 — Speaker Landing">
       <PCHeader />
 
-      {/* ─── ACT 1 · ЧАРЫШ — место, дорога, культура, люди ─── */}
+      {/* ─── HOOK + EMOTIONAL CORE ─── */}
       <PCHero heroPhoto="assets/photo/upload-00105.jpg" />
+      <PCDNA />
+
+      {/* ─── WHY NOW · контекст ─── */}
+      <PCTrends />
       <PCAltaiMarket />
+
+      {/* ─── PLACE · что это за земля ─── */}
       <PCLocation />
-      <PCSpeaker />
       <PlaceSection />
       <RoadSection />
       <PCCommunity />
+      <PCResidents />
       <PCYearRound />
       <PCActivities />
-      <PCResidents />
-      <PCDNA />
       <RapportStrip variant={2} tone="redOnWhite" height={48} />
 
-      {/* ─── ACT 2 · ПРОЕКТ — деревенский курорт Чарыш ─── */}
+      {/* ─── PEOPLE · кто стоит за проектом ─── */}
+      <PCSpeaker />
+      <PCTeam />
+
+      {/* ─── CONFIDENCE · почему мы справимся ─── */}
+      <PCSecurity />
+      <PCWhatsBuilt />
+
+      {/* ─── PROJECT · что мы строим ─── */}
       <PCMasterPlan />
       <PCMasterPlanDetail />
 
-      {/* ─── ACT 3 · ИНВЕСТИЦИОННЫЕ ВОЗМОЖНОСТИ ─── */}
-      {/* Форма А — места размещения (участок + подряд) */}
+      {/* ─── INVESTMENT · как войти ─── */}
+      <PCThreeForms />
       <PCConstructionTimeline />
       <PCEconomics />
-
-      {/* Форма Б — тематический инвестор */}
       <PCFormBObjects />
-
-      {/* Витрина ретрит-зоны (мост между Б и В) */}
       <PCRetreatShowcase />
-
-      {/* Форма В — акции АО (финансирует всю ретрит-зону) */}
       <PCFormCEquity />
-
-      {/* Анонс — КФХ как отдельный проект */}
       <PCAnnounceFarming />
 
-      {/* Тезис → тренды → прошлое · команда → доказательство → план → recap */}
-      <PCSecurity />
-      <PCTrends />
-      <PCWhatsBuilt />
-      <PCTeam />
+      {/* ─── PROOF + PLAN · доказательство и дорога ─── */}
       <PCAltaiViability />
       <PCRoadmap />
-      <PCThreeForms />
-      <PCLegal />
 
-      {/* ─── ACT 4 · ЗОВ ─── */}
+      {/* ─── CLOSE · юр. чистота → бонус PC2 → CTA ─── */}
+      <PCLegal />
       <PCBonus />
       <PCFinalCTA />
       <RapportStrip variant={3} tone="goldOnBlack" height={56} />
