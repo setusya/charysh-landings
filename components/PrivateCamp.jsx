@@ -1612,7 +1612,7 @@ function PCFormBObjects() {
       ],
     },
     {
-      img: 'assets/photo/object-coworking.jpg',
+      img: 'assets/photo/object-coworking-steford.jpg',
       tag: 'Приоритет 2026',
       name: 'Коворкинг',
       sub: 'Деловое пространство в&nbsp;общественном центре · удалённая работа с&nbsp;видом на&nbsp;долину',
