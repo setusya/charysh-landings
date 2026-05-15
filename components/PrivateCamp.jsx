@@ -212,12 +212,12 @@ function PCAltaiMarket() {
   ];
   return (
     <section className="sec-pad sec-dark pc-bigaltai" id="altai-market" data-screen-label="04 Big Altai context">
-      {/* Декоративная подложка — летняя аэрофотосъёмка Чарыша */}
-      <div className="pc-bigaltai-bg" style={{backgroundImage:"url('assets/photo/charysh-aerial.jpg')"}}/>
+      {/* Декоративная подложка — Белуха, главный пик Алтая */}
+      <div className="pc-bigaltai-bg" style={{backgroundImage:"url('assets/photo/altai-belukha.webp')"}}/>
       <div className="pc-bigaltai-bg-overlay"/>
       <div className="container pc-bigaltai-inner">
         <div className="comm-head">
-          <div className="crumb"><span className="num">04</span><span className="sep">|</span>Большой&nbsp;Алтай</div>
+          <div className="crumb"><span className="num">03</span><span className="sep">|</span>Большой&nbsp;Алтай</div>
           <h2 className="display h-display-l">
             <em className="redword-light">Большой Алтай</em> —<br/>
             самый растущий туррегион России.
@@ -439,7 +439,7 @@ function PCLocation() {
         <div className="place-photo-overlay" />
         <div className="container place-photo-frame">
           <div className="crumb" style={{ color: '#fff' }}>
-            <span className="num">05</span><span className="sep">|</span>География<span className="sep">|</span>Где&nbsp;это
+            <span className="num">04</span><span className="sep">|</span>География<span className="sep">|</span>Где&nbsp;это
           </div>
           <h2 className="display h-display-l place-photo-h">
             Россия · Алтайский край ·<br/>
@@ -860,7 +860,7 @@ function PCActivities() {
     <section className="sec-pad sec-warm" id="activities" data-screen-label="04.5 Activities">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">09</span><span className="sep">|</span>Чем&nbsp;живёт&nbsp;Чарыш</div>
+          <div className="crumb"><span className="num">08</span><span className="sep">|</span>Чем&nbsp;живёт&nbsp;Чарыш</div>
           <h2 className="display h-display-l">
             Дома, реки и горы — это <em className="redword">оправа</em>.<br/>
             Главное — то, что мы&nbsp;здесь делаем&nbsp;<em className="redword">вместе</em>.
@@ -1179,7 +1179,7 @@ function PCTrends() {
     <section className="sec-pad" id="trends" data-screen-label="02 Совпадение десятилетия">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">03</span><span className="sep">|</span>Совпадение&nbsp;десятилетия</div>
+          <div className="crumb"><span className="num">09</span><span className="sep">|</span>Совпадение&nbsp;десятилетия</div>
           <h2 className="display h-display-l">
             Двенадцать трендов десятилетия —<br/>
             <em className="redword">сошлись здесь</em>. Одновременно.
@@ -1532,7 +1532,7 @@ function PCCommunity() {
     <section className="sec-pad" id="community" data-screen-label="ACT 1.4 Community">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">08</span><span className="sep">|</span>10 000 лет на одной долине</div>
+          <div className="crumb"><span className="num">07</span><span className="sep">|</span>10 000 лет на одной долине</div>
           <h2 className="display h-display-l">
             Скифы. Казаки. Староверы.<br/>
             <em className="redword">Живые легенды места.</em>
