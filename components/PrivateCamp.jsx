@@ -55,7 +55,7 @@ function PCHero({ heroPhoto = 'assets/photo/upload-00105.jpg' }) {
             Алтай<br/>не&nbsp;для&nbsp;всех
           </h1>
           <div className="hero-sub">
-            Закрытый клубный посёлок в&nbsp;тупиковой долине реки Чарыш на&nbsp;72&nbsp;га. Дом — в&nbsp;собственность, сервис — гостиничный, доход — 50% от&nbsp;валовой выручки. Вы&nbsp;только что слушали выступление; здесь — глубина, цифры и&nbsp;документы.
+            <strong>Заповедная новая локация в&nbsp;Алтайском крае.</strong> Тупиковая долина реки Чарыш, 72&nbsp;га в&nbsp;собственности. Здесь — глубина, цифры и&nbsp;документы. Вы&nbsp;только что слушали выступление.
           </div>
         </div>
         <div className="hero-bottom">
@@ -75,11 +75,20 @@ function PCHero({ heroPhoto = 'assets/photo/upload-00105.jpg' }) {
 }
 window.PCHero = PCHero;
 
-// ───────────────────────── 02 · Scale anchor — clean photo, no text ─────────────────────────
+// ───────────────────────── 02 · Recovery курорт — full-bleed positioning ─────────────────────────
 function PCScale() {
   return (
-    <section className="pc-scale" id="scale" data-screen-label="02 Scale — photo">
+    <section className="pc-scale" id="scale" data-screen-label="02 Recovery курорт · 72 ГА">
       <div className="pc-scale-photo" style={{ backgroundImage: "url('assets/photo/nature-panorama.jpg')" }}/>
+      <div className="pc-scale-overlay"/>
+      <div className="container pc-scale-frame">
+        <h2 className="display h-display-l pc-scale-h">
+          Новый <em className="redword-light">recovery&nbsp;курорт</em><br/>
+          для жизни и&nbsp;отдыха<br/>
+          на&nbsp;72&nbsp;гектарах<br/>
+          в&nbsp;Чарышском районе Алтайского края.
+        </h2>
+      </div>
     </section>
   );
 }
@@ -127,7 +136,7 @@ function PCSpeaker() {
     <section className="sec-pad" id="speaker" data-screen-label="02 Speaker — Антонова">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">11</span><span className="sep">|</span>Спикер</div>
+          <div className="crumb"><span className="num">10</span><span className="sep">|</span>Спикер</div>
           <h2 className="display h-display-l">
             Сегодня проект представляет<br/>
             <em className="redword">Светлана Антонова.</em>
@@ -202,8 +211,11 @@ function PCAltaiMarket() {
     { name: 'Международный аэропорт', sub: 'Малая авиация · реконструкция дорог', where: 'Горно-Алтайск', fact: 'Растущий хаб региона' },
   ];
   return (
-    <section className="sec-pad sec-dark" id="altai-market" data-screen-label="02 Big Altai context">
-      <div className="container">
+    <section className="sec-pad sec-dark pc-bigaltai" id="altai-market" data-screen-label="04 Big Altai context">
+      {/* Декоративная подложка-титул */}
+      <div className="pc-bigaltai-bg" style={{backgroundImage:"url('assets/photo/altai-manzherok.jpg')"}}/>
+      <div className="pc-bigaltai-bg-overlay"/>
+      <div className="container pc-bigaltai-inner">
         <div className="comm-head">
           <div className="crumb"><span className="num">04</span><span className="sep">|</span>Большой&nbsp;Алтай</div>
           <h2 className="display h-display-l">
@@ -513,7 +525,7 @@ function PCMasterPlan() {
     <section className="sec-pad sec-warm" id="masterplan" data-screen-label="03 Master Plan — 6 sectors">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">15</span><span className="sep">|</span>Мастер-план</div>
+          <div className="crumb"><span className="num">14</span><span className="sep">|</span>Мастер-план</div>
           <h2 className="display h-display-l">
             Шесть секторов на&nbsp;<em className="redword">72 га</em>.<br/>
             Автономное и&nbsp;безопасное пространство.
@@ -538,6 +550,29 @@ function PCMasterPlan() {
   );
 }
 window.PCMasterPlan = PCMasterPlan;
+
+// ───────────────────────── 16 · Master Plan render — empty placeholder ─────────────────────────
+function PCMasterPlanRender() {
+  return (
+    <section className="sec-pad pc-mp-render-placeholder" id="masterplan-render" data-screen-label="16 Master plan render">
+      <div className="container">
+        <div className="comm-head">
+          <div className="crumb"><span className="num">15</span><span className="sep">|</span>Рендер мастер-плана</div>
+          <h2 className="display h-display-l">
+            Здесь будет <em className="redword">визуализация</em> мастер-плана.
+          </h2>
+        </div>
+        <div className="pc-mp-render-box">
+          <div className="pc-mp-render-hint">
+            Подложка для рендера / макета посёлка<br/>
+            <span className="pc-mp-render-hint-meta">Сохрани изображение в <code>assets/photo/masterplan-render.jpg</code> — оно появится здесь</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+window.PCMasterPlanRender = PCMasterPlanRender;
 
 // ───────── Slide 2: Detailed breakdown — частные резиденции + общественный центр ─────────
 function PCMasterPlanDetail() {
@@ -819,7 +854,7 @@ function PCActivities() {
     <section className="sec-pad sec-warm" id="activities" data-screen-label="04.5 Activities">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">10</span><span className="sep">|</span>Чем&nbsp;живёт&nbsp;Чарыш</div>
+          <div className="crumb"><span className="num">09</span><span className="sep">|</span>Чем&nbsp;живёт&nbsp;Чарыш</div>
           <h2 className="display h-display-l">
             Дома, реки и горы — это <em className="redword">оправа</em>.<br/>
             Главное — то, что мы&nbsp;здесь делаем&nbsp;<em className="redword">вместе</em>.
@@ -967,7 +1002,7 @@ function PCDNA() {
     <section className="sec-pad sec-warm" id="dna" data-screen-label="10 DNA convergence">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">13</span><span className="sep">|</span>Где&nbsp;сходятся&nbsp;три&nbsp;ДНК</div>
+          <div className="crumb"><span className="num">12</span><span className="sep">|</span>Где&nbsp;сходятся&nbsp;три&nbsp;ДНК</div>
           <h2 className="display h-display-l">
             ДНК основателей · ДНК места · ДНК людей —<br/>
             <em className="redword">сходятся в&nbsp;одной точке</em>.
@@ -1091,7 +1126,7 @@ function PCSecurity() {
     <section className="sec-pad sec-dark" id="security" data-screen-label="18 Why we are confident">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">14</span><span className="sep">|</span>Почему&nbsp;мы&nbsp;уверены&nbsp;в&nbsp;проекте</div>
+          <div className="crumb"><span className="num">13</span><span className="sep">|</span>Почему&nbsp;мы&nbsp;уверены&nbsp;в&nbsp;проекте</div>
           <h2 className="display h-display-l">
             Не&nbsp;идея и&nbsp;не&nbsp;план.<br/>
             <em className="redword-light">Сходятся четыре силы</em> — одновременно.
@@ -1456,7 +1491,7 @@ function PCTeam() {
     <section className="sec-pad sec-warm" id="team" data-screen-label="13 Team">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">12</span><span className="sep">|</span>Команда&nbsp;и&nbsp;амбассадоры</div>
+          <div className="crumb"><span className="num">11</span><span className="sep">|</span>Команда&nbsp;и&nbsp;амбассадоры</div>
           <h2 className="display h-display-l">
             Команда, которая <em className="redword">создаст</em> это место.
           </h2>
