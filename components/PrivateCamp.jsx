@@ -75,30 +75,11 @@ function PCHero({ heroPhoto = 'assets/photo/upload-00105.jpg' }) {
 }
 window.PCHero = PCHero;
 
-// ───────────────────────── 02 · Scale anchor — "72 гектара" ─────────────────────────
+// ───────────────────────── 02 · Scale anchor — clean photo, no text ─────────────────────────
 function PCScale() {
   return (
-    <section className="pc-scale" id="scale" data-screen-label="02 Scale — 72 ГА">
+    <section className="pc-scale" id="scale" data-screen-label="02 Scale — photo">
       <div className="pc-scale-photo" style={{ backgroundImage: "url('assets/photo/nature-panorama.jpg')" }}/>
-      <div className="pc-scale-overlay"/>
-      <div className="container pc-scale-frame">
-        <div className="crumb" style={{color:'#fff'}}>
-          <span className="num">02</span><span className="sep">|</span>Масштаб
-        </div>
-        <div className="pc-scale-body">
-          <div className="pc-scale-figure">
-            <span className="pc-scale-num">72</span>
-            <span className="pc-scale-unit">гектара</span>
-          </div>
-          <h2 className="display h-display-l pc-scale-h">
-            В&nbsp;тупиковой долине Чарыша.<br/>
-            <em className="redword-light">В собственности.</em> Дом для рода.
-          </h2>
-          <p className="pc-scale-meta">
-            Земля под рекреационное использование · ВРИ оформлен · АО учреждено · коммуникации подведены
-          </p>
-        </div>
-      </div>
     </section>
   );
 }
