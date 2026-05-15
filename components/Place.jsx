@@ -10,10 +10,10 @@ function PlaceSection() {
   ];
   // Галерея — реальные фото долины Чарыша (взяты из слайда 15)
   const gallery = [
-    { src: 'assets/photo/valley-overlook.jpg',    cap: 'Панорама с высоты' },
-    { src: 'assets/photo/nature-river-rocks.jpg', cap: 'Берег · щебень' },
-    { src: 'assets/photo/valley-autumn.jpg',      cap: 'Долина · октябрь' },
-    { src: 'assets/photo/season-autumn-river.jpg',cap: 'Чарыш · сезон' },
+    { src: 'assets/photo/place-misty-mountains.jpg', cap: 'Мягкий вечер над долиной' },
+    { src: 'assets/photo/nature-river-rocks.jpg',    cap: 'Берег · щебень' },
+    { src: 'assets/photo/valley-autumn.jpg',         cap: 'Долина · октябрь' },
+    { src: 'assets/photo/season-autumn-river.jpg',   cap: 'Чарыш · сезон' },
   ];
   return (
     <section className="sec-pad" id="place" data-screen-label="04 Place — Nature">
