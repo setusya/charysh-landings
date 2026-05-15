@@ -1069,7 +1069,7 @@ function PCDNA() {
           <div className="pc-dna-converge-arrow" aria-hidden="true">↓</div>
           <div className="pc-dna-converge-h">Что получается на&nbsp;пересечении</div>
           <p className="pc-dna-converge-d">
-            Семейный курорт с&nbsp;<strong>честью рода</strong>, <strong>красотой и&nbsp;духовной глубиной</strong>, <strong>сибирской прямотой и&nbsp;делом</strong> — собран на&nbsp;земле, которая 10&nbsp;000&nbsp;лет хранит этот код, и&nbsp;рядом с&nbsp;людьми, которые его носят живым.
+            <strong>Recovery курорт на&nbsp;Алтае</strong> с&nbsp;<strong>красотой</strong>, <strong>функциональностью</strong> и&nbsp;<strong>глубиной</strong> — собран на&nbsp;земле, которая <strong>300&nbsp;лет</strong> хранит свой культурный код, и&nbsp;рядом с&nbsp;людьми, которые его носят живым.
           </p>
           <p className="pc-dna-converge-tag">Чарыш — не&nbsp;проект про курорт. Это место, которое возвращает домой.</p>
         </div>
