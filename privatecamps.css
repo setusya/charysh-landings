@@ -188,6 +188,33 @@
   max-width: 72ch;
   margin: 0 auto 18px;
 }
+.pc-dna-product-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 28px auto 24px;
+  max-width: 880px;
+}
+.pc-dna-product {
+  padding: 18px 20px;
+  border: 1px solid rgba(244,200,168,.4);
+  background: rgba(244,200,168,.06);
+  text-align: center;
+}
+.pc-dna-product-label {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 22px;
+  color: #f4c8a8;
+  margin-bottom: 6px;
+}
+.pc-dna-product-meta {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .75;
+  line-height: 1.35;
+}
+@media (max-width: 720px) { .pc-dna-product-strip { grid-template-columns: 1fr; } }
 .pc-dna-converge-d strong {
   color: #f4c8a8;
   font-weight: 500;
@@ -204,6 +231,139 @@
 @media (max-width: 1000px) {
   .pc-dna-founders { grid-template-columns: 1fr; }
   .pc-dna-pair { grid-template-columns: 1fr; gap: 24px; }
+}
+
+/* ─────────── Family 8+ audience slide ─────────── */
+.pc-family-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 0 0 48px;
+}
+.pc-family-col {
+  padding: 28px 28px 30px;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+.pc-family-col-tag {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.pc-family-col-h {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 28px;
+  line-height: 1.12;
+  margin: 6px 0 16px;
+}
+.pc-family-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: var(--fs-spec);
+  line-height: 1.5;
+}
+.pc-family-list li {
+  padding-left: 18px;
+  position: relative;
+  opacity: .88;
+}
+.pc-family-list li::before {
+  content: '·';
+  position: absolute;
+  left: 6px;
+  color: var(--accent);
+  font-weight: 700;
+}
+.pc-family-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  margin-bottom: 36px;
+}
+.pc-family-stat {
+  padding: 22px 22px 24px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 160px;
+}
+.pc-family-stat-num {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  color: var(--accent);
+  opacity: .65;
+}
+.pc-family-stat-v {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 32px;
+  line-height: 1.05;
+  margin: 6px 0 4px;
+}
+.pc-family-stat-l {
+  font-size: var(--fs-spec);
+  line-height: 1.4;
+  opacity: .9;
+}
+.pc-family-stat-sub {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .55;
+  margin-top: auto;
+  line-height: 1.4;
+}
+
+.pc-family-market {
+  padding: 24px 28px;
+  background: rgba(0,0,0,.04);
+  border-left: 3px solid var(--accent);
+}
+.pc-family-market-h {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+.pc-family-market-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  font-size: var(--fs-spec);
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+.pc-family-market-row .arrow {
+  color: var(--accent);
+  font-weight: 600;
+}
+.pc-family-market-row strong {
+  font-weight: 500;
+  color: var(--accent);
+}
+.pc-family-market-meta {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .65;
+  line-height: 1.5;
+}
+@media (max-width: 980px) {
+  .pc-family-grid { grid-template-columns: 1fr; }
+  .pc-family-stats { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .pc-family-stats { grid-template-columns: 1fr; }
+  .pc-family-market-row { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .pc-family-market-row .arrow { display: none; }
 }
 
 /* ─────────── Trends slide — 12 main as bordered 4x3 grid ─────────── */
@@ -315,6 +475,34 @@
   padding: 2px 8px;
   font-family: monospace;
   font-size: 12px;
+}
+
+/* ─────────── Equity AO — первый объём привлекаемых инвестиций ─────────── */
+.pc-equity-firstround {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 0 0 36px;
+  padding: 18px 24px;
+  background: rgba(244,200,168,.08);
+  border: 1px solid rgba(244,200,168,.35);
+}
+.pc-equity-firstround-l {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: #f4c8a8;
+  opacity: .9;
+}
+.pc-equity-firstround-v {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: clamp(32px, 3.6vw, 48px);
+  color: #fff;
+  line-height: 1;
+}
+@media (max-width: 600px) {
+  .pc-equity-firstround { flex-direction: column; gap: 4px; padding: 14px 18px; }
 }
 
 /* ─────────── Big Altai — slide background (заголовок поверх затемнённого фото) ─────────── */
@@ -1054,13 +1242,13 @@
 /* ─────────── Master Plan — 6 sectors ─────────── */
 .pc-sectors-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 0;
   border-top: 1px solid var(--line);
   border-left: 1px solid var(--line);
 }
 .pc-sector-card {
-  padding: 28px 26px 24px;
+  padding: 22px 18px 20px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   display: flex;
@@ -1104,8 +1292,9 @@
   color: var(--accent);
   opacity: .8;
 }
-@media (max-width: 980px) { .pc-sectors-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 560px) { .pc-sectors-grid { grid-template-columns: 1fr; } }
+@media (max-width: 1280px) { .pc-sectors-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 800px)  { .pc-sectors-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px)  { .pc-sectors-grid { grid-template-columns: 1fr; } }
 
 /* ─────────── Master Plan Detail — 2 columns deep dive ─────────── */
 .pc-mp-detail-grid {

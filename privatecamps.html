@@ -61,6 +61,9 @@ function PrivateCampApp() {
 
       {/* ─── BIG IDEA · совпадение десятилетия (cap of Place block) ─── */}
       <PCTrends />
+
+      {/* ─── AUDIENCE · семьи с детьми 8+ ─── */}
+      <PCFamily />
       <RapportStrip variant={2} tone="redOnWhite" height={48} />
 
       {/* ─── PEOPLE · кто стоит за проектом ─── */}
@@ -76,13 +79,16 @@ function PrivateCampApp() {
       {/* ─── PROJECT · что мы строим ─── */}
       <PCMasterPlan />
       <PCMasterPlanRender />
+
+      {/* ─── INVESTMENT OVERVIEW · три формы участия сразу после мастер-плана ─── */}
+      <PCThreeForms />
+
       <PCMasterPlanDetail />
 
-      {/* ─── COMMUNITY ANCHOR · кто живёт рядом — мост к инвестициям ─── */}
+      {/* ─── COMMUNITY ANCHOR · кто живёт рядом — мост к деталям инвестиций ─── */}
       <PCResidents />
 
-      {/* ─── INVESTMENT · три формы и опции ─── */}
-      <PCThreeForms />
+      {/* ─── INVESTMENT · детали опций ─── */}
       <PCConstructionTimeline />
       <PCEconomics />
       <PCFormBObjects />

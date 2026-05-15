@@ -136,7 +136,7 @@ function PCSpeaker() {
     <section className="sec-pad" id="speaker" data-screen-label="02 Speaker — Антонова">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">10</span><span className="sep">|</span>Спикер</div>
+          <div className="crumb"><span className="num">11</span><span className="sep">|</span>Спикер</div>
           <h2 className="display h-display-l">
             Сегодня проект представляет<br/>
             <em className="redword">Светлана Антонова.</em>
@@ -337,10 +337,10 @@ function PCAltaiViability() {
     <section className="sec-pad sec-dark" id="altai-viability" data-screen-label="02.4 Altai viability + scenarios">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">25</span><span className="sep">|</span>Доказательство · оборот</div>
+          <div className="crumb"><span className="num">26</span><span className="sep">|</span>Доказательство · оборот</div>
           <h2 className="display h-display-l">
-            Чарышу нужно <em className="redword-light">0,36% рынка 2030</em>.<br/>
-            Этой доли достаточно.
+            Для реализации Чарышу необходимо привлечь<br/>
+            <em className="redword-light">всего 0,36% турпотока Большого Алтая</em>.
           </h2>
         </div>
         <p className="lead" style={{opacity:.85, maxWidth:'66ch', marginBottom:48}}>
@@ -485,45 +485,39 @@ window.PCLocation = PCLocation;
 function PCMasterPlan() {
   const sectors = [
     {
-      n: '01', name: 'Чарышские Усадьбы',
-      sub: 'Сердце посёлка',
-      d: '150–200 гостевых домов на индивидуальных участках 6–7 соток. 4 функциональных подсектора — от долгосрочного проживания до апартаментов с видом на реку.',
+      n: '01', name: 'Чарышские усадьбы с богатым общественным центром',
+      sub: 'Сердце посёлка · жизнь и быт',
+      d: '150–200 гостевых домов на участках 6–7 соток + общественный центр (визит-центр, фермерское кафе, smart cafe, ярмарка, прокат, спорт, парковка).',
       status: 'Проектируется',
     },
     {
-      n: '02', name: 'Общественный центр',
-      sub: 'Все объекты для жителей',
-      d: 'Визит-центр, банный комплекс, фермерское кафе, smart cafe, ярмарка, прокат, спорт, водопад, КПП, парковка на 40 машин.',
-      status: 'Проектируется',
-    },
-    {
-      n: '03', name: 'Ретрит-зона',
+      n: '02', name: 'Ретрит-зона',
       sub: '«Резиденция Чарыш»',
-      d: 'Ретрит-центр, 4 двухэтажных гостевых дома, 11 одиночных + 5 дуплексов в лесу, банный комплекс с круглой баней до 30 человек, MICE-павильон.',
+      d: 'Ретрит-центр, 4 двухэтажных гостевых дома, 11 одиночных + 5 дуплексов в лесу, банный комплекс, MICE-павильон.',
       status: 'Готов · студия 8 Lines',
     },
     {
-      n: '04', name: 'Видовая зона «Гора»',
+      n: '03', name: 'Видовая зона «Гора»',
       sub: 'Высота над долиной',
-      d: 'Smart cafe, 2–3 видовые беседки, костровище. Без жёсткой привязки к точке — гибкое размещение по рельефу.',
+      d: 'Smart cafe, 2–3 видовые беседки, костровище. Гибкое размещение по рельефу.',
       status: 'Концепция',
     },
     {
-      n: '05', name: 'Кластер горных лыж',
+      n: '04', name: 'Кластер горных лыж',
       sub: 'Зимний спорт',
-      d: 'Горнолыжный склон примыкает к территории. Зимняя инфраструктура — основа 365-дневного сценария жизни.',
+      d: 'Горнолыжный склон примыкает к территории. Зимняя инфраструктура — основа 365-дневного сценария.',
       status: 'Обозначено',
     },
     {
-      n: '06', name: 'Конный двор',
+      n: '05', name: 'Конный двор',
       sub: 'Конные тропы и клуб',
-      d: 'Якорный объект для семей. Конные прогулки по тропам, обучение, природная академия.',
+      d: 'Якорный объект для семей. Конные прогулки, обучение, природная академия.',
       status: 'Обозначено',
     },
     {
-      n: '07', name: 'Recovery кластер',
+      n: '06', name: 'Recovery кластер',
       sub: 'Физическое · ментальное · сексуальное здоровье',
-      d: 'На основе местных курортных факторов (моралы, фитотравы, артезиан, климат) и новых технологий (IV-терапия, биохакинг, протоколы recovery). Здоровая семья · здоровая пара · longevity.',
+      d: 'Местные курортные факторы (моралы, фитотравы, артезиан) + новые технологии (IV-терапия, биохакинг, recovery протоколы).',
       status: 'Якорь wellness-программы',
     },
   ];
@@ -531,9 +525,9 @@ function PCMasterPlan() {
     <section className="sec-pad sec-warm" id="masterplan" data-screen-label="14 Master Plan — 7 sectors">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">14</span><span className="sep">|</span>Мастер-план</div>
+          <div className="crumb"><span className="num">15</span><span className="sep">|</span>Мастер-план</div>
           <h2 className="display h-display-l">
-            Семь секторов на&nbsp;<em className="redword">72 га</em>.<br/>
+            Шесть секторов на&nbsp;<em className="redword">72 га</em>.<br/>
             Автономное и&nbsp;безопасное пространство.
           </h2>
         </div>
@@ -563,7 +557,7 @@ function PCMasterPlanRender() {
     <section className="sec-pad pc-mp-render-placeholder" id="masterplan-render" data-screen-label="16 Master plan render">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">15</span><span className="sep">|</span>Рендер мастер-плана</div>
+          <div className="crumb"><span className="num">16</span><span className="sep">|</span>Рендер мастер-плана</div>
           <h2 className="display h-display-l">
             Здесь будет <em className="redword">визуализация</em> мастер-плана.
           </h2>
@@ -615,7 +609,7 @@ function PCMasterPlanDetail() {
     <section className="sec-pad" id="masterplan-detail" data-screen-label="03.5 Master Plan Detail">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">16</span><span className="sep">|</span>Что внутри</div>
+          <div className="crumb"><span className="num">18</span><span className="sep">|</span>Что внутри</div>
           <h2 className="display h-display-l">
             Два сектора — <em className="redword">сердце посёлка</em>.<br/>
             Где живут и где собираются.
@@ -929,7 +923,7 @@ function PCResidents() {
     <section className="sec-pad sec-warm" id="residents" data-screen-label="05 Residents">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">17</span><span className="sep">|</span>Кто&nbsp;здесь&nbsp;живёт</div>
+          <div className="crumb"><span className="num">19</span><span className="sep">|</span>Кто&nbsp;здесь&nbsp;живёт</div>
           <h2 className="display h-display-l">
             Тщательно отобранное<br/>
             <em className="redword">сообщество</em> — наша защита<br/>
@@ -1008,7 +1002,7 @@ function PCDNA() {
     <section className="sec-pad sec-warm" id="dna" data-screen-label="10 DNA convergence">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">12</span><span className="sep">|</span>Где&nbsp;сходятся&nbsp;три&nbsp;ДНК</div>
+          <div className="crumb"><span className="num">13</span><span className="sep">|</span>Где&nbsp;сходятся&nbsp;три&nbsp;ДНК</div>
           <h2 className="display h-display-l">
             ДНК основателей · ДНК места · ДНК людей —<br/>
             <em className="redword">сходятся в&nbsp;одной точке</em>.
@@ -1071,6 +1065,20 @@ function PCDNA() {
           <p className="pc-dna-converge-d">
             <strong>Recovery курорт на&nbsp;Алтае</strong> с&nbsp;<strong>красотой</strong>, <strong>функциональностью</strong> и&nbsp;<strong>глубиной</strong> — собран на&nbsp;земле, которая <strong>300&nbsp;лет</strong> хранит свой культурный код, и&nbsp;рядом с&nbsp;людьми, которые его носят живым.
           </p>
+          <div className="pc-dna-product-strip">
+            <div className="pc-dna-product">
+              <div className="pc-dna-product-label">Recovery</div>
+              <div className="pc-dna-product-meta">Здоровье · longevity · восстановление</div>
+            </div>
+            <div className="pc-dna-product">
+              <div className="pc-dna-product-label">Mini MICE</div>
+              <div className="pc-dna-product-meta">Корпоративные сессии · ретриты команд · стратсессии</div>
+            </div>
+            <div className="pc-dna-product">
+              <div className="pc-dna-product-label">Ретриты</div>
+              <div className="pc-dna-product-meta">Авторские программы мастеров и кураторов</div>
+            </div>
+          </div>
           <p className="pc-dna-converge-tag">Чарыш — не&nbsp;проект про курорт. Это место, которое возвращает домой.</p>
         </div>
       </div>
@@ -1132,7 +1140,7 @@ function PCSecurity() {
     <section className="sec-pad sec-dark" id="security" data-screen-label="18 Why we are confident">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">13</span><span className="sep">|</span>Почему&nbsp;мы&nbsp;уверены&nbsp;в&nbsp;проекте</div>
+          <div className="crumb"><span className="num">14</span><span className="sep">|</span>Почему&nbsp;мы&nbsp;уверены&nbsp;в&nbsp;проекте</div>
           <h2 className="display h-display-l">
             Не&nbsp;идея и&nbsp;не&nbsp;план.<br/>
             <em className="redword-light">Сходятся четыре силы</em> — одновременно.
@@ -1203,6 +1211,88 @@ function PCTrends() {
 }
 window.PCTrends = PCTrends;
 
+// ───────────────────────── XX · Семьи с детьми 8+ — целевая аудитория ─────────────────────────
+function PCFamily() {
+  const stats = [
+    { v: '~5 млн', l: 'семей в РФ с детьми 8–14', sub: 'Целевой возраст «окна осознанного выбора родителей»' },
+    { v: '+22%',   l: 'рост рынка детского туризма за 2 года', sub: 'РСТ · итоги 2025 · структурный тренд' },
+    { v: '76%',    l: 'россиян хотят «отдых ради тишины»', sub: 'Замер ЮMoney 2025 — мотивации поездок' },
+    { v: '29%',    l: 'выбирают уединённые домики на Алтае', sub: '№ 1 в РФ · ЮMoney и Суточно.ру' },
+  ];
+  return (
+    <section className="sec-pad sec-warm" id="family" data-screen-label="Family 8+ audience">
+      <div className="container">
+        <div className="comm-head">
+          <div className="crumb"><span className="num">10</span><span className="sep">|</span>Семьи&nbsp;с&nbsp;детьми&nbsp;8+</div>
+          <h2 className="display h-display-l">
+            Курорт для семей с&nbsp;детьми <em className="redword">8+</em>.<br/>
+            Серьёзно занимаемся главным.
+          </h2>
+        </div>
+        <p className="lead" style={{opacity:.78, maxWidth:'68ch', marginBottom:40}}>
+          Возраст 8–14 — окно, когда ребёнок ещё с&nbsp;удовольствием едет с&nbsp;родителями, но&nbsp;уже готов к&nbsp;настоящим делам. Чарыш собран под&nbsp;этот сегмент: дети заняты осмысленным трудом и&nbsp;приключениями круглый год, родители — собой.
+        </p>
+
+        <div className="pc-family-grid">
+          <article className="pc-family-col">
+            <div className="pc-family-col-tag">Детям</div>
+            <h3 className="pc-family-col-h">Настоящие сибирские дела</h3>
+            <ul className="pc-family-list">
+              <li>Конные походы и&nbsp;конный клуб</li>
+              <li>Рафтинг, SUP, рыбалка на&nbsp;Чарыше</li>
+              <li>Скалолазание, велотреккинг, тропы</li>
+              <li>Мастерские: дерево, керамика, кузня, валяние</li>
+              <li>Природные академии: травы, мараловодство, скифские курганы</li>
+              <li>Зимой: горнолыжный кластер · санки · ледовый трек</li>
+              <li>Круглогодичный детский центр на&nbsp;~300 м²</li>
+            </ul>
+          </article>
+          <article className="pc-family-col">
+            <div className="pc-family-col-tag">Родителям</div>
+            <h3 className="pc-family-col-h">Своё пространство и&nbsp;покой</h3>
+            <ul className="pc-family-list">
+              <li>Recovery программы и&nbsp;medi-spa</li>
+              <li>Тишина, приватность, тупиковая долина</li>
+              <li>Сообщество единомышленников · клуб</li>
+              <li>Гибкая работа: коворкинг + интернет 1&nbsp;Гбит</li>
+              <li>Долгие визиты возможны — 2–4&nbsp;недели как норма</li>
+              <li>Безопасная среда — родители всегда видят детей</li>
+            </ul>
+          </article>
+        </div>
+
+        <div className="pc-family-stats">
+          {stats.map((s, i) => (
+            <div className="pc-family-stat" key={i}>
+              <div className="pc-family-stat-num">{String(i+1).padStart(2,'0')}</div>
+              <div className="pc-family-stat-v">{s.v}</div>
+              <div className="pc-family-stat-l">{s.l}</div>
+              <div className="pc-family-stat-sub">{s.sub}</div>
+            </div>
+          ))}
+        </div>
+
+        <div className="pc-family-market">
+          <div className="pc-family-market-h">Оценка рынка для&nbsp;Чарыша</div>
+          <div className="pc-family-market-row">
+            <div><strong>5&nbsp;млн</strong> семей с&nbsp;детьми 8–14 в&nbsp;РФ</div>
+            <div className="arrow">→</div>
+            <div><strong>~2,5%</strong> верхне-средний сегмент (≈125&nbsp;тыс. семей)</div>
+            <div className="arrow">→</div>
+            <div><strong>0,2%</strong> готовы к&nbsp;курорту-усадьбе (≈250&nbsp;семей в&nbsp;год)</div>
+            <div className="arrow">→</div>
+            <div><strong>Чарыш на&nbsp;200&nbsp;семей-владельцев</strong> + 2–3&nbsp;тыс. гостевых визитов</div>
+          </div>
+          <div className="pc-family-market-meta">
+            Тренды: осознанное родительство · slow parenting · образование вне города (homeschool, unschool) · альтернатива летним лагерям с&nbsp;программами «на&nbsp;глубину»
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+window.PCFamily = PCFamily;
+
 // ───────────────────────── 07 · Investment Economics ─────────────────────────
 function PCEconomics() {
   const stats = [
@@ -1217,7 +1307,7 @@ function PCEconomics() {
     <section className="sec-pad" id="economics" data-screen-label="07 Economics">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">20</span><span className="sep">|</span>Экономика</div>
+          <div className="crumb"><span className="num">21</span><span className="sep">|</span>Экономика</div>
           <h2 className="display h-display-l">
             Зарабатывает, когда вы в&nbsp;городе.<br/>
             <em className="redword">Восстанавливает</em>, когда вы&nbsp;здесь.
@@ -1362,7 +1452,7 @@ function PCLegal() {
     <section className="sec-pad sec-warm" id="legal" data-screen-label="10 Legal">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">28</span><span className="sep">|</span>Юридика</div>
+          <div className="crumb"><span className="num">29</span><span className="sep">|</span>Юридика</div>
           <h2 className="display h-display-l">
             Земля оформлена. Документы в&nbsp;порядке.<br/>
             <em className="redword">Сделка прозрачна.</em>
@@ -1402,7 +1492,7 @@ function PCWhatsBuilt() {
     <section className="sec-pad sec-dark" id="built" data-screen-label="11 Whats Built">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">26</span><span className="sep">|</span>Что&nbsp;уже&nbsp;сделано</div>
+          <div className="crumb"><span className="num">27</span><span className="sep">|</span>Что&nbsp;уже&nbsp;сделано</div>
           <h2 className="display h-display-l">
             Не план. <em className="redword-light">Уже&nbsp;работа.</em>
           </h2>
@@ -1459,7 +1549,7 @@ function PCRoadmap() {
     <section className="sec-pad" id="roadmap" data-screen-label="12 Roadmap">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">27</span><span className="sep">|</span>Дорожная&nbsp;карта</div>
+          <div className="crumb"><span className="num">28</span><span className="sep">|</span>Дорожная&nbsp;карта</div>
           <h2 className="display h-display-l">
             Вы входите <em className="redword">сейчас</em>.<br/>
             В самый нужный момент.
@@ -1497,7 +1587,7 @@ function PCTeam() {
     <section className="sec-pad sec-warm" id="team" data-screen-label="13 Team">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">11</span><span className="sep">|</span>Команда&nbsp;и&nbsp;амбассадоры</div>
+          <div className="crumb"><span className="num">12</span><span className="sep">|</span>Команда&nbsp;и&nbsp;амбассадоры</div>
           <h2 className="display h-display-l">
             Команда, которая <em className="redword">создаст</em> это место.
           </h2>
@@ -1622,7 +1712,7 @@ function PCRetreatShowcase() {
         <div className="place-photo-overlay" />
         <div className="container place-photo-frame">
           <div className="crumb" style={{ color: '#fff' }}>
-            <span className="num">22</span><span className="sep">|</span>Опция&nbsp;3<span className="sep">|</span>Станьте&nbsp;акционером
+            <span className="num">23</span><span className="sep">|</span>Опция&nbsp;3<span className="sep">|</span>Станьте&nbsp;акционером
           </div>
           <h2 className="display h-display-l place-photo-h">
             <em className="redword-light">Резиденция здоровой семьи</em>.<br/>
@@ -1690,7 +1780,7 @@ function PCThreeForms() {
     <section className="sec-pad" id="forms-fork" data-screen-label="ACT 3 Three Forms Fork">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">18</span><span className="sep">|</span>Три&nbsp;формы&nbsp;участия</div>
+          <div className="crumb"><span className="num">17</span><span className="sep">|</span>Три&nbsp;формы&nbsp;участия</div>
           <h2 className="display h-display-l">
             Вход — это <em className="redword">выбор</em>,<br/>
             а не покупка.
@@ -1781,7 +1871,7 @@ function PCFormBObjects() {
     <section className="sec-pad" id="objects" data-screen-label="ACT 3.B Objects">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">21</span><span className="sep">|</span>Станьте&nbsp;нашим&nbsp;тематическим&nbsp;партнёром</div>
+          <div className="crumb"><span className="num">22</span><span className="sep">|</span>Станьте&nbsp;нашим&nbsp;тематическим&nbsp;партнёром</div>
           <h2 className="display h-display-l">
             Станьте нашим <em className="redword">тематическим партнёром</em>.<br/>
             Отдельное ООО, отдельная экономика.
@@ -1861,7 +1951,7 @@ function PCConstructionTimeline() {
     <section className="sec-pad" id="construction" data-screen-label="ACT 3.A Construction Timeline">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">19</span><span className="sep">|</span>Опция 1 · Участок + подряд</div>
+          <div className="crumb"><span className="num">20</span><span className="sep">|</span>Опция 1 · Участок + подряд</div>
           <h2 className="display h-display-l">
             Участок + подряд = <em className="redword">ключи в&nbsp;руках</em>.<br/>
             Два срока, одна ответственность.
@@ -1911,7 +2001,7 @@ function PCAnnounceFarming() {
     <section className="sec-pad sec-warm" id="farming-announce" data-screen-label="ACT 3.D Announce — КФХ">
       <div className="container">
         <div className="pc-announce-frame">
-          <div className="crumb"><span className="num">24</span><span className="sep">|</span>Анонс · отдельный проект</div>
+          <div className="crumb"><span className="num">25</span><span className="sep">|</span>Анонс · отдельный проект</div>
           <h2 className="display h-display-l pc-announce-h">
             Земли под <em className="redword">крестьянско-фермерское хозяйство</em><br/>
             — следующая инвестиционная волна.
@@ -2009,15 +2099,19 @@ function PCFormCEquity() {
     <section className="sec-pad sec-dark" id="equity" data-screen-label="ACT 3.C Equity AO">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">23</span><span className="sep">|</span>Стать&nbsp;сонаследником</div>
+          <div className="crumb"><span className="num">24</span><span className="sep">|</span>Стать&nbsp;сонаследником</div>
           <h2 className="display h-display-l">
             Войдите в&nbsp;долю <em className="redword-light">Резиденции Чарыш</em>.<br/>
             Строительство 2027 · ввод в&nbsp;эксплуатацию 2028.
           </h2>
         </div>
-        <p className="lead" style={{opacity:.78, maxWidth:'64ch', marginBottom:40}}>
+        <p className="lead" style={{opacity:.78, maxWidth:'64ch', marginBottom:24}}>
           Самый тёплый порог входа — от&nbsp;500&nbsp;000&nbsp;₽. Деньги совладельцев строят всю ретрит-зону: ретрит-центр, банный комплекс, ретрит-дома и&nbsp;модульные дома в&nbsp;лесу. Ниже — условия и&nbsp;четыре объекта, в&nbsp;которые вы&nbsp;входите.
         </p>
+        <div className="pc-equity-firstround">
+          <span className="pc-equity-firstround-l">Первый объём привлекаемых инвестиций</span>
+          <span className="pc-equity-firstround-v">300 млн ₽</span>
+        </div>
 
         {/* 6 финансовых условий компактно */}
         <div className="market-grid">
@@ -2084,7 +2178,7 @@ function PCBonus() {
       <div className="container">
         <div className="pc-bonus-frame">
           <div className="crumb" style={{color:'rgba(255,255,255,.65)'}}>
-            <span className="num">29</span><span className="sep">|</span>Эксклюзив&nbsp;для&nbsp;Private&nbsp;Camp&nbsp;2
+            <span className="num">30</span><span className="sep">|</span>Эксклюзив&nbsp;для&nbsp;Private&nbsp;Camp&nbsp;2
           </div>
           <h2 className="display h-display-l pc-bonus-h">
             Персональные условия —<br/>
@@ -2155,7 +2249,7 @@ function PCFinalCTA() {
       <div className="container">
         <div className="form-grid">
           <div className="form-left">
-            <div className="crumb"><span className="num">30</span><span className="sep">|</span>Следующий&nbsp;шаг</div>
+            <div className="crumb"><span className="num">31</span><span className="sep">|</span>Следующий&nbsp;шаг</div>
             <h2 className="display h-display-m">
               Вы уже <em className="redword">очарышованы</em>?<br/>
               Покажем место, дома, расчёты доходности.
