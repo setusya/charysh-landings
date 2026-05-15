@@ -79,7 +79,7 @@ window.PCHero = PCHero;
 function PCScale() {
   return (
     <section className="pc-scale" id="scale" data-screen-label="02 Recovery курорт · 72 ГА">
-      <div className="pc-scale-photo" style={{ backgroundImage: "url('assets/photo/nature-panorama.jpg')" }}/>
+      <div className="pc-scale-photo" style={{ backgroundImage: "url('assets/photo/nature-river-rocks.jpg')" }}/>
       <div className="pc-scale-overlay"/>
       <div className="container pc-scale-frame">
         <h2 className="display h-display-l pc-scale-h">
@@ -520,14 +520,20 @@ function PCMasterPlan() {
       d: 'Якорный объект для семей. Конные прогулки по тропам, обучение, природная академия.',
       status: 'Обозначено',
     },
+    {
+      n: '07', name: 'Recovery кластер',
+      sub: 'Физическое · ментальное · сексуальное здоровье',
+      d: 'На основе местных курортных факторов (моралы, фитотравы, артезиан, климат) и новых технологий (IV-терапия, биохакинг, протоколы recovery). Здоровая семья · здоровая пара · longevity.',
+      status: 'Якорь wellness-программы',
+    },
   ];
   return (
-    <section className="sec-pad sec-warm" id="masterplan" data-screen-label="03 Master Plan — 6 sectors">
+    <section className="sec-pad sec-warm" id="masterplan" data-screen-label="14 Master Plan — 7 sectors">
       <div className="container">
         <div className="comm-head">
           <div className="crumb"><span className="num">14</span><span className="sep">|</span>Мастер-план</div>
           <h2 className="display h-display-l">
-            Шесть секторов на&nbsp;<em className="redword">72 га</em>.<br/>
+            Семь секторов на&nbsp;<em className="redword">72 га</em>.<br/>
             Автономное и&nbsp;безопасное пространство.
           </h2>
         </div>
@@ -1725,9 +1731,9 @@ function PCFormBObjects() {
     {
       img: 'assets/photo/object-banya.jpg',
       tag: 'Приоритет 2026',
-      name: 'Банный комплекс',
-      sub: 'Алтайская баня · баня по-чёрному · баня русская · баня горная казацкая',
-      d: 'Высокомаржинальный объект с круглогодичным трафиком. Реализация в&nbsp;первой очереди ретрит-комплекса.',
+      name: 'Recovery medi-spa',
+      sub: 'Wellness-якорь курорта · восстановление тела и нервной системы',
+      d: 'Программы recovery на&nbsp;стыке местных бальнеологических факторов и&nbsp;современных протоколов. Алтайские травы, маральи ванны, ИК-сауны, криозоны, IV-терапия, остеопатия.',
       facts: [
         ['Площадь', '~600 м²'],
         ['Целевая загрузка', '95% сезон'],
