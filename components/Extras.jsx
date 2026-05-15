@@ -81,7 +81,7 @@ function RoadSection() {
       <div className="container">
         <div className="road-head">
           <div>
-            <div className="crumb"><span className="num">06</span><span className="sep">|</span>Дорога</div>
+            <div className="crumb"><span className="num">07</span><span className="sep">|</span>Дорога</div>
             <h2 className="display h-display-l road-h">
               4 часа в&nbsp;воздухе<br/>
               и&nbsp;<em className="redword">комфортный трансфер</em><br/>
@@ -89,7 +89,7 @@ function RoadSection() {
             </h2>
           </div>
           <p className="road-intro">
-            От&nbsp;Москвы до&nbsp;Барнаула — ежедневные рейсы, 4&nbsp;часа лёта. От&nbsp;Барнаула до&nbsp;Чарыша — комфортный трансфер по&nbsp;дороге без&nbsp;пробок и&nbsp;светофоров через горные долины. Дорога — это фильтр. Доезжают те, кто действительно искал.
+            От&nbsp;Москвы до&nbsp;Барнаула — ежедневные рейсы. От&nbsp;Барнаула до&nbsp;Чарыша — 3,5&nbsp;часа комфортного трансфера по&nbsp;пустой горной дороге. Для&nbsp;тех, кто хочет ещё быстрее — <strong>вертолёт 1&nbsp;ч&nbsp;20&nbsp;мин</strong>. Дорога — это фильтр: доезжают те, кто действительно искал.
           </p>
         </div>
         <div className="road-line">
@@ -104,7 +104,7 @@ function RoadSection() {
             <div className="road-name">Барнаул</div>
             <div className="road-meta">пересадка</div>
           </div>
-          <div className="road-arc"><span>комфортный трансфер</span></div>
+          <div className="road-arc"><span>3,5 часа авто · 1ч20 вертолёт</span></div>
           <div className="road-stop active">
             <div className="road-dot"/>
             <div className="road-name">Чарыш</div>

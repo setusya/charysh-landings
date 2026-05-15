@@ -247,6 +247,66 @@
 @media (max-width: 480px)  { .pc-trends-main12 { grid-template-columns: 1fr; } }
 
 
+/* ─────────── Scale anchor — "72 гектара" (slide 02) ─────────── */
+.pc-scale {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.pc-scale-photo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+.pc-scale-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.55) 100%);
+}
+.pc-scale-frame {
+  position: relative;
+  z-index: 2;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  color: #fff;
+}
+.pc-scale-body {
+  margin-top: 32px;
+  max-width: 64ch;
+}
+.pc-scale-figure {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.pc-scale-num {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: clamp(110px, 16vw, 220px);
+  line-height: .9;
+  color: #fff;
+  letter-spacing: -.02em;
+}
+.pc-scale-unit {
+  font-size: clamp(20px, 2.6vw, 36px);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-eyebrow);
+  color: #f4c8a8;
+  opacity: .95;
+}
+.pc-scale-h {
+  color: #fff;
+  margin: 8px 0 18px;
+}
+.pc-scale-meta {
+  font-size: var(--fs-spec);
+  opacity: .82;
+  max-width: 56ch;
+}
+
 /* ─────────── Big Altai — hero duo (Шерегеш + Манжерок) для контраста ─────────── */
 .pc-bigaltai-hero-duo {
   display: grid;
