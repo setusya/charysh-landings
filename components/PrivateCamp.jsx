@@ -212,8 +212,8 @@ function PCAltaiMarket() {
   ];
   return (
     <section className="sec-pad sec-dark pc-bigaltai" id="altai-market" data-screen-label="04 Big Altai context">
-      {/* Декоративная подложка-титул */}
-      <div className="pc-bigaltai-bg" style={{backgroundImage:"url('assets/photo/altai-manzherok.jpg')"}}/>
+      {/* Декоративная подложка — летняя аэрофотосъёмка Чарыша */}
+      <div className="pc-bigaltai-bg" style={{backgroundImage:"url('assets/photo/charysh-aerial.jpg')"}}/>
       <div className="pc-bigaltai-bg-overlay"/>
       <div className="container pc-bigaltai-inner">
         <div className="comm-head">

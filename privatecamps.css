@@ -327,13 +327,13 @@
   inset: 0;
   background-size: cover;
   background-position: center;
-  opacity: .35;
-  filter: saturate(.85);
+  opacity: .55;
+  filter: saturate(.95);
 }
 .pc-bigaltai-bg-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.78) 80%);
+  background: linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.72) 75%);
 }
 .pc-bigaltai-inner {
   position: relative;
