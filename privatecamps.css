@@ -603,13 +603,17 @@
 }
 .pc-bigaltai-flagships-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   gap: 0;
   border-top: 1px solid rgba(255,255,255,.18);
   border-left: 1px solid rgba(255,255,255,.18);
 }
+.pc-bigaltai-flagship:last-child {
+  background: rgba(244,200,168,.10);
+}
+.pc-bigaltai-flagship:last-child .pc-bigaltai-flagship-name { color: #f4c8a8; }
 .pc-bigaltai-flagship {
-  padding: 22px 22px 24px;
+  padding: 18px 14px 20px;
   border-right: 1px solid rgba(255,255,255,.18);
   border-bottom: 1px solid rgba(255,255,255,.18);
   display: flex;
@@ -617,6 +621,7 @@
   gap: 6px;
   min-height: 180px;
 }
+.pc-bigaltai-flagship-name { font-size: 19px; }
 .pc-bigaltai-flagship-name {
   font-family: 'Dobrozrachniy', serif;
   font-size: 24px;
