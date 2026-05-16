@@ -61,7 +61,7 @@ function PCHero({ heroPhoto = 'assets/photo/upload-00105.jpg' }) {
         <div className="hero-bottom">
           <div className="hero-ctas">
             <a href="#form" className="btn btn-primary">
-              Личная&nbsp;презентация · 60&nbsp;мин <span className="arrow">→</span>
+              Презентация для&nbsp;бизнес-кемпа <span className="arrow">→</span>
             </a>
             <a href="#bonus" className="btn btn-light">
               Эксклюзив для участников <span className="arrow">→</span>
@@ -2352,54 +2352,36 @@ window.PCBonus = PCBonus;
 
 // ───────────────────────── 15 · Final CTA ─────────────────────────
 function PCFinalCTA() {
-  const [sent, setSent] = React.useState(false);
   return (
-    <section className="sec-pad" id="form" data-screen-label="15 Final CTA">
+    <section className="sec-pad" id="form" data-screen-label="29 Final CTA">
       <div className="container">
-        <div className="form-grid">
-          <div className="form-left">
-            <div className="crumb"><span className="num">29</span><span className="sep">|</span>Следующий&nbsp;шаг</div>
-            <h2 className="display h-display-m">
-              Вы уже <em className="redword">очарышованы</em>?<br/>
-              Покажем место, дома, расчёты доходности.
-            </h2>
-            <p style={{fontSize:'15px', lineHeight:1.6, opacity:.78, maxWidth:'42ch', marginTop:8}}>
-              Видеозвонок · 60 минут · любой мессенджер. Бесплатно, без обязательств, без скриптов продаж. Давайте дышать вместе. Чарыш ждёт вас.
-            </p>
-            <div className="form-contacts" style={{marginTop:24}}>
-              <div className="contact-person">
-                <div>Вячеслав Немцов · со-основатель</div>
-                <div><a href="tel:+79017168776">+7 901 716-87-76</a> · <a href="https://t.me/nemtsovvyacheslav">@nemtsovvyacheslav</a></div>
-              </div>
-              <div className="contact-person">
-                <div>Светлана Антонова · со-основатель</div>
-                <div><a href="tel:+79037744042">+7 903 774-40-42</a> · <a href="https://t.me/santagiving">@santagiving</a></div>
-              </div>
-              <div className="contact-person">
-                <div>Андрей Пережогин · развитие и инвестиции</div>
-                <div><a href="tel:+79015888858">+7 901 588-88-58</a> · <a href="https://t.me/andreiperezhoginofficial">@andreiperezhoginofficial</a></div>
-              </div>
-              <div className="contact-person">
-                <div>Андрей Немцев · управляющий партнёр</div>
-                <div><a href="tel:+79635191490">+7 963 519-14-90</a></div>
-              </div>
+        <div className="pc-final">
+          <div className="crumb"><span className="num">29</span><span className="sep">|</span>Следующий&nbsp;шаг</div>
+          <h2 className="display h-display-l">
+            Вы уже <em className="redword">очарышованы</em>?<br/>
+            Покажем место, дома, расчёты доходности.
+          </h2>
+          <p className="pc-final-lead">
+            Видеозвонок · 60 минут · любой мессенджер. Бесплатно, без обязательств, без скриптов продаж. Давайте дышать вместе. Чарыш ждёт вас.
+          </p>
+          <div className="pc-final-contacts">
+            <div className="contact-person">
+              <div>Вячеслав Немцов · со-основатель</div>
+              <div><a href="tel:+79017168776">+7 901 716-87-76</a> · <a href="https://t.me/nemtsovvyacheslav">@nemtsovvyacheslav</a></div>
+            </div>
+            <div className="contact-person">
+              <div>Светлана Антонова · со-основатель</div>
+              <div><a href="tel:+79037744042">+7 903 774-40-42</a> · <a href="https://t.me/santagiving">@santagiving</a></div>
+            </div>
+            <div className="contact-person">
+              <div>Андрей Пережогин · развитие и инвестиции</div>
+              <div><a href="tel:+79015888858">+7 901 588-88-58</a> · <a href="https://t.me/andreiperezhoginofficial">@andreiperezhoginofficial</a></div>
+            </div>
+            <div className="contact-person">
+              <div>Андрей Немцев · управляющий партнёр</div>
+              <div><a href="tel:+79635191490">+7 963 519-14-90</a></div>
             </div>
           </div>
-          <form className="form-right" onSubmit={(e) => { e.preventDefault(); setSent(true); }}>
-            <Field label="Имя" placeholder="Иван Петров"/>
-            <Field label="Телефон" placeholder="+7 (___) ___-__-__"/>
-            <Field label="Telegram / E-mail" placeholder="@username · name@example.ru"/>
-            <Field label="Что вас зацепило в выступлении" placeholder="Цифры доходности · юридика · место · команда…" multi/>
-            <div className="form-bottom">
-              <label className="consent">
-                <span className="cbox"><span className="ctick"/></span>
-                Согласен на&nbsp;обработку персональных данных
-              </label>
-              <button type="submit" className="btn btn-primary">
-                {sent ? 'Спасибо! Свяжемся в течение дня.' : 'Запросить персональную презентацию'} <span className="arrow">→</span>
-              </button>
-            </div>
-          </form>
         </div>
       </div>
     </section>

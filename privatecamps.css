@@ -498,6 +498,52 @@
 @media (max-width: 480px)  { .pc-trends-main12 { grid-template-columns: 1fr; } }
 
 
+/* ─────────── Final CTA — center column, no form (slide 29) ─────────── */
+.pc-final {
+  max-width: 64ch;
+  margin: 0 auto;
+  text-align: center;
+}
+.pc-final .crumb {
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.pc-final-lead {
+  font-size: var(--fs-spec);
+  line-height: 1.6;
+  opacity: .82;
+  margin: 16px auto 32px;
+  max-width: 54ch;
+}
+.pc-final-contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 28px;
+  text-align: left;
+  margin: 0 auto;
+  max-width: 720px;
+  padding: 24px 28px;
+  background: rgba(0,0,0,.03);
+  border-left: 3px solid var(--accent);
+}
+.pc-final-contacts .contact-person {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: var(--fs-spec);
+}
+.pc-final-contacts .contact-person > div:first-child {
+  font-weight: 500;
+}
+.pc-final-contacts a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.pc-final-contacts a:hover { text-decoration: underline; }
+@media (max-width: 720px) {
+  .pc-final-contacts { grid-template-columns: 1fr; }
+}
+
 /* ─────────── Scale anchor — recovery курорт позиционирование (slide 02) ─────────── */
 .pc-scale {
   position: relative;
