@@ -1100,6 +1100,14 @@ function PCDNA() {
           </div>
         </div>
 
+        {/* Фото-полоска реальной локации (под колонками с буллетами) */}
+        <div className="pc-dna-photo-strip">
+          <div className="pc-dna-photo-cell" style={{backgroundImage:"url('assets/photo/location-5882.jpg')"}}/>
+          <div className="pc-dna-photo-cell" style={{backgroundImage:"url('assets/photo/location-5902.jpg')"}}/>
+          <div className="pc-dna-photo-cell" style={{backgroundImage:"url('assets/photo/location-5934.jpg')"}}/>
+          <div className="pc-dna-photo-cell" style={{backgroundImage:"url('assets/photo/location-5963.jpg')"}}/>
+        </div>
+
         {/* Уровень 3 — сходимость */}
         <div className="pc-dna-converge">
           <div className="pc-dna-converge-arrow" aria-hidden="true">↓</div>
