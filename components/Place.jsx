@@ -10,7 +10,7 @@ function PlaceSection() {
   ];
   // Галерея — реальные фото долины Чарыша (взяты из слайда 15)
   const gallery = [
-    { src: 'assets/photo/place-misty-mountains.jpg', cap: 'Мягкий вечер над долиной' },
+    { src: 'assets/photo/location-aerial-3.jpg',     cap: 'Долина Чарыша · аэрофото' },
     { src: 'assets/photo/nature-river-rocks.jpg',    cap: 'Берег · щебень' },
     { src: 'assets/photo/valley-autumn.jpg',         cap: 'Долина · октябрь' },
     { src: 'assets/photo/season-autumn-river.jpg',   cap: 'Чарыш · сезон' },
