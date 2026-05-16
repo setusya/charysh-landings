@@ -436,7 +436,7 @@ function PCLocation() {
   ];
   return (
     <section id="location" data-screen-label="02.5 Where is Charysh">
-      <div className="place-photo pc-location-photo" style={{ backgroundImage: "url('assets/photo/valley-overlook.jpg')" }}>
+      <div className="place-photo pc-location-photo" style={{ backgroundImage: "url('assets/photo/altai-pik-shangina.jpg')" }}>
         <div className="place-photo-overlay" />
         <div className="container place-photo-frame">
           <div className="crumb" style={{ color: '#fff' }}>
@@ -1044,9 +1044,15 @@ function PCDNA() {
             <em className="redword">сходятся в&nbsp;одной точке</em>.
           </h2>
         </div>
-        <p className="lead" style={{opacity:.78, maxWidth:'66ch', marginBottom:48}}>
+        <p className="lead" style={{opacity:.78, maxWidth:'66ch', marginBottom:32}}>
           Чарышские Усадьбы — это не&nbsp;девелопмент-проект. Это сочетание трёх ДНК. Каждое сильное само по&nbsp;себе. Вместе они дают характер места.
         </p>
+
+        {/* Hero — реальная панорама локации (визуальный якорь для ДНК места) */}
+        <figure className="pc-dna-hero">
+          <div className="pc-dna-hero-ph" style={{backgroundImage:"url('assets/photo/charysh-location-panorama.jpg')"}}/>
+          <figcaption className="pc-dna-hero-cap">Чарышская долина · вид с локации</figcaption>
+        </figure>
 
         {/* Уровень 1 — ДНК основателей */}
         <div className="pc-dna-section-head">

@@ -39,6 +39,26 @@
   .place-gallery > :nth-child(1) .place-gallery-ph { aspect-ratio: 16/9; }
 }
 
+/* ─────────── DNA — hero photo (real location panorama) ─────────── */
+.pc-dna-hero {
+  margin: 0 0 40px;
+}
+.pc-dna-hero-ph {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0,0,0,.05);
+}
+.pc-dna-hero-cap {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .7;
+  margin-top: 8px;
+}
+@media (max-width: 880px) { .pc-dna-hero-ph { aspect-ratio: 16/9; } }
+
 /* ─────────── DNA convergence slide — founders + place + locals ─────────── */
 .pc-dna-section-head {
   display: flex;
