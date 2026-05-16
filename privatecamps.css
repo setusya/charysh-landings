@@ -403,6 +403,60 @@
   .pc-family-market-row .arrow { display: none; }
 }
 
+/* ─────────── Trends — 3 ключевых сдвига (red highlight) ─────────── */
+.pc-trends-key {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 0 0 24px;
+}
+.pc-trend-key {
+  padding: 24px 22px 26px;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 160px;
+}
+.pc-trend-key-num {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  color: #fff;
+  opacity: .75;
+}
+.pc-trend-key-tag {
+  font-family: 'Dobrozrachniy', serif;
+  font-size: 24px;
+  line-height: 1.1;
+  margin: 6px 0 4px;
+}
+.pc-trend-key-d {
+  font-size: var(--fs-spec);
+  line-height: 1.45;
+  opacity: .92;
+  margin-top: auto;
+}
+.pc-trends-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 28px 0;
+}
+.pc-trends-divider > span:first-child,
+.pc-trends-divider > span:last-child {
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.pc-trends-divider-mark {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  opacity: .55;
+}
+@media (max-width: 880px) { .pc-trends-key { grid-template-columns: 1fr; } }
+
 /* ─────────── Trends slide — 12 main as bordered 4x3 grid ─────────── */
 .pc-trends-main12 {
   display: grid;
