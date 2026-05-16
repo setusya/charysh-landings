@@ -555,20 +555,18 @@ window.PCMasterPlan = PCMasterPlan;
 // ───────────────────────── 16 · Master Plan render — empty placeholder ─────────────────────────
 function PCMasterPlanRender() {
   return (
-    <section className="sec-pad pc-mp-render-placeholder" id="masterplan-render" data-screen-label="16 Master plan render">
+    <section className="sec-pad" id="masterplan-render" data-screen-label="13 Master plan render">
       <div className="container">
         <div className="comm-head">
           <div className="crumb"><span className="num">13</span><span className="sep">|</span>Рендер мастер-плана</div>
           <h2 className="display h-display-l">
-            Здесь будет <em className="redword">визуализация</em> мастер-плана.
+            Вид с&nbsp;высоты — <em className="redword">так это будет</em>.
           </h2>
         </div>
-        <div className="pc-mp-render-box">
-          <div className="pc-mp-render-hint">
-            Подложка для рендера / макета посёлка<br/>
-            <span className="pc-mp-render-hint-meta">Сохрани изображение в <code>assets/photo/masterplan-render.jpg</code> — оно появится здесь</span>
-          </div>
-        </div>
+        <figure className="pc-mp-render-fig">
+          <img src="assets/photo/masterplan-render.jpg" alt="Архитектурный рендер мастер-плана Чарышских Усадеб"/>
+          <figcaption className="pc-mp-render-cap">Аэрофото-рендер · долина Чарыша · посёлок и&nbsp;ретрит-зона</figcaption>
+        </figure>
       </div>
     </section>
   );

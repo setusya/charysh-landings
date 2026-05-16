@@ -579,39 +579,22 @@
   .pc-scale { min-height: 60vh; }
 }
 
-/* ─────────── Master Plan render — пустой placeholder ─────────── */
-.pc-mp-render-box {
-  margin-top: 24px;
-  border: 2px dashed var(--line);
-  background: rgba(0,0,0,.02);
-  padding: 120px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 480px;
-  aspect-ratio: 16/8;
+/* ─────────── Master Plan render — фото-рендер ─────────── */
+.pc-mp-render-fig {
+  margin: 24px 0 0;
 }
-.pc-mp-render-hint {
-  font-family: 'Dobrozrachniy', serif;
-  font-size: clamp(22px, 2.4vw, 32px);
-  line-height: 1.3;
-  text-align: center;
-  opacity: .55;
-}
-.pc-mp-render-hint-meta {
+.pc-mp-render-fig img {
   display: block;
-  font-family: inherit;
+  width: 100%;
+  height: auto;
+  background: rgba(0,0,0,.05);
+}
+.pc-mp-render-cap {
   font-size: var(--fs-eyebrow);
   letter-spacing: var(--tracking-eyebrow);
   text-transform: uppercase;
-  margin-top: 14px;
-  opacity: .65;
-}
-.pc-mp-render-hint-meta code {
-  background: rgba(0,0,0,.06);
-  padding: 2px 8px;
-  font-family: monospace;
-  font-size: 12px;
+  opacity: .7;
+  margin-top: 10px;
 }
 
 /* ─────────── Equity AO — первый объём привлекаемых инвестиций ─────────── */
@@ -2598,16 +2581,16 @@
 /* ─────────── Showcase (full-bleed retreat) ─────────── */
 .pc-showcase-photo { min-height: 86vh; }
 
-/* ─────────── Three Forms Fork ─────────── */
+/* ─────────── Four Forms Fork (А · Б · В · Г) ─────────── */
 .pc-forms-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 0;
   border-top: 1px solid var(--line);
   border-left: 1px solid var(--line);
 }
 .pc-form-card {
-  padding: 32px 28px 36px;
+  padding: 26px 20px 28px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   display: flex;
@@ -2619,10 +2602,15 @@
 .pc-form-tone-paper { background: var(--paper); color: var(--ink); }
 .pc-form-tone-warm  { background: var(--paper-2); color: var(--ink); }
 .pc-form-tone-ink   { background: var(--ink); color: #fff; }
+.pc-form-tone-gold  { background: var(--accent); color: #fff; }
 .pc-form-tone-ink   .pc-form-tag { color: #f4c8a8; }
+.pc-form-tone-gold  .pc-form-tag { color: #fff; opacity: .92; }
 .pc-form-tone-ink   .pc-form-cta { background: #fff; color: var(--ink); border-color: #fff; }
+.pc-form-tone-gold  .pc-form-cta { background: #fff; color: var(--accent); border-color: #fff; }
 .pc-form-tone-ink   .pc-form-cta:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
-.pc-form-tone-ink   .pc-form-ticket-l { opacity: .65; }
+.pc-form-tone-gold  .pc-form-cta:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+.pc-form-tone-ink   .pc-form-ticket-l,
+.pc-form-tone-gold  .pc-form-ticket-l { opacity: .8; }
 .pc-form-letter {
   font-family: 'Dobrozrachniy', serif;
   font-size: 96px;
@@ -2702,7 +2690,8 @@
   align-self: flex-start;
   position: relative; z-index: 2;
 }
-@media (max-width: 980px) { .pc-forms-grid { grid-template-columns: 1fr; } }
+@media (max-width: 1280px) { .pc-forms-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 700px)  { .pc-forms-grid { grid-template-columns: 1fr; } }
 
 /* ─────────── Form B objects grid ─────────── */
 .pc-objects-grid {
