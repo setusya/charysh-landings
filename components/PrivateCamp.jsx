@@ -338,7 +338,7 @@ function PCAltaiViability() {
     <section className="sec-pad sec-dark" id="altai-viability" data-screen-label="02.4 Altai viability + scenarios">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">23</span><span className="sep">|</span>Доказательство · оборот</div>
+          <div className="crumb"><span className="num">22</span><span className="sep">|</span>Доказательство · оборот</div>
           <h2 className="display h-display-l">
             Для реализации Чарышу необходимо привлечь<br/>
             <em className="redword-light">всего 0,36% турпотока Большого Алтая</em>.
@@ -526,7 +526,7 @@ function PCMasterPlan() {
     <section className="sec-pad sec-warm" id="masterplan" data-screen-label="14 Master Plan — 7 sectors">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">12</span><span className="sep">|</span>Мастер-план</div>
+          <div className="crumb"><span className="num">11</span><span className="sep">|</span>Мастер-план</div>
           <h2 className="display h-display-l">
             Шесть секторов на&nbsp;<em className="redword">72 га</em>.<br/>
             Автономное и&nbsp;безопасное пространство.
@@ -558,7 +558,7 @@ function PCMasterPlanRender() {
     <section className="sec-pad" id="masterplan-render" data-screen-label="13 Master plan render">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">13</span><span className="sep">|</span>Рендер мастер-плана</div>
+          <div className="crumb"><span className="num">12</span><span className="sep">|</span>Рендер мастер-плана</div>
           <h2 className="display h-display-l">
             Вид с&nbsp;высоты — <em className="redword">так это будет</em>.
           </h2>
@@ -608,7 +608,7 @@ function PCMasterPlanDetail() {
     <section className="sec-pad" id="masterplan-detail" data-screen-label="03.5 Master Plan Detail">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">14</span><span className="sep">|</span>Что внутри</div>
+          <div className="crumb"><span className="num">13</span><span className="sep">|</span>Что внутри</div>
           <h2 className="display h-display-l">
             Два сектора — <em className="redword">сердце посёлка</em>.<br/>
             Где живут и где собираются.
@@ -957,7 +957,7 @@ function PCResidents() {
     <section className="sec-pad sec-warm" id="residents" data-screen-label="05 Residents">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">15</span><span className="sep">|</span>Кто&nbsp;здесь&nbsp;живёт</div>
+          <div className="crumb"><span className="num">14</span><span className="sep">|</span>Кто&nbsp;здесь&nbsp;живёт</div>
           <h2 className="display h-display-l">
             Тщательно отобранное<br/>
             <em className="redword">сообщество</em> — наша защита<br/>
@@ -1244,7 +1244,7 @@ function PCTrends() {
     <section className="sec-pad" id="trends" data-screen-label="02 Совпадение десятилетия">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">10</span><span className="sep">|</span>Совпадение&nbsp;десятилетия</div>
+          <div className="crumb"><span className="num">25</span><span className="sep">|</span>Совпадение&nbsp;десятилетия</div>
           <h2 className="display h-display-l">
             Тренды десятилетия —<br/>
             <em className="redword">сошлись здесь</em>. Одновременно.
@@ -1382,7 +1382,7 @@ function PCEconomics() {
     <section className="sec-pad" id="economics" data-screen-label="07 Economics">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">18</span><span className="sep">|</span>Экономика</div>
+          <div className="crumb"><span className="num">17</span><span className="sep">|</span>Экономика</div>
           <h2 className="display h-display-l">
             Зарабатывает, когда вы в&nbsp;городе.<br/>
             <em className="redword">Восстанавливает</em>, когда вы&nbsp;здесь.
@@ -1567,7 +1567,7 @@ function PCWhatsBuilt() {
     <section className="sec-pad sec-dark" id="built" data-screen-label="11 Whats Built">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">24</span><span className="sep">|</span>Что&nbsp;уже&nbsp;сделано</div>
+          <div className="crumb"><span className="num">23</span><span className="sep">|</span>Что&nbsp;уже&nbsp;сделано</div>
           <h2 className="display h-display-l">
             Не план. <em className="redword-light">Уже&nbsp;работа.</em>
           </h2>
@@ -1640,7 +1640,7 @@ function PCRoadmap() {
     <section className="sec-pad" id="roadmap" data-screen-label="27 Roadmap">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">25</span><span className="sep">|</span>Дорожная&nbsp;карта</div>
+          <div className="crumb"><span className="num">24</span><span className="sep">|</span>Дорожная&nbsp;карта</div>
           <h2 className="display h-display-l">
             Три года <em className="redword">уже работы</em>.<br/>
             Вы входите сейчас — в&nbsp;самый нужный момент.
@@ -1822,7 +1822,7 @@ function PCRetreatShowcase() {
         <div className="place-photo-overlay" />
         <div className="container place-photo-frame">
           <div className="crumb" style={{ color: '#fff' }}>
-            <span className="num">20</span><span className="sep">|</span>Ретрит&nbsp;и&nbsp;MICE&nbsp;комплекс
+            <span className="num">19</span><span className="sep">|</span>Ретрит&nbsp;и&nbsp;MICE&nbsp;комплекс
           </div>
           <h2 className="display h-display-l place-photo-h">
             <em className="redword-light">Ретрит и&nbsp;MICE комплекс</em><br/>
@@ -1905,7 +1905,7 @@ function PCThreeForms() {
     <section className="sec-pad" id="forms-fork" data-screen-label="ACT 3 Three Forms Fork">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">16</span><span className="sep">|</span>Четыре&nbsp;формы&nbsp;участия</div>
+          <div className="crumb"><span className="num">15</span><span className="sep">|</span>Четыре&nbsp;формы&nbsp;участия</div>
           <h2 className="display h-display-l">
             Вход — это <em className="redword">выбор</em>,<br/>
             а не покупка.
@@ -1996,7 +1996,7 @@ function PCFormBObjects() {
     <section className="sec-pad" id="objects" data-screen-label="ACT 3.B Objects">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">19</span><span className="sep">|</span>Станьте&nbsp;нашим&nbsp;тематическим&nbsp;партнёром</div>
+          <div className="crumb"><span className="num">18</span><span className="sep">|</span>Станьте&nbsp;нашим&nbsp;тематическим&nbsp;партнёром</div>
           <h2 className="display h-display-l">
             Станьте нашим <em className="redword">тематическим партнёром</em>.<br/>
             Отдельное ООО, отдельная экономика.
@@ -2077,7 +2077,7 @@ function PCConstructionTimeline() {
     <section className="sec-pad" id="construction" data-screen-label="ACT 3.A Construction Timeline">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">17</span><span className="sep">|</span>Опция 1 · Участок + подряд</div>
+          <div className="crumb"><span className="num">16</span><span className="sep">|</span>Опция 1 · Участок + подряд</div>
           <h2 className="display h-display-l">
             Участок + подряд = <em className="redword">ключи в&nbsp;руках</em>.<br/>
             Два срока, одна ответственность.
@@ -2127,7 +2127,7 @@ function PCAnnounceFarming() {
     <section className="sec-pad sec-warm" id="farming-announce" data-screen-label="ACT 3.D Announce — КФХ">
       <div className="container">
         <div className="pc-announce-frame">
-          <div className="crumb"><span className="num">22</span><span className="sep">|</span>Анонс · отдельный проект</div>
+          <div className="crumb"><span className="num">21</span><span className="sep">|</span>Анонс · отдельный проект</div>
           <h2 className="display h-display-l pc-announce-h">
             Земли под <em className="redword">крестьянско-фермерское хозяйство</em><br/>
             — следующая инвестиционная волна.
@@ -2225,7 +2225,7 @@ function PCFormCEquity() {
     <section className="sec-pad sec-dark" id="equity" data-screen-label="ACT 3.C Equity AO">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">21</span><span className="sep">|</span>Стать&nbsp;сонаследником</div>
+          <div className="crumb"><span className="num">20</span><span className="sep">|</span>Стать&nbsp;сонаследником</div>
           <h2 className="display h-display-l">
             Войдите в&nbsp;долю <em className="redword-light">Резиденции Чарыш</em>.<br/>
             Строительство 2027 · ввод в&nbsp;эксплуатацию 2028.
