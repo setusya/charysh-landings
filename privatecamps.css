@@ -1932,6 +1932,23 @@
   background: var(--accent);
 }
 .pc-stage-active .pc-stage-when { color: var(--accent); }
+.pc-stage-past {
+  background: rgba(0,0,0,.03);
+}
+.pc-stage-past .pc-stage-n { color: rgba(0,0,0,.4); }
+.pc-roadmap-section-h {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--accent);
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--ink);
+}
+.pc-roadmap-grid-past .pc-stage {
+  position: relative;
+}
 .pc-stage-n {
   font-family: 'Dobrozrachniy', serif;
   font-size: 36px;
