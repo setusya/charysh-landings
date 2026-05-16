@@ -136,7 +136,7 @@ function PCSpeaker() {
     <section className="sec-pad" id="speaker" data-screen-label="02 Speaker — Антонова">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">03</span><span className="sep">|</span>Спикер</div>
+          <div className="crumb"><span className="num">02</span><span className="sep">|</span>Спикер</div>
           <h2 className="display h-display-l">
             Сегодня проект представляет<br/>
             <em className="redword">Светлана Антонова.</em>
@@ -1956,9 +1956,9 @@ function PCFormBObjects() {
       ],
     },
     {
-      img: 'assets/photo/food-cauliflower.jpg',
+      img: 'assets/photo/food-altai-bowl.webp',
       tag: 'Приоритет 2026',
-      name: 'Ресторан здорового питания',
+      name: 'Ресторан живого питания',
       sub: 'Живая еда · переработка местного сырья · доставка по&nbsp;посёлку',
       d: 'Якорный объект ретрит-комплекса и&nbsp;точка притяжения для&nbsp;резидентов курорта. Производственный цех — часть концепции.',
       facts: [
