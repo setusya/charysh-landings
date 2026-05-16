@@ -608,7 +608,7 @@ function PCMasterPlanDetail() {
     <section className="sec-pad" id="masterplan-detail" data-screen-label="03.5 Master Plan Detail">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">15</span><span className="sep">|</span>Что внутри</div>
+          <div className="crumb"><span className="num">14</span><span className="sep">|</span>Что внутри</div>
           <h2 className="display h-display-l">
             Два сектора — <em className="redword">сердце посёлка</em>.<br/>
             Где живут и где собираются.
@@ -957,7 +957,7 @@ function PCResidents() {
     <section className="sec-pad sec-warm" id="residents" data-screen-label="05 Residents">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">16</span><span className="sep">|</span>Кто&nbsp;здесь&nbsp;живёт</div>
+          <div className="crumb"><span className="num">15</span><span className="sep">|</span>Кто&nbsp;здесь&nbsp;живёт</div>
           <h2 className="display h-display-l">
             Тщательно отобранное<br/>
             <em className="redword">сообщество</em> — наша защита<br/>
@@ -1822,7 +1822,7 @@ function PCRetreatShowcase() {
         <div className="place-photo-overlay" />
         <div className="container place-photo-frame">
           <div className="crumb" style={{ color: '#fff' }}>
-            <span className="num">20</span><span className="sep">|</span>Опция&nbsp;3<span className="sep">|</span>Станьте&nbsp;акционером
+            <span className="num">20</span><span className="sep">|</span>Ретрит&nbsp;и&nbsp;MICE&nbsp;комплекс
           </div>
           <h2 className="display h-display-l place-photo-h">
             <em className="redword-light">Ретрит и&nbsp;MICE комплекс</em><br/>
@@ -1905,7 +1905,7 @@ function PCThreeForms() {
     <section className="sec-pad" id="forms-fork" data-screen-label="ACT 3 Three Forms Fork">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">14</span><span className="sep">|</span>Четыре&nbsp;формы&nbsp;участия</div>
+          <div className="crumb"><span className="num">16</span><span className="sep">|</span>Четыре&nbsp;формы&nbsp;участия</div>
           <h2 className="display h-display-l">
             Вход — это <em className="redword">выбор</em>,<br/>
             а не покупка.
