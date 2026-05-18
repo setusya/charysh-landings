@@ -37,7 +37,19 @@ function PCHeader() {
 window.PCHeader = PCHeader;
 
 // ───────────────────────── 01 · Hero (custom for Private Camp) ─────────────────────────
-function PCHero({ heroPhoto = 'assets/photo/upload-00105.jpg' }) {
+function PCHero({
+  heroPhoto = 'assets/photo/upload-00105.jpg',
+  crumbLabel,
+  crumbExtra = 'Красная Поляна',
+  meta = 'Чарышские Усадьбы · спикер-страница',
+  h1,
+  sub,
+  primaryCtaText = 'Презентация для бизнес-кемпа',
+  primaryCtaHref = '#form',
+  secondaryCtaText = 'Эксклюзив для участников',
+  secondaryCtaHref = '#bonus',
+  tagline = 'ЧАРЫШ ЖДЁТ СВОИХ',
+}) {
   return (
     <section className="hero hero-A" id="top" data-screen-label="01 PC Hero">
       <div className="hero-photo" style={{ backgroundImage: `url('${heroPhoto}')` }} />
@@ -46,28 +58,30 @@ function PCHero({ heroPhoto = 'assets/photo/upload-00105.jpg' }) {
         <div className="hero-top">
           <div className="crumb" style={{ color: '#fff' }}>
             <span className="num">01</span><span className="sep">|</span>
-            Private Camp 2<span className="sep">|</span>Красная Поляна
+            {crumbLabel || 'Private Camp 2'}<span className="sep">|</span>{crumbExtra}
           </div>
-          <div className="hero-meta">Чарышские Усадьбы · спикер-страница</div>
+          <div className="hero-meta">{meta}</div>
         </div>
         <div className="hero-body">
           <h1 className="display h-display-xl hero-h1">
-            Алтай<br/>не&nbsp;для&nbsp;всех
+            {h1 || (<>Алтай<br/>не&nbsp;для&nbsp;всех</>)}
           </h1>
           <div className="hero-sub">
-            <strong>Заповедная новая локация в&nbsp;Алтайском крае.</strong> Тупиковая долина реки Чарыш, 72&nbsp;га в&nbsp;собственности. Здесь — глубина, цифры и&nbsp;документы. Вы&nbsp;только что слушали выступление.
+            {sub || (
+              <><strong>Заповедная новая локация в&nbsp;Алтайском крае.</strong> Тупиковая долина реки Чарыш, 72&nbsp;га в&nbsp;собственности. Здесь — глубина, цифры и&nbsp;документы. Вы&nbsp;только что слушали выступление.</>
+            )}
           </div>
         </div>
         <div className="hero-bottom">
           <div className="hero-ctas">
-            <a href="#form" className="btn btn-primary">
-              Презентация для&nbsp;бизнес-кемпа <span className="arrow">→</span>
+            <a href={primaryCtaHref} className="btn btn-primary">
+              {primaryCtaText} <span className="arrow">→</span>
             </a>
-            <a href="#bonus" className="btn btn-light">
-              Эксклюзив для участников <span className="arrow">→</span>
+            <a href={secondaryCtaHref} className="btn btn-light">
+              {secondaryCtaText} <span className="arrow">→</span>
             </a>
           </div>
-          <div className="hero-tagline">ЧАРЫШ&nbsp;ЖДЁТ&nbsp;СВОИХ</div>
+          <div className="hero-tagline">{tagline}</div>
         </div>
       </div>
     </section>
