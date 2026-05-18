@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Чарышские Усадьбы — для участников Private Camp 2</title>
+<meta name="description" content="Закрытый клубный посёлок в тупиковой долине реки Чарыш на 72 га. Дом — в собственность, 65% от валовой выручки, окупаемость от 3.5 лет. Спикер-страница для Private Camp 2 в Красной Поляне.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="privatecamps.css">
+</head>
+<body class="tone-warm accent-red type-s cards-bordered">
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="components/RapportStrip.jsx"></script>
+<script type="text/babel" src="components/Header.jsx"></script>
+<script type="text/babel" src="components/Place.jsx"></script>
+<script type="text/babel" src="components/Houses.jsx"></script>
+<script type="text/babel" src="components/Community.jsx"></script>
+<script type="text/babel" src="components/Extras.jsx"></script>
+<script type="text/babel" src="components/Visit.jsx"></script>
+<script type="text/babel" src="components/PrivateCamp.jsx"></script>
+
+<script type="text/babel">
+function PrivateCampApp() {
+  React.useEffect(() => {
+    const els = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((es) => {
+      es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    els.forEach(el => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+
+  return (
+    <div data-screen-label="00 Private Camp 2 — Speaker Landing">
+      <PCHeader />
+
+      {/* ─── HOOK · открытие ─── */}
+      <PCHero heroPhoto="../assets/photo/charysh-aerial.jpg" />
+
+      {/* ─── SPEAKER · кто представляет проект ─── */}
+      <PCSpeaker />
+
+      {/* ─── SCALE ANCHOR · 72 гектара в собственности ─── */}
+      <PCScale />
+
+      {/* ─── WHY NOW · макроконтекст рынка ─── */}
+      <PCAltaiMarket />
+
+      {/* ─── PLACE · что это за земля ─── */}
+      <PCLocation />
+      <PlaceSection />
+      <RoadSection />
+      <PCCommunity />
+      <PCActivities />
+
+      <RapportStrip variant={2} tone="redOnWhite" height={48} />
+
+      {/* ─── PEOPLE · команда ─── */}
+      <PCTeam />
+
+      {/* ─── PROJECT · что мы строим ─── */}
+      <PCMasterPlan />
+      <PCMasterPlanRender />
+      <PCMasterPlanDetail />
+
+      {/* ─── COMMUNITY ANCHOR · кто живёт рядом ─── */}
+      <PCResidents />
+
+      {/* ─── INVESTMENT OVERVIEW · четыре формы участия ─── */}
+      <PCThreeForms />
+
+      {/* ─── INVESTMENT · детали опций ─── */}
+      <PCConstructionTimeline />
+      <PCEconomics />
+      <PCFormBObjects />
+      <PCRetreatShowcase />
+      <PCFormCEquity />
+      <PCAnnounceFarming />
+
+      {/* ─── PROOF · оборот → "Не план. Уже работа." → дорожная карта → тренды → 5 драйверов ─── */}
+      <PCAltaiViability />
+      <PCWhatsBuilt />
+      <PCRoadmap />
+      <PCTrends />
+      <PCSecurity />
+
+      {/* ─── CLOSE · бонус PC2 → CTA ─── */}
+      <PCBonus />
+      <PCFinalCTA />
+      <RapportStrip variant={3} tone="goldOnBlack" height={56} />
+      <Footer />
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<PrivateCampApp />);
+</script>
+</body>
+</html>
