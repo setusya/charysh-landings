@@ -228,8 +228,7 @@ function PCSpeakerNemtsov() {
               <div className="pc-speaker-block-h">Бизнес и капитал</div>
               <ul className="pc-speaker-list">
                 <li><strong>35 лет</strong> в&nbsp;успешном предпринимательстве — создатель десятка бизнесов и&nbsp;нескольких <strong>миллиардных компаний</strong>.</li>
-                <li>На&nbsp;Алтае строит вместе с&nbsp;командой курорт и&nbsp;коттеджный посёлок Чарышских Усадеб.</li>
-                <li>Параллельно — проект <strong>70 КФХ на&nbsp;500&nbsp;га</strong>: ищет партнёров и&nbsp;тематических инвесторов.</li>
+                <li>На&nbsp;Чарыше вместе с&nbsp;командой строит <strong>Деревенский курорт Чарыш</strong> — коттеджный посёлок и&nbsp;recovery-курорт на&nbsp;72&nbsp;га в&nbsp;собственности.</li>
               </ul>
             </div>
 
