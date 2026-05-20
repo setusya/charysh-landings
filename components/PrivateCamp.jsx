@@ -204,6 +204,67 @@ function PCSpeaker() {
 }
 window.PCSpeaker = PCSpeaker;
 
+// ───────────────────────── 02 · SPEAKER — Вячеслав Немцов ─────────────────────────
+function PCSpeakerNemtsov() {
+  return (
+    <section className="sec-pad" id="speaker" data-screen-label="02 Speaker — Немцов">
+      <div className="container">
+        <div className="comm-head">
+          <div className="crumb"><span className="num">02</span><span className="sep">|</span>Спикер</div>
+          <h2 className="display h-display-l">
+            Сегодня проект представляет<br/>
+            <em className="redword">Вячеслав Немцов.</em>
+          </h2>
+        </div>
+        <div className="pc-speaker-grid">
+          <figure className="pc-speaker-photo">
+            <img src="assets/team/nemtsov.jpg" alt="Вячеслав Немцов — со-основатель Чарышских Усадеб"/>
+            <figcaption className="pc-speaker-cap">Вячеслав Немцов</figcaption>
+          </figure>
+          <div className="pc-speaker-body">
+            <div className="pc-speaker-tagline">Со-основатель курорта · психолог-энерготерапевт · серийный предприниматель · писатель</div>
+
+            <div className="pc-speaker-block">
+              <div className="pc-speaker-block-h">Бизнес и капитал</div>
+              <ul className="pc-speaker-list">
+                <li><strong>35 лет</strong> в&nbsp;успешном предпринимательстве — создатель десятка бизнесов и&nbsp;нескольких <strong>миллиардных компаний</strong>.</li>
+                <li>На&nbsp;Алтае строит вместе с&nbsp;командой курорт и&nbsp;коттеджный посёлок Чарышских Усадеб.</li>
+                <li>Параллельно — проект <strong>70 КФХ на&nbsp;500&nbsp;га</strong>: ищет партнёров и&nbsp;тематических инвесторов.</li>
+              </ul>
+            </div>
+
+            <div className="pc-speaker-block">
+              <div className="pc-speaker-block-h">Практика и&nbsp;методы</div>
+              <ul className="pc-speaker-list">
+                <li><strong>25 000+ часов</strong> энергетической, коучинговой и&nbsp;психотерапевтической работы с&nbsp;людьми.</li>
+                <li>Автор методов <strong>«Ресурсный баланс»</strong> и <strong>«Пирамида зрелости»</strong>, телесно-ориентированных и&nbsp;энергетических практик.</li>
+                <li>Создатель <strong>Академии счастья и&nbsp;ресурсного состояния</strong>, руководитель <strong>Лаборатории Энергии Человека</strong>.</li>
+                <li>Провёл <strong>100+ тренингов и&nbsp;ретритов</strong> в&nbsp;России и&nbsp;за&nbsp;рубежом. Автор пяти книг.</li>
+              </ul>
+            </div>
+
+            <div className="pc-speaker-tags">
+              <div className="pc-speaker-tag-group">
+                <div className="pc-speaker-tag-l">Подход</div>
+                <div className="pc-speaker-tag-v">Тело · психика · энергия в&nbsp;единой системе</div>
+              </div>
+              <div className="pc-speaker-tag-group">
+                <div className="pc-speaker-tag-l">Семья</div>
+                <div className="pc-speaker-tag-v">17 лет в&nbsp;браке · 6&nbsp;детей · внуки</div>
+              </div>
+              <div className="pc-speaker-tag-group">
+                <div className="pc-speaker-tag-l">Контакт</div>
+                <div className="pc-speaker-tag-v"><a href="https://t.me/nemtsovvyacheslav">@nemtsovvyacheslav</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+window.PCSpeakerNemtsov = PCSpeakerNemtsov;
+
 // ───────────────────────── 02.3 · BIG ALTAI MARKET — определение + динамика 2010→2030 ─────────────────────────
 function PCAltaiMarket() {
   // Bar chart: турпоток в Большой Алтай, млн чел./год — 2010-2030
