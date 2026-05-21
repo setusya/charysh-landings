@@ -1,6 +1,7 @@
 # Heavy / working files — not for repo
 uploads/
 *.pdf
+exports/
 .claude/
 
 # Editor / OS

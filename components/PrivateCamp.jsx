@@ -93,7 +93,7 @@ window.PCHero = PCHero;
 function PCScale() {
   return (
     <section className="pc-scale" id="scale" data-screen-label="02 Recovery курорт · 72 ГА">
-      <div className="pc-scale-photo" style={{ backgroundImage: "url('assets/photo/nature-river-rocks.jpg')" }}/>
+      <div className="pc-scale-photo" style={{ backgroundImage: "url('assets/photo/altai-snowcaps-meadow.jpg')" }}/>
       <div className="pc-scale-overlay"/>
       <div className="container pc-scale-frame">
         <h2 className="display h-display-l pc-scale-h">
