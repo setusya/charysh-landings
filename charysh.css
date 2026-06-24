@@ -5,6 +5,17 @@
    сетка и типографика — из tokens.css / site.css / privatecamps.css.
    ============================================================ */
 
+/* ── Hero: полноэкранное фоновое видео (вариант 1, cover) ── */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
 /* ── Карта региона ───────────────────────────────────────── */
 .cs-map-wrap {
   margin: 0 0 64px;
@@ -215,6 +226,46 @@
   width: 8px; height: 8px;
   background: var(--charysh-red);
 }
+
+/* ── Архитектурные рендеры в «Сценарии» ──────────────────── */
+.cs-render-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 48px;
+}
+.cs-render-fig { margin: 0; }
+.cs-render-fig img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+.cs-render-fig figcaption { margin-top: 12px; }
+@media (max-width: 720px) { .cs-render-row { grid-template-columns: 1fr; } }
+
+/* ── Блок УК «Чарыш Холдинг» внутри листа «Инвесторам» ───── */
+.cs-uk-block {
+  margin-top: 72px;
+  padding-top: 48px;
+  border-top: 1px solid var(--charysh-black);
+}
+.cs-uk-head {
+  font-family: var(--font-display);
+  font-size: var(--fs-36);
+  line-height: var(--lh-snug);
+  margin-bottom: 20px;
+}
+
+/* ── Фото-врезка в «Аудитории» ───────────────────────────── */
+.cs-aud-photo { margin: 0 0 48px; }
+.cs-aud-photo img {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  display: block;
+}
+.cs-aud-photo figcaption { margin-top: 12px; }
 
 /* ── Экономика на тёмной секции: видимые границы climate-grid ─ */
 #economics .climate-grid { border-color: rgba(255,255,255,.18); }

@@ -16,7 +16,7 @@ function CSHeader() {
     { id: 'audience',  label: 'Аудитория' },
     { id: 'economics', label: 'Экономика' },
     { id: 'invest',    label: 'Инвесторам' },
-    { id: 'team',      label: 'Команда' },
+    { id: 'contacts',  label: 'Контакты' },
   ];
   return (
     <header className={`site-header ${scrolled ? 'scrolled' : ''}`} data-screen-label="Header">
@@ -42,6 +42,12 @@ function CSHero() {
   return (
     <section className="hero hero-A" id="top" data-screen-label="01 Hero">
       <div className="hero-photo" style={{ backgroundImage: "url('assets/photo/charysh-summer-panorama.jpg')" }} />
+      <video
+        className="hero-video"
+        autoPlay muted loop playsInline preload="auto"
+        poster="assets/photo/charysh-summer-panorama.jpg">
+        <source src="assets/video/charysh-from-mountain.mp4" type="video/mp4" />
+      </video>
       <div className="hero-photo-overlay" />
       <div className="hero-frame">
         <div className="hero-top">
@@ -159,7 +165,7 @@ window.CSMap = CSMap;
 function CSLocation() {
   const infra = [
     { v: '3 км',        l: 'Дорога',            sub: 'проложена и благоустроена' },
-    { v: '0,5 МВт',     l: 'Электроподстанция', sub: 'с возможностью добавить мощность' },
+    { v: '0,5 МВт',     l: 'Электроподстанция', sub: 'с возможностью увеличения до 3 МВт' },
     { v: '1000 Гб/с',   l: 'Оптоволокно',       sub: 'высокоскоростной интернет' },
     { v: '100 т/сут',   l: 'Водоснабжение',     sub: 'скважина + аварийный вариант' },
     { v: '✓',           l: 'Водоотвод',         sub: 'подготовлен' },
@@ -169,7 +175,7 @@ function CSLocation() {
     <section className="sec-pad" id="location" data-screen-label="02 Location">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">01</span><span className="sep">|</span>Локация</div>
+          <div className="crumb"><span className="num">02</span><span className="sep">|</span>Локация</div>
           <h2 className="display h-display-l">
             <em className="redword">62 гектара</em> в&nbsp;собственности<br/>
             на&nbsp;берегу реки Чарыш.
@@ -198,6 +204,16 @@ function CSLocation() {
         <div className="cs-infra-foot">
           Разработана концепция туристско-рекреационного комплекса с&nbsp;различными сценариями развития — в&nbsp;том числе создание <strong>горнолыжных трасс</strong>.
         </div>
+        <div className="cs-render-row">
+          <figure className="cs-render-fig">
+            <img src="assets/photo/charysh-location-panorama.jpg" alt="Панорама участка — долина и река Чарыш" loading="lazy" />
+            <figcaption className="caption">Панорама участка — долина и&nbsp;излучина реки Чарыш</figcaption>
+          </figure>
+          <figure className="cs-render-fig">
+            <img src="assets/photo/elder-with-stela.jpg" alt="Царские курганы Сентелека — русский Стоунхендж" loading="lazy" />
+            <figcaption className="caption">Царские курганы Сентелека — «русский Стоунхендж» рядом с&nbsp;локацией</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
   );
@@ -218,7 +234,7 @@ function CSScenario() {
     <section className="sec-pad sec-warm" id="scenario" data-screen-label="03 Scenario">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">02</span><span className="sep">|</span>Основной&nbsp;сценарий</div>
+          <div className="crumb"><span className="num">03</span><span className="sep">|</span>Основной&nbsp;сценарий</div>
           <h2 className="display h-display-l">
             Туристско-рекреационный комплекс<br/>
             стандарта <em className="redword">4&nbsp;звезды</em>.
@@ -235,6 +251,16 @@ function CSScenario() {
               <div className="cs-spec-sub">{s.sub}</div>
             </div>
           ))}
+        </div>
+        <div className="cs-render-row">
+          <figure className="cs-render-fig">
+            <img src="assets/photo/render-coliving.jpg" alt="Архитектурный рендер — общественный центр комплекса" loading="lazy" />
+            <figcaption className="caption">Концепт-рендер · общественный центр</figcaption>
+          </figure>
+          <figure className="cs-render-fig">
+            <img src="assets/photo/render-rental.png" alt="Архитектурный рендер — сервисный корпус с прокатом" loading="lazy" />
+            <figcaption className="caption">Концепт-рендер · сервис и&nbsp;прокат</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -255,12 +281,16 @@ function CSAudience() {
     <section className="sec-pad" id="audience" data-screen-label="04 Audience">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">03</span><span className="sep">|</span>Целевая&nbsp;аудитория</div>
+          <div className="crumb"><span className="num">04</span><span className="sep">|</span>Целевая&nbsp;аудитория</div>
           <h2 className="display h-display-l">
             Семьи на&nbsp;авто из&nbsp;городов Сибири<br/>
             с&nbsp;доходом <em className="redword">от&nbsp;200&nbsp;000&nbsp;₽</em> на&nbsp;семью.
           </h2>
         </div>
+        <figure className="cs-aud-photo">
+          <img src="assets/photo/dance-ribbons.jpg" alt="Событийная программа курорта — фестиваль" loading="lazy" />
+          <figcaption className="caption">Событийный туризм: свадьбы, юбилеи, фестивали и&nbsp;MICE-группы.</figcaption>
+        </figure>
         <div className="cs-aud-grid">
           <div className="cs-aud-bars">
             <div className="cs-aud-bars-h">География спроса</div>
@@ -311,7 +341,7 @@ function CSEconomics() {
     <section className="sec-pad sec-dark" id="economics" data-screen-label="05 Economics">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">04</span><span className="sep">|</span>Экономика</div>
+          <div className="crumb"><span className="num">05</span><span className="sep">|</span>Экономика</div>
           <h2 className="display h-display-l">
             Экономика круглогодичного<br/>
             <em className="redword-light">деревенского курорта</em>.
@@ -379,7 +409,7 @@ function CSInvest() {
     <section className="sec-pad" id="invest" data-screen-label="06 Invest">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">05</span><span className="sep">|</span>Инвесторам</div>
+          <div className="crumb"><span className="num">06</span><span className="sep">|</span>Инвесторам</div>
           <h2 className="display h-display-l">
             Пять форм участия —<br/>
             <em className="redword">собственность и&nbsp;доходность</em>.
@@ -412,6 +442,8 @@ function CSInvest() {
             <strong>Инвестирование осуществляется поэтапно.</strong> Управление инвестициями обеспечивает УК&nbsp;«Чарыш&nbsp;Холдинг».
           </div>
         </div>
+
+        <CSTeam />
       </div>
     </section>
   );
@@ -436,18 +468,11 @@ function CSTeam() {
     { name: 'Тамара Маркиш',     role: 'Консультант · организация ЗОЖ-программ', img: 'assets/team/markish.jpg' },
   ];
   return (
-    <section className="sec-pad sec-warm" id="team" data-screen-label="07 Team">
-      <div className="container">
-        <div className="comm-head">
-          <div className="crumb"><span className="num">06</span><span className="sep">|</span>УК&nbsp;«Чарыш&nbsp;Холдинг»</div>
-          <h2 className="display h-display-l">
-            Строительство и&nbsp;управление ведёт<br/>
-            <em className="redword">одна команда</em>.
-          </h2>
-        </div>
-        <p className="lead" style={{ opacity: .82, maxWidth: '62ch', marginBottom: 40 }}>
-          Единая команда на&nbsp;всём цикле — от&nbsp;стройки до&nbsp;эксплуатации — обеспечивает лучшую экономику комплекса.
-        </p>
+    <div className="cs-uk-block" id="team">
+      <div className="cs-uk-head">УК&nbsp;«Чарыш&nbsp;Холдинг» — кто строит и&nbsp;управляет</div>
+      <p className="lead" style={{ opacity: .82, maxWidth: '62ch', marginBottom: 32 }}>
+        Строительство и&nbsp;эксплуатацию ведёт <strong>одна команда</strong> — это обеспечивает лучшую экономику комплекса.
+      </p>
         <div className="cs-uk-stats">
           {stats.map((s, i) => (
             <div className="cs-uk-stat" key={i}>
@@ -468,8 +493,7 @@ function CSTeam() {
             </div>
           ))}
         </div>
-      </div>
-    </section>
+    </div>
   );
 }
 window.CSTeam = CSTeam;
@@ -477,7 +501,7 @@ window.CSTeam = CSTeam;
 // ───────────────────────── 07 · Контакты ─────────────────────────
 function CSContacts() {
   return (
-    <section className="sec-pad" id="contacts" data-screen-label="08 Contacts">
+    <section className="sec-pad" id="contacts" data-screen-label="07 Contacts">
       <div className="container">
         <div className="cs-contacts">
           <div className="crumb"><span className="num">07</span><span className="sep">|</span>Контакты</div>
@@ -515,7 +539,7 @@ function CSFooter() {
             <div className="fc-h">Инвесторам</div>
             <a href="#economics">Экономика</a>
             <a href="#invest">Предложения</a>
-            <a href="#team">УК «Чарыш Холдинг»</a>
+            <a href="#invest">УК «Чарыш Холдинг»</a>
           </div>
           <div>
             <div className="fc-h">Связь</div>
