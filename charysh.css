@@ -1,0 +1,409 @@
+/* ============================================================
+   Charysh — публичный сайт проекта.
+   Стили только для НОВЫХ секций (карта, инфраструктура, сценарий,
+   аудитория, инвест-предложения, УК, контакты). Базовые токены,
+   сетка и типографика — из tokens.css / site.css / privatecamps.css.
+   ============================================================ */
+
+/* ── Карта региона ───────────────────────────────────────── */
+.cs-map-wrap {
+  margin: 0 0 64px;
+  padding: 32px;
+  background: #faf7f1;
+  border: 1px solid var(--charysh-black);
+}
+.cs-map-cap {
+  margin-top: 16px;
+  font-size: var(--fs-14);
+  line-height: var(--lh-snug);
+  color: var(--fg-mute);
+  max-width: 72ch;
+}
+
+/* ── Инфраструктура (1-й этап) ───────────────────────────── */
+.cs-infra-head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.cs-infra-tag {
+  font-size: var(--fs-12);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--charysh-white);
+  background: var(--charysh-red);
+  padding: 5px 12px;
+}
+.cs-infra-h {
+  font-family: var(--font-display);
+  font-size: var(--fs-28);
+  line-height: var(--lh-snug);
+}
+.cs-infra-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--charysh-black);
+  border-left: 1px solid var(--charysh-black);
+}
+.cs-infra-cell {
+  padding: 24px;
+  border-right: 1px solid var(--charysh-black);
+  border-bottom: 1px solid var(--charysh-black);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.cs-infra-num {
+  font-size: var(--fs-12);
+  color: var(--fg-mute);
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 8px;
+}
+.cs-infra-v {
+  font-family: var(--font-display);
+  font-size: var(--fs-36);
+  line-height: 1;
+  color: var(--charysh-red);
+}
+.cs-infra-l {
+  font-weight: var(--weight-bold);
+  font-size: var(--fs-18);
+}
+.cs-infra-sub {
+  font-size: var(--fs-14);
+  color: var(--fg-2);
+  line-height: var(--lh-snug);
+}
+.cs-infra-foot {
+  margin-top: 28px;
+  padding: 20px 24px;
+  border-left: 3px solid var(--charysh-red);
+  background: #faf7f1;
+  font-size: var(--fs-18);
+  line-height: var(--lh-body);
+  max-width: 72ch;
+}
+
+/* ── Сценарий — спецификация комплекса ───────────────────── */
+.cs-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--charysh-black);
+  border: 1px solid var(--charysh-black);
+}
+.cs-spec-cell {
+  background: var(--charysh-white);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 180px;
+}
+.cs-spec-v {
+  font-family: var(--font-display);
+  font-size: var(--fs-64);
+  line-height: 0.9;
+  color: var(--charysh-red);
+}
+.cs-spec-u {
+  font-family: var(--font-sans);
+  font-size: var(--fs-18);
+  font-weight: var(--weight-medium);
+  color: var(--fg-1);
+  margin-left: 8px;
+}
+.cs-spec-l {
+  font-weight: var(--weight-bold);
+  font-size: var(--fs-18);
+  line-height: var(--lh-snug);
+}
+.cs-spec-sub {
+  font-size: var(--fs-14);
+  color: var(--fg-2);
+  line-height: var(--lh-snug);
+  margin-top: auto;
+}
+
+/* ── Аудитория ───────────────────────────────────────────── */
+.cs-aud-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.cs-aud-bars-h,
+.cs-aud-groups-h {
+  font-size: var(--fs-12);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--fg-mute);
+  margin-bottom: 24px;
+}
+.cs-aud-row {
+  display: grid;
+  grid-template-columns: 200px 1fr 56px;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.cs-aud-city {
+  font-size: var(--fs-16);
+  font-weight: var(--weight-medium);
+}
+.cs-aud-track {
+  height: 14px;
+  background: #ece5da;
+}
+.cs-aud-fill {
+  height: 100%;
+  background: var(--charysh-red);
+}
+.cs-aud-pct {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: var(--weight-bold);
+  font-size: var(--fs-16);
+}
+.cs-aud-note {
+  margin-top: 20px;
+  font-size: var(--fs-14);
+  color: var(--fg-mute);
+}
+.cs-aud-side { display: flex; flex-direction: column; gap: 32px; }
+.cs-aud-stat {
+  padding: 24px;
+  background: var(--charysh-black);
+  color: var(--charysh-white);
+}
+.cs-aud-stat-v {
+  font-family: var(--font-display);
+  font-size: var(--fs-64);
+  line-height: 1;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.cs-aud-stat-l { font-size: var(--fs-18); line-height: var(--lh-snug); }
+.cs-aud-stat-sub {
+  margin-top: 12px;
+  font-size: var(--fs-14);
+  line-height: var(--lh-snug);
+  color: rgba(255,255,255,.66);
+}
+.cs-aud-groups-foot {
+  margin-top: 16px;
+  font-size: var(--fs-14);
+  color: var(--fg-2);
+  line-height: var(--lh-snug);
+}
+.cs-aud-list { list-style: none; padding: 0; margin: 0; }
+.cs-aud-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  font-size: var(--fs-16);
+  line-height: var(--lh-snug);
+}
+.cs-aud-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 9px;
+  width: 8px; height: 8px;
+  background: var(--charysh-red);
+}
+
+/* ── Экономика на тёмной секции: видимые границы climate-grid ─ */
+#economics .climate-grid { border-color: rgba(255,255,255,.18); }
+#economics .climate-cell { border-color: rgba(255,255,255,.18); }
+
+/* ── Экономика: подпись-источник (на тёмной секции) ──────── */
+.cs-econ-src {
+  margin-top: 40px;
+  font-size: var(--fs-14);
+  line-height: var(--lh-snug);
+  color: rgba(255,255,255,.6);
+  max-width: 76ch;
+}
+
+/* ── Инвест-предложения ──────────────────────────────────── */
+.cs-invest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.cs-invest-card {
+  border: 1px solid var(--charysh-black);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: var(--charysh-white);
+  transition: transform var(--duration-base) var(--ease), box-shadow var(--duration-base) var(--ease);
+}
+.cs-invest-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 0 var(--charysh-red);
+}
+.cs-invest-num {
+  font-size: var(--fs-12);
+  color: var(--fg-mute);
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 12px;
+}
+.cs-invest-name {
+  font-family: var(--font-display);
+  font-size: var(--fs-28);
+  line-height: var(--lh-snug);
+  margin-bottom: 8px;
+}
+.cs-invest-spec {
+  font-size: var(--fs-14);
+  color: var(--fg-2);
+  line-height: var(--lh-snug);
+  min-height: 40px;
+  margin-bottom: 16px;
+}
+.cs-invest-price {
+  font-family: var(--font-display);
+  font-size: var(--fs-36);
+  line-height: 1;
+  color: var(--charysh-red);
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--charysh-black);
+  margin-bottom: 16px;
+}
+.cs-invest-metrics {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.cs-invest-metric {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px;
+  background: #faf7f1;
+}
+.cs-invest-metric-l {
+  font-size: var(--fs-12);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--fg-mute);
+}
+.cs-invest-metric-v {
+  font-family: var(--font-display);
+  font-size: var(--fs-28);
+  line-height: 1;
+}
+.cs-invest-own {
+  margin-top: auto;
+  font-size: var(--fs-14);
+  color: var(--fg-2);
+  padding-top: 8px;
+}
+.cs-invest-foot {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 40px;
+  padding: 22px 26px;
+  background: var(--charysh-black);
+  color: var(--charysh-white);
+  font-size: var(--fs-18);
+  line-height: var(--lh-snug);
+}
+.cs-invest-foot strong { color: #fff; }
+.cs-invest-foot-badge {
+  flex: 0 0 auto;
+  width: 36px; height: 36px;
+  display: grid; place-items: center;
+  background: var(--charysh-red);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: var(--fs-22);
+  border-radius: 50%;
+}
+
+/* ── УК «Чарыш Холдинг» ──────────────────────────────────── */
+.cs-uk-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--charysh-black);
+  border: 1px solid var(--charysh-black);
+  margin-bottom: 56px;
+}
+.cs-uk-stat {
+  background: var(--charysh-white);
+  padding: 24px;
+}
+.cs-uk-stat-v {
+  font-family: var(--font-display);
+  font-size: var(--fs-48);
+  line-height: 1;
+  color: var(--charysh-red);
+  margin-bottom: 10px;
+}
+.cs-uk-stat-u {
+  font-family: var(--font-sans);
+  font-size: var(--fs-16);
+  font-weight: var(--weight-medium);
+  color: var(--fg-1);
+  margin-left: 6px;
+}
+.cs-uk-stat-l {
+  font-size: var(--fs-16);
+  line-height: var(--lh-snug);
+}
+.cs-team-head {
+  font-size: var(--fs-12);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--fg-mute);
+  margin-bottom: 24px;
+}
+.cs-team-ph-empty {
+  display: grid;
+  place-items: center;
+  background: var(--charysh-red);
+  color: var(--charysh-white);
+  font-family: var(--font-display);
+  font-size: var(--fs-64);
+}
+
+/* ── Контакты ────────────────────────────────────────────── */
+.cs-contacts { max-width: 76ch; }
+.cs-contacts-lead {
+  font-size: var(--fs-18);
+  line-height: var(--lh-body);
+  margin: 24px 0 32px;
+  color: var(--fg-2);
+}
+.cs-tg-btn { font-size: var(--fs-18); }
+
+/* ── Адаптив ─────────────────────────────────────────────── */
+@media (max-width: 920px) {
+  .cs-infra-grid,
+  .cs-spec-grid { grid-template-columns: repeat(2, 1fr); }
+  .cs-invest-grid { grid-template-columns: repeat(2, 1fr); }
+  .cs-uk-stats { grid-template-columns: repeat(2, 1fr); }
+  .cs-aud-grid { grid-template-columns: 1fr; gap: 40px; }
+  .cs-aud-row { grid-template-columns: 150px 1fr 48px; }
+}
+@media (max-width: 600px) {
+  .cs-map-wrap { padding: 16px; }
+  .cs-infra-grid,
+  .cs-spec-grid,
+  .cs-invest-grid,
+  .cs-uk-stats { grid-template-columns: 1fr; }
+  .cs-spec-v { font-size: var(--fs-48); }
+  .cs-aud-row { grid-template-columns: 120px 1fr 40px; gap: 10px; }
+  .cs-invest-foot { flex-direction: column; align-items: flex-start; gap: 12px; }
+}
