@@ -1,72 +1,8 @@
 // Charysh — Бизнес-завтрак, часть 2 «Концепция и место»: секции, которые есть только в этой версии.
 // Остальные слайды переиспользуются из PrivateCamp.jsx / Place.jsx через пропсы (num, members, contacts…).
 
-// ───────────────────────── 04 · Большой Алтай + География (схлопнутые слайды 04 и 05) ─────────────────────────
-function BBAltaiGeo({ num = '04' } = {}) {
-  const stats = [
-    { v: '×3,7', l: 'рост рынка за 20 лет', sub: 'с 2010 (2,0 млн) до 2030 (7,3 млн)', cls: '' },
-    { v: '5,2', u: 'млн', l: 'туристов в 2025 году', sub: 'РА 2,8 (Минэк РА) + АК 2,4 (Управление АК)', cls: 'pc-bigaltai-stat-now' },
-    { v: '7,3', u: 'млн', l: 'цель нацпроекта к 2030', sub: '+40% за 5 лет · бюджетное финансирование инфраструктуры', cls: 'pc-bigaltai-stat-target' },
-  ];
-  const distances = [
-    { city: 'Барнаул', t: '3,5 ч', sub: '290 км · новый терминал аэропорта · рейсы из Москвы 4 ч' },
-    { city: 'Горно-Алтайск', t: '5 ч',  sub: '300 км · ближайший региональный аэропорт' },
-    { city: 'Новосибирск', t: '7 ч',  sub: '530 км · крупнейший хаб Сибири' },
-    { city: 'с. Чарышское', t: '3–5 км', sub: 'районный центр · вся инфраструктура' },
-  ];
-  return (
-    <section className="sec-pad sec-dark pc-bigaltai" id="altai-geo" data-screen-label="04 Big Altai + Geography (compact)">
-      <div className="pc-bigaltai-bg" style={{backgroundImage:"url('assets/photo/altai-belukha.webp')"}}/>
-      <div className="pc-bigaltai-bg-overlay"/>
-      <div className="container pc-bigaltai-inner">
-        <div className="comm-head">
-          <div className="crumb"><span className="num">{num}</span><span className="sep">|</span>Большой&nbsp;Алтай<span className="sep">|</span>Где&nbsp;это</div>
-          <h2 className="display h-display-l">
-            <em className="redword-light">Большой Алтай</em> —<br/>
-            самый растущий туррегион России.
-          </h2>
-        </div>
-
-        <p className="pc-bigaltai-hero-note">
-          Республика Алтай · Алтайский край · Кузбасс — единый туристический бренд нацпроекта. Мегакурорты, миллионы гостей и&nbsp;бюджеты под&nbsp;триллион. <strong>Чарыш — русская душа Горного Алтая</strong> в&nbsp;часе от&nbsp;этих потоков.
-        </p>
-
-        <div className="pc-bigaltai-stats" style={{marginTop:0}}>
-          {stats.map((st, i) => (
-            <div className={`pc-bigaltai-stat ${st.cls}`} key={i}>
-              <div className="pc-bigaltai-stat-v">{st.v}{st.u && <> <span className="pc-bigaltai-stat-u">{st.u}</span></>}</div>
-              <div className="pc-bigaltai-stat-l">{st.l}</div>
-              <div className="pc-bigaltai-stat-sub">{st.sub}</div>
-            </div>
-          ))}
-        </div>
-
-        <div className="bb-geo">
-          <div className="bb-geo-head">
-            <h3 className="display h-display-m bb-geo-h">
-              Россия · Алтайский край · Чарышский район · <em className="redword-light">с.&nbsp;Чарышское</em>
-            </h3>
-            <div className="bb-geo-cap">51°23′ с.ш. · 83°33′ в.д. · 441 м над уровнем моря · тупиковая долина реки Чарыш · 72 га в собственности</div>
-          </div>
-          <div className="pc-location-grid bb-geo-grid">
-            {distances.map((d, i) => (
-              <div className="pc-location-cell" key={i}>
-                <div className="pc-location-num">{String(i+1).padStart(2,'0')}</div>
-                <div className="pc-location-city">{d.city}</div>
-                <div className="pc-location-t">{d.t}</div>
-                <div className="pc-location-sub">{d.sub}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-window.BBAltaiGeo = BBAltaiGeo;
-
-// ───────────────────────── 05 · Почему Чарыш — пять аргументов с источниками ─────────────────────────
-function BBWhyCharysh({ num = '05' } = {}) {
+// ───────────────────────── 04 · Почему Чарыш — пять аргументов с источниками ─────────────────────────
+function BBWhyCharysh({ num = '04' } = {}) {
   const args = [
     { h: 'Земля до якорного инвестора', d: 'После прихода Сбера в Манжерок сотка в Республике Алтай выросла на 88% за год и стоит 592 тыс ₽ — дороже всего в Сибири. Чарыш сегодня на той стадии, где Манжерок был десять лет назад.', src: 'cian,erz,iz' },
     { h: 'Там, где нет толпы', d: 'Шерегеш: 1,65 млн гостей, 95 гостиниц и 50 СПА конкурируют за одного человека. В Чарыше прямых конкурентов нет, а 45 000 автотуристов уже останавливаются здесь в гостевых домах.', src: 'ator,pdf' },
@@ -100,8 +36,8 @@ function BBWhyCharysh({ num = '05' } = {}) {
 }
 window.BBWhyCharysh = BBWhyCharysh;
 
-// ───────────────────────── 08 · Чем живёт Чарыш + Свадьбы и мероприятия ─────────────────────────
-function BBActivities({ num = '08' } = {}) {
+// ───────────────────────── 07 · Чем живёт Чарыш + Свадьбы и мероприятия ─────────────────────────
+function BBActivities({ num = '07' } = {}) {
   const cats = [
     {
       tag: 'Река и вода',

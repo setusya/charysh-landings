@@ -7,32 +7,38 @@ function FinKeyNumbers({ num = '02' } = {}) {
   const stats = [
     { n: '2,9', u: 'млрд ₽', l: 'бюджет проекта', sub: 'Две очереди · 72 га в собственности' },
     { n: '288', u: 'млн ₽', l: 'уже инвестировано', sub: 'Земля, коммуникации, разработка проекта' },
-    { n: '950', u: 'млн ₽', l: 'привлекаем', sub: 'Акции АО и недвижимость · чек 10–50 млн ₽' },
+    { n: '950', u: 'млн ₽', l: 'привлекаем', sub: 'Акции и недвижимость · чек 10–50 млн ₽' },
     { n: '55', u: 'млн ₽', l: 'господдержка', sub: 'Нацпроект «Туризм и индустрия гостеприимства»' },
     { n: '72', u: 'га', l: 'земля в собственности', sub: 'С необходимым ВРИ · на берегу реки Чарыш' },
     { n: '2028', u: 'апрель', l: 'открытие первой очереди', sub: 'Продажи групп: свадьбы, MICE, ретриты — с 2027 года' },
   ];
   return (
-    <section className="sec-pad" id="key" data-screen-label="02 Fin — Key numbers">
+    <section className="sec-pad" id="key" data-screen-label="02 Fin — Key numbers + map">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">{num}</span><span className="sep">|</span>Проект в&nbsp;цифрах</div>
+          <div className="crumb"><span className="num">{num}</span><span className="sep">|</span>Проект в&nbsp;цифрах<span className="sep">|</span>Где&nbsp;это</div>
           <h2 className="display h-display-l">
             «Чарыш» — деревня-курорт<br/>
             на&nbsp;<em className="redword">72&nbsp;гектарах</em> в&nbsp;предгорьях Алтая.
           </h2>
         </div>
-        <div className="climate-grid pc-economics-grid">
-          {stats.map((s, i) => (
-            <div className="climate-cell" key={i}>
-              <div className="climate-num">0{i+1}</div>
-              <div className="climate-value">
-                {s.n}<span className="climate-unit">{s.u}</span>
+        <div className="fin-two fin-keymap">
+          <div className="climate-grid pc-economics-grid fin-key-grid">
+            {stats.map((s, i) => (
+              <div className="climate-cell" key={i}>
+                <div className="climate-num">0{i+1}</div>
+                <div className="climate-value">
+                  {s.n}<span className="climate-unit">{s.u}</span>
+                </div>
+                <div className="climate-label">{s.l}</div>
+                <div className="climate-sub">{s.sub}</div>
               </div>
-              <div className="climate-label">{s.l}</div>
-              <div className="climate-sub">{s.sub}</div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <figure className="fin-map">
+            <img src="assets/photo/fin/map-altai.jpg" alt="Карта: Чарыш между Барнаулом, Горно-Алтайском и Новосибирском"/>
+            <figcaption className="fin-map-cap">Барнаул 290 км · Горно-Алтайск 300 км · Новосибирск 530 км</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -149,7 +155,53 @@ function FinPhases({ num = '04' } = {}) {
 }
 window.FinPhases = FinPhases;
 
-// ───────────────────────── 05 · Почему наш проект ─────────────────────────
+// ───────────────────────── 05 · Деревня · Курорт · Место силы (PDF, стр. 9–11) ─────────────────────────
+function FinProduct({ num = '05' } = {}) {
+  const cols = [
+    {
+      tag: 'Деревня', h: 'Русский код Алтая', img: 'assets/photo/fin/church.jpg',
+      items: ['От одежды сотрудников до архитектурных решений', 'От гастрономии до программ по оздоровлению', 'От помощи в археологических раскопках до освоения традиционных ремёсел', 'От приобщения к быту казаков до участия в этнических фестивалях', 'Наши гости приобретут новые навыки'],
+    },
+    {
+      tag: 'Курорт', h: '260 солнечных дней', img: 'assets/photo/fin/spa-stone.jpg',
+      items: ['Номера и коттеджи уровня 4 звезды', 'Кафе, бар, ресторан авторской кухни', 'Пляжи, парк, прогулочные зоны, терренкуры, смотровые площадки', 'Крытый бассейн, бани, сауны, массажные кабинеты, лекарственные чаи', 'Инфоцентр, сувениры, трансфер, консьерж, аптека, охрана, Wi-Fi, медпункт', 'Спортивный городок, аренда инвентаря, программы активного отдыха'],
+    },
+    {
+      tag: 'Алтайский край', h: 'Место силы', img: 'assets/photo/fin/rock-pond.jpg',
+      items: ['Разнообразные ландшафты, богатое биоразнообразие', 'Уникальные природные объекты', 'Историко-культурное наследие', 'Сочетание природных и бальнеологических ресурсов', 'Климат с контрастами', 'Туристский потенциал, пассионарная энергия'],
+    },
+  ];
+  return (
+    <section className="sec-pad sec-warm" id="product" data-screen-label="05 Fin — Product: village, resort, place">
+      <div className="container">
+        <div className="comm-head">
+          <div className="crumb"><span className="num">{num}</span><span className="sep">|</span>Что&nbsp;покупает гость</div>
+          <h2 className="display h-display-l">
+            Деревня. Курорт. Место силы.<br/>
+            <em className="redword">Три слоя одного продукта</em>.
+          </h2>
+        </div>
+        <div className="fin-product">
+          {cols.map((c, i) => (
+            <article className="fin-product-col" key={i}>
+              <div className="fin-product-photo" style={{backgroundImage:`url('${c.img}')`}}/>
+              <div className="fin-product-body">
+                <div className="fin-product-tag">{c.tag}</div>
+                <h3 className="fin-product-h">{c.h}</h3>
+                <ul className="pc-activity-list fin-list">
+                  {c.items.map((it, j) => <li key={j}>{it}</li>)}
+                </ul>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+window.FinProduct = FinProduct;
+
+// ───────────────────────── 06 · Почему наш проект ─────────────────────────
 function FinWhyUs({ num = '05' } = {}) {
   const args = [
     { h: 'Не идея, а стройплощадка', d: 'Вложено 288 млн ₽. Все коммуникации подведены. Земля 72 га в собственности с необходимым ВРИ.', src: 'pdf' },
@@ -176,6 +228,11 @@ function FinWhyUs({ num = '05' } = {}) {
               <p className="fin-card-d">{a.d}</p>
             </article>
           ))}
+        </div>
+        <div className="fin-photos">
+          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/fin/build-excavator.jpg')"}}><div className="fin-photo-cap">Стройматериалы «под ногами»: мрамор, сланец, галька</div></div>
+          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/fin/build-trees-winter.jpg')"}}><div className="fin-photo-cap">Работы на площадке идут круглый год</div></div>
+          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/fin/community-planting.jpg')"}}><div className="fin-photo-cap">Земляки: 95% персонала — из Чарышского</div></div>
         </div>
       </div>
     </section>
@@ -277,6 +334,10 @@ function FinOffer({ num = '07' } = {}) {
             </article>
           ))}
         </div>
+        <figure className="fin-offer-fig">
+          <img src="assets/photo/fin/guesthouse-render.jpg" alt="Рендер гостевого дома с землёй в собственности"/>
+          <figcaption className="pc-mp-render-cap">Гостевой дом с землёй в собственности — от 8,5 млн ₽ · рендер из проекта</figcaption>
+        </figure>
         <div className="fin-metrics">
           {metrics.map((m, i) => (
             <div className="fin-metric" key={i}>
@@ -425,6 +486,7 @@ function FinDemand({ num = '10' } = {}) {
             </div>
           ))}
         </div>
+        <p className="fin-note">Аналитические материалы по&nbsp;спросу и&nbsp;целевой аудитории — по&nbsp;запросу.</p>
         <SrcList keys={['tolkRA','gov','raGov','pdf']}/>
       </div>
     </section>
@@ -479,7 +541,7 @@ function FinExit({ num = '12' } = {}) {
     ['Доход', 'сдача через УК — без вашего участия'],
     ['Выкуп', 'по договору — условия приобретения и выкупа по запросу'],
     ['Вторичный рынок', 'гостевой дом с землёй в собственности — продаётся как любая недвижимость'],
-    ['Актив', 'растёт вместе с землёй региона — см. слайд 06'],
+    ['Актив', 'растёт вместе с землёй региона — см. слайд 07'],
   ];
   const Block = ({ tag, h, rows }) => (
     <article className="fin-exit-block">
