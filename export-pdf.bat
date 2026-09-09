@@ -20,8 +20,8 @@ REM Если аргумент не задан — экспортируем об�
 if "%~1"=="" (
     call :export nemtsov
     call :export privatecamps
-    call :export breakfast
-    call :export finance
+    call :exportdir invest
+    call :exportdir product
     goto :done
 )
 
@@ -37,6 +37,17 @@ echo Exporting %1.html  ^>  exports\%1.pdf
   --virtual-time-budget=30000 ^
   --run-all-compositor-stages-before-draw ^
   "http://localhost:5500/%1.html?print=1" 1>nul 2>nul
+exit /b
+
+:exportdir
+echo Exporting %1/index.html  ^>  exports%1.pdf
+"%CHROME%" --headless=new --disable-gpu --no-sandbox ^
+  --user-data-dir="%PROFILE%" ^
+  --print-to-pdf="%OUT%%1.pdf" ^
+  --no-pdf-header-footer --hide-scrollbars ^
+  --virtual-time-budget=30000 ^
+  --run-all-compositor-stages-before-draw ^
+  "http://localhost:5500/%1/?print=1" 1>nul 2>nul
 exit /b
 
 :done

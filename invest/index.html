@@ -1,0 +1,144 @@
+<!doctype html>
+<!-- Инвест-презентация · https://charysh-usadby.ru/invest/ · исходник этой папки — единственный, finance.html лишь редирект -->
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<!-- Страница лежит в подпапке, все пути (css, jsx, assets) — от корня сайта -->
+<base href="../">
+<script>
+// С <base> ссылки вида href="#id" ведут на корень сайта — перехватываем и просто скроллим.
+document.addEventListener("click", function (e) {
+  var a = e.target.closest && e.target.closest("a[href^='#']");
+  if (!a) return;
+  e.preventDefault();
+  var id = a.getAttribute("href").slice(1);
+  var el = id && document.getElementById(id);
+  if (el) { el.scrollIntoView({ behavior: "smooth", block: "start" }); history.replaceState(null, "", location.pathname + location.search + "#" + id); }
+  else if (!id) { window.scrollTo({ top: 0, behavior: "smooth" }); }
+});
+</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Курорт — открытие в Чарыше · финансовая презентация</title>
+<meta name="description" content="«Чарыш» деревня-курорт на 72 га в предгорьях Алтая. Финансовая презентация для частных инвесторов с чеком 10–50 млн ₽: бюджет, очереди, предложение, допущения финмодели, рост земли, выход.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="privatecamps.css">
+<link rel="stylesheet" href="finance.css">
+<link rel="stylesheet" href="print.css">
+</head>
+<body class="tone-warm accent-red type-s cards-bordered">
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="components/RapportStrip.jsx"></script>
+<script type="text/babel" src="components/Header.jsx"></script>
+<script type="text/babel" src="components/Place.jsx"></script>
+<script type="text/babel" src="components/Houses.jsx"></script>
+<script type="text/babel" src="components/Community.jsx"></script>
+<script type="text/babel" src="components/Extras.jsx"></script>
+<script type="text/babel" src="components/Visit.jsx"></script>
+<script type="text/babel" src="components/PrivateCamp.jsx"></script>
+<script type="text/babel" src="components/Sources.jsx"></script>
+<script type="text/babel" src="components/Team.jsx"></script>
+<script type="text/babel" src="components/Finance.jsx"></script>
+<script src="print-prep.js" defer></script>
+
+<script type="text/babel">
+// ─── Бизнес-завтрак · Часть 1 · Финансы (спикер — Андрей Маслак) · 14 слайдов ───
+// 01 Обложка · 02 Цифры · 03 Первая очередь · 04 Очереди и финансирование · 05 Почему наш проект ·
+// 06 Рост земли (Горный Алтай, Шерегеш) · 07 Предложение · 08 Допущения · 09 «0 километр» ·
+// 10 Спрос · 11 Риски · 12 Выход · 13 Команда и УК · 14 Контакты
+
+const FIN_NAV = [
+  { id: 'key',    label: 'Цифры' },
+  { id: 'offer',  label: 'Предложение' },
+  { id: 'land',   label: 'Рост земли' },
+  { id: 'exit',   label: 'Выход' },
+  { id: 'team',   label: 'Команда' },
+];
+
+function FinanceApp() {
+  React.useEffect(() => {
+    const els = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((es) => {
+      es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    els.forEach(el => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+
+  return (
+    <div data-screen-label="00 Бизнес-завтрак · Часть 1 · Финансы">
+      <PCHeader links={FIN_NAV} />
+
+      {/* 01 · Обложка */}
+      <PCHero
+        heroPhoto="assets/photo/charysh-aerial.jpg"
+        crumbLabel="Бизнес-завтрак"
+        crumbExtra="Часть 1 · Финансы"
+        meta="Курорт «Чарыш» · финансовая презентация"
+        h1={<>Курорт —<br/>открытие в&nbsp;Чарыше</>}
+        sub={<><strong>Курорт «Чарыш» — деревня-курорт в&nbsp;предгорьях Алтая. Открытие для&nbsp;гостей и&nbsp;для&nbsp;инвесторов.</strong> 72&nbsp;га в&nbsp;собственности в&nbsp;тупиковой долине реки Чарыш. Барнаул 290&nbsp;км · Горно-Алтайск 300&nbsp;км · Новосибирск 530&nbsp;км. <strong>Бюджет 2,9&nbsp;млрд&nbsp;₽, открытие первой очереди — апрель 2028.</strong></>}
+        primaryCtaText="Предложение для инвесторов"
+        primaryCtaHref="#offer"
+        secondaryCtaText="Рост земли на Алтае"
+        secondaryCtaHref="#land"
+        tagline="КУРОРТ — ОТКРЫТИЕ В ЧАРЫШЕ · ИНВЕСТИРУЕМ В НАСТОЯЩЕЕ"
+      />
+
+      {/* 02–04 · Проект: цифры, первая очередь, очереди и финансирование */}
+      <FinKeyNumbers num="02" />
+      <FinComplex num="03" />
+      <FinPhases num="04" />
+
+      {/* 05–06 · Аргументы: почему мы, почему Чарыш (земля) */}
+      <FinWhyUs num="05" />
+      <FinLandGrowth num="06" />
+
+      <RapportStrip variant={2} tone="redOnWhite" height={48} />
+
+      {/* 07–08 · Деньги: предложение и допущения */}
+      <FinOffer num="07" />
+      <FinAssumptions num="08" />
+
+      {/* 09–11 · Почему сойдётся: «0 километр», спрос, риски */}
+      <FinZeroKm num="09" />
+      <FinDemand num="10" />
+      <FinRisks num="11" />
+
+      {/* 12 · Выход */}
+      <FinExit num="12" />
+
+      {/* 13 · Команда и УК */}
+      <PCTeam
+        num="13"
+        members={CH_TEAM}
+        crumbText="Команда и УК"
+        h2={<>Заказчик и&nbsp;оператор — <em className="redword">в&nbsp;одном лице</em>.</>}
+        lead="УК — заказчик и оператор проекта. Команда имеет опыт в строительстве и управлении отелем. УТП команды — привлечение групп в низкий сезон. Все члены команды инвестируют в проект сами."
+      />
+
+      {/* 14 · Контакты */}
+      <PCFinalCTA
+        num="14"
+        h2={<>Сделаем <em className="redword">индивидуальное предложение</em><br/>под&nbsp;ваш чек.</>}
+        lead="Финмодель под ваш сценарий, полный пакет документов, условия выкупа. Для чека 10–50 млн ₽ — гостевой дом с землёй, пакет акций или их комбинация."
+        contacts={[CH_CONTACT_MASLAK, CH_CONTACT_ANTONOVA, CH_CONTACT_CHANNEL]}
+        note="Дальше — часть 2: место, люди и атмосфера Чарыша. Спикер — Светлана Антонова."
+      />
+      <RapportStrip variant={3} tone="goldOnBlack" height={56} />
+      <Footer />
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<FinanceApp />);
+</script>
+</body>
+</html>
