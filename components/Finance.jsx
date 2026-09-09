@@ -94,67 +94,6 @@ function FinComplex({ num = '03' } = {}) {
 }
 window.FinComplex = FinComplex;
 
-// ───────────────────────── 04 · Очереди и структура финансирования ─────────────────────────
-function FinPhases({ num = '04' } = {}) {
-  const phases = [
-    { tag: 'Очередь 1 · 17,2 га', h: 'Курорт и гостевые дома', d: '124 номера, СПА с бассейном, ивент-холл и ресторан, озёра и пляж, посёлок гостевых домов на 72 дома.', when: 'Открытие — апрель 2028 · продажи групп с 2027' },
-    { tag: 'Очередь 2 · 14,2 га и рядом', h: 'Развитие курорта', d: 'Гостиница на 120 номеров, спортивно-концертный комплекс на 500, оздоровительный центр на 60, модульный отель на 32 юнита, автокемпинг. Рядом — посёлок на 150 домов, горнолыжная база на 40 га, глэмпинг на 15 юнитов на высоте 540 м.', when: 'Финансируется выручкой первой очереди' },
-  ];
-  // Структура бюджета 2,9 млрд ₽ — млн ₽
-  const total = 2900;
-  const segs = [
-    { l: 'Вложено основателями', v: 288, cls: 'fin-bar-a' },
-    { l: 'Частные инвесторы · акции и недвижимость', v: 950, cls: 'fin-bar-b' },
-    { l: 'Господдержка', v: 55, cls: 'fin-bar-c' },
-    { l: 'Продажа гостевых домов и подряд · по очередям', v: total - 288 - 950 - 55, cls: 'fin-bar-d' },
-  ];
-  return (
-    <section className="sec-pad sec-dark" id="phases" data-screen-label="04 Fin — Phases and financing">
-      <div className="container">
-        <div className="comm-head">
-          <div className="crumb"><span className="num">{num}</span><span className="sep">|</span>Очереди&nbsp;и&nbsp;финансирование</div>
-          <h2 className="display h-display-l">
-            Две очереди. Вторая<br/>
-            <em className="redword-light">финансируется выручкой первой</em>.
-          </h2>
-        </div>
-        <div className="fin-phases">
-          {phases.map((p, i) => (
-            <article className="fin-phase" key={i}>
-              <div className="fin-phase-tag">{p.tag}</div>
-              <h3 className="fin-phase-h">{p.h}</h3>
-              <p className="fin-phase-d">{p.d}</p>
-              <div className="fin-phase-when">{p.when}</div>
-            </article>
-          ))}
-        </div>
-
-        <div className="fin-bar-h">Бюджет 2,9 млрд ₽ — откуда деньги</div>
-        <div className="fin-bar" role="img" aria-label="Структура финансирования проекта">
-          {segs.map((s, i) => (
-            <div className={`fin-bar-seg ${s.cls}`} key={i} style={{flex: s.v}} title={`${s.l}: ${s.v} млн ₽`}>
-              {s.v >= 250 ? `${s.v} млн` : ''}
-            </div>
-          ))}
-        </div>
-        <div className="fin-bar-legend">
-          {segs.map((s, i) => (
-            <div className="fin-bar-key" key={i}>
-              <span className={`fin-bar-dot ${s.cls}`}/>
-              <span className="fin-bar-key-v">{s.v} млн ₽ · {Math.round(s.v / total * 100)}%</span>
-              <span className="fin-bar-key-l">{s.l}</span>
-            </div>
-          ))}
-        </div>
-        <p className="pc-bigaltai-hero-note" style={{marginTop:32, marginBottom:0}}>
-          20% выручки от&nbsp;продажи гостевых домов и&nbsp;подряда вкладывается в&nbsp;общую инфраструктуру: <strong>инфраструктура строится одновременно с&nbsp;номерным фондом</strong>, а&nbsp;не&nbsp;после него.
-        </p>
-      </div>
-    </section>
-  );
-}
-window.FinPhases = FinPhases;
-
 // ───────────────────────── 05 · Деревня · Курорт · Место силы (PDF, стр. 9–11) ─────────────────────────
 function FinProduct({ num = '05' } = {}) {
   const cols = [
@@ -208,7 +147,7 @@ function FinWhyUs({ num = '05' } = {}) {
     { h: 'Концепция «0 километр»', d: 'Местные материалы, подрядчики и персонал: минус 20% CAPEX и минус 12% OPEX относительно типового курорта.', src: 'pdf' },
     { h: 'Выручка до открытия', d: 'Свадьбы, MICE и ретриты продаются с 2027 года. 20% выручки от участков идёт в общую инфраструктуру.', src: 'pdf' },
     { h: 'Команда соинвестирует и управляет', d: 'Заказчик, застройщик и оператор — в одном лице. Опыт строительства и управления отелем, привлечение групп в низкий сезон.', src: 'pdf' },
-    { h: 'Два понятных входа', d: 'Акции АО от 500 000 ₽ или гостевой дом с землёй в собственности от 8,5 млн ₽ с доходом от сдачи. Для чека 10–50 млн — комбинация.', src: 'pdf' },
+    { h: 'Три понятных входа', d: 'Акции от 500 000 ₽, гостевой дом с землёй в собственности от 8,5 млн ₽ или отдельный объект инфраструктуры для тематического инвестора.', src: 'pdf' },
   ];
   return (
     <section className="sec-pad" id="why-us" data-screen-label="05 Fin — Why us">
@@ -304,9 +243,9 @@ window.FinLandGrowth = FinLandGrowth;
 // ───────────────────────── 07 · Предложение для инвесторов ─────────────────────────
 function FinOffer({ num = '07' } = {}) {
   const tickets = [
-    { tag: 'Вход 1', h: 'Акции АО', v: 'от 500 000 ₽', d: 'Доля в курорте. Дивиденды и выкуп — условия фиксируются в договоре.' },
+    { tag: 'Вход 1', h: 'Акции', v: 'от 500 000 ₽', d: 'Доля в курорте. Дивиденды и выкуп — условия фиксируются в договоре.' },
     { tag: 'Вход 2', h: 'Гостевой дом', v: 'от 8,5 млн ₽', d: 'Гостевой дом с землёй в собственности в посёлке при курорте. Доход от сдачи через УК, выкуп по договору.' },
-    { tag: 'Чек 10–50 млн ₽', h: 'Комбинация', v: 'гостевой дом + акции', d: 'Гостевой дом с землёй плюс доля в доходах всего комплекса. Пропорцию собираем под ваш сценарий.', hl: true },
+    { tag: 'Вход 3', h: 'Тематический инвестор', v: 'объект инфраструктуры', d: 'Отдельный объект курорта — СПА, ресторан, ивент-холл, банный комплекс, прокат — как самостоятельный бизнес со своей экономикой. Условия — под объект.' },
   ];
   const metrics = [
     { v: '21,1', u: '%', l: 'ROI', sub: 'Годовой доход к вложенным средствам' },
@@ -320,8 +259,8 @@ function FinOffer({ num = '07' } = {}) {
         <div className="comm-head">
           <div className="crumb"><span className="num">{num}</span><span className="sep">|</span>Предложение&nbsp;для&nbsp;инвесторов</div>
           <h2 className="display h-display-l">
-            Два входа и&nbsp;<em className="redword">комбинация</em><br/>
-            для&nbsp;чека 10–50 млн&nbsp;₽.
+            Три входа: <em className="redword">акции</em>, <em className="redword">гостевой дом</em><br/>
+            или&nbsp;<em className="redword">объект инфраструктуры</em>.
           </h2>
         </div>
         <div className="fin-tickets">
@@ -334,10 +273,16 @@ function FinOffer({ num = '07' } = {}) {
             </article>
           ))}
         </div>
-        <figure className="fin-offer-fig">
-          <img src="assets/photo/fin/guesthouse-render.jpg" alt="Рендер гостевого дома с землёй в собственности"/>
-          <figcaption className="pc-mp-render-cap">Гостевой дом с землёй в собственности — от 8,5 млн ₽ · рендер из проекта</figcaption>
-        </figure>
+        <div className="fin-offer-figs">
+          <figure className="fin-offer-fig">
+            <img src="assets/photo/fin/guesthouse-render.jpg" alt="Рендер гостевого дома с землёй в собственности"/>
+            <figcaption className="pc-mp-render-cap">Гостевой дом с землёй в собственности — от 8,5 млн ₽</figcaption>
+          </figure>
+          <figure className="fin-offer-fig">
+            <img src="assets/photo/render-coliving.jpg" alt="Рендер дома на 8 номеров"/>
+            <figcaption className="pc-mp-render-cap">Дом на 8 номеров — мини-гостиница курорта</figcaption>
+          </figure>
+        </div>
         <div className="fin-metrics">
           {metrics.map((m, i) => (
             <div className="fin-metric" key={i}>
@@ -541,7 +486,7 @@ function FinExit({ num = '12' } = {}) {
     ['Доход', 'сдача через УК — без вашего участия'],
     ['Выкуп', 'по договору — условия приобретения и выкупа по запросу'],
     ['Вторичный рынок', 'гостевой дом с землёй в собственности — продаётся как любая недвижимость'],
-    ['Актив', 'растёт вместе с землёй региона — см. слайд 07'],
+    ['Актив', 'растёт вместе с землёй региона — см. слайд 06'],
   ];
   const Block = ({ tag, h, rows }) => (
     <article className="fin-exit-block">
