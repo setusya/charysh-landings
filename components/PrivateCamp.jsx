@@ -90,10 +90,10 @@ function PCHero({
 window.PCHero = PCHero;
 
 // ───────────────────────── 02 · Recovery курорт — full-bleed positioning ─────────────────────────
-function PCScale() {
+function PCScale({ photo = 'assets/photo/charysh-summer-panorama.jpg' } = {}) {
   return (
     <section className="pc-scale" id="scale" data-screen-label="02 Recovery курорт · 72 ГА">
-      <div className="pc-scale-photo" style={{ backgroundImage: "url('assets/photo/charysh-summer-panorama.jpg')" }}/>
+      <div className="pc-scale-photo" style={{ backgroundImage: `url('${photo}')` }}/>
       <div className="pc-scale-overlay"/>
       <div className="container pc-scale-frame">
         <h2 className="display h-display-l pc-scale-h">
@@ -1798,8 +1798,8 @@ window.PCTeam = PCTeam;
 
 // ───────────────────────── ACT 1.4 · COMMUNITY (override of CommunitySection) ─────────────────────────
 // Replaces the shared CommunitySection on this page so we control the gallery contents.
-function PCCommunity({ num = '08' } = {}) {
-  const eras = [
+function PCCommunity({ num = '08', eras: erasProp } = {}) {
+  const eras = erasProp || [
     { era: 'V в. до н.э.', who: 'Скифы',       t: 'Около 50 курганов в долине Сентелека. Царский курган — скифская обсерватория.', img: 'assets/photo/elder-with-stela.jpg' },
     { era: 'XVIII век',    who: 'Казаки',       t: 'Чарышское основано в 1765 году как казачья станица. Хор «Канареечка» — победитель Сибири.', img: 'assets/photo/cossacks-khorovod.jpg' },
     { era: 'XIX век',      who: 'Старообрядцы', t: 'Особая философия согласия с природой, сезонные обряды, мараловодство, ремёсла.', img: 'assets/photo/old-believers.jpg' },

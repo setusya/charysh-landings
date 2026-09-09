@@ -94,90 +94,6 @@ function FinComplex({ num = '03' } = {}) {
 }
 window.FinComplex = FinComplex;
 
-// ───────────────────────── 05 · Деревня · Курорт · Место силы (PDF, стр. 9–11) ─────────────────────────
-function FinProduct({ num = '05' } = {}) {
-  const cols = [
-    {
-      tag: 'Деревня', h: 'Русский код Алтая', img: 'assets/photo/fin/church.jpg',
-      items: ['От одежды сотрудников до архитектурных решений', 'От гастрономии до программ по оздоровлению', 'От помощи в археологических раскопках до освоения традиционных ремёсел', 'От приобщения к быту казаков до участия в этнических фестивалях', 'Наши гости приобретут новые навыки'],
-    },
-    {
-      tag: 'Курорт', h: '260 солнечных дней', img: 'assets/photo/fin/spa-stone.jpg',
-      items: ['Номера и коттеджи уровня 4 звезды', 'Кафе, бар, ресторан авторской кухни', 'Пляжи, парк, прогулочные зоны, терренкуры, смотровые площадки', 'Крытый бассейн, бани, сауны, массажные кабинеты, лекарственные чаи', 'Инфоцентр, сувениры, трансфер, консьерж, аптека, охрана, Wi-Fi, медпункт', 'Спортивный городок, аренда инвентаря, программы активного отдыха'],
-    },
-    {
-      tag: 'Алтайский край', h: 'Место силы', img: 'assets/photo/fin/rock-pond.jpg',
-      items: ['Разнообразные ландшафты, богатое биоразнообразие', 'Уникальные природные объекты', 'Историко-культурное наследие', 'Сочетание природных и бальнеологических ресурсов', 'Климат с контрастами', 'Туристский потенциал, пассионарная энергия'],
-    },
-  ];
-  return (
-    <section className="sec-pad sec-warm" id="product" data-screen-label="05 Fin — Product: village, resort, place">
-      <div className="container">
-        <div className="comm-head">
-          <div className="crumb"><span className="num">{num}</span><span className="sep">|</span>Что&nbsp;покупает гость</div>
-          <h2 className="display h-display-l">
-            Деревня. Курорт. Место силы.<br/>
-            <em className="redword">Три слоя одного продукта</em>.
-          </h2>
-        </div>
-        <div className="fin-product">
-          {cols.map((c, i) => (
-            <article className="fin-product-col" key={i}>
-              <div className="fin-product-photo" style={{backgroundImage:`url('${c.img}')`}}/>
-              <div className="fin-product-body">
-                <div className="fin-product-tag">{c.tag}</div>
-                <h3 className="fin-product-h">{c.h}</h3>
-                <ul className="pc-activity-list fin-list">
-                  {c.items.map((it, j) => <li key={j}>{it}</li>)}
-                </ul>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-window.FinProduct = FinProduct;
-
-// ───────────────────────── 06 · Почему наш проект ─────────────────────────
-function FinWhyUs({ num = '05' } = {}) {
-  const args = [
-    { h: 'Не идея, а стройплощадка', d: 'Вложено 288 млн ₽. Все коммуникации подведены. Земля 72 га в собственности с необходимым ВРИ.', src: 'pdf' },
-    { h: 'Концепция «0 километр»', d: 'Местные материалы, подрядчики и персонал: минус 20% CAPEX и минус 12% OPEX относительно типового курорта.', src: 'pdf' },
-    { h: 'Выручка до открытия', d: 'Свадьбы, MICE и ретриты продаются с 2027 года. 20% выручки от участков идёт в общую инфраструктуру.', src: 'pdf' },
-    { h: 'Команда соинвестирует и управляет', d: 'Заказчик, застройщик и оператор — в одном лице. Опыт строительства и управления отелем, привлечение групп в низкий сезон.', src: 'pdf' },
-    { h: 'Три понятных входа', d: 'Акции от 500 000 ₽, гостевой дом с землёй в собственности от 8,5 млн ₽ или отдельный объект инфраструктуры для тематического инвестора.', src: 'pdf' },
-  ];
-  return (
-    <section className="sec-pad" id="why-us" data-screen-label="05 Fin — Why us">
-      <div className="container">
-        <div className="comm-head">
-          <div className="crumb"><span className="num">{num}</span><span className="sep">|</span>Почему&nbsp;наш&nbsp;проект</div>
-          <h2 className="display h-display-l">
-            Пять причин, по&nbsp;которым<br/>
-            <em className="redword">это построится</em>.
-          </h2>
-        </div>
-        <div className="fin-cards">
-          {args.map((a, i) => (
-            <article className="fin-card" key={i}>
-              <div className="fin-card-num">{String(i+1).padStart(2,'0')}</div>
-              <h3 className="fin-card-h">{a.h}</h3>
-              <p className="fin-card-d">{a.d}</p>
-            </article>
-          ))}
-        </div>
-        <div className="fin-photos">
-          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/fin/build-excavator.jpg')"}}><div className="fin-photo-cap">Стройматериалы «под ногами»: мрамор, сланец, галька</div></div>
-          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/fin/build-trees-winter.jpg')"}}><div className="fin-photo-cap">Работы на площадке идут круглый год</div></div>
-          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/fin/community-planting.jpg')"}}><div className="fin-photo-cap">Земляки: 95% персонала — из Чарышского</div></div>
-        </div>
-      </div>
-    </section>
-  );
-}
-window.FinWhyUs = FinWhyUs;
 
 // ───────────────────────── 06 · Рост земли — сравнение с Горным Алтаем и Шерегешем ─────────────────────────
 function FinLandGrowth({ num = '06' } = {}) {
@@ -393,6 +309,11 @@ function FinZeroKm({ num = '09' } = {}) {
             ))}
           </div>
         </div>
+        <div className="fin-photos">
+          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/fin/build-excavator.jpg')"}}><div className="fin-photo-cap">Стройматериалы «под ногами»: мрамор, сланец, галька</div></div>
+          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/fin/build-trees-winter.jpg')"}}><div className="fin-photo-cap">Работы на площадке идут круглый год</div></div>
+          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/fin/community-planting.jpg')"}}><div className="fin-photo-cap">Земляки: 95% персонала — из Чарышского</div></div>
+        </div>
       </div>
     </section>
   );
@@ -419,17 +340,22 @@ function FinDemand({ num = '10' } = {}) {
             <em className="redword">Пока — в&nbsp;чужие гостевые дома</em>.
           </h2>
         </div>
-        <div className="climate-grid pc-economics-grid">
-          {stats.map((s, i) => (
-            <div className="climate-cell" key={i}>
-              <div className="climate-num">0{i+1}</div>
-              <div className="climate-value">
-                {s.n}<span className="climate-unit">{s.u}</span>
+        <div className="fin-two fin-demand">
+          <div className="climate-grid pc-economics-grid fin-key-grid">
+            {stats.map((s, i) => (
+              <div className="climate-cell" key={i}>
+                <div className="climate-num">0{i+1}</div>
+                <div className="climate-value">
+                  {s.n}<span className="climate-unit">{s.u}</span>
+                </div>
+                <div className="climate-label">{s.l}</div>
+                <div className="climate-sub">{s.sub} <SrcRef k={s.src}/></div>
               </div>
-              <div className="climate-label">{s.l}</div>
-              <div className="climate-sub">{s.sub} <SrcRef k={s.src}/></div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="fin-demand-photo" style={{backgroundImage:"url('assets/photo/fin/autotourists.jpg')"}}>
+            <div className="fin-photo-cap">Автотуристы из Сибири — ядро аудитории (69%)</div>
+          </div>
         </div>
         <p className="fin-note">Аналитические материалы по&nbsp;спросу и&nbsp;целевой аудитории — по&nbsp;запросу.</p>
         <SrcList keys={['tolkRA','gov','raGov','pdf']}/>
@@ -439,42 +365,15 @@ function FinDemand({ num = '10' } = {}) {
 }
 window.FinDemand = FinDemand;
 
-// ───────────────────────── 11 · Риски и хеджирование ─────────────────────────
-function FinRisks({ num = '11' } = {}) {
+// ───────────────────────── 09 · Риски, хеджирование и выход ─────────────────────────
+function FinRisksExit({ num = '09' } = {}) {
   const risks = [
     { r: 'Разрыв в финансировании', h: 'Две очереди: вторая строится на выручке первой. 20% выручки от гостевых домов и подряда — в общую инфраструктуру.' },
     { r: 'Спрос до открытия', h: 'Пакеты для групп — MICE, свадьбы, ретриты — продаём с 2027 года: выручка формируется до запуска комплекса.' },
-    { r: 'Мотивация команды', h: 'Все члены команды сами инвестируют в проект. Заказчик и оператор — одно лицо, контроль качества и сроков у основателей.' },
+    { r: 'Мотивация команды', h: 'Все члены команды сами инвестируют в проект. Заказчик и оператор — одно лицо: УК с опытом строительства и управления отелем.' },
     { r: 'Юридический риск', h: '72 га в собственности с необходимым ВРИ. Условия приобретения и полный пакет документов — по запросу.' },
     { r: 'Сезонность', h: 'Круглогодичный формат: СПА, ретриты, события. УТП команды — привлечение групп в низкий сезон.' },
   ];
-  return (
-    <section className="sec-pad sec-dark" id="risks" data-screen-label="11 Fin — Risks">
-      <div className="container">
-        <div className="comm-head">
-          <div className="crumb"><span className="num">{num}</span><span className="sep">|</span>Риски&nbsp;и&nbsp;хеджирование</div>
-          <h2 className="display h-display-l">
-            Пять рисков, которые вы&nbsp;назовёте,<br/>
-            <em className="redword-light">и&nbsp;что мы&nbsp;с&nbsp;ними уже сделали</em>.
-          </h2>
-        </div>
-        <div className="fin-risks">
-          {risks.map((x, i) => (
-            <article className="fin-risk" key={i}>
-              <div className="fin-risk-num">{String(i+1).padStart(2,'0')}</div>
-              <div className="fin-risk-r">{x.r}</div>
-              <div className="fin-risk-h">{x.h}</div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-window.FinRisks = FinRisks;
-
-// ───────────────────────── 12 · Выход: дивиденды и выкуп ─────────────────────────
-function FinExit({ num = '12' } = {}) {
   const shares = [
     ['Вход', 'от 500 000 ₽ в акции'],
     ['Дивиденды', 'из прибыли курорта — после вознаграждения УК (20% от GOP)'],
@@ -486,7 +385,6 @@ function FinExit({ num = '12' } = {}) {
     ['Доход', 'сдача через УК — без вашего участия'],
     ['Выкуп', 'по договору — условия приобретения и выкупа по запросу'],
     ['Вторичный рынок', 'гостевой дом с землёй в собственности — продаётся как любая недвижимость'],
-    ['Актив', 'растёт вместе с землёй региона — см. слайд 06'],
   ];
   const Block = ({ tag, h, rows }) => (
     <article className="fin-exit-block">
@@ -503,24 +401,33 @@ function FinExit({ num = '12' } = {}) {
     </article>
   );
   return (
-    <section className="sec-pad sec-warm" id="exit" data-screen-label="12 Fin — Exit">
+    <section className="sec-pad sec-warm" id="exit" data-screen-label="09 Fin — Risks and exit">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">{num}</span><span className="sep">|</span>Выход</div>
+          <div className="crumb"><span className="num">{num}</span><span className="sep">|</span>Риски&nbsp;и&nbsp;выход</div>
           <h2 className="display h-display-l">
-            Два способа получить деньги обратно:<br/>
-            <em className="redword">дивиденды</em> и&nbsp;<em className="redword">выкуп</em>.
+            Что может пойти не&nbsp;так —<br/>
+            <em className="redword">и&nbsp;как вы&nbsp;получаете деньги обратно</em>.
           </h2>
         </div>
-        <div className="fin-two fin-two-eq">
-          <Block tag="Акции АО" h="Доля в курорте" rows={shares}/>
-          <Block tag="Гостевой дом" h="Гостевой дом с землёй в собственности" rows={estate}/>
+        <div className="fin-risks fin-risks-light">
+          {risks.map((x, i) => (
+            <article className="fin-risk" key={i}>
+              <div className="fin-risk-num">{String(i+1).padStart(2,'0')}</div>
+              <div className="fin-risk-r">{x.r}</div>
+              <div className="fin-risk-h">{x.h}</div>
+            </article>
+          ))}
+        </div>
+        <div className="fin-two fin-two-eq" style={{marginTop:28}}>
+          <Block tag="Акции" h="Дивиденды и выкуп" rows={shares}/>
+          <Block tag="Гостевой дом" h="Доход и выкуп" rows={estate}/>
         </div>
         <p className="fin-note">
-          Механизм выхода фиксируется в&nbsp;договоре при&nbsp;входе, а&nbsp;не&nbsp;обещается на&nbsp;словах. Условия приобретения гостевого дома и&nbsp;пакета акций под&nbsp;конкретный чек — по&nbsp;запросу.
+          Механизм выхода фиксируется в&nbsp;договоре при&nbsp;входе, а&nbsp;не&nbsp;обещается на&nbsp;словах. Условия приобретения гостевого дома, пакета акций и&nbsp;объекта инфраструктуры под&nbsp;конкретный чек — по&nbsp;запросу.
         </p>
       </div>
     </section>
   );
 }
-window.FinExit = FinExit;
+window.FinRisksExit = FinRisksExit;

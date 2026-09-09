@@ -50,17 +50,24 @@ document.addEventListener("click", function (e) {
 <script src="print-prep.js" defer></script>
 
 <script type="text/babel">
-// ─── Бизнес-завтрак · Часть 2 · Концепция и место (спикер — Светлана Антонова) · 13 слайдов ───
+// ─── Бизнес-завтрак · Часть 2 · Концепция и место (спикер — Светлана Антонова) · 10 слайдов ───
 // 01 Hero · 02 Спикер · 03 Recovery-курорт · 04 Почему Чарыш · 05 Природа · 06 Легенды места ·
-// 07 Чем живёт Чарыш + свадьбы · 08 Команда · 09 Рендер мастер-плана · 10 Тренды · 11 Пять драйверов ·
-// 12 Эксклюзив · 13 Контакты
+// 07 Чем живёт Чарыш + свадьбы · 08 Команда и УК · 09 Эксклюзив · 10 Контакты
 
 const BB_NAV = [
   { id: 'why-charysh',      label: 'Почему Чарыш' },
   { id: 'activities',       label: 'Чем живёт' },
   { id: 'events',           label: 'Мероприятия' },
   { id: 'team',             label: 'Команда' },
-  { id: 'masterplan-render',label: 'Проект' },
+  { id: 'bonus',            label: 'Эксклюзив' },
+];
+
+// Эпохи слайда «10 000 лет на одной долине» — как в PrivateCamp, но казаки с архивного фото из PDF Маслака
+const BB_ERAS = [
+  { era: 'V в. до н.э.', who: 'Скифы',       t: 'Около 50 курганов в долине Сентелека. Царский курган — скифская обсерватория.', img: 'assets/photo/elder-with-stela.jpg' },
+  { era: 'XVIII век',    who: 'Казаки',       t: 'Чарышское основано в 1765 году как казачья станица. Хор «Канареечка» — победитель Сибири.', img: 'assets/photo/fin/cossacks-archive.jpg' },
+  { era: 'XIX век',      who: 'Старообрядцы', t: 'Особая философия согласия с природой, сезонные обряды, мараловодство, ремёсла.', img: 'assets/photo/old-believers.jpg' },
+  { era: 'Сегодня',      who: 'Живые легенды места', t: 'Изобретатели, народные умельцы, гончары, камнерезы, валяльщики. Не музей — те, кого можно встретить в субботу на ярмарке.', img: 'assets/photo/founders-with-master.jpg' },
 ];
 
 function BreakfastApp() {
@@ -89,8 +96,8 @@ function BreakfastApp() {
       {/* 02 · SPEAKER */}
       <PCSpeaker />
 
-      {/* 03 · SCALE ANCHOR · 72 га */}
-      <PCScale />
+      {/* 03 · SCALE ANCHOR · 72 га — озеро на территории, фото из PDF */}
+      <PCScale photo="assets/photo/fin/lake.jpg" />
 
       {/* 04 · Почему Чарыш — пять аргументов с источниками */}
       <BBWhyCharysh num="04" />
@@ -98,27 +105,25 @@ function BreakfastApp() {
       {/* 05 · Природа и микроклимат */}
       <PlaceSection num="05" />
 
-      {/* 06 · Скифы · Казаки · Староверы */}
-      <PCCommunity num="06" />
+      {/* 06 · Скифы · Казаки · Староверы — казаки: архивное фото из PDF */}
+      <PCCommunity num="06" eras={BB_ERAS} />
 
       {/* 07 · Чем живёт Чарыш + Свадьбы и мероприятия */}
       <BBActivities num="07" />
 
       <RapportStrip variant={2} tone="redOnWhite" height={48} />
 
-      {/* 08 · Команда — роли как в финансовой презентации */}
-      <PCTeam num="08" members={CH_TEAM} />
+      {/* 08 · Команда и УК — единственный раз за оба выступления */}
+      <PCTeam
+        num="08"
+        members={CH_TEAM}
+        crumbText="Команда и УК"
+        lead="УК — заказчик и оператор проекта в одном лице. Опыт в строительстве и управлении отелем. Все члены команды инвестируют в проект сами."
+      />
 
-      {/* 09 · Рендер мастер-плана */}
-      <PCMasterPlanRender num="09" />
-
-      {/* 10–11 · Тренды → пять драйверов */}
-      <PCTrends num="10" />
-      <PCSecurity num="11" />
-
-      {/* 12 · Эксклюзив → 13 · Контакты */}
-      <PCBonus num="12" audience={'участников бизнес-завтрака'} />
-      <PCFinalCTA num="13" contacts={[CH_CONTACT_ANTONOVA, CH_CONTACT_MASLAK]} />
+      {/* 09 · Эксклюзив → 10 · Контакты */}
+      <PCBonus num="09" audience={'участников бизнес-завтрака'} />
+      <PCFinalCTA num="10" contacts={[CH_CONTACT_ANTONOVA, CH_CONTACT_MASLAK]} />
       <RapportStrip variant={3} tone="goldOnBlack" height={56} />
       <Footer />
     </div>

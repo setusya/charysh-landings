@@ -175,3 +175,12 @@
 .fin-offer-figs .fin-offer-fig { margin: 0; }
 .fin-offer-figs .fin-offer-fig img { aspect-ratio: 16/9; }
 @media (max-width: 880px) { .fin-offer-figs { grid-template-columns: 1fr; } }
+
+/* ─── риски на светлом фоне + спрос с фото ─── */
+.fin-risks-light { border-color: var(--line); }
+.fin-risks-light .fin-risk { border-color: var(--line); min-height: 0; padding: 20px 18px; }
+.fin-risks-light .fin-risk-r { color: var(--accent); font-size: 21px; }
+.fin-risks-light .fin-risk-h { opacity: .82; }
+.fin-demand { grid-template-columns: 1.7fr 1fr; align-items: stretch; }
+.fin-demand-photo { position: relative; min-height: 100%; background-size: cover; background-position: center; border: 1px solid var(--line); }
+@media (max-width: 880px) { .fin-demand { grid-template-columns: 1fr; } .fin-demand-photo { aspect-ratio: 4/5; } }

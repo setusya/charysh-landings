@@ -29,6 +29,11 @@ function BBWhyCharysh({ num = '04' } = {}) {
             </article>
           ))}
         </div>
+        <div className="fin-photos">
+          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/fin/rock-pond.jpg')"}}><div className="fin-photo-cap">Скала и пруд на территории</div></div>
+          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/fin/river-sup.jpg')"}}><div className="fin-photo-cap">Река Чарыш · SUP и сплавы</div></div>
+          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/fin/church.jpg')"}}><div className="fin-photo-cap">Село Чарышское · зима</div></div>
+        </div>
         <SrcList keys={['cian','erz','iz','ator','tolkRA','gov','pdf']}/>
       </div>
     </section>
