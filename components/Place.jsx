@@ -1,5 +1,5 @@
 // Charysh — Place / Nature / Climate section
-function PlaceSection({ num = '06' } = {}) {
+function PlaceSection({ num = '06', gallery: galleryProp } = {}) {
   const climate = [
     { n: '250', u: 'дн', l: 'солнечных дней в году', sub: 'Дольше, чем в Сочи и Кисловодске' },
     { n: '120', u: 'ккал', l: 'солнечной радиации см²', sub: 'Как на Южном берегу Крыма' },
@@ -9,7 +9,7 @@ function PlaceSection({ num = '06' } = {}) {
     { n: '+19',  u: '°',  l: 'средняя июльская',        sub: 'Не жарко даже летом' },
   ];
   // Галерея — реальные фото долины Чарыша (взяты из слайда 15)
-  const gallery = [
+  const gallery = galleryProp || [
     { src: 'assets/photo/location-aerial-3.jpg',     cap: 'Долина Чарыша · аэрофото' },
     { src: 'assets/photo/nature-river-rocks.jpg',    cap: 'Берег · щебень' },
     { src: 'assets/photo/valley-autumn.jpg',         cap: 'Долина · октябрь' },

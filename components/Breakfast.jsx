@@ -140,9 +140,9 @@ function BBActivities({ num = '07' } = {}) {
             </ul>
           </div>
           <div className="bb-events-photos">
-            <div className="bb-ph bb-events-photo bb-events-photo-main">Место для фото<br/>свадьба у реки</div>
-            <div className="bb-ph bb-events-photo">Место для фото<br/>банкет</div>
-            <div className="bb-ph bb-events-photo">Место для фото<br/>мероприятие</div>
+            <div className="fin-photo bb-events-photo bb-events-photo-main" style={{backgroundImage:"url('assets/photo/web/valley-pavilion.jpg')"}}><div className="fin-photo-cap">Поляна и павильон у реки — площадка для выездной церемонии</div></div>
+            <div className="fin-photo bb-events-photo" style={{backgroundImage:"url('assets/photo/object-restaurant.jpg')"}}><div className="fin-photo-cap">Ресторан на 180 гостей — банкет</div></div>
+            <div className="fin-photo bb-events-photo" style={{backgroundImage:"url('assets/photo/web/people-folk-dance.jpg')"}}><div className="fin-photo-cap">Праздники и фестивали</div></div>
           </div>
         </article>
       </div>

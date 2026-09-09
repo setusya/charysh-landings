@@ -184,3 +184,11 @@
 .fin-demand { grid-template-columns: 1.7fr 1fr; align-items: stretch; }
 .fin-demand-photo { position: relative; min-height: 100%; background-size: cover; background-position: center; border: 1px solid var(--line); }
 @media (max-width: 880px) { .fin-demand { grid-template-columns: 1fr; } .fin-demand-photo { aspect-ratio: 4/5; } }
+
+/* ─── три рендера на предложении, две фото на спросе ─── */
+.fin-offer-figs-3 { grid-template-columns: repeat(3, 1fr); }
+.fin-demand-photos { display: flex; flex-direction: column; gap: 14px; }
+.fin-demand-photos .fin-photo { flex: 1; min-height: 0; aspect-ratio: auto; }
+.bb-events-photos .fin-photo.bb-events-photo { aspect-ratio: 4/3; }
+.bb-events-photos .fin-photo.bb-events-photo-main { aspect-ratio: 16/9; }
+@media (max-width: 880px) { .fin-offer-figs-3 { grid-template-columns: 1fr; } .fin-demand-photos .fin-photo { aspect-ratio: 16/10; } }

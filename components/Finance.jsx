@@ -88,6 +88,11 @@ function FinComplex({ num = '03' } = {}) {
             <figcaption className="pc-mp-render-cap">Аэрофото-рендер первой очереди · долина Чарыша</figcaption>
           </figure>
         </div>
+        <div className="fin-photos">
+          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/fin/hotel-wood.jpg')"}}><div className="fin-photo-cap">Мини-гостиницы и коттеджи · 124 номера</div></div>
+          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/fin/spa-stone.jpg')"}}><div className="fin-photo-cap">СПА с закрытым бассейном на 55 гостей</div></div>
+          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/fin/lake.jpg')"}}><div className="fin-photo-cap">Озёра, пляж и парк на территории</div></div>
+        </div>
       </div>
     </section>
   );
@@ -149,6 +154,11 @@ function FinLandGrowth({ num = '06' } = {}) {
             </table>
           </div>
         </div>
+        <div className="fin-photos">
+          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/web/altai-manzherok.jpg')"}}><div className="fin-photo-cap">Манжерок · Республика Алтай · курорт Сбера</div></div>
+          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/web/altai-sheregesh.jpg')"}}><div className="fin-photo-cap">Шерегеш · Кузбасс · 95 гостиниц</div></div>
+          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/web/river-summer.jpg')"}}><div className="fin-photo-cap">Чарыш · тупиковая долина · до якорного инвестора</div></div>
+        </div>
         <SrcList keys={['cian','erz','rbc','iz','ator','barn','pdf']}/>
       </div>
     </section>
@@ -189,7 +199,7 @@ function FinOffer({ num = '07' } = {}) {
             </article>
           ))}
         </div>
-        <div className="fin-offer-figs">
+        <div className="fin-offer-figs fin-offer-figs-3">
           <figure className="fin-offer-fig">
             <img src="assets/photo/fin/guesthouse-render.jpg" alt="Рендер гостевого дома с землёй в собственности"/>
             <figcaption className="pc-mp-render-cap">Гостевой дом с землёй в собственности — от 8,5 млн ₽</figcaption>
@@ -197,6 +207,10 @@ function FinOffer({ num = '07' } = {}) {
           <figure className="fin-offer-fig">
             <img src="assets/photo/render-coliving.jpg" alt="Рендер дома на 8 номеров"/>
             <figcaption className="pc-mp-render-cap">Дом на 8 номеров — мини-гостиница курорта</figcaption>
+          </figure>
+          <figure className="fin-offer-fig">
+            <img src="assets/photo/object-restaurant.jpg" alt="Ресторан — объект инфраструктуры для тематического инвестора"/>
+            <figcaption className="pc-mp-render-cap">Объект инфраструктуры — ресторан, СПА, банный комплекс</figcaption>
           </figure>
         </div>
         <div className="fin-metrics">
@@ -353,8 +367,9 @@ function FinDemand({ num = '10' } = {}) {
               </div>
             ))}
           </div>
-          <div className="fin-demand-photo" style={{backgroundImage:"url('assets/photo/fin/autotourists.jpg')"}}>
-            <div className="fin-photo-cap">Автотуристы из Сибири — ядро аудитории (69%)</div>
+          <div className="fin-demand-photos">
+            <div className="fin-photo fin-demand-photo" style={{backgroundImage:"url('assets/photo/fin/autotourists.jpg')"}}><div className="fin-photo-cap">Автотуристы из Сибири — ядро аудитории (69%)</div></div>
+            <div className="fin-photo" style={{backgroundImage:"url('assets/photo/web/people-rafting-group.jpg')"}}><div className="fin-photo-cap">Группы: сплавы, MICE, ретриты — продажи с 2027 года</div></div>
           </div>
         </div>
         <p className="fin-note">Аналитические материалы по&nbsp;спросу и&nbsp;целевой аудитории — по&nbsp;запросу.</p>
