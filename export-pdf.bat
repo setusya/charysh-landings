@@ -20,6 +20,8 @@ REM Если аргумент не задан — экспортируем об�
 if "%~1"=="" (
     call :export nemtsov
     call :export privatecamps
+    call :export breakfast
+    call :export finance
     goto :done
 )
 

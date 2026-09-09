@@ -3,14 +3,14 @@
 // Numbering of crumbs is local to this page.
 
 // ───────────────────────── 00 · Header (custom nav for this page) ─────────────────────────
-function PCHeader() {
+function PCHeader({ links: linksProp } = {}) {
   const [scrolled, setScrolled] = React.useState(false);
   React.useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-  const links = [
+  const links = linksProp || [
     { id: 'why',          label: 'Чарыш' },
     { id: 'masterplan',   label: 'Проект' },
     { id: 'forms-fork',   label: 'Три формы' },
@@ -627,12 +627,12 @@ function PCMasterPlan() {
 window.PCMasterPlan = PCMasterPlan;
 
 // ───────────────────────── 16 · Master Plan render — empty placeholder ─────────────────────────
-function PCMasterPlanRender() {
+function PCMasterPlanRender({ num = '12' } = {}) {
   return (
     <section className="sec-pad" id="masterplan-render" data-screen-label="13 Master plan render">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">12</span><span className="sep">|</span>Рендер мастер-плана</div>
+          <div className="crumb"><span className="num">{num}</span><span className="sep">|</span>Рендер мастер-плана</div>
           <h2 className="display h-display-l">
             Вид с&nbsp;высоты — <em className="redword">так это будет</em>.
           </h2>
@@ -1210,7 +1210,7 @@ function PCDNA() {
 window.PCDNA = PCDNA;
 
 // ───────────────────────── 18 · Why we are confident — 4 pillars ─────────────────────────
-function PCSecurity() {
+function PCSecurity({ num = '26' } = {}) {
   const pillars = [
     {
       h: 'Юридически чистый актив',
@@ -1266,7 +1266,7 @@ function PCSecurity() {
     <section className="sec-pad sec-dark" id="security" data-screen-label="18 Why we are confident">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">26</span><span className="sep">|</span>Почему&nbsp;мы&nbsp;уверены&nbsp;в&nbsp;проекте</div>
+          <div className="crumb"><span className="num">{num}</span><span className="sep">|</span>Почему&nbsp;мы&nbsp;уверены&nbsp;в&nbsp;проекте</div>
           <h2 className="display h-display-l">
             Не&nbsp;идея и&nbsp;не&nbsp;план.<br/>
             <em className="redword-light">Сходятся пять драйверов проекта</em> — одновременно.
@@ -1294,7 +1294,7 @@ function PCSecurity() {
 window.PCSecurity = PCSecurity;
 
 // ───────────────────────── 19 · Trends — на пересечении трендов ─────────────────────────
-function PCTrends() {
+function PCTrends({ num = '25' } = {}) {
   const keyShifts = [
     { tag: 'Безопасность',                       d: 'Запрос на физическую и финансовую защищённость — главный сдвиг эпохи' },
     { tag: 'Создание комплексной среды',         d: 'Не дом, не отель — экосистема: жильё + сервис + инфраструктура + сообщество' },
@@ -1318,7 +1318,7 @@ function PCTrends() {
     <section className="sec-pad" id="trends" data-screen-label="02 Совпадение десятилетия">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">25</span><span className="sep">|</span>Совпадение&nbsp;десятилетия</div>
+          <div className="crumb"><span className="num">{num}</span><span className="sep">|</span>Совпадение&nbsp;десятилетия</div>
           <h2 className="display h-display-l">
             Тренды десятилетия —<br/>
             <em className="redword">сошлись здесь</em>. Одновременно.
@@ -1758,8 +1758,8 @@ function PCRoadmap() {
 window.PCRoadmap = PCRoadmap;
 
 // ───────────────────────── 13 · Team + Ambassadors ─────────────────────────
-function PCTeam() {
-  const team = [
+function PCTeam({ num = '10', members, lead, h2, crumbText } = {}) {
+  const team = members || [
     { name: 'Вячеслав Немцов', role: 'Со-основатель · идейный вдохновитель', d: 'Тренер, писатель, журналист. Создатель многомиллиардных компаний. Инвестор в недвижимость.', img: 'assets/team/nemtsov.jpg' },
     { name: 'Светлана Антонова', role: 'Со-основатель · идейный вдохновитель', d: 'Предприниматель и идеолог. Маркетинг и стратегическое позиционирование.', img: 'assets/team/antonova.jpg' },
     { name: 'Андрей Немцев', role: 'Управляющий партнёр', d: 'Операционное управление проектом. 20 лет в приключенческом туризме.', img: 'assets/team/nemtsev.jpg' },
@@ -1771,15 +1771,18 @@ function PCTeam() {
     <section className="sec-pad sec-warm" id="team" data-screen-label="13 Team">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">10</span><span className="sep">|</span>Команда&nbsp;и&nbsp;амбассадоры</div>
+          <div className="crumb"><span className="num">{num}</span><span className="sep">|</span>{crumbText || <>Команда&nbsp;и&nbsp;амбассадоры</>}</div>
           <h2 className="display h-display-l">
-            Команда, которая <em className="redword">создаст</em> это место.
+            {h2 || <>Команда, которая <em className="redword">создаст</em> это место.</>}
           </h2>
         </div>
+        {lead && <p className="lead" style={{opacity:.78, maxWidth:"70ch", marginBottom:40}}>{lead}</p>}
         <div className="team-grid pc-team-grid">
           {team.map((m) => (
             <div className="team-cell" key={m.name}>
-              <div className="team-ph" style={{backgroundImage:`url('${m.img}')`}}/>
+              {m.img
+                ? <div className="team-ph" style={{backgroundImage:`url('${m.img}')`, backgroundPosition: m.pos || 'center'}}/>
+                : <div className="team-ph bb-ph">Место для фото</div>}
               <div className="team-role">{m.role}</div>
               <div className="team-name">{m.name}</div>
               <div className="team-d">{m.d}</div>
@@ -1795,7 +1798,7 @@ window.PCTeam = PCTeam;
 
 // ───────────────────────── ACT 1.4 · COMMUNITY (override of CommunitySection) ─────────────────────────
 // Replaces the shared CommunitySection on this page so we control the gallery contents.
-function PCCommunity() {
+function PCCommunity({ num = '08' } = {}) {
   const eras = [
     { era: 'V в. до н.э.', who: 'Скифы',       t: 'Около 50 курганов в долине Сентелека. Царский курган — скифская обсерватория.', img: 'assets/photo/elder-with-stela.jpg' },
     { era: 'XVIII век',    who: 'Казаки',       t: 'Чарышское основано в 1765 году как казачья станица. Хор «Канареечка» — победитель Сибири.', img: 'assets/photo/cossacks-khorovod.jpg' },
@@ -1806,7 +1809,7 @@ function PCCommunity() {
     <section className="sec-pad" id="community" data-screen-label="ACT 1.4 Community">
       <div className="container">
         <div className="comm-head">
-          <div className="crumb"><span className="num">08</span><span className="sep">|</span>10 000 лет на одной долине</div>
+          <div className="crumb"><span className="num">{num}</span><span className="sep">|</span>10 000 лет на одной долине</div>
           <h2 className="display h-display-l">
             Скифы. Казаки. Староверы.<br/>
             <em className="redword">Живые легенды места.</em>
@@ -2372,13 +2375,13 @@ function PCFormCEquity() {
 window.PCFormCEquity = PCFormCEquity;
 
 // ───────────────────────── 14 · Bonus for Private Camp 2 participants ─────────────────────────
-function PCBonus() {
+function PCBonus({ num = '27', audience = 'Private\u00a0Camp\u00a02' } = {}) {
   return (
     <section className="sec-pad pc-bonus-section" id="bonus" data-screen-label="14 Private Camp Bonus">
       <div className="container">
         <div className="pc-bonus-frame">
           <div className="crumb" style={{color:'rgba(255,255,255,.65)'}}>
-            <span className="num">27</span><span className="sep">|</span>Эксклюзив&nbsp;для&nbsp;Private&nbsp;Camp&nbsp;2
+            <span className="num">{num}</span><span className="sep">|</span>Эксклюзив&nbsp;для&nbsp;{audience}
           </div>
           <h2 className="display h-display-l pc-bonus-h">
             Персональные условия —<br/>
@@ -2386,7 +2389,7 @@ function PCBonus() {
             Только для участников.
           </h2>
           <p className="pc-bonus-lead">
-            Два формата визита, оба на&nbsp;индивидуальных условиях для&nbsp;Private&nbsp;Camp 2. Инвест-тур — для&nbsp;тех, кто рассматривает покупку дома или&nbsp;долю в&nbsp;инфраструктуре. Душа-тур — чтобы влюбиться в&nbsp;Чарыш всей семьёй и&nbsp;понять, ваше ли&nbsp;это место.
+            Два формата визита, оба на&nbsp;индивидуальных условиях для&nbsp;{audience}. Инвест-тур — для&nbsp;тех, кто рассматривает покупку дома или&nbsp;долю в&nbsp;инфраструктуре. Душа-тур — чтобы влюбиться в&nbsp;Чарыш всей семьёй и&nbsp;понять, ваше ли&nbsp;это место.
           </p>
           <div className="pc-bonus-tours">
             <article className="pc-bonus-tour pc-bonus-tour-invest" id="visit-invest">
@@ -2442,37 +2445,38 @@ function PCBonus() {
 window.PCBonus = PCBonus;
 
 // ───────────────────────── 15 · Final CTA ─────────────────────────
-function PCFinalCTA() {
+function PCFinalCTA({ num = '28', contacts, h2, lead, note } = {}) {
+  const list = contacts || [
+    { who: 'Вячеслав Немцов · со-основатель', tel: '+7 901 716-87-76', tg: 'nemtsovvyacheslav' },
+    { who: 'Светлана Антонова · со-основатель', tel: '+7 903 774-40-42', tg: 'santagiving' },
+    { who: 'Андрей Пережогин · развитие и инвестиции', tel: '+7 901 588-88-58', tg: 'andreiperezhoginofficial' },
+    { who: 'Андрей Немцев · управляющий партнёр', tel: '+7 963 519-14-90' },
+  ];
   return (
     <section className="sec-pad" id="form" data-screen-label="29 Final CTA">
       <div className="container">
         <div className="pc-final">
-          <div className="crumb"><span className="num">28</span><span className="sep">|</span>Следующий&nbsp;шаг</div>
+          <div className="crumb"><span className="num">{num}</span><span className="sep">|</span>Следующий&nbsp;шаг</div>
           <h2 className="display h-display-l">
-            Вы уже <em className="redword">очарышованы</em>?<br/>
-            Покажем место, дома, расчёты доходности.
+            {h2 || <>Вы уже <em className="redword">очарышованы</em>?<br/>Покажем место, дома, расчёты доходности.</>}
           </h2>
           <p className="pc-final-lead">
-            Видеозвонок · 60 минут · любой мессенджер. Бесплатно, без обязательств, без скриптов продаж. Давайте дышать вместе. Чарыш ждёт вас.
+            {lead || 'Видеозвонок · 60 минут · любой мессенджер. Бесплатно, без обязательств, без скриптов продаж. Давайте дышать вместе. Чарыш ждёт вас.'}
           </p>
           <div className="pc-final-contacts">
-            <div className="contact-person">
-              <div>Вячеслав Немцов · со-основатель</div>
-              <div><a href="tel:+79017168776">+7 901 716-87-76</a> · <a href="https://t.me/nemtsovvyacheslav">@nemtsovvyacheslav</a></div>
-            </div>
-            <div className="contact-person">
-              <div>Светлана Антонова · со-основатель</div>
-              <div><a href="tel:+79037744042">+7 903 774-40-42</a> · <a href="https://t.me/santagiving">@santagiving</a></div>
-            </div>
-            <div className="contact-person">
-              <div>Андрей Пережогин · развитие и инвестиции</div>
-              <div><a href="tel:+79015888858">+7 901 588-88-58</a> · <a href="https://t.me/andreiperezhoginofficial">@andreiperezhoginofficial</a></div>
-            </div>
-            <div className="contact-person">
-              <div>Андрей Немцев · управляющий партнёр</div>
-              <div><a href="tel:+79635191490">+7 963 519-14-90</a></div>
-            </div>
+            {list.map((c) => (
+              <div className="contact-person" key={c.who}>
+                <div>{c.who}</div>
+                <div>
+                  {c.tel && <a href={`tel:${c.tel.replace(/[^+\d]/g, '')}`}>{c.tel}</a>}
+                  {c.tg && <>{c.tel ? ' · ' : ''}<a href={`https://t.me/${c.tg}`}>@{c.tg}</a></>}
+                </div>
+                {c.email && <div><a href={`mailto:${c.email}`}>{c.email}</a></div>}
+                {c.extra && <div>{c.extra}</div>}
+              </div>
+            ))}
           </div>
+          {note && <p className="pc-final-lead" style={{marginTop:32}}>{note}</p>}
         </div>
       </div>
     </section>

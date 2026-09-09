@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Чарышские Усадьбы — презентация для бизнес-завтрака</title>
+<meta name="description" content="Чарышские Усадьбы — recovery-курорт в тупиковой долине реки Чарыш на 72 га. Часть 2 презентации для бизнес-завтрака: место, природа, люди, свадьбы и мероприятия, команда.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="privatecamps.css">
+<link rel="stylesheet" href="finance.css">
+<link rel="stylesheet" href="print.css">
+</head>
+<body class="tone-warm accent-red type-s cards-bordered">
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="components/RapportStrip.jsx"></script>
+<script type="text/babel" src="components/Header.jsx"></script>
+<script type="text/babel" src="components/Place.jsx"></script>
+<script type="text/babel" src="components/Houses.jsx"></script>
+<script type="text/babel" src="components/Community.jsx"></script>
+<script type="text/babel" src="components/Extras.jsx"></script>
+<script type="text/babel" src="components/Visit.jsx"></script>
+<script type="text/babel" src="components/PrivateCamp.jsx"></script>
+<script type="text/babel" src="components/Sources.jsx"></script>
+<script type="text/babel" src="components/Team.jsx"></script>
+<script type="text/babel" src="components/Breakfast.jsx"></script>
+<script src="print-prep.js" defer></script>
+
+<script type="text/babel">
+// ─── Бизнес-завтрак · Часть 2 · Концепция и место (спикер — Светлана Антонова) · 14 слайдов ───
+// 01 Hero · 02 Спикер · 03 Recovery-курорт · 04 Большой Алтай + География · 05 Почему Чарыш ·
+// 06 Природа · 07 Легенды места · 08 Чем живёт Чарыш + свадьбы · 09 Команда · 10 Рендер мастер-плана ·
+// 11 Тренды · 12 Пять драйверов · 13 Эксклюзив · 14 Контакты
+
+const BB_NAV = [
+  { id: 'why-charysh',      label: 'Почему Чарыш' },
+  { id: 'activities',       label: 'Чем живёт' },
+  { id: 'events',           label: 'Мероприятия' },
+  { id: 'team',             label: 'Команда' },
+  { id: 'masterplan-render',label: 'Проект' },
+];
+
+function BreakfastApp() {
+  React.useEffect(() => {
+    const els = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((es) => {
+      es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    els.forEach(el => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+
+  return (
+    <div data-screen-label="00 Бизнес-завтрак · Часть 2 · Концепция">
+      <PCHeader links={BB_NAV} />
+
+      {/* 01 · HOOK */}
+      <PCHero
+        heroPhoto="assets/photo/charysh-aerial.jpg"
+        crumbLabel="Бизнес-завтрак"
+        crumbExtra="Часть 2 · Концепция и место"
+        meta="Чарышские Усадьбы · бизнес-завтрак"
+        primaryCtaText="Презентация для бизнес-завтрака"
+      />
+
+      {/* 02 · SPEAKER */}
+      <PCSpeaker />
+
+      {/* 03 · SCALE ANCHOR · 72 га */}
+      <PCScale />
+
+      {/* 04 · Большой Алтай + География — схлопнутые 04 и 05 */}
+      <BBAltaiGeo num="04" />
+
+      {/* 05 · Почему Чарыш — пять аргументов с источниками */}
+      <BBWhyCharysh num="05" />
+
+      {/* 06 · Природа и микроклимат */}
+      <PlaceSection num="06" />
+
+      {/* 07 · Скифы · Казаки · Староверы */}
+      <PCCommunity num="07" />
+
+      {/* 08 · Чем живёт Чарыш + Свадьбы и мероприятия */}
+      <BBActivities num="08" />
+
+      <RapportStrip variant={2} tone="redOnWhite" height={48} />
+
+      {/* 09 · Команда — роли как в финансовой презентации */}
+      <PCTeam num="09" members={CH_TEAM} />
+
+      {/* 10 · Рендер мастер-плана */}
+      <PCMasterPlanRender num="10" />
+
+      {/* 11–12 · Тренды → пять драйверов */}
+      <PCTrends num="11" />
+      <PCSecurity num="12" />
+
+      {/* 13 · Эксклюзив → 14 · Контакты */}
+      <PCBonus num="13" audience={'участников бизнес-завтрака'} />
+      <PCFinalCTA num="14" contacts={[CH_CONTACT_ANTONOVA, CH_CONTACT_MASLAK]} />
+      <RapportStrip variant={3} tone="goldOnBlack" height={56} />
+      <Footer />
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<BreakfastApp />);
+</script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+/* ============================================================
+   Чарыш — финансовая презентация (finance.html)
+   + слайд «Почему Чарыш» и источники в breakfast.html.
+   Подключается после privatecamps.css.
+   ============================================================ */
+
+.fin-two {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: start;
+}
+.fin-two-rev { grid-template-columns: 1fr 1.2fr; }
+.fin-two-eq { grid-template-columns: 1fr 1fr; }
+.fin-list li { max-width: 60ch; }
+
+/* ─── Карточки аргументов (5 в ряд) ─── */
+.fin-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.fin-cards-col { grid-template-columns: 1fr; }
+.fin-card {
+  padding: 26px 22px 24px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 250px;
+}
+.fin-cards-col .fin-card { min-height: 0; }
+.fin-card-num { font-size: var(--fs-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; opacity: .5; }
+.fin-card-h { font-family: 'Dobrozrachniy', serif; font-size: 24px; line-height: 1.12; margin: 0; }
+.fin-card-d { font-size: var(--fs-spec); line-height: 1.5; opacity: .82; margin: 0; }
+.sec-dark .fin-cards, .sec-dark .fin-card { border-color: rgba(255,255,255,.2); }
+
+/* ─── Ссылки на источники ─── */
+.fin-ref { font-size: .55em; opacity: .55; vertical-align: super; line-height: 0; margin-left: 2px; }
+.fin-src-wrap { margin-top: 32px; padding-top: 10px; border-top: 1px solid var(--line); }
+.sec-dark .fin-src-wrap { border-color: rgba(255,255,255,.2); }
+.fin-src-h { font-size: 8px; letter-spacing: .12em; text-transform: uppercase; opacity: .45; margin-bottom: 4px; }
+.fin-src { list-style: none; margin: 0; padding: 0; columns: 3; column-gap: 28px; font-size: 8px; line-height: 1.4; opacity: .55; }
+.fin-src li { break-inside: avoid; margin-bottom: 2px; }
+.fin-src-n { font-variant-numeric: tabular-nums; opacity: .7; }
+.fin-src a { color: inherit; text-decoration: none; border-bottom: 1px solid rgba(127,127,127,.35); }
+.fin-src a:hover { border-color: currentColor; }
+
+/* ─── Таблицы ─── */
+.fin-table-wrap { overflow-x: auto; }
+.fin-table { width: 100%; border-collapse: collapse; font-size: var(--fs-spec); line-height: 1.45; }
+.fin-table th, .fin-table td { padding: 14px 16px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.fin-table th { font-size: var(--fs-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; opacity: .55; font-weight: 500; }
+.fin-table .v { font-family: 'Dobrozrachniy', serif; font-size: 24px; line-height: 1.1; white-space: nowrap; }
+.fin-table .fin-table-dyn { color: var(--accent); }
+.fin-table .fin-table-loc { font-weight: 500; min-width: 18ch; }
+.fin-table tr.hl td { background: rgba(196, 60, 40, .08); }
+.fin-table-dark th, .fin-table-dark td { border-color: rgba(255,255,255,.2); }
+.fin-table-dark .fin-table-dyn { color: #f4c8a8; }
+.fin-table-dark tr.hl td { background: rgba(255,255,255,.08); }
+
+/* ─── Очереди и структура финансирования ─── */
+.fin-phases { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.fin-phase { padding: 26px 26px 24px; border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.04); display: flex; flex-direction: column; gap: 10px; }
+.fin-phase-tag { font-size: var(--fs-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; opacity: .6; }
+.fin-phase-h { font-family: 'Dobrozrachniy', serif; font-size: 32px; line-height: 1; margin: 0; color: #fff; }
+.fin-phase-d { font-size: var(--fs-spec); line-height: 1.5; opacity: .82; margin: 0; }
+.fin-phase-when { margin-top: auto; padding-top: 12px; font-size: var(--fs-eyebrow); letter-spacing: .04em; color: #f4c8a8; }
+
+.fin-bar-h { margin-top: 48px; font-size: var(--fs-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; opacity: .6; }
+.fin-bar { display: flex; height: 56px; margin-top: 14px; border: 1px solid rgba(255,255,255,.25); }
+.fin-bar-seg { display: flex; align-items: center; justify-content: center; font-size: var(--fs-eyebrow); letter-spacing: .04em; overflow: hidden; white-space: nowrap; color: #fff; }
+.fin-bar-a { background: rgba(255,255,255,.55); color: #14110d; }
+.fin-bar-b { background: var(--accent); }
+.fin-bar-c { background: #f4c8a8; color: #14110d; }
+.fin-bar-d { background: rgba(255,255,255,.14); }
+.fin-bar-legend { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
+.fin-bar-key { display: flex; flex-direction: column; gap: 4px; font-size: var(--fs-spec); line-height: 1.4; }
+.fin-bar-dot { display: inline-block; width: 12px; height: 12px; border: 1px solid rgba(255,255,255,.3); }
+.fin-bar-key-v { font-family: 'Dobrozrachniy', serif; font-size: 20px; color: #fff; }
+.fin-bar-key-l { opacity: .75; }
+
+/* ─── Предложение: три входа + метрики ─── */
+.fin-tickets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.fin-ticket { padding: 28px; border: 1px solid var(--line); background: rgba(255,255,255,.5); display: flex; flex-direction: column; gap: 8px; }
+.fin-ticket-hl { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.fin-ticket-tag { font-size: var(--fs-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; opacity: .55; }
+.fin-ticket-h { font-family: 'Dobrozrachniy', serif; font-size: 30px; line-height: 1; margin: 0; }
+.fin-ticket-v { font-family: 'Dobrozrachniy', serif; font-size: clamp(30px, 3.2vw, 44px); line-height: 1; color: var(--accent); margin-top: 6px; }
+.fin-ticket-d { font-size: var(--fs-spec); line-height: 1.5; opacity: .82; margin: 8px 0 0; }
+
+.fin-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 40px; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.fin-metrics-2 { grid-template-columns: 1fr 1fr; margin-top: 0; }
+.fin-metric { padding: 28px 24px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px; }
+.fin-metric-v { font-family: 'Dobrozrachniy', serif; font-size: clamp(44px, 5vw, 72px); line-height: 1; }
+.fin-metric-u { font-family: 'Geometria', sans-serif; font-size: var(--fs-lead); margin-left: 6px; opacity: .8; }
+.fin-metric-l { font-size: var(--fs-spec); font-weight: 500; }
+.fin-metric-sub { font-size: var(--fs-eyebrow); letter-spacing: .03em; opacity: .65; line-height: 1.45; }
+.fin-note { margin: 28px 0 0; max-width: 78ch; font-size: var(--fs-spec); line-height: 1.55; opacity: .78; }
+
+/* ─── Риски ─── */
+.fin-risks { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; border-top: 1px solid rgba(255,255,255,.2); border-left: 1px solid rgba(255,255,255,.2); }
+.fin-risk { padding: 26px 22px; border-right: 1px solid rgba(255,255,255,.2); border-bottom: 1px solid rgba(255,255,255,.2); display: flex; flex-direction: column; gap: 10px; min-height: 260px; }
+.fin-risk-num { font-size: var(--fs-eyebrow); letter-spacing: var(--tracking-eyebrow); opacity: .5; }
+.fin-risk-r { font-family: 'Dobrozrachniy', serif; font-size: 24px; line-height: 1.12; color: #f4c8a8; }
+.fin-risk-h { font-size: var(--fs-spec); line-height: 1.5; opacity: .85; }
+
+/* ─── Выход ─── */
+.fin-exit-block { padding: 28px; border: 1px solid var(--line); background: rgba(255,255,255,.5); }
+.fin-dl { margin: 18px 0 0; }
+.fin-dl-row { display: grid; grid-template-columns: 15ch 1fr; gap: 16px; padding: 10px 0; border-top: 1px solid var(--line); font-size: var(--fs-spec); line-height: 1.45; }
+.fin-dl-row dt { font-size: var(--fs-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; opacity: .55; padding-top: 3px; }
+.fin-dl-row dd { margin: 0; }
+
+@media (max-width: 1100px) {
+  .fin-cards { grid-template-columns: repeat(3, 1fr); }
+  .fin-risks { grid-template-columns: repeat(3, 1fr); }
+  .fin-metrics { grid-template-columns: 1fr 1fr; }
+  .fin-bar-legend { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 880px) {
+  .fin-two, .fin-two-rev, .fin-two-eq { grid-template-columns: 1fr; }
+  .fin-phases, .fin-tickets { grid-template-columns: 1fr; }
+  .fin-src { columns: 2; }
+}
+@media (max-width: 560px) {
+  .fin-cards, .fin-risks { grid-template-columns: 1fr; }
+  .fin-metrics, .fin-metrics-2, .fin-bar-legend { grid-template-columns: 1fr; }
+  .fin-dl-row { grid-template-columns: 1fr; gap: 4px; }
+}
+
+/* ─── 06 · Рост земли — компактная раскладка ─── */
+.fin-land { display: grid; grid-template-columns: 1fr 2.4fr; gap: 24px; align-items: start; }
+.fin-land-stats { display: flex; flex-direction: column; gap: 10px; }
+.fin-land-stat { padding: 14px 16px; border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.04); }
+.fin-land-stat-v { font-family: 'Dobrozrachniy', serif; font-size: clamp(28px, 3vw, 40px); line-height: 1; color: #fff; }
+.fin-land-stat-l { font-size: var(--fs-spec); line-height: 1.35; margin-top: 6px; }
+.fin-land-stat-sub { font-size: var(--fs-eyebrow); letter-spacing: .03em; opacity: .6; margin-top: 4px; line-height: 1.4; }
+.fin-table-compact th, .fin-table-compact td { padding: 9px 10px; font-size: 13px; line-height: 1.35; }
+.fin-table-compact .v { font-size: 17px; }
+.fin-table-compact .fin-table-loc { min-width: 14ch; }
+@media (max-width: 980px) { .fin-land { grid-template-columns: 1fr; } .fin-land-stats { flex-direction: row; } .fin-land-stat { flex: 1; } }
+@media (max-width: 560px) { .fin-land-stats { flex-direction: column; } }

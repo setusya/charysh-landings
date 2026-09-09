@@ -1,5 +1,5 @@
 // Charysh — Place / Nature / Climate section
-function PlaceSection() {
+function PlaceSection({ num = '06' } = {}) {
   const climate = [
     { n: '250', u: 'дн', l: 'солнечных дней в году', sub: 'Дольше, чем в Сочи и Кисловодске' },
     { n: '120', u: 'ккал', l: 'солнечной радиации см²', sub: 'Как на Южном берегу Крыма' },
@@ -20,7 +20,7 @@ function PlaceSection() {
       <div className="container">
         <div className="comm-head">
           <div className="crumb">
-            <span className="num">06</span><span className="sep">|</span>Место<span className="sep">|</span>Природа
+            <span className="num">{num}</span><span className="sep">|</span>Место<span className="sep">|</span>Природа
           </div>
           <h2 className="display h-display-l">
             Уникальная природа<br/>
