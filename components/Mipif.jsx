@@ -199,7 +199,7 @@ function MpLife({ num = '05' } = {}) {
 }
 window.MpLife = MpLife;
 
-// ───────────────────────── 06 · Первая очередь — мастер-план крупно + архитектура бюро ЗОВ ─────────────────────────
+// ───────────────────────── 06 · Первая очередь — мастер-план крупно ─────────────────────────
 function MpComplex({ num = '06' } = {}) {
   const items = [
     '124 номера в мини-гостиницах и коттеджах, от 16 до 100 м²',
@@ -213,12 +213,6 @@ function MpComplex({ num = '06' } = {}) {
     'Все объекты одноэтажные, с выходом на собственный участок',
     'Безбарьерная среда — для людей с ограниченными возможностями, роботов-доставщиков и сервисной логистики',
     'Дополнительное «жизненное пространство» на открытом воздухе и вид 360°',
-  ];
-  // Эскизный проект гостиниц на 8 номеров для «Чарыша» — бюро ЗОВ (уплоады/Чарыш_эскизный_проект_гостиниц_на_8_номеров.pdf)
-  const zov = [
-    { img: 'assets/photo/zov/village-day.jpg', cap: 'Гостиницы на 8 номеров · эскизный проект бюро ЗОВ' },
-    { img: 'assets/photo/zov/hotel-winter.jpg', cap: 'Зимний фасад · алтайский орнамент по дереву' },
-    { img: 'assets/photo/zov/hotel-evening.jpg', cap: 'Вечер · терраса и общая гостиная' },
   ];
   return (
     <section className="sec-pad sec-warm" id="complex" data-screen-label="06 MIPIF — Complex, big master plan">
@@ -248,20 +242,57 @@ function MpComplex({ num = '06' } = {}) {
             </ul>
           </div>
         </div>
-        <div className="fin-photos">
-          {zov.map((z, i) => (
-            <div className="fin-photo" key={i} style={{backgroundImage:`url('${z.img}')`}}><div className="fin-photo-cap">{z.cap}</div></div>
-          ))}
-        </div>
-        <p className="fin-note" style={{marginTop:14}}>Архитектура — бюро ЗОВ: эскизный проект гостиниц на&nbsp;8 номеров, тип 1 и&nbsp;тип 2. Дерево, кирпич, стекло, резной алтайский орнамент <SrcRef k="zov"/>.</p>
       </div>
     </section>
   );
 }
 window.MpComplex = MpComplex;
 
+// ───────────────────────── 07 · Архитектура — авторская интерпретация современного русского стиля ─────────────────────────
+function MpArchitecture({ num = '07' } = {}) {
+  const small = [
+    { img: 'assets/photo/zov/hotel-winter.jpg', cap: 'Зима · резной орнамент по дереву' },
+    { img: 'assets/photo/zov/hotel-sunset.jpg', cap: 'Закат · стеклянный торец и терраса' },
+    { img: 'assets/photo/zov/hotel-evening.jpg', cap: 'Вечер · общая гостиная' },
+  ];
+  const points = [
+    'Дерево, кирпич, стекло — материалы «0 километра», без имитаций',
+    'Резной алтайский орнамент на фасадах — код места, а не декорация',
+    'Гостиницы на 8 номеров, тип 1 и тип 2: общая кухня-гостиная, терраса, номера 17–27 м²',
+    'Всё одноэтажное или в два уровня, с выходом на свой участок и видом 360°',
+  ];
+  return (
+    <section className="sec-pad sec-warm" id="architecture" data-screen-label="07 MIPIF — Architecture (ZOV)">
+      <div className="container">
+        <div className="comm-head">
+          <div className="crumb"><span className="num">{num}</span><span className="sep">|</span>Архитектура<span className="sep">|</span>Бюро ЗОВ</div>
+          <h2 className="display h-display-l">
+            <em className="redword">Авторская интерпретация</em><br/>
+            современного русского стиля.
+          </h2>
+        </div>
+        <figure className="mp-masterplan">
+          <img src="assets/photo/zov/village-day.jpg" alt="Гостиницы на 8 номеров — эскизный проект бюро ЗОВ"/>
+          <figcaption className="pc-mp-render-cap">Гостиницы на 8 номеров · эскизный проект бюро ЗОВ · главный архитектор — Лев Нодельман</figcaption>
+        </figure>
+        <div className="fin-photos">
+          {small.map((z, i) => (
+            <div className="fin-photo" key={i} style={{backgroundImage:`url('${z.img}')`}}><div className="fin-photo-cap">{z.cap}</div></div>
+          ))}
+        </div>
+        <ul className="pc-activity-list fin-list mp-arch-list">
+          {points.map((it, i) => <li key={i}>{it}</li>)}
+        </ul>
+        <p className="fin-note" style={{marginTop:8}}>Эскизный проект гостиниц для курорта «Чарыш» <SrcRef k="zov"/>.</p>
+      </div>
+    </section>
+  );
+}
+window.MpArchitecture = MpArchitecture;
+
+
 // ───────────────────────── 07 · Инвест-цифры ─────────────────────────
-function MpNumbers({ num = '07' } = {}) {
+function MpNumbers({ num = '08' } = {}) {
   const budget = [
     { n: '2,9', u: 'млрд ₽', l: 'бюджет проекта', sub: 'Две очереди · курорт и гостевые дома, затем развитие' },
     { n: '288', u: 'млн ₽', l: 'уже инвестировано', sub: 'Земля, коммуникации, разработка проекта' },
@@ -313,7 +344,7 @@ function MpNumbers({ num = '07' } = {}) {
 window.MpNumbers = MpNumbers;
 
 // ───────────────────────── 08 · Что продаём · Акции ─────────────────────────
-function MpShares({ num = '08' } = {}) {
+function MpShares({ num = '09' } = {}) {
   const rows = [
     ['Вход', 'от 500 000 ₽'],
     ['Что это', 'доля в курорте — номера, СПА, ресторан, ивент-холл, посёлок гостевых домов'],
@@ -343,8 +374,8 @@ function MpShares({ num = '08' } = {}) {
             </dl>
           </article>
           <figure className="pc-mp-render-fig" style={{margin:0}}>
-            <img src="assets/photo/zov/hotel-sunset.jpg" alt="Гостиница на 8 номеров — эскизный проект бюро ЗОВ"/>
-            <figcaption className="pc-mp-render-cap">Во что входит акционер: мини-гостиницы на 8 номеров, СПА, ресторан, ивент-холл · эскизный проект бюро ЗОВ</figcaption>
+            <img src="assets/photo/fin/hotel-wood.jpg" alt="Мини-гостиницы курорта"/>
+            <figcaption className="pc-mp-render-cap">Во что входит акционер: 124 номера в мини-гостиницах и коттеджах, СПА, ресторан, ивент-холл</figcaption>
           </figure>
         </div>
         <p className="fin-note">Приглашаем к&nbsp;сотрудничеству инвест-брокеров, деловые клубы и&nbsp;предпринимателей <SrcRef k="pdf"/>.</p>
@@ -355,7 +386,7 @@ function MpShares({ num = '08' } = {}) {
 window.MpShares = MpShares;
 
 // ───────────────────────── 09 · Что продаём · Арендная вилла 134 м² ─────────────────────────
-function MpVilla({ num = '09' } = {}) {
+function MpVilla({ num = '10' } = {}) {
   const spec = [
     ['Площадь', '134 м² · одноэтажный'],
     ['Материал', 'клеёный брус · ЛХК «Алтайлес», Алтайский край'],
@@ -422,7 +453,7 @@ function MpVilla({ num = '09' } = {}) {
 window.MpVilla = MpVilla;
 
 // ───────────────────────── 10 · Финмодель и спрос ─────────────────────────
-function MpModel({ num = '10' } = {}) {
+function MpModel({ num = '11' } = {}) {
   const model = [
     { v: '13 800', u: '₽', l: 'ADR — цена номера за сутки', sub: 'Средняя по Республике Алтай — 21 106 ₽ (РСТ)', src: 'pdf,rst' },
     { v: '55', u: '%', l: 'загрузка (OCC)', sub: 'Консервативно относительно Белокурихи', src: 'pdf' },
@@ -469,7 +500,7 @@ function MpModel({ num = '10' } = {}) {
 window.MpModel = MpModel;
 
 // ───────────────────────── 11 · Риски и их хеджирование ─────────────────────────
-function MpRisks({ num = '11' } = {}) {
+function MpRisks({ num = '12' } = {}) {
   const risks = [
     { r: 'Разрыв в финансировании', h: 'Две очереди: вторая строится на выручке первой. 20% выручки от гостевых домов и подряда — в общую инфраструктуру.' },
     { r: 'Спрос до открытия', h: 'Группы бронируют раньше, чем открывается курорт: выручка формируется до запуска.' },

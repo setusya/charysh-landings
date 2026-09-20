@@ -234,3 +234,7 @@
 .mp-factor-d { font-size: 13px; line-height: 1.45; opacity: .85; }
 @media (max-width: 980px) { .mp-under, .mp-factors { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .mp-under, .mp-factors { grid-template-columns: 1fr; } }
+
+.mp-arch-list { margin-top: 18px; columns: 2; column-gap: 32px; }
+.mp-arch-list li { break-inside: avoid; }
+@media (max-width: 880px) { .mp-arch-list { columns: 1; } }
