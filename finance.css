@@ -243,3 +243,5 @@
 .mp-nature-facts .fin-metric-v { font-size: clamp(30px, 3.4vw, 48px); }
 .mp-factors { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 880px) { .mp-nature-facts { grid-template-columns: 1fr 1fr; } }
+
+.mp-disclaimer { margin: 14px 0 0; font-size: 9px; line-height: 1.5; letter-spacing: .02em; opacity: .6; }
