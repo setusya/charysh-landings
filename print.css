@@ -576,3 +576,13 @@ body.printing-desktop { }
   #complex .pc-mp-render-fig img { max-height: 330px !important; width: 100% !important; object-fit: cover !important; }
   #shares .pc-mp-render-fig img { max-height: 330px !important; width: 100% !important; object-fit: cover !important; }
 }
+
+/* ─── Печать: команда в один ряд (6 или 8 человек), мастер-план МИПИФ не выше 360px ─── */
+@media print, screen {
+  body.printing .pc-team-grid { grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)) !important; }
+  body.printing .mp-masterplan img { max-height: 360px !important; }
+}
+@media print {
+  .pc-team-grid { grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)) !important; }
+  .mp-masterplan img { max-height: 360px !important; }
+}

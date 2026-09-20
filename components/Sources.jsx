@@ -17,6 +17,15 @@ const CH_SOURCES = {
   raGov:  { n: 12, t: 'Правительство Республики Алтай: 29 туристических проектов на 188 млрд ₽', u: 'https://altai-republic.ru/tourism/development/' },
   kuz:    { n: 13, t: 'Шория Град (девелопер, Шерегеш): курортная недвижимость +15–25% в год против 5–8% в мегаполисах', u: 'https://shoriya-grad42.ru/articles/pochemu-kurortnaya-nedvizhimost-budet-dorozhat-2026-2030/' },
   pdf:    { n: 14, t: 'Финансовая модель проекта «Чарыш», расширенная версия, А. Маслак, 2026 — по методике Туризм.РФ', u: null },
+  restateRA: { n: 15, t: 'Restate, 09.09.2026: средняя цена сотки в Республике Алтай — 474 366 ₽ (323 212 ₽ в сентябре 2025)', u: 'https://respublika-altay.restate.ru/graph/ceny-prodazhi-zemli/' },
+  amic2008: { n: 16, t: 'Amic.ru, 19.11.2008: сотка в Чемальском районе — от 86 тыс ₽ у реки, ~27 тыс ₽ на левом берегу; Манжерок 180–300 тыс ₽', u: 'https://www.amic.ru/news/skolko-stoit-zemlya-v-gornom-altae-95504' },
+  altaiGold: { n: 17, t: 'Altai-gold.info (продавец земли в Чемальском районе, 2025–2026): участки 40–100 тыс ₽/сотка; «за последние 7 лет земля на Горном Алтае выросла раз в 10, за последний год — вдвое»', u: 'https://altai-gold.info/chemal/' },
+  cianChemal: { n: 18, t: 'Циан, 2026: участки в с. Чемал — 150–370 тыс ₽ за сотку', u: 'https://gorno-altaysk.cian.ru/kupit-zemelniy-uchastok-altay-chemalskiy-rayon-chemal-01164369/' },
+  fontanka: { n: 19, t: 'Фонтанка, 06.07.2025, репортаж из Манжерока: 10 соток куплены за 500 тыс ₽ (2020), выставлены за 20 млн ₽; сделка 10 соток за 6 млн ₽; у озера — 25–35 млн ₽ за участок', u: 'https://www.fontanka.ru/2025/07/06/75680126/' },
+  altaika: { n: 20, t: 'Каталог altaika.narod.ru (2010-е): земля в Усть-Коксинском районе — 90–550 тыс ₽ за гектар, то есть 0,9–5,5 тыс ₽ за сотку', u: 'https://altaika.narod.ru/land/ust-koksa.html' },
+  cianUymon: { n: 21, t: 'Циан, 2026: Усть-Коксинский район, с. Тихонькая — 32,6 тыс ₽/сотка; предложения до 100 тыс ₽/сотка', u: 'https://gorno-altaysk.cian.ru/kupit-zemelniy-uchastok-altay-ust-koksinskiy-rayon/' },
+  zov:    { n: 22, t: 'Архитектурное бюро ЗОВ, Санкт-Петербург, с 2016 — рендеры из портфолио бюро', u: 'https://zovarchitect.ru/' },
+  unsplash: { n: 23, t: 'Фото СПА-купели — Unsplash (лицензия Unsplash, свободное использование)', u: 'https://unsplash.com/s/photos/mountain-spa-pool' },
 };
 window.CH_SOURCES = CH_SOURCES;
 

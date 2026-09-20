@@ -2,6 +2,7 @@
 // Собирает сильное из /invest/ и /product/: что такое Чарыш → почему поедут → цифры → что продаём (акции, арендные виллы).
 // Цифры проекта — только из PDF Маслака; рыночные — со ссылкой на источник (components/Sources.jsx).
 // Цена виллы и её доходность намеренно НЕ заполнены (MP_BLANK) — заполняет Маслак.
+// Правило слайдов: каждое фото и каждая цифра встречаются в презентации один раз; мастер-план — только крупно на 06.
 
 const MP_BLANK = '—';
 
@@ -13,7 +14,7 @@ function MpCharysh({ num = '02' } = {}) {
     { n: '72', u: '', l: 'гостевых дома в посёлке при курорте', sub: 'Каждый — с землёй в собственности' },
     { n: '200', u: '', l: 'гостей — ивент-холл', sub: 'Ресторан на 180 · СПА с бассейном на 55' },
     { n: '5', u: 'га', l: 'озёр на территории', sub: 'Пляж, парк, водопад 90 м, скважина 100 т/сутки' },
-    { n: '2028', u: 'апрель', l: 'открытие первой очереди', sub: 'Продажи групп — с 2027 года' },
+    { n: '2028', u: 'апрель', l: 'открытие первой очереди', sub: 'Курорт и гостевые дома · 17,2 га из 72' },
   ];
   return (
     <section className="sec-pad" id="charysh" data-screen-label="02 MIPIF — What is Charysh">
@@ -44,7 +45,7 @@ function MpCharysh({ num = '02' } = {}) {
         <div className="fin-photos">
           <div className="fin-photo" style={{backgroundImage:"url('assets/photo/fin/lake.jpg')"}}><div className="fin-photo-cap">Озеро на территории</div></div>
           <div className="fin-photo" style={{backgroundImage:"url('assets/photo/fin/rock-pond.jpg')"}}><div className="fin-photo-cap">Скала и пруд · берег реки</div></div>
-          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/masterplan-render-2026.jpg')"}}><div className="fin-photo-cap">Рендер первой очереди · 17,2 га из 72</div></div>
+          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/charysh-summer-panorama.jpg')"}}><div className="fin-photo-cap">Долина Чарыша · лето</div></div>
         </div>
       </div>
     </section>
@@ -52,19 +53,19 @@ function MpCharysh({ num = '02' } = {}) {
 }
 window.MpCharysh = MpCharysh;
 
-// ───────────────────────── 03 · Доказательство: Греф качает Алтай, Чарыш — Горный десять лет назад ─────────────────────────
+// ───────────────────────── 03 · Почему туда поедут: Горный Алтай и Белокуриха качают спрос ─────────────────────────
 function MpProof({ num = '03' } = {}) {
-  const sber = [
-    { v: '>200 млрд ₽', l: 'вложил Сбер в Манжерок', sub: 'Половина всех инвестиций в Республику Алтай', src: 'iz' },
-    { v: '+88%', l: 'сотка в Республике Алтай за год', sub: '592 тыс ₽ — дороже всего в Сибири · ×2 за 2024', src: 'cian,erz,rbc' },
-    { v: '2,8 млн', l: 'туристов в Республике Алтай, 2025', sub: 'Рост ×2,3 за пять лет · Алтайский край +2,4 млн', src: 'tolkRA,gov' },
+  const demand = [
+    { v: '2,8 млн', l: 'туристов в Республике Алтай, 2025', sub: 'Рост ×2,3 за пять лет · Сбер вложил в Манжерок >200 млрд ₽', src: 'tolkRA,iz' },
+    { v: '>100%', l: 'загрузка санаториев Белокурихи летом 2025', sub: 'В среднем за 2024 год — 68% · Алтайский край: 2,4 млн гостей', src: 'belo,gov' },
+    { v: '474 тыс ₽', l: 'средняя сотка в Республике Алтай, сентябрь 2026', sub: '+88% за 2024 год · дороже всего в Сибири', src: 'restateRA,erz,cian' },
   ];
+  // Сотка: «раньше» → «сейчас». Годы указаны по каждой строке — данных именно за 2016 по сёлам в открытых источниках нет.
   const rows = [
-    { k: 'Стадия', a: 'Курорт-миллионник: 1,5 млн гостей, аэропорт, пробки на Чуйском тракте', b: 'Стадия «до якоря»: 45 000 автотуристов уже приезжают, курорт открывается в 2028', src: 'iz,pdf' },
-    { k: 'Земля', a: '592 тыс ₽ за сотку · +88% за год', b: 'Не переоценена: 72 га одним куском, с ВРИ, в собственности', src: 'cian,erz,pdf' },
-    { k: 'Цена ночи', a: '21 106 ₽ — средняя по Республике Алтай', b: '13 800 ₽ — ADR в модели «Чарыша»: приятнее для гостя, честнее для загрузки', src: 'rst,pdf' },
-    { k: 'Конкуренция', a: 'Шерегеш: 95 гостиниц, 50 СПА за одного гостя', b: 'Прямых конкурентов в локации нет', src: 'ator,pdf' },
-    { k: 'Среда', a: 'Массовый поток, стройка, шум', b: 'Тупиковая долина, 260 солнечных дней, деревня с казачьей историей', src: 'pdf' },
+    { loc: 'Чемал · Чемальский район', then: '2008 · 27–86 тыс ₽', now: '2026 · 40–370 тыс ₽', dyn: '×4–5 · «за 7 лет — в 10 раз»', src: 'amic2008,altaiGold,cianChemal' },
+    { loc: 'Манжерок · у курорта', then: '2020 · 50 тыс ₽', now: '2025 · 600 тыс — 2 млн ₽', dyn: '×12–40 за пять лет', src: 'fontanka' },
+    { loc: 'Уймонская долина · Усть-Кокса', then: '2010-е · 1–5,5 тыс ₽ (наделы от 1 га)', now: '2026 · 33–100 тыс ₽', dyn: '×10 и выше', src: 'altaika,cianUymon' },
+    { loc: 'Чарыш · Чарышский район', then: 'до якорного инвестора', now: '2026 · ~25 тыс ₽ в селе · 1 тыс ₽ в крупных наделах', dyn: 'та же стадия, что Чемал и Манжерок 10 лет назад', src: 'cianCh', hl: true },
   ];
   return (
     <section className="sec-pad sec-dark pc-bigaltai" id="proof" data-screen-label="03 MIPIF — Proof">
@@ -74,13 +75,12 @@ function MpProof({ num = '03' } = {}) {
         <div className="comm-head" style={{marginBottom:28}}>
           <div className="crumb"><span className="num">{num}</span><span className="sep">|</span>Почему&nbsp;туда&nbsp;поедут</div>
           <h2 className="display h-display-l">
-            Греф качает Алтай.<br/>
-            <em className="redword-light">Чарыш — это Горный Алтай десять лет назад</em>:<br/>
-            чище и&nbsp;приятнее по&nbsp;ценам.
+            Горный Алтай и&nbsp;Белокуриха качают спрос.<br/>
+            <em className="redword-light">Чарыш — недооценённая локация, открытие 2026&nbsp;года.</em>
           </h2>
         </div>
         <div className="fin-land-stats mp-sber">
-          {sber.map((s, i) => (
+          {demand.map((s, i) => (
             <div className="fin-land-stat" key={i}>
               <div className="fin-land-stat-v">{s.v}</div>
               <div className="fin-land-stat-l">{s.l} <SrcRef k={s.src}/></div>
@@ -88,28 +88,30 @@ function MpProof({ num = '03' } = {}) {
             </div>
           ))}
         </div>
-        <div className="fin-table-wrap" style={{marginTop:24}}>
+        <div className="fin-src-h" style={{fontSize:'var(--fs-eyebrow)', opacity:.6, margin:'28px 0 6px'}}>Цена сотки: раньше → сейчас</div>
+        <div className="fin-table-wrap">
           <table className="fin-table fin-table-dark fin-table-compact mp-compare">
             <thead>
-              <tr><th></th><th>Горный Алтай сегодня · Манжерок, Чемал, Шерегеш</th><th className="hl-th">Чарыш сегодня</th></tr>
+              <tr><th>Локация</th><th>Раньше</th><th>Сейчас</th><th>Рост</th></tr>
             </thead>
             <tbody>
               {rows.map((r, i) => (
-                <tr key={i}>
-                  <td className="fin-table-loc">{r.k}</td>
-                  <td>{r.a}</td>
-                  <td className="hl-td">{r.b} <SrcRef k={r.src}/></td>
+                <tr key={i} className={r.hl ? 'hl' : ''}>
+                  <td className="fin-table-loc">{r.loc}</td>
+                  <td>{r.then}</td>
+                  <td className={r.hl ? 'hl-td' : ''}>{r.now}</td>
+                  <td className="fin-table-dyn">{r.dyn} <SrcRef k={r.src}/></td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
         <div className="fin-photos">
-          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/web/altai-manzherok.jpg')"}}><div className="fin-photo-cap">Манжерок · курорт Сбера</div></div>
-          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/web/altai-sheregesh.jpg')"}}><div className="fin-photo-cap">Шерегеш · 95 гостиниц</div></div>
+          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/web/altai-manzherok.jpg')"}}><div className="fin-photo-cap">Манжерок · Республика Алтай</div></div>
+          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/web/altai-teletskoye.jpg')"}}><div className="fin-photo-cap">Телецкое озеро · Горный Алтай</div></div>
           <div className="fin-photo" style={{backgroundImage:"url('assets/photo/web/river-summer.jpg')"}}><div className="fin-photo-cap">Чарыш · тупиковая долина</div></div>
         </div>
-        <SrcList keys={['iz','cian','erz','rbc','tolkRA','gov','rst','ator','pdf']}/>
+        <SrcList keys={['tolkRA','iz','belo','gov','restateRA','erz','cian','amic2008','altaiGold','cianChemal','fontanka','altaika','cianUymon','cianCh']}/>
       </div>
     </section>
   );
@@ -170,10 +172,10 @@ function MpLife({ num = '05' } = {}) {
   const cats = [
     { tag: 'Река и горы', img: 'assets/photo/activity-marble-river.jpg', d: 'Рафтинг, SUP, рыбалка, походы, конные тропы, скалолазание' },
     { tag: 'Русский код Алтая', img: 'assets/photo/people-craft-circle.jpg', d: 'Казачий быт, ремёсла, фольклор, этнофестивали, раскопки' },
-    { tag: 'СПА и оздоровление', img: 'assets/photo/fin/spa-stone.jpg', d: 'Крытый бассейн, бани, массаж, лекарственные чаи, терренкуры' },
+    { tag: 'СПА и оздоровление', img: 'assets/photo/web/spa-hottub-mountains.jpg', pos: 'center 62%', d: 'Крытый бассейн, бани, купели, массаж, лекарственные чаи, терренкуры' },
     { tag: 'Живая еда', img: 'assets/photo/food-cauliflower.jpg', d: 'Ресторан авторской кухни, продукты «за забором», фермерская ярмарка' },
     { tag: 'Свадьбы и юбилеи', img: 'assets/photo/web/valley-pavilion.jpg', d: 'Церемония у реки, банкет на 180, размещение гостей в гостевых домах' },
-    { tag: 'MICE и ретриты', img: 'assets/photo/web/people-rafting-group.jpg', d: 'Ивент-холл на 200, стратсессии, сплав, баня. Продажи групп — с 2027' },
+    { tag: 'MICE и ретриты', img: 'assets/photo/web/people-rafting-group.jpg', d: 'Ивент-холл на 200, стратсессии, сплав, баня, ретрит-программы' },
   ];
   return (
     <section className="sec-pad sec-warm" id="life" data-screen-label="05 MIPIF — Life">
@@ -188,7 +190,7 @@ function MpLife({ num = '05' } = {}) {
         <div className="pc-activities-grid">
           {cats.map((c, i) => (
             <article className="pc-activity-card" key={i}>
-              <div className="pc-activity-photo" style={{backgroundImage:`url('${c.img}')`}}>
+              <div className="pc-activity-photo" style={{backgroundImage:`url('${c.img}')`, backgroundPosition: c.pos || 'center'}}>
                 <div className="pc-activity-num">{String(i+1).padStart(2,'0')}</div>
               </div>
               <div className="pc-activity-body">
@@ -204,6 +206,66 @@ function MpLife({ num = '05' } = {}) {
   );
 }
 window.MpLife = MpLife;
+
+// ───────────────────────── 06 · Первая очередь — мастер-план крупно + архитектура бюро ЗОВ ─────────────────────────
+function MpComplex({ num = '06' } = {}) {
+  const items = [
+    '124 номера в мини-гостиницах и коттеджах, от 16 до 100 м²',
+    'Ивент-холл на 200 гостей и ресторан на 180',
+    'СПА с закрытым бассейном на 55 гостей',
+    'Зона отдыха: озёра, пляж, парк, спорт- и ретрит-комплексы',
+    'Посёлок гостевых домов на 72 дома — каждый с землёй в собственности',
+    'Центр управления и автоматизации · все коммуникации подведены',
+  ];
+  const usp = [
+    'Все объекты одноэтажные, с выходом на собственный участок',
+    'Безбарьерная среда — для людей с ограниченными возможностями, роботов-доставщиков и сервисной логистики',
+    'Дополнительное «жизненное пространство» на открытом воздухе и вид 360°',
+  ];
+  const zov = [
+    { img: 'assets/photo/zov/glass-cabin.jpg', cap: 'Гостевой павильон · бюро ЗОВ' },
+    { img: 'assets/photo/zov/wood-cabin.jpg', cap: 'Дом на сваях у воды · бюро ЗОВ' },
+    { img: 'assets/photo/zov/stables.jpg', cap: 'Конный центр · бюро ЗОВ' },
+  ];
+  return (
+    <section className="sec-pad sec-warm" id="complex" data-screen-label="06 MIPIF — Complex, big master plan">
+      <div className="container">
+        <div className="comm-head">
+          <div className="crumb"><span className="num">{num}</span><span className="sep">|</span>Первая очередь</div>
+          <h2 className="display h-display-l">
+            Первая очередь — курорт и&nbsp;гостевые дома:<br/>
+            <em className="redword">17,2&nbsp;га</em> из&nbsp;72 на&nbsp;берегу реки Чарыш.
+          </h2>
+        </div>
+        <figure className="mp-masterplan">
+          <img src="assets/photo/masterplan-render-2026.jpg" alt="Мастер-план первой очереди курорта Чарыш"/>
+          <figcaption className="pc-mp-render-cap">Мастер-план первой очереди · долина Чарыша · главный архитектор — Лев Нодельман</figcaption>
+        </figure>
+        <div className="fin-two fin-two-eq" style={{marginTop:24}}>
+          <div>
+            <div className="format-h" style={{color:'var(--accent)'}}>Что строим</div>
+            <ul className="pc-activity-list fin-list">
+              {items.map((it, i) => <li key={i}>{it}</li>)}
+            </ul>
+          </div>
+          <div>
+            <div className="format-h" style={{color:'var(--accent)'}}>УТП комплекса</div>
+            <ul className="pc-activity-list fin-list">
+              {usp.map((it, i) => <li key={i}>{it}</li>)}
+            </ul>
+          </div>
+        </div>
+        <div className="fin-photos">
+          {zov.map((z, i) => (
+            <div className="fin-photo" key={i} style={{backgroundImage:`url('${z.img}')`}}><div className="fin-photo-cap">{z.cap}</div></div>
+          ))}
+        </div>
+        <p className="fin-note" style={{marginTop:14}}>Архитектурный язык комплекса — бюро ЗОВ (Санкт-Петербург): дерево, стекло, бетон, орнамент русского Алтая <SrcRef k="zov"/>.</p>
+      </div>
+    </section>
+  );
+}
+window.MpComplex = MpComplex;
 
 // ───────────────────────── 07 · Инвест-цифры ─────────────────────────
 function MpNumbers({ num = '07' } = {}) {
@@ -264,7 +326,7 @@ function MpShares({ num = '08' } = {}) {
     ['Что это', 'доля в курорте — номера, СПА, ресторан, ивент-холл, посёлок гостевых домов'],
     ['Дивиденды', 'из прибыли курорта — после вознаграждения УК (20% от GOP)'],
     ['Выкуп', 'условия и цена выкупа фиксируются в договоре при входе'],
-    ['Горизонт модели', 'продажа актива через 10 лет по рыночной цене: IRR 25%, прирост стоимости 160%'],
+    ['Горизонт модели', '10 лет — продажа актива по рыночной цене'],
     ['Для инвест-брокеров', 'партнёрская программа — условия по запросу'],
   ];
   return (
@@ -288,8 +350,8 @@ function MpShares({ num = '08' } = {}) {
             </dl>
           </article>
           <figure className="pc-mp-render-fig" style={{margin:0}}>
-            <img src="assets/photo/masterplan-render-2026.jpg" alt="Рендер курорта — во что входит акционер"/>
-            <figcaption className="pc-mp-render-cap">Во что входит акционер: вся первая очередь на 17,2 га</figcaption>
+            <img src="assets/photo/zov/wellness-centre.jpg" alt="Велнес-центр — архитектура бюро ЗОВ"/>
+            <figcaption className="pc-mp-render-cap">Во что входит акционер: СПА и велнес-центр, ресторан, ивент-холл · архитектура бюро ЗОВ</figcaption>
           </figure>
         </div>
         <p className="fin-note">Приглашаем к&nbsp;сотрудничеству инвест-брокеров, деловые клубы и&nbsp;предпринимателей <SrcRef k="pdf"/>.</p>
@@ -370,7 +432,7 @@ window.MpVilla = MpVilla;
 function MpModel({ num = '10' } = {}) {
   const model = [
     { v: '13 800', u: '₽', l: 'ADR — цена номера за сутки', sub: 'Средняя по Республике Алтай — 21 106 ₽ (РСТ)', src: 'pdf,rst' },
-    { v: '55', u: '%', l: 'загрузка (OCC)', sub: 'Санатории Белокурихи: 68% в 2024, летом 2025 — свыше 100%', src: 'pdf,belo' },
+    { v: '55', u: '%', l: 'загрузка (OCC)', sub: 'Консервативно относительно Белокурихи', src: 'pdf' },
     { v: '1,8', u: '', l: 'мультипликатор к доходу номерного фонда', sub: 'Ресторан, СПА, события, активности', src: 'pdf' },
     { v: '55', u: '%', l: 'GOP margin', sub: 'Методика Туризм.РФ · УК 20% от GOP · резервы 3,5% · инфляция 5%', src: 'pdf' },
   ];
@@ -406,7 +468,7 @@ function MpModel({ num = '10' } = {}) {
         <div className="fin-src-h" style={{fontSize:'var(--fs-eyebrow)', opacity:.55, margin:'28px 0 8px'}}>Спрос подтверждён</div>
         <Grid items={demand}/>
         <p className="fin-note">Аналитические материалы по&nbsp;спросу и&nbsp;целевой аудитории — по&nbsp;запросу.</p>
-        <SrcList keys={['rst','belo','pdf']}/>
+        <SrcList keys={['rst','pdf']}/>
       </div>
     </section>
   );
@@ -417,10 +479,10 @@ window.MpModel = MpModel;
 function MpRisks({ num = '11' } = {}) {
   const risks = [
     { r: 'Разрыв в финансировании', h: 'Две очереди: вторая строится на выручке первой. 20% выручки от гостевых домов и подряда — в общую инфраструктуру.' },
-    { r: 'Спрос до открытия', h: 'Пакеты для групп — MICE, свадьбы, ретриты — продаём с 2027 года: выручка формируется до запуска.' },
-    { r: 'Мотивация команды', h: 'Все члены команды сами инвестируют в проект. Заказчик и оператор — одно лицо.' },
-    { r: 'Юридический риск', h: '72 га в собственности с необходимым ВРИ. Полный пакет документов — по запросу.' },
-    { r: 'Выход', h: 'Дивиденды и выкуп фиксируются в договоре при входе, а не обещаются на словах. Вилла — продаётся как любая недвижимость.' },
+    { r: 'Спрос до открытия', h: 'Группы бронируют раньше, чем открывается курорт: выручка формируется до запуска.' },
+    { r: 'Мотивация команды', h: 'Все члены команды сами инвестируют в проект.' },
+    { r: 'Юридический риск', h: 'Земля в собственности с необходимым ВРИ. Полный пакет документов — по запросу.' },
+    { r: 'Выход', h: 'Дивиденды и выкуп фиксируются в договоре при входе, а не обещаются на словах. Вилла продаётся как любая недвижимость.' },
   ];
   return (
     <section className="sec-pad sec-dark" id="risks" data-screen-label="11 MIPIF — Risks">
