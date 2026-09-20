@@ -22,6 +22,7 @@ if "%~1"=="" (
     call :export privatecamps
     call :exportdir invest
     call :exportdir product
+    call :exportdir mipif
     goto :done
 )
 

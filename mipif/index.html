@@ -1,0 +1,142 @@
+<!doctype html>
+<!-- Презентация для МИПИФ · https://charysh-usadby.ru/mipif/ · спикер — Андрей Маслак -->
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<!-- Страница лежит в подпапке, все пути (css, jsx, assets) — от корня сайта -->
+<base href="../">
+<script>
+// С <base> ссылки вида href="#id" ведут на корень сайта — перехватываем и просто скроллим.
+document.addEventListener("click", function (e) {
+  var a = e.target.closest && e.target.closest("a[href^='#']");
+  if (!a) return;
+  e.preventDefault();
+  var id = a.getAttribute("href").slice(1);
+  var el = id && document.getElementById(id);
+  if (el) { el.scrollIntoView({ behavior: "smooth", block: "start" }); history.replaceState(null, "", "#" + id); }
+  else if (!id) { window.scrollTo({ top: 0, behavior: "smooth" }); }
+});
+</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Курортная деревня Чарыш · МИПИФ</title>
+<meta name="description" content="Курортная деревня «Чарыш» — новое открытие на Алтае. Презентация для МИПИФ: что такое Чарыш, почему туда поедут, инвест-цифры, акции и арендные виллы 134 м². Спикер — Андрей Маслак.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="privatecamps.css">
+<link rel="stylesheet" href="finance.css">
+<link rel="stylesheet" href="print.css">
+</head>
+<body class="tone-warm accent-red type-s cards-bordered">
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="components/RapportStrip.jsx"></script>
+<script type="text/babel" src="components/Header.jsx"></script>
+<script type="text/babel" src="components/Place.jsx"></script>
+<script type="text/babel" src="components/Houses.jsx"></script>
+<script type="text/babel" src="components/Community.jsx"></script>
+<script type="text/babel" src="components/Extras.jsx"></script>
+<script type="text/babel" src="components/Visit.jsx"></script>
+<script type="text/babel" src="components/PrivateCamp.jsx"></script>
+<script type="text/babel" src="components/Sources.jsx"></script>
+<script type="text/babel" src="components/Team.jsx"></script>
+<script type="text/babel" src="components/Finance.jsx"></script>
+<script type="text/babel" src="components/Mipif.jsx"></script>
+<script src="print-prep.js" defer></script>
+
+<script type="text/babel">
+// ─── МИПИФ · спикер — Андрей Маслак · 20 минут с вопросами · 13 слайдов ───
+// 01 Обложка · 02 Что такое Чарыш · 03 Почему поедут (Греф качает Алтай) · 04 Природа · 05 Чем живёт ·
+// 06 Первая очередь · 07 Инвест-цифры · 08 Акции · 09 Арендная вилла 134 м² · 10 Финмодель и спрос ·
+// 11 Риски · 12 Команда и УК · 13 Контакты
+// Цена и доходность виллы не заполнены намеренно (см. MP_BLANK в components/Mipif.jsx).
+
+const MP_NAV = [
+  { id: 'charysh', label: 'Чарыш' },
+  { id: 'proof',   label: 'Почему' },
+  { id: 'numbers', label: 'Цифры' },
+  { id: 'shares',  label: 'Акции' },
+  { id: 'villa',   label: 'Виллы' },
+];
+
+function MipifApp() {
+  React.useEffect(() => {
+    const els = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((es) => {
+      es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    els.forEach(el => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+
+  return (
+    <div data-screen-label="00 МИПИФ — Курортная деревня Чарыш">
+      <PCHeader links={MP_NAV} />
+
+      {/* 01 · Обложка */}
+      <PCHero
+        heroPhoto="assets/photo/charysh-aerial.jpg"
+        crumbLabel="МИПИФ"
+        crumbExtra="Андрей Маслак"
+        meta="Курортная деревня «Чарыш» · Алтайский край"
+        h1={<>Курортная деревня<br/>Чарыш</>}
+        sub={<><strong>Проект — новое открытие на&nbsp;Алтае.</strong> 72&nbsp;га в&nbsp;собственности в&nbsp;тупиковой долине реки Чарыш. Бюджет 2,9&nbsp;млрд&nbsp;₽, открытие первой очереди — апрель 2028. <strong>Продаём акции курорта и&nbsp;арендные виллы с&nbsp;землёй в&nbsp;собственности.</strong></>}
+        primaryCtaText="Что продаём"
+        primaryCtaHref="#shares"
+        secondaryCtaText="Инвест-цифры"
+        secondaryCtaHref="#numbers"
+        tagline="ПРОЕКТ — НОВОЕ ОТКРЫТИЕ НА АЛТАЕ"
+      />
+
+      {/* 02–05 · Что такое Чарыш и почему туда поедут */}
+      <MpCharysh num="02" />
+      <MpProof num="03" />
+      <MpNature num="04" />
+      <MpLife num="05" />
+
+      <RapportStrip variant={2} tone="redOnWhite" height={48} />
+
+      {/* 06–07 · Проект и цифры */}
+      <FinComplex num="06" />
+      <MpNumbers num="07" />
+
+      {/* 08–09 · Что продаём */}
+      <MpShares num="08" />
+      <MpVilla num="09" />
+
+      {/* 10–11 · Модель, спрос, риски */}
+      <MpModel num="10" />
+      <MpRisks num="11" />
+
+      {/* 12 · Команда и УК */}
+      <PCTeam
+        num="12"
+        members={CH_TEAM}
+        crumbText="Команда и УК"
+        h2={<>Заказчик и&nbsp;оператор — <em className="redword">в&nbsp;одном лице</em>.</>}
+        lead="УК — заказчик и оператор проекта. Опыт в строительстве и управлении отелем. УТП команды — привлечение групп в низкий сезон. Все члены команды инвестируют в проект сами."
+      />
+
+      {/* 13 · Контакты — только Маслак */}
+      <PCFinalCTA
+        num="13"
+        h2={<>Сделаем <em className="redword">индивидуальное предложение</em><br/>под&nbsp;ваш чек.</>}
+        lead="От 500 тысяч до 40 млн ₽ — акции, арендная вилла или их сочетание. Финмодель под ваш сценарий, полный пакет документов, условия выкупа. Инвест-брокерам — партнёрские условия."
+        contacts={[CH_CONTACT_MASLAK, CH_CONTACT_CHANNEL]}
+      />
+      <RapportStrip variant={3} tone="goldOnBlack" height={56} />
+      <Footer />
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<MipifApp />);
+</script>
+</body>
+</html>
