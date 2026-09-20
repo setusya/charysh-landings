@@ -238,3 +238,8 @@
 .mp-arch-list { margin-top: 18px; columns: 2; column-gap: 32px; }
 .mp-arch-list li { break-inside: avoid; }
 @media (max-width: 880px) { .mp-arch-list { columns: 1; } }
+
+.mp-nature-facts { grid-template-columns: repeat(3, 1fr); }
+.mp-nature-facts .fin-metric-v { font-size: clamp(30px, 3.4vw, 48px); }
+.mp-factors { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 880px) { .mp-nature-facts { grid-template-columns: 1fr 1fr; } }
