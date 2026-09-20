@@ -635,7 +635,7 @@ body.mipif.printing #life .pc-activity-body { padding: 8px 10px !important; }
 body.mipif.printing #life .pc-activity-tag { font-size: 11px !important; }
 body.mipif.printing #life .fin-card-d { font-size: 11px !important; line-height: 1.35 !important; }
 body.mipif.printing #life .lead { display: none !important; }
-body.mipif.printing #complex .mp-masterplan img { max-height: 290px !important; }
+body.mipif.printing #complex .mp-masterplan img { max-height: 235px !important; }
 body.mipif.printing #complex .fin-two-eq { margin-top: 12px !important; gap: 24px !important; }
 body.mipif.printing .fin-list li { font-size: 12px !important; line-height: 1.35 !important; }
 body.mipif.printing .format-h { font-size: 11px !important; }
@@ -716,7 +716,7 @@ body.mipif.printing .pc-final-lead { font-size: 13px !important; }
   body.mipif #life .pc-activity-tag { font-size: 11px !important; }
   body.mipif #life .fin-card-d { font-size: 11px !important; line-height: 1.35 !important; }
   body.mipif #life .lead { display: none !important; }
-  body.mipif #complex .mp-masterplan img { max-height: 290px !important; }
+  body.mipif #complex .mp-masterplan img { max-height: 235px !important; }
   body.mipif #complex .fin-two-eq { margin-top: 12px !important; gap: 24px !important; }
   body.mipif .fin-list li { font-size: 12px !important; line-height: 1.35 !important; }
   body.mipif .format-h { font-size: 11px !important; }
