@@ -223,3 +223,14 @@
 #team .team-grid.pc-team-grid { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 980px) { #team .team-grid.pc-team-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { #team .team-grid.pc-team-grid { grid-template-columns: 1fr; } }
+
+/* ─── МИПИФ 03: недооценённость + факторы успеха ─── */
+.mp-under { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.mp-under .fin-land-stat-v { font-size: clamp(30px, 3.2vw, 44px); }
+.mp-factors { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid rgba(255,255,255,.2); border-left: 1px solid rgba(255,255,255,.2); }
+.mp-factor { padding: 14px 16px 14px; border-right: 1px solid rgba(255,255,255,.2); border-bottom: 1px solid rgba(255,255,255,.2); display: flex; flex-direction: column; gap: 4px; }
+.mp-factor-num { font-size: var(--fs-eyebrow); letter-spacing: var(--tracking-eyebrow); opacity: .5; }
+.mp-factor-h { font-family: 'Dobrozrachniy', serif; font-size: 20px; line-height: 1.1; color: #f4c8a8; }
+.mp-factor-d { font-size: 13px; line-height: 1.45; opacity: .85; }
+@media (max-width: 980px) { .mp-under, .mp-factors { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .mp-under, .mp-factors { grid-template-columns: 1fr; } }

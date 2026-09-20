@@ -53,35 +53,39 @@ function MpCharysh({ num = '02' } = {}) {
 }
 window.MpCharysh = MpCharysh;
 
-// ───────────────────────── 03 · Почему туда поедут: Горный Алтай и Белокуриха качают спрос ─────────────────────────
+// ───────────────────────── 03 · Почему туда поедут: спрос уже есть, Чарыш недооценён, факторы успеха ─────────────────────────
 function MpProof({ num = '03' } = {}) {
-  const demand = [
-    { v: '2,8 млн', l: 'туристов в Республике Алтай, 2025', sub: 'Рост ×2,3 за пять лет · Сбер вложил в Манжерок >200 млрд ₽', src: 'tolkRA,iz' },
-    { v: '>100%', l: 'загрузка санаториев Белокурихи летом 2025', sub: 'В среднем за 2024 год — 68% · Алтайский край: 2,4 млн гостей', src: 'belo,gov' },
-    { v: '474 тыс ₽', l: 'средняя сотка в Республике Алтай, сентябрь 2026', sub: '+88% за 2024 год · дороже всего в Сибири', src: 'restateRA,erz,cian' },
+  // Только цифры, которые подчёркивают недооценённость Чарыша относительно Горного Алтая.
+  const under = [
+    { v: '×3–8', l: 'дешевле сельхозземля в Чарышском районе', sub: '70–100 тыс ₽/га против 350 тыс ₽/га в Чемальском и 250–800 тыс ₽/га в Уймонской долине, 2026', src: 'cianCh,cianAgriRA,cianUymon' },
+    { v: '1,85 млн ₽', l: 'за гектар — рекреация на первой линии Катуни', sub: 'Барангол, 2025. Ориентир для 72 га «Чарыша» в той же категории — туристическое обслуживание', src: 'cianComm' },
+    { v: '×2,3', l: 'вырос турпоток Республики Алтай за пять лет', sub: '2,8 млн гостей в 2025 · Белокуриха летом 2025 загружена более чем на 100%', src: 'tolkRA,belo' },
+    { v: '0', l: 'прямых конкурентов в локации', sub: '45 000 автотуристов уже приезжают в долину Чарыша — до открытия курорта', src: 'pdf' },
   ];
-  // Сравнение по категориям земли: сельхозназначение и рекреация / туристическое обслуживание — за гектар.
-  // ИЖС в сравнение не входит. Все цифры — из объявлений и каталогов, год указан в каждой ячейке.
-  const rows = [
-    { loc: 'Чемальский район', agriThen: '2000-е · от 250 тыс ₽', agriNow: '2026 · от 350 тыс ₽', rec: '2026 · лоты под турбизнес в среднем 9,9 млн ₽, до 30 млн ₽ (участки 1–22 га)', src: 'altaika,cianAgriRA,cianChemal' },
-    { loc: 'Манжерок · Майминский район', agriThen: '—', agriNow: '—', rec: '2025 · 1,85 млн ₽/га — первая линия Катуни, Барангол; у озера Манжерок — 60 млн ₽/га (10 соток за 6 млн)', src: 'cianComm,fontanka' },
-    { loc: 'Уймонская долина · Усть-Кокса', agriThen: '2010-е · 90–550 тыс ₽', agriNow: '2026 · 250–800 тыс ₽', rec: '—', src: 'altaika,cianUymon' },
-    { loc: 'Чарышский район', agriThen: '—', agriNow: '2026 · 70–100 тыс ₽', rec: '2026 · действующая база «Лесная» в Сентелеке (6 домов, баня, бассейн) — 24,9 млн ₽; 12 га под турбазу у реки — по запросу', src: 'cianCh,altera', hl: true },
+  const factors = [
+    { h: 'Электричество и коммуникации', d: 'Подведены к участку: электричество, вода (скважина 100 т/сутки), связь' },
+    { h: 'Школы и детские сады', d: 'В райцентре Чарышское — школа, детские сады, школа искусств, спортивная школа' },
+    { h: 'Медицина', d: 'Современная оснащённая больница и поликлиника в 3–5 км' },
+    { h: 'Сетевые супермаркеты', d: 'Федеральные сети в райцентре — снабжение курорта и гостей без логистического плеча' },
+    { h: 'Дороги', d: 'Асфальт от Барнаула; трасса проходит обновление и реконструкцию' },
+    { h: 'Юридически чистая земля', d: '72 га в собственности, категория — рекреация / туристическое обслуживание' },
+    { h: 'Между горой и рекой', d: 'Тупиковая долина: 441 м над уровнем моря, 260 солнечных дней, скала и берег Чарыша на территории' },
+    { h: '«0 километр»', d: 'Материалы, подрядчики и 95% персонала — из района: −20% CAPEX, −12% OPEX' },
   ];
   return (
     <section className="sec-pad sec-dark pc-bigaltai" id="proof" data-screen-label="03 MIPIF — Proof">
       <div className="pc-bigaltai-bg" style={{backgroundImage:"url('assets/photo/altai-belukha.webp')"}}/>
       <div className="pc-bigaltai-bg-overlay"/>
       <div className="container pc-bigaltai-inner">
-        <div className="comm-head" style={{marginBottom:28}}>
+        <div className="comm-head" style={{marginBottom:24}}>
           <div className="crumb"><span className="num">{num}</span><span className="sep">|</span>Почему&nbsp;туда&nbsp;поедут</div>
           <h2 className="display h-display-l">
             Горный Алтай и&nbsp;Белокуриха качают спрос.<br/>
             <em className="redword-light">Чарыш — недооценённая локация, открытие 2026&nbsp;года.</em>
           </h2>
         </div>
-        <div className="fin-land-stats mp-sber">
-          {demand.map((s, i) => (
+        <div className="mp-under">
+          {under.map((s, i) => (
             <div className="fin-land-stat" key={i}>
               <div className="fin-land-stat-v">{s.v}</div>
               <div className="fin-land-stat-l">{s.l} <SrcRef k={s.src}/></div>
@@ -89,31 +93,17 @@ function MpProof({ num = '03' } = {}) {
             </div>
           ))}
         </div>
-        <div className="fin-src-h" style={{fontSize:'var(--fs-eyebrow)', opacity:.6, margin:'28px 0 6px'}}>Цена земли за гектар — по категориям: сельхозназначение и рекреация · ИЖС не сравниваем</div>
-        <div className="fin-table-wrap">
-          <table className="fin-table fin-table-dark fin-table-compact mp-compare">
-            <thead>
-              <tr><th>Локация</th><th>Сельхоз · раньше</th><th>Сельхоз · сейчас</th><th>Рекреация / туристическое обслуживание</th></tr>
-            </thead>
-            <tbody>
-              {rows.map((r, i) => (
-                <tr key={i} className={r.hl ? 'hl' : ''}>
-                  <td className="fin-table-loc">{r.loc}</td>
-                  <td>{r.agriThen}</td>
-                  <td className={r.hl ? 'hl-td' : ''}>{r.agriNow}</td>
-                  <td>{r.rec} <SrcRef k={r.src}/></td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="fin-src-h" style={{fontSize:'var(--fs-eyebrow)', opacity:.6, margin:'26px 0 8px'}}>Ключевые факторы успеха</div>
+        <div className="mp-factors">
+          {factors.map((f, i) => (
+            <article className="mp-factor" key={i}>
+              <div className="mp-factor-num">{String(i+1).padStart(2,'0')}</div>
+              <div className="mp-factor-h">{f.h}</div>
+              <div className="mp-factor-d">{f.d}</div>
+            </article>
+          ))}
         </div>
-        <p className="fin-note" style={{opacity:.7, marginTop:12}}>72&nbsp;га «Чарыша» — в&nbsp;собственности, с&nbsp;ВРИ под&nbsp;туристическое обслуживание: земля уже переведена в&nbsp;категорию, которая в&nbsp;Горном Алтае стоит на&nbsp;порядок дороже сельхозной.</p>
-        <div className="fin-photos">
-          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/web/altai-manzherok.jpg')"}}><div className="fin-photo-cap">Манжерок · Республика Алтай</div></div>
-          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/web/altai-teletskoye.jpg')"}}><div className="fin-photo-cap">Телецкое озеро · Горный Алтай</div></div>
-          <div className="fin-photo" style={{backgroundImage:"url('assets/photo/web/river-summer.jpg')"}}><div className="fin-photo-cap">Чарыш · тупиковая долина</div></div>
-        </div>
-        <SrcList keys={['tolkRA','iz','belo','gov','restateRA','erz','cian','altaika','cianAgriRA','cianChemal','cianComm','fontanka','cianUymon','cianCh','altera']}/>
+        <SrcList keys={['cianCh','cianAgriRA','cianUymon','cianComm','tolkRA','belo','pdf']}/>
       </div>
     </section>
   );
