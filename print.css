@@ -382,3 +382,197 @@ body.printing #place .place-gallery-cell:first-child {
   max-width: 70% !important;
   margin: 0 auto !important;
 }
+
+/* ─── АВТО: десктопные сетки в печати (Chrome печатает A4 landscape с viewport ≈ 842px, ─── */
+/* ─── и срабатывают мобильные брейкпоинты). Сгенерировано scratch/printfix.cjs.          ─── */
+@media print {
+  .site-nav { display: flex !important; }
+  .hero-B .hero-split-grid { grid-template-columns: 1.1fr 1fr !important; }
+  .hero-collage-grid { grid-template-columns: 1fr 1.2fr !important; }
+  .manifest-grid { grid-template-columns: 1fr 1.1fr !important; }
+  .format-pair { grid-template-columns: 1fr 1fr !important; }
+  .climate-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .nature-strip { grid-template-columns: repeat(4, 1fr) !important; }
+  .houses-grid { grid-template-columns: repeat(4, 1fr) !important; }
+  .houses-head { grid-template-columns: 1fr 1.4fr !important; }
+  .card-house-lg { grid-template-columns: 1.05fr 1fr !important; }
+  .houses-spread-grid { grid-template-columns: 1fr 1fr !important; }
+  .market-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .road-head { grid-template-columns: 1fr 1.4fr !important; }
+  .road-line { grid-template-columns: auto 1fr auto 1fr auto !important; }
+  .team-grid { grid-template-columns: repeat(5, 1fr) !important; }
+  .comm-head { grid-template-columns: 1fr 1.4fr !important; }
+  .timeline { grid-template-columns: repeat(4, 1fr) !important; }
+  .gallery-grid { grid-template-columns: 2fr 1fr 1fr !important; }
+  .g-1 { grid-column: span 2 !important; }
+  .g-4 { grid-column: span 2 !important; }
+  .g-7 { grid-column: span 2 !important; }
+  .g-9 { grid-column: span 1 !important; }
+  .g-10 { grid-column: span 2 !important; }
+  .tours-grid { grid-template-columns: 1fr 1fr !important; }
+  .form-grid { grid-template-columns: 1fr 1.2fr !important; }
+  .footer-row { grid-template-columns: 1fr 2fr !important; }
+  .footer-cols { grid-template-columns: repeat(3,1fr) !important; }
+  .place-gallery { grid-template-columns: 1fr 1fr 1fr !important; }
+  .place-gallery > :nth-child(1) { grid-column: span 3 !important; }
+  .place-gallery-ph { aspect-ratio: 4/3 !important; }
+  .place-gallery > :nth-child(1) .place-gallery-ph { aspect-ratio: 21/8 !important; }
+  .pc-dna-photo-strip { grid-template-columns: repeat(4, 1fr) !important; }
+  .pc-dna-hero-ph { aspect-ratio: 21 / 9 !important; }
+  .pc-dna-product-strip { grid-template-columns: repeat(3, 1fr) !important; }
+  .pc-dna-founders { grid-template-columns: repeat(3, 1fr) !important; }
+  .pc-dna-pair { grid-template-columns: 1fr 1fr !important; }
+  .pc-family-grid { grid-template-columns: 1fr 1fr !important; }
+  .pc-family-stats { grid-template-columns: repeat(4, 1fr) !important; }
+  .pc-trends-key { grid-template-columns: repeat(3, 1fr) !important; }
+  .pc-trends-main12 { grid-template-columns: repeat(4, 1fr) !important; }
+  .pc-final-contacts { grid-template-columns: 1fr 1fr !important; }
+  .pc-bigaltai-hero-duo { grid-template-columns: 1fr 1fr !important; }
+  .pc-bigaltai-flagships-grid { grid-template-columns: repeat(7, 1fr) !important; }
+  .pc-bigaltai-def { grid-template-columns: repeat(3, 1fr) !important; }
+  .pc-bigaltai-stats { grid-template-columns: repeat(3, 1fr) !important; }
+  .pc-reality-math { grid-template-columns: repeat(5, 1fr) !important; }
+  .pc-scenarios-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .pc-money-row { grid-template-columns: 1.4fr 1fr 1fr 1.2fr !important; }
+  .pc-speaker-grid { grid-template-columns: 0.9fr 1.2fr !important; }
+  .pc-speaker-tag-group { grid-template-columns: 160px 1fr !important; }
+  .pc-location-grid { grid-template-columns: repeat(4, 1fr) !important; }
+  .pc-location-narrative { grid-template-columns: 1fr 1fr !important; }
+  .pc-sectors-grid { grid-template-columns: repeat(6, 1fr) !important; }
+  .pc-mp-detail-grid { grid-template-columns: 1fr 1fr !important; }
+  .pc-mp-block { grid-template-columns: 110px 1fr !important; }
+  .pc-arch-strip { grid-template-columns: repeat(4, 1fr) !important; }
+  .pc-seasons-grid { grid-template-columns: repeat(4, 1fr) !important; }
+  .pc-residents-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .pc-security-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .pc-pillars-hero { aspect-ratio: 21 / 7 !important; }
+  .pc-pillars-grid { grid-template-columns: repeat(5, 1fr) !important; }
+  .pc-cop-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .pc-legal-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .pc-roadmap-grid { grid-template-columns: repeat(4, 1fr) !important; }
+  .pc-team-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .pc-amb-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .pc-bonus-tours { grid-template-columns: 1fr 1fr !important; }
+  .pc-bonus-grid { grid-template-columns: repeat(4, 1fr) !important; }
+  .pc-people-grid { grid-template-columns: repeat(6, 1fr) !important; }
+  .pc-people-fig-hero { grid-column: span 4 !important; }
+  .pc-people-fig-2 { grid-column: span 2 !important; }
+  .pc-people-fig-3 { grid-column: span 2 !important; }
+  .pc-people-fig-4 { grid-column: span 2 !important; }
+  .pc-people-fig-5 { grid-column: span 2 !important; }
+  .pc-people-fig-6 { grid-column: span 2 !important; }
+  .pc-people-fig-7 { grid-column: span 4 !important; }
+  .pc-poster-grid { grid-template-columns: repeat(4, 1fr) !important; }
+  .pc-activities-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .pc-residents-strip { grid-template-columns: repeat(4, 1fr) !important; }
+  .pc-built-strip { grid-template-columns: repeat(4, 1fr) !important; }
+  .pc-eras-grid { grid-template-columns: repeat(4, 1fr) !important; }
+  .pc-forms-grid { grid-template-columns: repeat(4, 1fr) !important; }
+  .pc-object-card { grid-template-columns: 1.05fr 1fr !important; }
+  .pc-objects-grid { grid-template-columns: 1fr 1fr !important; }
+  .pc-construction-grid { grid-template-columns: 1fr 1fr !important; }
+  .pc-construction-foot-grid { grid-template-columns: repeat(4, 1fr) !important; }
+  .pc-announce-grid { grid-template-columns: repeat(4, 1fr) !important; }
+  .pc-retreat-card-full { grid-template-columns: 1.4fr 1fr !important; }
+  .pc-retreat-showcase { grid-template-columns: repeat(6, 1fr) !important; }
+  .pc-retreat-card-hero { grid-column: span 4 !important; }
+  .pc-retreat-card-hero .pc-retreat-photo { aspect-ratio: 16/9 !important; }
+  .pc-retreat-card-wide { grid-column: span 2 !important; }
+  .pc-retreat-card-wide .pc-retreat-photo { aspect-ratio: 4/5 !important; }
+  .pc-retreat-card-std { grid-column: span 3 !important; }
+  .pc-equity-gallery { grid-template-columns: repeat(6, 1fr) !important; }
+  .pc-equity-fig-1 { grid-column: span 4 !important; }
+  .pc-equity-fig-2 { grid-column: span 2 !important; }
+  .pc-equity-fig-3 { grid-column: span 3 !important; }
+  .pc-equity-fig-4 { grid-column: span 3 !important; }
+  .pc-equity-fig-5 { grid-column: span 3 !important; }
+  .pc-equity-fig-6 { grid-column: span 3 !important; }
+  .pc-equity-objects { grid-template-columns: repeat(3, 1fr) !important; }
+  .pc-equity-objects-2x2 { grid-template-columns: 1fr 1fr !important; }
+  .pc-equity-list-2col { grid-template-columns: 1fr 1fr !important; }
+  .pc-equity-composition-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .bb-events { grid-template-columns: 1.1fr 1fr !important; }
+  .fin-cards { grid-template-columns: repeat(5, 1fr) !important; }
+  .fin-risks { grid-template-columns: repeat(5, 1fr) !important; }
+  .fin-metrics { grid-template-columns: repeat(4, 1fr) !important; }
+  .fin-bar-legend { grid-template-columns: repeat(4, 1fr) !important; }
+  .fin-two { grid-template-columns: 1.1fr 1fr !important; }
+  .fin-two-rev { grid-template-columns: 1fr 1.2fr !important; }
+  .fin-two-eq { grid-template-columns: 1fr 1fr !important; }
+  .fin-phases { grid-template-columns: 1fr 1fr !important; }
+  .fin-tickets { grid-template-columns: repeat(3, 1fr) !important; }
+  .fin-src { columns: 3 !important; }
+  .fin-metrics-2 { grid-template-columns: 1fr 1fr !important; }
+  .fin-dl-row { grid-template-columns: 15ch 1fr !important; }
+  .fin-land { grid-template-columns: 1fr 2.4fr !important; }
+  .fin-land-stats { flex-direction: column !important; }
+  .fin-product { grid-template-columns: repeat(3, 1fr) !important; }
+  .fin-photos { grid-template-columns: repeat(3, 1fr) !important; }
+  .fin-keymap { grid-template-columns: 1.55fr 1fr !important; }
+  .fin-offer-figs { grid-template-columns: 1fr 1fr !important; }
+  .fin-demand { grid-template-columns: 1.7fr 1fr !important; }
+  .fin-offer-figs-3 { grid-template-columns: repeat(3, 1fr) !important; }
+  .fin-demand-photos .fin-photo { aspect-ratio: auto !important; }
+  .mp-sber { flex-direction: row !important; }
+  .mp-budget { grid-template-columns: repeat(4, 1fr) !important; }
+  .mp-villa { grid-template-columns: 2fr 1fr !important; }
+  .mp-villa-side { flex-direction: column !important; }
+  .mp-money-grid { grid-template-columns: repeat(3, 1fr) !important; }
+}
+body.printing-desktop { }
+
+/* ─── Тяжёлые по фото секции: в печати расширение контейнера растит фото пропорционально, ─── */
+/* ─── и масштаб упирается в MIN_SCALE. Делаем раскладку компактнее только для печати.     ─── */
+@media print, screen {
+  body.printing #nature .place-gallery,
+  body.printing #place .place-gallery { grid-template-columns: repeat(4, 1fr) !important; gap: 10px !important; margin-bottom: 24px !important; }
+  body.printing #nature .place-gallery > :nth-child(1),
+  body.printing #place .place-gallery > :nth-child(1) { grid-column: auto !important; }
+  body.printing #nature .place-gallery-ph,
+  body.printing #place .place-gallery-ph { aspect-ratio: 4/3 !important; }
+  body.printing .pc-team-grid { grid-template-columns: repeat(6, 1fr) !important; gap: 14px !important; }
+  body.printing .pc-team-grid .team-d { font-size: 11px !important; }
+  body.printing .pc-team-grid .team-name { font-size: 17px !important; }
+  body.printing #activities .pc-activities-grid { grid-template-columns: repeat(5, 1fr) !important; gap: 12px !important; }
+  body.printing #activities .pc-activity-photo { aspect-ratio: 16/9 !important; }
+  body.printing #activities .pc-activity-list { font-size: 11px !important; }
+  body.printing #activities .bb-events { margin-top: 24px !important; }
+}
+@media print {
+  #nature .place-gallery, #place .place-gallery { grid-template-columns: repeat(4, 1fr) !important; gap: 10px !important; margin-bottom: 24px !important; }
+  #nature .place-gallery > :nth-child(1), #place .place-gallery > :nth-child(1) { grid-column: auto !important; }
+  #nature .place-gallery-ph, #place .place-gallery-ph { aspect-ratio: 4/3 !important; }
+  .pc-team-grid { grid-template-columns: repeat(6, 1fr) !important; gap: 14px !important; }
+  .pc-team-grid .team-d { font-size: 11px !important; }
+  .pc-team-grid .team-name { font-size: 17px !important; }
+  #activities .pc-activities-grid { grid-template-columns: repeat(5, 1fr) !important; gap: 12px !important; }
+  #activities .pc-activity-photo { aspect-ratio: 16/9 !important; }
+  #activities .pc-activity-list { font-size: 11px !important; }
+  #activities .bb-events { margin-top: 24px !important; }
+}
+
+/* ─── Компактнее в печати: пустые высокие ячейки цифр и фото-полосы под рендером ─── */
+@media print, screen {
+  body.printing .climate-cell { min-height: 0 !important; padding: 16px 16px 14px !important; }
+  body.printing #complex .fin-photo { aspect-ratio: 21/9 !important; }
+  body.printing #complex .fin-list li, body.printing #complex .format-h { font-size: 15px !important; }
+}
+@media print {
+  .climate-cell { min-height: 0 !important; padding: 16px 16px 14px !important; }
+  #complex .fin-photo { aspect-ratio: 21/9 !important; }
+  #complex .fin-list li, #complex .format-h { font-size: 15px !important; }
+}
+
+/* ─── Печать: карта и большой рендер не должны задавать высоту всего слайда ─── */
+@media print, screen {
+  body.printing .fin-map img { max-height: 340px !important; width: auto !important; margin: 0 auto !important; }
+  body.printing .fin-keymap { align-items: start !important; }
+  body.printing #complex .pc-mp-render-fig img { max-height: 330px !important; width: 100% !important; object-fit: cover !important; }
+  body.printing #shares .pc-mp-render-fig img { max-height: 330px !important; width: 100% !important; object-fit: cover !important; }
+}
+@media print {
+  .fin-map img { max-height: 340px !important; width: auto !important; margin: 0 auto !important; }
+  .fin-keymap { align-items: start !important; }
+  #complex .pc-mp-render-fig img { max-height: 330px !important; width: 100% !important; object-fit: cover !important; }
+  #shares .pc-mp-render-fig img { max-height: 330px !important; width: 100% !important; object-fit: cover !important; }
+}

@@ -31,7 +31,7 @@ goto :done
 
 :export
 echo Exporting %1.html  ^>  exports\%1.pdf
-"%CHROME%" --headless=new --disable-gpu --no-sandbox ^
+"%CHROME%" --headless=new --disable-gpu --no-sandbox --window-size=1123,790 ^
   --user-data-dir="%PROFILE%" ^
   --print-to-pdf="%OUT%\%1.pdf" ^
   --no-pdf-header-footer --hide-scrollbars ^
@@ -42,7 +42,7 @@ exit /b
 
 :exportdir
 echo Exporting %1/index.html  ^>  exports%1.pdf
-"%CHROME%" --headless=new --disable-gpu --no-sandbox ^
+"%CHROME%" --headless=new --disable-gpu --no-sandbox --window-size=1123,790 ^
   --user-data-dir="%PROFILE%" ^
   --print-to-pdf="%OUT%%1.pdf" ^
   --no-pdf-header-footer --hide-scrollbars ^
