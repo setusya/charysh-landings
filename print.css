@@ -618,8 +618,11 @@ body.mipif.printing .mp-factor-h { font-size: 15px !important; }
 body.mipif.printing .mp-factor-d { font-size: 11px !important; }
 body.mipif.printing #nature .place-gallery { grid-template-columns: repeat(7, 1fr) !important; gap: 6px !important; margin-bottom: 12px !important; }
 body.mipif.printing #nature .place-gallery > :nth-child(1) { grid-column: auto !important; }
-body.mipif.printing #nature .place-gallery-ph { aspect-ratio: 1 !important; }
-body.mipif.printing #nature .place-gallery-cap { font-size: 9px !important; }
+body.mipif.printing #nature .place-gallery-ph { aspect-ratio: 3/4 !important; }
+body.mipif.printing #nature .place-gallery-cap { font-size: 10px !important; }
+body.mipif.printing .mp-nature-facts .fin-metric { padding: 18px 14px !important; }
+body.mipif.printing .mp-nature-facts .fin-metric-v { font-size: 32px !important; }
+body.mipif.printing .mp-nature-facts .fin-metric-l { font-size: 13px !important; }
 body.mipif.printing .mp-nature-facts { grid-template-columns: repeat(6, 1fr) !important; }
 body.mipif.printing .fin-metric { padding: 10px 12px !important; gap: 3px !important; }
 body.mipif.printing .fin-metric-v { font-size: 26px !important; }
@@ -696,8 +699,11 @@ body.mipif.printing .pc-final-lead { font-size: 13px !important; }
   body.mipif .mp-factor-d { font-size: 11px !important; }
   body.mipif #nature .place-gallery { grid-template-columns: repeat(7, 1fr) !important; gap: 6px !important; margin-bottom: 12px !important; }
   body.mipif #nature .place-gallery > :nth-child(1) { grid-column: auto !important; }
-  body.mipif #nature .place-gallery-ph { aspect-ratio: 1 !important; }
-  body.mipif #nature .place-gallery-cap { font-size: 9px !important; }
+  body.mipif #nature .place-gallery-ph { aspect-ratio: 3/4 !important; }
+  body.mipif #nature .place-gallery-cap { font-size: 10px !important; }
+  body.mipif .mp-nature-facts .fin-metric { padding: 18px 14px !important; }
+  body.mipif .mp-nature-facts .fin-metric-v { font-size: 32px !important; }
+  body.mipif .mp-nature-facts .fin-metric-l { font-size: 13px !important; }
   body.mipif .mp-nature-facts { grid-template-columns: repeat(6, 1fr) !important; }
   body.mipif .fin-metric { padding: 10px 12px !important; gap: 3px !important; }
   body.mipif .fin-metric-v { font-size: 26px !important; }
