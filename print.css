@@ -586,3 +586,161 @@ body.printing-desktop { }
   .pc-team-grid { grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)) !important; }
   .mp-masterplan img { max-height: 360px !important; }
 }
+
+/* ─── МИПИФ: компактный режим печати (масштаб слайда не ниже ~0.75, шрифт читаемый). Источник: scratch mipif-print.txt ─── */
+body.mipif.printing .sec-pad { padding: 30px 0 26px !important; }
+body.mipif.printing section > .container { padding-left: 24px !important; padding-right: 24px !important; }
+body.mipif.printing .comm-head { display: block !important; margin-bottom: 12px !important; }
+body.mipif.printing .comm-head h2 { font-size: 30px !important; line-height: 1.08 !important; margin: 6px 0 0 !important; }
+body.mipif.printing .comm-head .crumb { font-size: 10px !important; }
+body.mipif.printing .fin-photos { gap: 10px !important; margin-top: 12px !important; }
+body.mipif.printing .fin-photo { aspect-ratio: 3/1 !important; }
+body.mipif.printing .fin-photo-cap { font-size: 10px !important; padding: 14px 8px 6px !important; }
+body.mipif.printing .fin-note { margin-top: 10px !important; font-size: 12px !important; }
+body.mipif.printing .fin-src-wrap { margin-top: 8px !important; padding-top: 5px !important; }
+body.mipif.printing .fin-src { font-size: 7px !important; line-height: 1.3 !important; }
+body.mipif.printing .fin-src-h { font-size: 7px !important; }
+body.mipif.printing .mp-disclaimer { margin-top: 8px !important; font-size: 9px !important; }
+body.mipif.printing .fin-key-grid .climate-cell, .mp-budget .climate-cell { padding: 10px 12px 8px !important; gap: 2px !important; }
+body.mipif.printing .climate-value { font-size: 30px !important; margin-top: 2px !important; }
+body.mipif.printing .climate-label { font-size: 12px !important; }
+body.mipif.printing .climate-sub { font-size: 10px !important; }
+body.mipif.printing #charysh .fin-map img { max-height: 230px !important; }
+body.mipif.printing #charysh .fin-map { padding: 8px !important; }
+body.mipif.printing .mp-under { gap: 8px !important; }
+body.mipif.printing .mp-under .fin-land-stat { padding: 8px 10px !important; }
+body.mipif.printing .fin-land-stat-v { font-size: 26px !important; }
+body.mipif.printing .fin-land-stat-l { font-size: 12px !important; margin-top: 3px !important; }
+body.mipif.printing .fin-land-stat-sub { font-size: 10px !important; margin-top: 2px !important; }
+body.mipif.printing .mp-factors { grid-template-columns: repeat(5, 1fr) !important; }
+body.mipif.printing .mp-factor { padding: 8px 10px !important; gap: 2px !important; }
+body.mipif.printing .mp-factor-h { font-size: 15px !important; }
+body.mipif.printing .mp-factor-d { font-size: 11px !important; }
+body.mipif.printing #nature .place-gallery { grid-template-columns: repeat(7, 1fr) !important; gap: 6px !important; margin-bottom: 12px !important; }
+body.mipif.printing #nature .place-gallery > :nth-child(1) { grid-column: auto !important; }
+body.mipif.printing #nature .place-gallery-ph { aspect-ratio: 1 !important; }
+body.mipif.printing #nature .place-gallery-cap { font-size: 9px !important; }
+body.mipif.printing .mp-nature-facts { grid-template-columns: repeat(6, 1fr) !important; }
+body.mipif.printing .fin-metric { padding: 10px 12px !important; gap: 3px !important; }
+body.mipif.printing .fin-metric-v { font-size: 26px !important; }
+body.mipif.printing .fin-metric-l { font-size: 11px !important; }
+body.mipif.printing .fin-metric-sub { font-size: 9px !important; }
+body.mipif.printing .fin-metrics { margin-top: 12px !important; }
+body.mipif.printing #life .pc-activities-grid { grid-template-columns: repeat(6, 1fr) !important; gap: 8px !important; }
+body.mipif.printing #life .pc-activity-photo { aspect-ratio: 4/3 !important; }
+body.mipif.printing #life .pc-activity-body { padding: 8px 10px !important; }
+body.mipif.printing #life .pc-activity-tag { font-size: 11px !important; }
+body.mipif.printing #life .fin-card-d { font-size: 11px !important; line-height: 1.35 !important; }
+body.mipif.printing #life .lead { display: none !important; }
+body.mipif.printing #complex .mp-masterplan img { max-height: 290px !important; }
+body.mipif.printing #complex .fin-two-eq { margin-top: 12px !important; gap: 24px !important; }
+body.mipif.printing .fin-list li { font-size: 12px !important; line-height: 1.35 !important; }
+body.mipif.printing .format-h { font-size: 11px !important; }
+body.mipif.printing #architecture .mp-masterplan img { max-height: 240px !important; }
+body.mipif.printing .mp-arch-list { margin-top: 10px !important; }
+body.mipif.printing .mp-arch-list li { font-size: 12px !important; }
+body.mipif.printing .fin-exit-block { padding: 12px 16px !important; }
+body.mipif.printing .fin-ticket-h { font-size: 22px !important; }
+body.mipif.printing .fin-dl { margin-top: 8px !important; }
+body.mipif.printing .fin-dl-row { padding: 5px 0 !important; font-size: 12px !important; grid-template-columns: 12ch 1fr !important; gap: 10px !important; }
+body.mipif.printing .fin-dl-row dt { font-size: 9px !important; }
+body.mipif.printing #shares .pc-mp-render-fig img { max-height: 320px !important; width: 100% !important; object-fit: cover !important; }
+body.mipif.printing .mp-villa { grid-template-columns: 1.7fr 1fr !important; gap: 10px !important; }
+body.mipif.printing .mp-villa-main img { aspect-ratio: 21/9 !important; max-height: 250px !important; }
+body.mipif.printing .mp-villa-side { flex-direction: column !important; gap: 10px !important; }
+body.mipif.printing .mp-villa-side img { flex: 0 0 120px !important; height: 120px !important; object-fit: cover !important; }
+body.mipif.printing .mp-villa { align-items: start !important; }
+body.mipif.printing #villa .fin-two-eq { margin-top: 12px !important; gap: 16px !important; }
+body.mipif.printing .mp-money-grid { grid-template-columns: repeat(5, 1fr) !important; gap: 6px !important; margin-top: 8px !important; }
+body.mipif.printing .mp-money { padding: 8px 6px !important; }
+body.mipif.printing .mp-money-v { font-size: 22px !important; }
+body.mipif.printing .mp-money-l { font-size: 9px !important; }
+body.mipif.printing .fin-risks { grid-template-columns: repeat(5, 1fr) !important; }
+body.mipif.printing .fin-risk { padding: 10px 12px !important; min-height: 0 !important; gap: 4px !important; }
+body.mipif.printing .fin-risk-r { font-size: 16px !important; }
+body.mipif.printing .fin-risk-h { font-size: 11px !important; }
+body.mipif.printing .pc-team-grid { grid-template-columns: repeat(6, 1fr) !important; gap: 12px !important; }
+body.mipif.printing .pc-team-grid .team-d { font-size: 10px !important; }
+body.mipif.printing .pc-team-grid .team-name { font-size: 15px !important; }
+body.mipif.printing .pc-team-grid .team-role { font-size: 9px !important; }
+body.mipif.printing #team .lead { font-size: 12px !important; margin-bottom: 14px !important; }
+body.mipif.printing .pc-final-lead { font-size: 13px !important; }
+@media print {
+  body.mipif .sec-pad { padding: 30px 0 26px !important; }
+  body.mipif section > .container { padding-left: 24px !important; padding-right: 24px !important; }
+  body.mipif .comm-head { display: block !important; margin-bottom: 12px !important; }
+  body.mipif .comm-head h2 { font-size: 30px !important; line-height: 1.08 !important; margin: 6px 0 0 !important; }
+  body.mipif .comm-head .crumb { font-size: 10px !important; }
+  body.mipif .fin-photos { gap: 10px !important; margin-top: 12px !important; }
+  body.mipif .fin-photo { aspect-ratio: 3/1 !important; }
+  body.mipif .fin-photo-cap { font-size: 10px !important; padding: 14px 8px 6px !important; }
+  body.mipif .fin-note { margin-top: 10px !important; font-size: 12px !important; }
+  body.mipif .fin-src-wrap { margin-top: 8px !important; padding-top: 5px !important; }
+  body.mipif .fin-src { font-size: 7px !important; line-height: 1.3 !important; }
+  body.mipif .fin-src-h { font-size: 7px !important; }
+  body.mipif .mp-disclaimer { margin-top: 8px !important; font-size: 9px !important; }
+  body.mipif .fin-key-grid .climate-cell, .mp-budget .climate-cell { padding: 10px 12px 8px !important; gap: 2px !important; }
+  body.mipif .climate-value { font-size: 30px !important; margin-top: 2px !important; }
+  body.mipif .climate-label { font-size: 12px !important; }
+  body.mipif .climate-sub { font-size: 10px !important; }
+  body.mipif #charysh .fin-map img { max-height: 230px !important; }
+  body.mipif #charysh .fin-map { padding: 8px !important; }
+  body.mipif .mp-under { gap: 8px !important; }
+  body.mipif .mp-under .fin-land-stat { padding: 8px 10px !important; }
+  body.mipif .fin-land-stat-v { font-size: 26px !important; }
+  body.mipif .fin-land-stat-l { font-size: 12px !important; margin-top: 3px !important; }
+  body.mipif .fin-land-stat-sub { font-size: 10px !important; margin-top: 2px !important; }
+  body.mipif .mp-factors { grid-template-columns: repeat(5, 1fr) !important; }
+  body.mipif .mp-factor { padding: 8px 10px !important; gap: 2px !important; }
+  body.mipif .mp-factor-h { font-size: 15px !important; }
+  body.mipif .mp-factor-d { font-size: 11px !important; }
+  body.mipif #nature .place-gallery { grid-template-columns: repeat(7, 1fr) !important; gap: 6px !important; margin-bottom: 12px !important; }
+  body.mipif #nature .place-gallery > :nth-child(1) { grid-column: auto !important; }
+  body.mipif #nature .place-gallery-ph { aspect-ratio: 1 !important; }
+  body.mipif #nature .place-gallery-cap { font-size: 9px !important; }
+  body.mipif .mp-nature-facts { grid-template-columns: repeat(6, 1fr) !important; }
+  body.mipif .fin-metric { padding: 10px 12px !important; gap: 3px !important; }
+  body.mipif .fin-metric-v { font-size: 26px !important; }
+  body.mipif .fin-metric-l { font-size: 11px !important; }
+  body.mipif .fin-metric-sub { font-size: 9px !important; }
+  body.mipif .fin-metrics { margin-top: 12px !important; }
+  body.mipif #life .pc-activities-grid { grid-template-columns: repeat(6, 1fr) !important; gap: 8px !important; }
+  body.mipif #life .pc-activity-photo { aspect-ratio: 4/3 !important; }
+  body.mipif #life .pc-activity-body { padding: 8px 10px !important; }
+  body.mipif #life .pc-activity-tag { font-size: 11px !important; }
+  body.mipif #life .fin-card-d { font-size: 11px !important; line-height: 1.35 !important; }
+  body.mipif #life .lead { display: none !important; }
+  body.mipif #complex .mp-masterplan img { max-height: 290px !important; }
+  body.mipif #complex .fin-two-eq { margin-top: 12px !important; gap: 24px !important; }
+  body.mipif .fin-list li { font-size: 12px !important; line-height: 1.35 !important; }
+  body.mipif .format-h { font-size: 11px !important; }
+  body.mipif #architecture .mp-masterplan img { max-height: 240px !important; }
+  body.mipif .mp-arch-list { margin-top: 10px !important; }
+  body.mipif .mp-arch-list li { font-size: 12px !important; }
+  body.mipif .fin-exit-block { padding: 12px 16px !important; }
+  body.mipif .fin-ticket-h { font-size: 22px !important; }
+  body.mipif .fin-dl { margin-top: 8px !important; }
+  body.mipif .fin-dl-row { padding: 5px 0 !important; font-size: 12px !important; grid-template-columns: 12ch 1fr !important; gap: 10px !important; }
+  body.mipif .fin-dl-row dt { font-size: 9px !important; }
+  body.mipif #shares .pc-mp-render-fig img { max-height: 320px !important; width: 100% !important; object-fit: cover !important; }
+  body.mipif .mp-villa { grid-template-columns: 1.7fr 1fr !important; gap: 10px !important; }
+  body.mipif .mp-villa-main img { aspect-ratio: 21/9 !important; max-height: 250px !important; }
+  body.mipif .mp-villa-side { flex-direction: column !important; gap: 10px !important; }
+  body.mipif .mp-villa-side img { flex: 0 0 120px !important; height: 120px !important; object-fit: cover !important; }
+  body.mipif .mp-villa { align-items: start !important; }
+  body.mipif #villa .fin-two-eq { margin-top: 12px !important; gap: 16px !important; }
+  body.mipif .mp-money-grid { grid-template-columns: repeat(5, 1fr) !important; gap: 6px !important; margin-top: 8px !important; }
+  body.mipif .mp-money { padding: 8px 6px !important; }
+  body.mipif .mp-money-v { font-size: 22px !important; }
+  body.mipif .mp-money-l { font-size: 9px !important; }
+  body.mipif .fin-risks { grid-template-columns: repeat(5, 1fr) !important; }
+  body.mipif .fin-risk { padding: 10px 12px !important; min-height: 0 !important; gap: 4px !important; }
+  body.mipif .fin-risk-r { font-size: 16px !important; }
+  body.mipif .fin-risk-h { font-size: 11px !important; }
+  body.mipif .pc-team-grid { grid-template-columns: repeat(6, 1fr) !important; gap: 12px !important; }
+  body.mipif .pc-team-grid .team-d { font-size: 10px !important; }
+  body.mipif .pc-team-grid .team-name { font-size: 15px !important; }
+  body.mipif .pc-team-grid .team-role { font-size: 9px !important; }
+  body.mipif #team .lead { font-size: 12px !important; margin-bottom: 14px !important; }
+  body.mipif .pc-final-lead { font-size: 13px !important; }
+}
