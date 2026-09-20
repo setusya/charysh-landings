@@ -13,7 +13,7 @@ const CH_SOURCES = {
   gov:    { n: 8,  t: 'Отчёт губернатора Алтайского края, 28.05.2026: турпоток 2,4 млн, инвестиции в отрасль +51% за год', u: 'https://altai.rnews.ru/20260528/39389371.html' },
   barn:   { n: 9,  t: 'Barn Estate, 05.03.2026: курортная недвижимость Алтая подорожала в 7 раз за 2015–2025', u: 'https://barn-estate.ru/media/blog/kurortnaya-nedvizhimost-altaya/' },
   belo:   { n: 10, t: 'Толк, 10.04.2026 и 10.09.2025: санатории Белокурихи — загрузка 68% в 2024, летом 2025 свыше 100%', u: 'https://tolknews.ru/ekonomika/214481-skolko-zarabotali-sanatorii-altayskogo-kraya-i-belokurihi-v-godu' },
-  cianCh: { n: 11, t: 'Циан, сентябрь 2026: объявления о продаже участков в Чарышском районе', u: 'https://barnaul.cian.ru/kupit-zemelniy-uchastok-altayskiy-kray-charyshskiy-rayon/' },
+  cianCh: { n: 11, t: 'Циан, 2026: сельхозземля в Чарышском районе — Бащелак 100 тыс ₽/га (3000 га), Сентелек 15,7 га от 1,1 млн ₽ (≈70 тыс ₽/га); 12 га под турбазу у реки', u: 'https://barnaul.cian.ru/kupit-zemelniy-uchastok-altayskiy-kray-charyshskiy-rayon/' },
   raGov:  { n: 12, t: 'Правительство Республики Алтай: 29 туристических проектов на 188 млрд ₽', u: 'https://altai-republic.ru/tourism/development/' },
   kuz:    { n: 13, t: 'Шория Град (девелопер, Шерегеш): курортная недвижимость +15–25% в год против 5–8% в мегаполисах', u: 'https://shoriya-grad42.ru/articles/pochemu-kurortnaya-nedvizhimost-budet-dorozhat-2026-2030/' },
   pdf:    { n: 14, t: 'Финансовая модель проекта «Чарыш», расширенная версия, А. Маслак, 2026 — по методике Туризм.РФ', u: null },
@@ -23,8 +23,11 @@ const CH_SOURCES = {
   cianChemal: { n: 18, t: 'Циан, 2026: участки в с. Чемал — 150–370 тыс ₽ за сотку', u: 'https://gorno-altaysk.cian.ru/kupit-zemelniy-uchastok-altay-chemalskiy-rayon-chemal-01164369/' },
   fontanka: { n: 19, t: 'Фонтанка, 06.07.2025, репортаж из Манжерока: 10 соток куплены за 500 тыс ₽ (2020), выставлены за 20 млн ₽; сделка 10 соток за 6 млн ₽; у озера — 25–35 млн ₽ за участок', u: 'https://www.fontanka.ru/2025/07/06/75680126/' },
   altaika: { n: 20, t: 'Каталог altaika.narod.ru (2010-е): земля в Усть-Коксинском районе — 90–550 тыс ₽ за гектар, то есть 0,9–5,5 тыс ₽ за сотку', u: 'https://altaika.narod.ru/land/ust-koksa.html' },
-  cianUymon: { n: 21, t: 'Циан, 2026: Усть-Коксинский район, с. Тихонькая — 32,6 тыс ₽/сотка; предложения до 100 тыс ₽/сотка', u: 'https://gorno-altaysk.cian.ru/kupit-zemelniy-uchastok-altay-ust-koksinskiy-rayon/' },
-  zov:    { n: 22, t: 'Архитектурное бюро ЗОВ, Санкт-Петербург, с 2016 — рендеры из портфолио бюро', u: 'https://zovarchitect.ru/' },
+  cianUymon: { n: 21, t: 'Циан, 2026: сельхозземля в Уймонской долине — пашня у с. Октябрьское 250 тыс ₽/га, участок 12 га — 800 тыс ₽/га', u: 'https://gorno-altaysk.cian.ru/kupit-zemelniy-uchastok-altay-ust-koksinskiy-rayon/' },
+  zov:    { n: 22, t: 'Бюро ЗОВ — эскизный проект гостиниц на 8 номеров для курорта «Чарыш» (тип 1 и тип 2), 2026', u: 'https://zovarchitect.ru/' },
+  cianAgriRA: { n: 24, t: 'Циан, 2026: сельхозземля в Чемальском районе — Верх-Анос от 352 тыс ₽, Еланда от 1,1 млн ₽; предложения по 350 тыс ₽ за гектар', u: 'https://gorno-altaysk.cian.ru/kupit-zemelniy-uchastok-selkhoz-naznacheniya-altay/' },
+  cianComm: { n: 25, t: 'Циан, коммерческие участки Республики Алтай, октябрь 2025: Барангол, первая линия Катуни, 1,25 га — промо-цена 1,85 млн ₽ за гектар', u: 'https://gorno-altaysk.cian.ru/kupit-kommercheskiy-uchastok-altay/' },
+  altera: { n: 26, t: 'Альтера Инвест, 2026: база отдыха «Лесная», с. Сентелек, Чарышский район — 24,9 млн ₽ (6 домов, баня, бассейн)', u: 'https://alterainvest.ru/bax/products/detail/16771572/' },
   unsplash: { n: 23, t: 'Фото СПА-купели — Unsplash (лицензия Unsplash, свободное использование)', u: 'https://unsplash.com/s/photos/mountain-spa-pool' },
 };
 window.CH_SOURCES = CH_SOURCES;

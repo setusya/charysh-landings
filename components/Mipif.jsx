@@ -60,12 +60,13 @@ function MpProof({ num = '03' } = {}) {
     { v: '>100%', l: 'загрузка санаториев Белокурихи летом 2025', sub: 'В среднем за 2024 год — 68% · Алтайский край: 2,4 млн гостей', src: 'belo,gov' },
     { v: '474 тыс ₽', l: 'средняя сотка в Республике Алтай, сентябрь 2026', sub: '+88% за 2024 год · дороже всего в Сибири', src: 'restateRA,erz,cian' },
   ];
-  // Сотка: «раньше» → «сейчас». Годы указаны по каждой строке — данных именно за 2016 по сёлам в открытых источниках нет.
+  // Сравнение по категориям земли: сельхозназначение и рекреация / туристическое обслуживание — за гектар.
+  // ИЖС в сравнение не входит. Все цифры — из объявлений и каталогов, год указан в каждой ячейке.
   const rows = [
-    { loc: 'Чемал · Чемальский район', then: '2008 · 27–86 тыс ₽', now: '2026 · 40–370 тыс ₽', dyn: '×4–5 · «за 7 лет — в 10 раз»', src: 'amic2008,altaiGold,cianChemal' },
-    { loc: 'Манжерок · у курорта', then: '2020 · 50 тыс ₽', now: '2025 · 600 тыс — 2 млн ₽', dyn: '×12–40 за пять лет', src: 'fontanka' },
-    { loc: 'Уймонская долина · Усть-Кокса', then: '2010-е · 1–5,5 тыс ₽ (наделы от 1 га)', now: '2026 · 33–100 тыс ₽', dyn: '×10 и выше', src: 'altaika,cianUymon' },
-    { loc: 'Чарыш · Чарышский район', then: 'до якорного инвестора', now: '2026 · ~25 тыс ₽ в селе · 1 тыс ₽ в крупных наделах', dyn: 'та же стадия, что Чемал и Манжерок 10 лет назад', src: 'cianCh', hl: true },
+    { loc: 'Чемальский район', agriThen: '2000-е · от 250 тыс ₽', agriNow: '2026 · от 350 тыс ₽', rec: '2026 · лоты под турбизнес в среднем 9,9 млн ₽, до 30 млн ₽ (участки 1–22 га)', src: 'altaika,cianAgriRA,cianChemal' },
+    { loc: 'Манжерок · Майминский район', agriThen: '—', agriNow: '—', rec: '2025 · 1,85 млн ₽/га — первая линия Катуни, Барангол; у озера Манжерок — 60 млн ₽/га (10 соток за 6 млн)', src: 'cianComm,fontanka' },
+    { loc: 'Уймонская долина · Усть-Кокса', agriThen: '2010-е · 90–550 тыс ₽', agriNow: '2026 · 250–800 тыс ₽', rec: '—', src: 'altaika,cianUymon' },
+    { loc: 'Чарышский район', agriThen: '—', agriNow: '2026 · 70–100 тыс ₽', rec: '2026 · действующая база «Лесная» в Сентелеке (6 домов, баня, бассейн) — 24,9 млн ₽; 12 га под турбазу у реки — по запросу', src: 'cianCh,altera', hl: true },
   ];
   return (
     <section className="sec-pad sec-dark pc-bigaltai" id="proof" data-screen-label="03 MIPIF — Proof">
@@ -88,30 +89,31 @@ function MpProof({ num = '03' } = {}) {
             </div>
           ))}
         </div>
-        <div className="fin-src-h" style={{fontSize:'var(--fs-eyebrow)', opacity:.6, margin:'28px 0 6px'}}>Цена сотки: раньше → сейчас</div>
+        <div className="fin-src-h" style={{fontSize:'var(--fs-eyebrow)', opacity:.6, margin:'28px 0 6px'}}>Цена земли за гектар — по категориям: сельхозназначение и рекреация · ИЖС не сравниваем</div>
         <div className="fin-table-wrap">
           <table className="fin-table fin-table-dark fin-table-compact mp-compare">
             <thead>
-              <tr><th>Локация</th><th>Раньше</th><th>Сейчас</th><th>Рост</th></tr>
+              <tr><th>Локация</th><th>Сельхоз · раньше</th><th>Сельхоз · сейчас</th><th>Рекреация / туристическое обслуживание</th></tr>
             </thead>
             <tbody>
               {rows.map((r, i) => (
                 <tr key={i} className={r.hl ? 'hl' : ''}>
                   <td className="fin-table-loc">{r.loc}</td>
-                  <td>{r.then}</td>
-                  <td className={r.hl ? 'hl-td' : ''}>{r.now}</td>
-                  <td className="fin-table-dyn">{r.dyn} <SrcRef k={r.src}/></td>
+                  <td>{r.agriThen}</td>
+                  <td className={r.hl ? 'hl-td' : ''}>{r.agriNow}</td>
+                  <td>{r.rec} <SrcRef k={r.src}/></td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
+        <p className="fin-note" style={{opacity:.7, marginTop:12}}>72&nbsp;га «Чарыша» — в&nbsp;собственности, с&nbsp;ВРИ под&nbsp;туристическое обслуживание: земля уже переведена в&nbsp;категорию, которая в&nbsp;Горном Алтае стоит на&nbsp;порядок дороже сельхозной.</p>
         <div className="fin-photos">
           <div className="fin-photo" style={{backgroundImage:"url('assets/photo/web/altai-manzherok.jpg')"}}><div className="fin-photo-cap">Манжерок · Республика Алтай</div></div>
           <div className="fin-photo" style={{backgroundImage:"url('assets/photo/web/altai-teletskoye.jpg')"}}><div className="fin-photo-cap">Телецкое озеро · Горный Алтай</div></div>
           <div className="fin-photo" style={{backgroundImage:"url('assets/photo/web/river-summer.jpg')"}}><div className="fin-photo-cap">Чарыш · тупиковая долина</div></div>
         </div>
-        <SrcList keys={['tolkRA','iz','belo','gov','restateRA','erz','cian','amic2008','altaiGold','cianChemal','fontanka','altaika','cianUymon','cianCh']}/>
+        <SrcList keys={['tolkRA','iz','belo','gov','restateRA','erz','cian','altaika','cianAgriRA','cianChemal','cianComm','fontanka','cianUymon','cianCh','altera']}/>
       </div>
     </section>
   );
@@ -222,10 +224,11 @@ function MpComplex({ num = '06' } = {}) {
     'Безбарьерная среда — для людей с ограниченными возможностями, роботов-доставщиков и сервисной логистики',
     'Дополнительное «жизненное пространство» на открытом воздухе и вид 360°',
   ];
+  // Эскизный проект гостиниц на 8 номеров для «Чарыша» — бюро ЗОВ (уплоады/Чарыш_эскизный_проект_гостиниц_на_8_номеров.pdf)
   const zov = [
-    { img: 'assets/photo/zov/glass-cabin.jpg', cap: 'Гостевой павильон · бюро ЗОВ' },
-    { img: 'assets/photo/zov/wood-cabin.jpg', cap: 'Дом на сваях у воды · бюро ЗОВ' },
-    { img: 'assets/photo/zov/stables.jpg', cap: 'Конный центр · бюро ЗОВ' },
+    { img: 'assets/photo/zov/village-day.jpg', cap: 'Гостиницы на 8 номеров · эскизный проект бюро ЗОВ' },
+    { img: 'assets/photo/zov/hotel-winter.jpg', cap: 'Зимний фасад · алтайский орнамент по дереву' },
+    { img: 'assets/photo/zov/hotel-evening.jpg', cap: 'Вечер · терраса и общая гостиная' },
   ];
   return (
     <section className="sec-pad sec-warm" id="complex" data-screen-label="06 MIPIF — Complex, big master plan">
@@ -260,7 +263,7 @@ function MpComplex({ num = '06' } = {}) {
             <div className="fin-photo" key={i} style={{backgroundImage:`url('${z.img}')`}}><div className="fin-photo-cap">{z.cap}</div></div>
           ))}
         </div>
-        <p className="fin-note" style={{marginTop:14}}>Архитектурный язык комплекса — бюро ЗОВ (Санкт-Петербург): дерево, стекло, бетон, орнамент русского Алтая <SrcRef k="zov"/>.</p>
+        <p className="fin-note" style={{marginTop:14}}>Архитектура — бюро ЗОВ: эскизный проект гостиниц на&nbsp;8 номеров, тип 1 и&nbsp;тип 2. Дерево, кирпич, стекло, резной алтайский орнамент <SrcRef k="zov"/>.</p>
       </div>
     </section>
   );
@@ -350,8 +353,8 @@ function MpShares({ num = '08' } = {}) {
             </dl>
           </article>
           <figure className="pc-mp-render-fig" style={{margin:0}}>
-            <img src="assets/photo/zov/wellness-centre.jpg" alt="Велнес-центр — архитектура бюро ЗОВ"/>
-            <figcaption className="pc-mp-render-cap">Во что входит акционер: СПА и велнес-центр, ресторан, ивент-холл · архитектура бюро ЗОВ</figcaption>
+            <img src="assets/photo/zov/hotel-sunset.jpg" alt="Гостиница на 8 номеров — эскизный проект бюро ЗОВ"/>
+            <figcaption className="pc-mp-render-cap">Во что входит акционер: мини-гостиницы на 8 номеров, СПА, ресторан, ивент-холл · эскизный проект бюро ЗОВ</figcaption>
           </figure>
         </div>
         <p className="fin-note">Приглашаем к&nbsp;сотрудничеству инвест-брокеров, деловые клубы и&nbsp;предпринимателей <SrcRef k="pdf"/>.</p>

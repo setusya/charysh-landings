@@ -11,13 +11,6 @@ const CH_TEAM = [
 ];
 window.CH_TEAM = CH_TEAM;
 
-// Полный состав (МИПИФ): плюс партнёр по инвестициям и архитектор 8 Lines — с инвест-лендинга.
-const CH_TEAM_FULL = [
-  ...CH_TEAM,
-  { name: 'Андрей Пережогин', role: 'Партнёр по инвестициям', d: 'Привлечение крупного капитала в девелопмент в России и за рубежом.', img: 'assets/team/perezhogin.jpg' },
-  { name: 'Антон Кочуркин', role: 'Архитектор · основатель 8 Lines', d: 'Соавтор Арт-парка Никола-Ленивец (ЮНЕСКО). Лауреат архитектурных конкурсов.', img: 'assets/photo/web/kochurkin.jpg' },
-];
-window.CH_TEAM_FULL = CH_TEAM_FULL;
 
 const CH_CONTACT_ANTONOVA = { who: 'Светлана Антонова · со-основатель', tel: '+7 903 774-40-42', tg: 'santagiving' };
 const CH_CONTACT_MASLAK = { who: 'Андрей Маслак · MICE и управление отелем', tel: '+7 903 726-98-99', tg: 'MaslakAndrey', email: 'maslak@invest-portal.com', extra: 'WhatsApp · MAX' };
