@@ -668,6 +668,7 @@ body.mipif.printing .pc-team-grid .team-name { font-size: 15px !important; }
 body.mipif.printing .pc-team-grid .team-role { font-size: 9px !important; }
 body.mipif.printing #team .lead { font-size: 12px !important; margin-bottom: 14px !important; }
 body.mipif.printing .pc-final-lead { font-size: 13px !important; }
+body.mipif.printing .rapport { display: none !important; }
 @media print {
   body.mipif .sec-pad { padding: 30px 0 26px !important; }
   body.mipif section > .container { padding-left: 24px !important; padding-right: 24px !important; }
@@ -749,4 +750,5 @@ body.mipif.printing .pc-final-lead { font-size: 13px !important; }
   body.mipif .pc-team-grid .team-role { font-size: 9px !important; }
   body.mipif #team .lead { font-size: 12px !important; margin-bottom: 14px !important; }
   body.mipif .pc-final-lead { font-size: 13px !important; }
+  body.mipif .rapport { display: none !important; }
 }
