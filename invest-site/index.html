@@ -1839,7 +1839,8 @@ function render(){
  app.querySelectorAll('[data-tz]').forEach(el=>{if(!el.value){try{el.value=Intl.DateTimeFormat().resolvedOptions().timeZone}catch(e){el.value='Europe/Moscow'}}});
  document.querySelectorAll('#tabs button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.go===page)));
  window.scrollTo(0,y)}
-document.addEventListener('click',e=>{const a=e.target.closest('[data-go]');if(!a)return;e.preventDefault();page=a.dataset.go;render();window.scrollTo(0,0)});
+document.addEventListener('click',e=>{const a=e.target.closest('[data-go]');if(!a)return;e.preventDefault();page=a.dataset.go;try{history.replaceState(null,'','#'+page)}catch(err){}render();window.scrollTo(0,0)});
+{const h=(location.hash||'').slice(1);if(TPL[h])page=h;}
 document.addEventListener('click',e=>{const z=e.target.closest('[data-zoom]');if(!z)return;e.preventDefault();
  const ov=document.createElement('div');ov.setAttribute('role','dialog');ov.setAttribute('aria-label','Эскиз мастер-плана');
  ov.style.cssText='position:fixed;inset:0;z-index:100;background:rgba(18,17,12,.92);overflow:auto;-webkit-overflow-scrolling:touch';
